@@ -18,7 +18,7 @@ summaryLength = 32
   fppc_id = "1482971"
   treasurer = "Lauren Turon"
   calendar_url = "https://calendar.app.google/Jqmp55mQB5MY64tU6"
-  umami_website_id = ""
+  umami_website_id = "ee906f2b-15f0-4856-afca-1134c0bdaebf"
 
 [params.cta_destinations]
   newsletter = "/newsletter/"
