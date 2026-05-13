@@ -26,7 +26,7 @@ CAMPAIGN_HOSTS_PATTERN='secure\.actblue\.com|actionnetwork\.org|sibforms\.com'
 REQUIRED_UTMS=(utm_source utm_medium utm_campaign utm_content)
 
 # Find every href to a campaign backend hostname
-URLS=$(grep -rohE "href=\"https?://(${CAMPAIGN_HOSTS_PATTERN})[^\"]*\"" "$PUBLIC_DIR" \
+URLS=$(grep -rohE "<a [^>]*href=\"https?://(${CAMPAIGN_HOSTS_PATTERN})[^\"]*\"" "$PUBLIC_DIR" | grep -oE "href=\"[^\"]*\"" | sed 's/^href="//;s/"$//' \
   | sed 's/^href="//; s/"$//' \
   | sort -u || true)
 
