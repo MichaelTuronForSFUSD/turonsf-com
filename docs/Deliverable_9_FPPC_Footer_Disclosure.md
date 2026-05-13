@@ -20,7 +20,7 @@ page in every language. The English source is locked from v1.2.0 and is
 
 > **Paid for by Michael Turon for SFUSD Board of Education 2026.
 > FPPC ID 1482971.
-> Treasurer: Lauren Turon.**
+>**
 
 Encoded in `i18n/en.toml` under the key `fppc_disclaimer`:
 
@@ -132,7 +132,7 @@ Neither replaces the other. Both render. The preflight checklist
 
 - [ ] English `fppc_disclaimer` i18n key is unchanged from v1.2.0:
       "Paid for by Michael Turon for SFUSD Board of Education 2026.
-       FPPC ID 1482971. Treasurer: Lauren Turon."
+       FPPC ID 1482971."
 - [ ] FPPC ID `1482971` appears as the literal numeric string in every
       language's footer.
 - [ ] Committee name `Michael Turon for SFUSD Board of Education` appears

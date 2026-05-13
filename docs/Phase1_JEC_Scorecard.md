@@ -71,7 +71,7 @@ Other dimensions unchanged from prior v1.
 
 **Gaps:**
 - Per-language reference translations of the FPPC footer in Deliverable 9 are AI-drafted from Step 1 Research — they are correct-looking but have not been native-reviewed. Sam Ray sign-off is required per language before that language can leave `placeholder` status. This is by design (the workflow explicitly defers per-language footer review until the page itself is reviewed), but it does mean the v1 ship-state has zero confirmed-reviewed footers in any non-English language.
-- "Treasurer: Lauren Turon" — Lauren is FPPC-designated CFRO, and California treats CFRO/treasurer as interchangeable labels for §84305 purposes, but the literal phrase "Treasurer" rather than "CFRO" is a Sam Ray confirmation item, not a verified one.
+- "" — Lauren is FPPC-designated CFRO, and California treats CFRO/treasurer as interchangeable labels for §84305 purposes, but the literal phrase "Treasurer" rather than "CFRO" is a Sam Ray confirmation item, not a verified one.
 
 **v2 path to 97:** Sam Ray review the six per-language reference footers as a single batch (before any language goes live) and add the approvals to the Deliverable 9 doc. Confirm "Treasurer" vs "CFRO" wording with Sam.
 
