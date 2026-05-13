@@ -151,3 +151,8 @@ Neither replaces the other. Both render. The preflight checklist
       financial claim. The footer carries no financial figures by design;
       financial figures live in the trust strip and content body, both
       under separate gates.
+
+
+## D9 Amendment — 2026-05-13
+
+Treasurer line removed per Sam Ray written sign-off. §84305(c)(1) requires 'Paid for by [committee name]' only for mass electronic mailings (>200/month). Website footer amended accordingly.
