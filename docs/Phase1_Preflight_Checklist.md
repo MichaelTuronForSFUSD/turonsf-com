@@ -86,7 +86,7 @@ Walk each page on (a) iPhone 14 viewport, (b) desktop 1440px viewport, in Safari
 
 | # | Check | Result |
 |---|---|---|
-| 5.1 | English FPPC footer present on every English page: "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971. Treasurer: Lauren Turon." **BLOCKING.** | |
+| 5.1 | English FPPC footer present on every English page: "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971." **BLOCKING.** | |
 | 5.2 | Non-English scaffold files carry the English FPPC footer placeholder with the `# AWAITING TRANSLATION` marker and the "REQUIRES SAM RAY REVIEW BEFORE PUBLICATION" flag. **BLOCKING.** | |
 | 5.3 | When a translation status flips to `reviewed`, the rendered FPPC footer in that language has been Sam-Ray-reviewed (review log entry present in frontmatter). **BLOCKING per language.** | |
 | 5.4 | FPPC ID `1482971` literal preserved in every footer in every language. **BLOCKING.** | |

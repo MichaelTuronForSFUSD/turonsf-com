@@ -26,7 +26,7 @@ Encoded in `i18n/en.toml` under the key `fppc_disclaimer`:
 
 ```toml
 [fppc_disclaimer]
-other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971. Treasurer: Lauren Turon."
+other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."
 ```
 
 **Legal basis:** Cal. Gov. Code §84305(c)(1) for mass electronic
@@ -156,3 +156,8 @@ Neither replaces the other. Both render. The preflight checklist
 ## D9 Amendment — 2026-05-13
 
 Treasurer line removed per Sam Ray written sign-off. §84305(c)(1) requires 'Paid for by [committee name]' only for mass electronic mailings (>200/month). Website footer amended accordingly.
+
+
+## D9 Amendment — 2026-05-13
+
+Treasurer line removed per Sam Ray written sign-off. §84305(c)(1) requires "Paid for by [committee name]" only for mass electronic mailings (>200/month). Website footer amended accordingly.
