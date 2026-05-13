@@ -1,0 +1,87 @@
+{{/*
+  cta-link.html — shared campaign CTA renderer for templates and shortcodes.
+  --------------------------------------------------------------------------
+  Purpose:
+    - Resolve a destination from hugo.toml [params.cta_destinations].
+    - Allow language-specific destination overrides through
+      [params.cta_destinations_<lang>] maps, e.g. [params.cta_destinations_es].
+    - Append the Phase 1 UTM scheme to outbound campaign-backend links.
+    - Add data-event/data-source attributes consumed by assets/js/analytics.js.
+
+  Template usage:
+    {{ partial "cta-link.html" (dict
+      "Page" .
+      "Site" .Site
+      "kind" "newsletter"
+      "source" "hero"
+      "label_key" "newsletter_cta_primary"
+      "style" "primary"
+    ) }}
+
+  Shortcode usage from Markdown:
+    {{< cta kind="newsletter" source="hero" label_key="newsletter_cta_primary" style="primary" >}}
+
+  Notes:
+    Hugo shortcodes are for content files. Layout templates should call this
+    partial directly. The cta.html shortcode below is only a wrapper around
+    this partial so content and templates share one implementation.
+*/}}
+
+{{ $page := .Page }}
+{{ $site := .Site | default $page.Site }}
+{{ $kind := .kind | default "" }}
+{{ $source := .source | default "utility" }}
+{{ $labelKey := .label_key | default "read_more" }}
+{{ $style := .style | default "primary" }}
+{{ $extraClass := .class | default "" }}
+{{ $ariaLabel := .aria_label | default "" }}
+{{ $lang := $page.Lang | default $site.Language.Lang | default "en" }}
+
+{{ $baseURL := "" }}
+{{ with $site.Params.cta_destinations }}
+  {{ with index . $kind }}{{ $baseURL = . }}{{ end }}
+{{ end }}
+
+{{/* Optional language-specific override. Example in hugo.toml:
+      [params.cta_destinations_es]
+        donate = "https://secure.actblue.com/donate/turonsf-es"
+*/}}
+{{ $langOverrideKey := printf "cta_destinations_%s" $lang }}
+{{ with index $site.Params $langOverrideKey }}
+  {{ with index . $kind }}{{ $baseURL = . }}{{ end }}
+{{ end }}
+
+{{ if not $baseURL }}
+  {{ errorf "Missing CTA destination for kind=%q. Add it to [params.cta_destinations] in hugo.toml." $kind }}
+{{ end }}
+
+{{ $utmContent := printf "%s-%s" $source $lang }}
+{{ $isExternal := or (hasPrefix $baseURL "https://") (hasPrefix $baseURL "http://") (hasPrefix $baseURL "mailto:") }}
+{{ $isInternalPlatform := eq $kind "platform" }}
+{{ $fullURL := $baseURL }}
+
+{{ if and $isExternal (not $isInternalPlatform) }}
+  {{ $separator := "?" }}
+  {{ if in $baseURL "?" }}{{ $separator = "&" }}{{ end }}
+  {{ $fullURL = printf "%s%sutm_source=turonsf&utm_medium=web&utm_campaign=phase1&utm_content=%s" $baseURL $separator $utmContent }}
+{{ end }}
+
+{{ $eventName := "" }}
+{{ if eq $kind "newsletter" }}{{ $eventName = "newsletter_cta_click" }}
+{{ else if eq $kind "donate" }}{{ $eventName = "donate_cta_click" }}
+{{ else if eq $kind "volunteer" }}{{ $eventName = "volunteer_cta_click" }}
+{{ else if eq $kind "email" }}{{ $eventName = "email_contact_click" }}
+{{ else if eq $kind "platform" }}{{ $eventName = "platform_link_click" }}
+{{ end }}
+
+<a href="{{ $fullURL }}"
+   class="cta cta--{{ $style }} cta--{{ $kind }}{{ with $extraClass }} {{ . }}{{ end }}"
+   {{ with $eventName }}data-event="{{ . }}"{{ end }}
+   data-source="{{ $source }}"
+   {{ if hasPrefix $baseURL "http" }}rel="noopener"{{ end }}
+   {{ with $ariaLabel }}aria-label="{{ . }}"{{ end }}>
+  {{ i18n $labelKey }}
+  {{ if or (eq $style "primary") (eq $style "secondary") }}
+    <span class="cta__arrow" aria-hidden="true">→</span>
+  {{ end }}
+</a>

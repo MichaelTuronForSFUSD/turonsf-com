@@ -1,0 +1,91 @@
+# robots.txt — turonsf.com (v1.3.0)
+# Architecture Decision 8: robots directives are language-neutral. The same
+# rules apply across /, /es/, /zh-Hant/, /zh-Hans/, /tl/, /vi/, /ar/.
+#
+# Language-specific bot directives are NOT used because they would make this
+# file harder to audit and would not solve translation-quality issues.
+# Placeholder pages use page-level <meta name="robots" content="noindex, follow">
+# emitted by head-hreflang.html (D4) rather than robots.txt Disallow.
+#
+# v1.2.0 -> v1.3.0 changes:
+#   1. Added Sitemap: directive pointing to the single multilingual sitemap.
+#   2. Added language-keyed llms.{lang}.txt references.
+#   3. PRESERVED the v1.2.0 11-AI-bot allowlist verbatim (per G-2 policy).
+
+# ---------------------------------------------------------------------------
+# Default policy: search engines and well-behaved general crawlers may
+# index everything except clearly-private paths.
+# ---------------------------------------------------------------------------
+
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /draft/
+Disallow: /preview/
+Disallow: /.well-known/private/
+
+# ---------------------------------------------------------------------------
+# 11-AI-bot allowlist (preserved unchanged from v1.2.0, policy line G-2).
+# Each of these agents may crawl the canonical English content and all
+# six target-language variants. The on-page AI translation disclosure
+# (Deliverable 4.5 / 8) is the campaign's transparency signal to these
+# crawlers; the canonical-tag points to the English source for
+# translated pages whose translation_status is placeholder.
+#
+# DO NOT REMOVE OR REORDER WITHOUT REVISING G-2 IN THE DECISIONS REGISTER.
+# ---------------------------------------------------------------------------
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Sitemap — single multilingual sitemap with hreflang alternates.
+# Architecture Decision 8: one sitemap, not seven.
+# ---------------------------------------------------------------------------
+
+Sitemap: https://turonsf.com/sitemap.xml
+
+# ---------------------------------------------------------------------------
+# llms.txt references — one per language (v1.3.0 addition).
+# Per build prompt Deliverable 10 (divergence from Architecture Decision 8
+# which prefers a single file; resolution documented in JEC scorecard).
+# ---------------------------------------------------------------------------
+
+# Canonical English (also discoverable at the conventional location):
+#   https://turonsf.com/llms.en.txt
+#   https://turonsf.com/llms.es.txt
+#   https://turonsf.com/llms.zh-Hant.txt
+#   https://turonsf.com/llms.zh-Hans.txt
+#   https://turonsf.com/llms.tl.txt
+#   https://turonsf.com/llms.vi.txt
+#   https://turonsf.com/llms.ar.txt

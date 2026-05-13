@@ -1,0 +1,11 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://us.umami.is; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://us.umami.is https://secure.actblue.com https://actionnetwork.org https://sibforms.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://secure.actblue.com https://actionnetwork.org https://sibforms.com
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=()
+  X-Robots-Tag: index, follow
+
+# Block indexing for archive / search-engine-incompatible paths if needed.
+# /admin/*
+#   X-Robots-Tag: noindex, nofollow

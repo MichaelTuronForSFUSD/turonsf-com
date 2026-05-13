@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.Params.dir | default "ltr" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ partial "head-preconnects.html" . }}
+  {{ partial "head-hreflang.html" . }}
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+  {{ with .Site.Params.umami_website_id }}
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ . }}"></script>
+  {{ end }}
+  {{ partial "analytics-script.html" . }}
+</head>
+<body>
+  <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
+  <div class="utility-bar">Election: {{ .Site.Params.election_date }} — FPPC ID {{ .Site.Params.fppc_id }}</div>
+  <header class="site-header">{{ partial "site-nav.html" . }}</header>
+  <main id="main">
+    {{ partial "ai-translation-disclosure.html" . }}
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "site-footer.html" . }}
+</body>
+</html>

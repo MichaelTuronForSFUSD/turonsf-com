@@ -1,0 +1,109 @@
+{{/*
+  head-hreflang.html
+  --------------------------------------------------------------------------
+  Emits <link rel="alternate" hreflang="..."> tags for every LIVE language
+  variant of the current page, plus x-default pointing to the English
+  canonical page. Excludes placeholders (Architecture Decision 4).
+
+  Also emits the page canonical URL and (when applicable) <meta name="robots"
+  content="noindex, follow"> for placeholder pages.
+
+  Reference table (Architecture Decision 2):
+
+    BCP 47    URL prefix         hreflang    dir   Notes
+    --------  -----------------  ----------  ----  -----------------------
+    en        /                  en          ltr   Canonical + x-default target
+    es        /es/               es          ltr   Family-engagement priority
+    zh-Hant   /zh-Hant/          zh-Hant     ltr   Cantonese-reading population
+    zh-Hans   /zh-Hans/          zh-Hans     ltr   Mandarin-reading population
+    tl        /tl/               tl          ltr   Exact Tagalog (not Filipino)
+    vi        /vi/               vi          ltr   2026 LAO certified
+    ar        /ar/               ar          rtl   RTL layout
+
+  Hreflang rules:
+    - English page (canonical): self-references "en" + cross-references every
+      live translation + x-default to self.
+    - Live translated page: self-references its own BCP 47 tag + cross-references
+      every other live translation of this page + cross-references the English
+      page + x-default to the English page.
+    - Placeholder pages: emit NO hreflang and emit <meta name="robots"
+      content="noindex, follow">. They also canonicalize to the English source.
+
+  Failure to follow these rules creates the duplicate-content problem
+  Research §4.5 warns about, and tells search engines an unfinished placeholder
+  is a translated equivalent.
+  --------------------------------------------------------------------------
+*/}}
+
+{{ $currentLang := .Site.Language.Lang }}
+{{ $translationStatusData := index .Site.Data.translation_status "pages" }}
+
+{{/* Resolve translation_status for the current page (key: "{relpath}::{lang}"). */}}
+{{ $thisPageKey := printf "%s::%s" .RelPermalink $currentLang }}
+{{ $thisStatus := index $translationStatusData $thisPageKey | default "placeholder" }}
+
+{{/* English is always considered live. */}}
+{{ if eq $currentLang "en" }}{{ $thisStatus = "live" }}{{ end }}
+
+{{ $isLive := or (eq $thisStatus "live") (eq $thisStatus "reviewed") (eq $thisStatus "community_corrected") }}
+
+{{/* Locate the English canonical translation for this page (always required
+     because every page either IS English or has an English source). */}}
+{{ $englishPage := "" }}
+{{ if eq $currentLang "en" }}
+  {{ $englishPage = . }}
+{{ else }}
+  {{ with .AllTranslations }}
+    {{ range . }}
+      {{ if eq .Lang "en" }}
+        {{ $englishPage = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Canonical URL. Live page canonicalizes to itself. Placeholder pages
+     canonicalize to the English source (Architecture Decision 2 §canonical). */}}
+{{ if $isLive }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+{{ else if $englishPage }}
+  <link rel="canonical" href="{{ $englishPage.Permalink }}" />
+  <meta name="robots" content="noindex, follow" />
+{{ else }}
+  {{/* Defensive: page has no English source. Should never happen for the
+       12 unconditional Phase 1 pages but possible for stray drafts. */}}
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <meta name="robots" content="noindex, follow" />
+{{ end }}
+
+{{/* hreflang emission. Only for LIVE pages. Placeholders emit no hreflang. */}}
+{{ if $isLive }}
+
+  {{/* Self-reference first. */}}
+  <link rel="alternate" hreflang="{{ $currentLang }}" href="{{ .Permalink }}" />
+
+  {{/* Then every OTHER live translation of this page. */}}
+  {{ with .AllTranslations }}
+    {{ range . }}
+      {{ $altLang := .Lang }}
+      {{ if ne $altLang $currentLang }}
+        {{ $altPageKey := printf "%s::%s" .RelPermalink $altLang }}
+        {{ $altStatus := index $translationStatusData $altPageKey | default "placeholder" }}
+        {{ if eq $altLang "en" }}{{ $altStatus = "live" }}{{ end }}
+        {{ $altLive := or (eq $altStatus "live") (eq $altStatus "reviewed") (eq $altStatus "community_corrected") }}
+        {{ if $altLive }}
+          <link rel="alternate" hreflang="{{ $altLang }}" href="{{ .Permalink }}" />
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* x-default always points to the English canonical version of THIS page,
+       never to the site home page (Architecture Decision 2 §hreflang). */}}
+  {{ if $englishPage }}
+    <link rel="alternate" hreflang="x-default" href="{{ $englishPage.Permalink }}" />
+  {{ end }}
+
+{{ end }}
+
+{{/* End head-hreflang.html */}}

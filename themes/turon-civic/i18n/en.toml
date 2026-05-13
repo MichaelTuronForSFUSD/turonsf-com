@@ -1,0 +1,182 @@
+# i18n/en.toml
+# Canonical English string table for turonsf.com (v1.3.0).
+# This file is the source of truth. The six non-English tables in this
+# directory are scaffolds that the operator's translation workflow fills in.
+# Reference: Architecture Decisions 2, 3, 6.5, 9.
+#
+# Add no key without adding it to all seven files (use the audit script in
+# Phase1_Preflight_Checklist.md §9 to verify key parity).
+
+# ---------------------------------------------------------------------------
+# Navigation
+# ---------------------------------------------------------------------------
+
+[home]
+other = "Home"
+
+[about]
+other = "About"
+
+[platform]
+other = "Platform"
+
+[pillar1]
+other = "Special Education"
+
+[pillar2]
+other = "Budget Discipline"
+
+[pillar3]
+other = "Teacher Retention"
+
+[endorsements]
+other = "Endorsements"
+
+[volunteer]
+other = "Volunteer"
+
+[donate]
+other = "Donate"
+
+[contact]
+other = "Contact"
+
+# DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
+# key retained for re-enable cycle (no removal). See MANIFEST §8.
+[letters]
+other = "Letters"
+
+# DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
+# key retained for re-enable cycle (no removal). See MANIFEST §8.
+[talk]
+other = "Talk"
+
+# ---------------------------------------------------------------------------
+# Hero CTAs
+# ---------------------------------------------------------------------------
+
+[donate_cta]
+other = "Donate"
+
+[volunteer_cta]
+other = "Volunteer"
+
+[endorse_cta]
+other = "Endorse"
+
+[book_call_cta]
+other = "Book a 15-minute call"
+
+# ---------------------------------------------------------------------------
+# Trust strip descriptors
+# Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
+# English. Only the descriptors translate. Financial figures never change.
+# ---------------------------------------------------------------------------
+
+[vendor_savings]
+other = "vendor savings"
+
+[sfusd_parent]
+other = "SFUSD parent"
+
+[ebitda_swing]
+other = "EBITDA swing"
+
+[cambridge_phd]
+other = "Cambridge Physics PhD"
+
+# ---------------------------------------------------------------------------
+# Footer — FPPC §84305 disclosure (Deliverable 9)
+# Proper nouns (Michael Turon, Lauren Turon, SFUSD, FPPC, FPPC ID 1482971)
+# stay in Latin script across all languages. Only the surrounding clauses
+# (paid_for_by, treasurer label) localize.
+# ---------------------------------------------------------------------------
+
+[fppc_disclaimer]
+other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971. Treasurer: Lauren Turon."
+
+[copyright]
+other = "© 2026 Michael Turon for SFUSD Board of Education"
+
+[contact_email]
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Form labels
+# ---------------------------------------------------------------------------
+
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[organization]
+other = "Organization"
+
+[message]
+other = "Message"
+
+[submit]
+other = "Submit"
+
+[form_success]
+other = "Thank you. We received your message and will reply within two business days."
+
+[form_error]
+other = "We could not send your message. Please try again or email info@turonsf.com."
+
+# ---------------------------------------------------------------------------
+# Language switcher (Architecture Decision 3)
+# ---------------------------------------------------------------------------
+
+[language_switcher_label]
+other = "Select language"
+
+[current_language]
+other = "Current"
+
+[english_official_source]
+other = "English — official source"
+
+[ai_translated_marker]
+other = "AI translated"
+
+# ---------------------------------------------------------------------------
+# AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
+# This is the body string rendered by the ai-translation-disclosure.html
+# partial at the top of every live non-English page.
+# ---------------------------------------------------------------------------
+
+[ai_translation_disclosure_body]
+other = "This page was translated by AI. English is the official version."
+
+[ai_translation_disclosure_link_text]
+other = "Find an error? Email info@turonsf.com."
+
+# ---------------------------------------------------------------------------
+# Translation-pending notice (Architecture Decision 4)
+# Renders on placeholder pages (translation_status: placeholder).
+# ---------------------------------------------------------------------------
+
+[translation_pending_notice]
+other = "This page is not yet translated. Please read the English version for now."
+
+[translation_pending_link]
+other = "Read the English version"
+
+# ---------------------------------------------------------------------------
+# Generic UX
+# ---------------------------------------------------------------------------
+
+[read_more]
+other = "Read more"
+
+[skip_to_content]
+other = "Skip to main content"
+
+[menu]
+other = "Menu"
+
+[close]
+other = "Close"

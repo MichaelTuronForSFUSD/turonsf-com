@@ -1,0 +1,312 @@
+--- themes/turon-civic/static/css/tokens.css	(v1.2.0)
++++ themes/turon-civic/static/css/tokens.css	(v1.3.0)
+@@ -1,3 +1,10 @@
++/* tokens.css — Direction A design system (v1.3.0)
++ *
++ * v1.2.0 -> v1.3.0 change: ADD multilingual support.
++ * No existing token (--navy-900, --accent, --cream-50, font family choices,
++ * layout patterns) is modified. Architecture Decision 5 and 6 explicitly
++ * scope this change to ADDITIONS only.
++ */
+ :root {
+   --navy-900: #0F1E3D;
+   --accent:   #C8531B;
+@@ -20,3 +27,239 @@
+   --space-12: 3rem;
+   --space-16: 4rem;
+ }
++
++/* ===========================================================================
++ * MULTILINGUAL ADDITIONS (v1.3.0)
++ * Architecture Decisions 5, 6, 6.5.
++ * Reference: Research §5.1, §5.2, §5.3, §5.4, §5.5.
++ * ===========================================================================
++ */
++
++/* ---------------------------------------------------------------------------
++ * Language-specific font fallback stacks.
++ * Strategy (Architecture Decision 6): NO new web fonts in Phase 1.
++ *   - Latin pages (en, es, tl, vi): existing Public Sans + Source Serif 4.
++ *   - CJK pages (zh-Hant, zh-Hans): system CJK fonts.
++ *   - Arabic pages: system Arabic fonts.
++ * Performance budget: 0KB additional network font cost for non-Latin scripts.
++ * --------------------------------------------------------------------------- */
++
++html[lang="zh-Hant"] body {
++  font-family:
++    "Public Sans",
++    "PingFang TC",
++    "Microsoft JhengHei",
++    "Noto Sans CJK TC",
++    "Heiti TC",
++    sans-serif;
++}
++
++html[lang="zh-Hant"] h1,
++html[lang="zh-Hant"] h2,
++html[lang="zh-Hant"] h3 {
++  font-family:
++    "Source Serif 4",
++    "PingFang TC",
++    "Microsoft JhengHei",
++    "Noto Serif CJK TC",
++    serif;
++}
++
++html[lang="zh-Hans"] body {
++  font-family:
++    "Public Sans",
++    "PingFang SC",
++    "Microsoft YaHei",
++    "Noto Sans CJK SC",
++    "Heiti SC",
++    sans-serif;
++}
++
++html[lang="zh-Hans"] h1,
++html[lang="zh-Hans"] h2,
++html[lang="zh-Hans"] h3 {
++  font-family:
++    "Source Serif 4",
++    "PingFang SC",
++    "Microsoft YaHei",
++    "Noto Serif CJK SC",
++    serif;
++}
++
++html[lang="ar"] body {
++  font-family:
++    "Public Sans",
++    "SF Arabic",
++    "Geeza Pro",
++    "Noto Naskh Arabic",
++    "Segoe UI",
++    Tahoma,
++    Arial,
++    sans-serif;
++}
++
++html[lang="ar"] h1,
++html[lang="ar"] h2,
++html[lang="ar"] h3 {
++  font-family:
++    "Source Serif 4",
++    "SF Arabic",
++    "Noto Naskh Arabic",
++    "Geeza Pro",
++    serif;
++}
++
++/* Vietnamese inherits the Latin stack but needs the existing subset to cover
++ * tone diacritics (đ, ơ, ư, and combining tones). If Public Sans does not
++ * cover these, expand the existing subset request — do NOT add a new family. */
++
++/* ---------------------------------------------------------------------------
++ * Line-height / spacing adjustments for non-Latin scripts.
++ * Research §5.1 §1.4.12: Arabic and CJK benefit from larger line-height.
++ * --------------------------------------------------------------------------- */
++
++html[lang="zh-Hant"] body,
++html[lang="zh-Hans"] body,
++html[lang="ar"] body {
++  line-height: 1.75;
++}
++
++html[lang="ar"] {
++  /* Arabic font metrics tend to push baseline up; small letter-spacing
++   * adjustment prevents glyphs from appearing cramped against punctuation. */
++  letter-spacing: 0;
++}
++
++/* ---------------------------------------------------------------------------
++ * RTL layout (Architecture Decision 5).
++ * Strategy: CSS logical properties as primary; [dir=rtl] selectors as
++ * exception layer for components that cannot auto-mirror.
++ * --------------------------------------------------------------------------- */
++
++/* Body-text alignment uses logical `start` so it flips automatically.
++ * Card/spacing classes should already use margin-inline-* / padding-inline-*;
++ * if v1.2.0 used margin-left / margin-right anywhere in i18n-sensitive
++ * components (header, cards, buttons, trust strip, language switcher,
++ * mobile drawer, long-form letter body), convert those before merging. */
++
++/* Exception 1: chevrons/arrows in RTL must mirror their pointing direction. */
++[dir="rtl"] .lang-switcher__caret,
++[dir="rtl"] .breadcrumb__separator,
++[dir="rtl"] .chevron-right,
++[dir="rtl"] .arrow-right {
++  transform: scaleX(-1);
++}
++
++/* Exception 2: mobile drawer opens from inline start in both LTR and RTL.
++ * If the existing drawer is transform-translateX(-100%) for closed and
++ * transform-translateX(0) for open, this rule mirrors the LTR translate. */
++[dir="rtl"] .mobile-drawer {
++  inset-inline-start: 0;
++  inset-inline-end: auto;
++}
++
++/* Exception 3: mixed-direction bidi isolation for financial figures and
++ * proper nouns inside Arabic body copy. The trust strip's "$72M",
++ * "-$33M", "+$9M" must read left-to-right inside the RTL page. */
++html[lang="ar"] .trust-strip__figure,
++html[lang="ar"] .latin-isolate {
++  unicode-bidi: isolate;
++  direction: ltr;
++}
++
++/* ---------------------------------------------------------------------------
++ * Language switcher styles (Deliverable 3).
++ * Uses existing tokens only. 44x44 px minimum tap target.
++ * --------------------------------------------------------------------------- */
++
++.lang-switcher {
++  position: relative;
++  display: inline-block;
++}
++
++.lang-switcher__toggle {
++  display: inline-flex;
++  align-items: center;
++  gap: 0.25rem;
++  min-block-size: 44px;
++  min-inline-size: 44px;
++  padding-inline: var(--space-3);
++  padding-block: var(--space-2);
++  background: transparent;
++  color: var(--navy-900);
++  border: 1px solid var(--navy-900);
++  border-radius: 999px;
++  font-family: inherit;
++  font-size: 0.875rem;
++  cursor: pointer;
++}
++
++.lang-switcher__toggle:focus-visible {
++  outline: 2px solid var(--accent);
++  outline-offset: 2px;
++}
++
++.lang-switcher__menu {
++  position: absolute;
++  inset-block-start: calc(100% + var(--space-1));
++  inset-inline-end: 0;
++  margin: 0;
++  padding: var(--space-2) 0;
++  list-style: none;
++  background: var(--cream-50);
++  border: 1px solid var(--navy-900);
++  border-radius: 8px;
++  min-inline-size: 14rem;
++  z-index: 100;
++  box-shadow: 0 4px 12px rgba(15, 30, 61, 0.12);
++}
++
++.lang-switcher__menu[hidden] { display: none; }
++
++.lang-switcher__link {
++  display: block;
++  padding-inline: var(--space-3);
++  padding-block: var(--space-2);
++  color: var(--navy-900);
++  text-decoration: none;
++  font-size: 0.9375rem;
++  min-block-size: 44px;
++}
++
++.lang-switcher__link:hover,
++.lang-switcher__link:focus-visible {
++  background: rgba(15, 30, 61, 0.06);
++  outline: 2px solid var(--accent);
++  outline-offset: -2px;
++}
++
++.lang-switcher__link.is-current {
++  font-weight: 600;
++}
++
++.lang-switcher__marker {
++  color: rgba(15, 30, 61, 0.7);
++  font-size: 0.8125rem;
++  margin-inline-start: 0.25rem;
++}
++
++/* ---------------------------------------------------------------------------
++ * AI translation disclosure banner (Deliverable 4.5).
++ * Uses cream-50 background + navy-900 text + accent inline-start border.
++ * No new colors. No new fonts. Non-dismissible (no close UI rendered).
++ * --------------------------------------------------------------------------- */
++
++.translation-notice {
++  background: var(--cream-50);
++  color: var(--navy-900);
++  border-inline-start: 4px solid var(--accent);
++  padding-inline: var(--space-4);
++  padding-block: var(--space-3);
++  margin-block-end: var(--space-6);
++  font-size: 0.9375rem;
++  line-height: 1.5;
++}
++
++.translation-notice__body {
++  margin: 0 0 var(--space-1) 0;
++}
++
++.translation-notice__action {
++  margin: 0;
++}
++
++.translation-notice__link {
++  color: var(--navy-900);
++  text-decoration: underline;
++  text-underline-offset: 2px;
++}
++
++.translation-notice__link:focus-visible {
++  outline: 2px solid var(--accent);
++  outline-offset: 2px;
++}
++
++/* Mobile: no horizontal scroll, body wraps cleanly. */
++@media (max-width: 480px) {
++  .translation-notice {
++    padding-inline: var(--space-3);
++    padding-block: var(--space-3);
++    font-size: 0.875rem;
++  }
++}
++
++/* ---------------------------------------------------------------------------
++ * Footer language list (backup switcher per Architecture Decision 3).
++ * --------------------------------------------------------------------------- */
++
++.footer__lang-list {
++  list-style: none;
++  display: flex;
++  flex-wrap: wrap;
++  gap: var(--space-2) var(--space-4);
++  padding: 0;
++  margin-block-start: var(--space-4);
++}
++
++.footer__lang-list a {
++  color: var(--cream-50);
++  text-decoration: none;
++  font-size: 0.875rem;
++}
++
++.footer__lang-list a:hover,
++.footer__lang-list a:focus-visible {
++  text-decoration: underline;
++}
+
+# --- END OF DIFF -----------------------------------------------------------
+# Acceptance gates (Architecture Decision 11 §3, §7):
+#   1. Arabic page renders dir="rtl"; header, mobile drawer, switcher mirror.
+#   2. CJK pages render in system PingFang/YaHei/Noto CJK without FOUC.
+#   3. Trust strip "$72M", "-$33M", "+$9M" stays Latin LTR inside Arabic body.
+#   4. Mobile 360px and 390px: no horizontal scroll on any language.
+#   5. Total page weight ≤100KB on mobile (Architecture Decision 6 budget).
+#   6. Language switcher tap target ≥44x44 px (WCAG 2.5.5 / 2.5.8).
+#   7. AI disclosure banner uses only --navy-900 / --accent / --cream-50.
+#   8. AI disclosure has NO close UI (non-dismissible per OIL Decision 2).

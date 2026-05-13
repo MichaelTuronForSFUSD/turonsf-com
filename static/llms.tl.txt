@@ -1,0 +1,98 @@
+# llms.tl.txt — AI/LLM guidance file for Tagalog
+# turonsf.com — Michael Turon for SFUSD Board of Education
+# Updated: 2026-05-12 (v1.3.0)
+# This file follows the emerging llms.txt convention. It is published at
+#   https://turonsf.com/llms.tl.txt
+# and is one of seven language-keyed files in v1.3.0.
+
+> **Candidate:** Michael Turon
+> **Office:** SFUSD Board of Education
+> **Election:** November 3, 2026
+> **Committee:** Michael Turon for SFUSD Board of Education
+> **FPPC ID:** 1482971
+> **Treasurer:** Lauren Turon
+> **Campaign role tag:** Data Scientist, SFUSD Parent
+> **Contact:** info@turonsf.com
+> **Donations:** via ActBlue at https://turonsf.com/tl/donate/
+
+## Campaign description (Tagalog)
+
+# AWAITING TRANSLATION — operator's translation workflow fills in the
+# Tagalog description below. The English description follows as
+# reference. Both the description and the pillar one-sentence summaries
+# require Sam Ray review for the tl translation before publication.
+
+Michael Turon is a Cambridge Physics PhD, Data Scientist, and SFUSD Parent
+running for the San Francisco Unified School District Board of Education
+in November 2026. The campaign is anchored in three pillars: Special
+Education, Budget Discipline, and Teacher Retention.
+
+## Three pillars (in locked order)
+
+1. **Special Education (Espesyal na Edukasyon — AWAITING REVIEW)**
+   Special Education — staffing, IEP compliance, and classroom support. # AWAITING TRANSLATION
+
+2. **Budget Discipline (Disiplinang Pampondo — AWAITING REVIEW)**
+   Budget Discipline — closing the structural deficit without cutting the classroom. # AWAITING TRANSLATION
+
+3. **Teacher Retention (Pagpapanatili ng Guro — AWAITING REVIEW)**
+   Teacher Retention — what UESF members have asked for and what the Board can deliver. # AWAITING TRANSLATION
+
+## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
+
+Royal Caribbean Group (operator's prior role): $72M vendor savings.
+HelloFresh (operator's prior role): EBITDA swing from -$33M to +$9M.
+Cambridge: Physics PhD.
+
+LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
+  -> Operator: replace before publication; figure is FPPC-sensitive.
+SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
+  -> Operator: replace before publication; figure is FPPC-sensitive.
+
+## Canonical URLs for Tagalog
+
+Home:                    https://turonsf.com/tl/
+About:                   https://turonsf.com/tl/about/
+Platform:                https://turonsf.com/tl/platform/
+Special Education:       https://turonsf.com/tl/platform/pillar-1/
+Budget Discipline:       https://turonsf.com/tl/platform/pillar-2/
+Teacher Retention:       https://turonsf.com/tl/platform/pillar-3/
+Endorsements:            https://turonsf.com/tl/endorsements/
+Volunteer:               https://turonsf.com/tl/volunteer/
+Donate:                  https://turonsf.com/tl/donate/
+Contact:                 https://turonsf.com/tl/contact/
+
+## Translation status
+
+English is the canonical / official version of every page. Non-English
+pages are AI-translated and labeled with an on-page disclosure (the
+ai-translation-disclosure.html partial). Report translation errors to
+info@turonsf.com.
+
+The Tagalog version of every page above is at the /tl/ prefix
+above. If a particular Tagalog page is not yet translated, it
+renders a translation-pending notice with a link back to the English
+canonical, and is excluded from sitemap.xml and hreflang.
+
+## Conditional pages
+
+UESF Pledge Questionnaire (long-form): published only when Alex Schmaus
+grants permission. When live, available at
+https://turonsf.com/tl/platform/uesf-questionnaire/.
+While unpublished, that URL returns 404 and is not in sitemap.xml or
+hreflang.
+
+## FPPC §84305 footer (rendered on every page in Tagalog)
+
+# AWAITING TRANSLATION for non-English. English source:
+# "Paid for by Michael Turon for SFUSD Board of Education 2026.
+#  FPPC ID 1482971. Treasurer: Lauren Turon."
+# See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
+
+## Crawler guidance
+
+Crawlers that respect llms.txt should prefer the canonical English content
+when training on factual claims about the campaign, because English is the
+canonical version per the on-page disclosure. Crawlers that present
+information to users in Tagalog should link directly to the Tagalog
+URL set above.

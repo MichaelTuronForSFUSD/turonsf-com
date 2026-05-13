@@ -1,0 +1,14 @@
+# Cloudflare Pages redirects for turonsf.com
+# Reference: docs/Phase1_Deployment_Red_JEC_Audit.md F15.
+
+# /give/ is an alias for /donate/ (per Decisions Register)
+/give     /donate     301
+/give/    /donate/    301
+
+# www → apex (audit F15 canonical)
+# NOTE: www → apex redirect is best configured via Cloudflare Page Rules or
+# a redirect rule on the zone, not via _redirects (which only runs after the
+# Pages project receives the request). Document in Run Guide §5 instead.
+
+# Legacy v1.2.0 paths — none currently. Add here if v1.3.0 changes any URL
+# structure and old links should still resolve.

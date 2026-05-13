@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-links">
+      {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "newsletter" "source" "footer-newsletter" "label_key" "newsletter_cta_primary" "style" "text") }}
+      {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "volunteer" "source" "footer-volunteer" "label_key" "volunteer_cta" "style" "text") }}
+      {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "donate" "source" "footer-donate" "label_key" "donate_cta" "style" "text") }}
+      {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "email" "source" "footer" "label_key" "contact_email" "style" "text") }}
+    </div>
+    <p class="fppc">{{ i18n "fppc_disclaimer" }}</p>
+    <p class="fppc">{{ i18n "copyright" }}</p>
+  </div>
+</footer>

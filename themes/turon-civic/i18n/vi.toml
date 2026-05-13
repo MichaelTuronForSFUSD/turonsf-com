@@ -1,0 +1,199 @@
+# i18n/vi.toml
+# Latin-script Vietnamese with full tone diacritics
+# Direction: ltr
+#
+# AWAITING TRANSLATION — scaffold only.
+# This file mirrors the key set of i18n/en.toml exactly. Values are the
+# English placeholder text. The operator's AI-translation workflow
+# (Phase1_Translation_Workflow.md) replaces each value with the Tiếng Việt
+# translation and removes the # AWAITING TRANSLATION marker on the affected
+# key block.
+#
+# Glossary discipline (Architecture Decision 9 §5):
+#   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
+#                 Royal Caribbean, HelloFresh, Cambridge, FPPC, FPPC ID 1482971,
+#                 ActBlue, Cloudflare, Umami, Action Network, Brevo,
+#                 MailChannels, Turnstile, Google Calendar, info@turonsf.com.
+#                 Financial figures unchanged: $72M, -$33M, +$9M.
+#   LOCALIZE: Vote, Endorse, Volunteer, Donate, Contact, Talk, Platform,
+#             About, Special Education, Budget Discipline, Teacher Retention.
+#
+# FPPC §84305 footer translation: requires SAM RAY review before publication.
+# Financial figures: require LAUREN review before publication.
+#
+# Do not change the [section] header tokens — Hugo i18n keys are global.
+# ----------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Navigation
+# ---------------------------------------------------------------------------
+
+[home]
+other = "Home"  # AWAITING TRANSLATION
+
+[about]
+other = "About"  # AWAITING TRANSLATION
+
+[platform]
+other = "Platform"  # AWAITING TRANSLATION
+
+[pillar1]
+other = "Special Education"  # AWAITING TRANSLATION
+
+[pillar2]
+other = "Budget Discipline"  # AWAITING TRANSLATION
+
+[pillar3]
+other = "Teacher Retention"  # AWAITING TRANSLATION
+
+[endorsements]
+other = "Endorsements"  # AWAITING TRANSLATION
+
+[volunteer]
+other = "Volunteer"  # AWAITING TRANSLATION
+
+[donate]
+other = "Donate"  # AWAITING TRANSLATION
+
+[contact]
+other = "Contact"  # AWAITING TRANSLATION
+
+# DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
+# key retained for re-enable cycle (no removal). See MANIFEST §8.
+[letters]
+other = "Letters"  # AWAITING TRANSLATION
+
+# DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
+# key retained for re-enable cycle (no removal). See MANIFEST §8.
+[talk]
+other = "Talk"  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Hero CTAs
+# ---------------------------------------------------------------------------
+
+[donate_cta]
+other = "Donate"  # AWAITING TRANSLATION
+
+[volunteer_cta]
+other = "Volunteer"  # AWAITING TRANSLATION
+
+[endorse_cta]
+other = "Endorse"  # AWAITING TRANSLATION
+
+[book_call_cta]
+other = "Book a 15-minute call"  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Trust strip descriptors
+# Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
+# English. Only the descriptors translate. Financial figures never change.
+# ---------------------------------------------------------------------------
+
+[vendor_savings]
+other = "vendor savings"  # AWAITING TRANSLATION
+
+[sfusd_parent]
+other = "SFUSD parent"  # AWAITING TRANSLATION
+
+[ebitda_swing]
+other = "EBITDA swing"  # AWAITING TRANSLATION
+
+[cambridge_phd]
+other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Footer — FPPC §84305 disclosure (Deliverable 9)
+# Proper nouns (Michael Turon, Lauren Turon, SFUSD, FPPC, FPPC ID 1482971)
+# stay in Latin script across all languages. Only the surrounding clauses
+# (paid_for_by, treasurer label) localize.
+# ---------------------------------------------------------------------------
+
+[fppc_disclaimer]
+other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971. Treasurer: Lauren Turon."  # AWAITING TRANSLATION
+
+[copyright]
+other = "© 2026 Michael Turon for SFUSD Board of Education"  # AWAITING TRANSLATION
+
+[contact_email]
+other = "info@turonsf.com"  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Form labels
+# ---------------------------------------------------------------------------
+
+[name]
+other = "Name"  # AWAITING TRANSLATION
+
+[email]
+other = "Email"  # AWAITING TRANSLATION
+
+[organization]
+other = "Organization"  # AWAITING TRANSLATION
+
+[message]
+other = "Message"  # AWAITING TRANSLATION
+
+[submit]
+other = "Submit"  # AWAITING TRANSLATION
+
+[form_success]
+other = "Thank you. We received your message and will reply within two business days."  # AWAITING TRANSLATION
+
+[form_error]
+other = "We could not send your message. Please try again or email info@turonsf.com."  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Language switcher (Architecture Decision 3)
+# ---------------------------------------------------------------------------
+
+[language_switcher_label]
+other = "Select language"  # AWAITING TRANSLATION
+
+[current_language]
+other = "Current"  # AWAITING TRANSLATION
+
+[english_official_source]
+other = "English — official source"  # AWAITING TRANSLATION
+
+[ai_translated_marker]
+other = "AI translated"  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
+# This is the body string rendered by the ai-translation-disclosure.html
+# partial at the top of every live non-English page.
+# ---------------------------------------------------------------------------
+
+[ai_translation_disclosure_body]
+other = "This page was translated by AI. English is the official version."  # AWAITING TRANSLATION
+
+[ai_translation_disclosure_link_text]
+other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Translation-pending notice (Architecture Decision 4)
+# Renders on placeholder pages (translation_status: placeholder).
+# ---------------------------------------------------------------------------
+
+[translation_pending_notice]
+other = "This page is not yet translated. Please read the English version for now."  # AWAITING TRANSLATION
+
+[translation_pending_link]
+other = "Read the English version"  # AWAITING TRANSLATION
+
+# ---------------------------------------------------------------------------
+# Generic UX
+# ---------------------------------------------------------------------------
+
+[read_more]
+other = "Read more"  # AWAITING TRANSLATION
+
+[skip_to_content]
+other = "Skip to main content"  # AWAITING TRANSLATION
+
+[menu]
+other = "Menu"  # AWAITING TRANSLATION
+
+[close]
+other = "Close"  # AWAITING TRANSLATION

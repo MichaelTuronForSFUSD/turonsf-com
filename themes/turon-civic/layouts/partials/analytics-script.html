@@ -1,0 +1,8 @@
+{{/*
+  analytics-script.html — includes the local Phase 1 event shim.
+  The Umami tracker script itself should remain in the existing v1.2.0 head
+  or footer partial with the live data-website-id. This shim safely no-ops
+  to console logging on preview if window.umami is absent.
+*/}}
+{{ $analytics := resources.Get "js/analytics.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $analytics.RelPermalink }}" integrity="{{ $analytics.Data.Integrity }}"></script>

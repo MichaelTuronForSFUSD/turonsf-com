@@ -1,0 +1,41 @@
+# Hugo build artifacts
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Operator-private content (audit F18)
+# Anything matching these patterns must NEVER be committed to a public repo.
+*.draft.md
+*.local.md
+*.private.md
+notes/
+private/
+draft/
+**/SAM_RAY_*
+**/LAUREN_*
+**/PRIVATE_*
+
+# Environment / secrets (none should exist; defense in depth per audit F15)
+.env
+.env.*
+*.local.toml
+*.secrets.toml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor backup files
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Cloudflare wrangler local state (if Workers are added in Phase 2)
+.wrangler/
+
+# Operator scratch files
+SCRATCH/
+TMP/
+*.scratch.*

@@ -1,0 +1,56 @@
+# data/endorsements.yaml
+# Single source of truth for endorsement records.
+# Reference: Architecture Decision 10.C.
+#
+# This file ships EMPTY in v1.3.0. The first endorsement triggers activation
+# via the content/endorsements.md `is_active: true` flip, no template changes.
+#
+# Schema example (commented out — uncomment and edit when first endorsement
+# is signed off by Sam Ray for labor language and Lauren for any financial
+# claims):
+#
+# endorsements:
+#   - id: "uesf-2026"
+#     name: "United Educators of San Francisco"
+#     display_name: "United Educators of San Francisco (UESF)"
+#     category: "labor"                  # labor | educator | parent | community
+#                                        # | elected | organization | newspaper | other
+#     title: ""                          # Optional individual title (empty for orgs)
+#     organization: "UESF"
+#     quote: ""                          # English quote text; translations live in `translations`
+#     quote_source: "Public statement, June 2026"
+#     quote_date: 2026-06-15
+#     logo: "/img/endorsements/uesf-logo.svg"
+#     logo_alt: "UESF — United Educators of San Francisco"
+#     url: "https://uesf.org/"
+#     weight: 100
+#     featured: true
+#     is_active: true
+#     translation_status:                # per-language live state for this endorser's quote
+#       es: "placeholder"
+#       zh-Hant: "placeholder"
+#       zh-Hans: "placeholder"
+#       tl: "placeholder"
+#       vi: "placeholder"
+#       ar: "placeholder"
+#     translations:
+#       es:
+#         quote: ""                      # filled in by Phase1_Translation_Workflow.md
+#         logo_alt: ""                   # localize where appropriate
+#       zh-Hant:
+#         quote: ""
+#         logo_alt: ""
+#       zh-Hans:
+#         quote: ""
+#         logo_alt: ""
+#       tl:
+#         quote: ""
+#         logo_alt: ""
+#       vi:
+#         quote: ""
+#         logo_alt: ""
+#       ar:
+#         quote: ""
+#         logo_alt: ""
+
+endorsements: []

@@ -1,0 +1,194 @@
+{{/*
+  language-switcher.html
+  --------------------------------------------------------------------------
+  Renders a text-only language switcher (Architecture Decision 3).
+
+  Placement:
+    - Desktop header right edge (included from header.html).
+    - Mobile drawer top, before main nav (included from mobile-nav.html).
+    - Footer language list as backup (included from footer.html).
+
+  Behavior:
+    - Click navigates to translated version of current page IF that page has
+      translation_status: live in data/translation_status.yaml. Otherwise it
+      falls back to the target-language home page; if that home is also not
+      live, it falls back to the English canonical home page.
+    - Active language is text-marked "Current" (i18n key: current_language).
+    - English is marked "official source" (i18n key: english_official_source).
+    - Each language label renders in its own script and carries the matching
+      lang attribute, satisfying WCAG 2.1 AA 3.1.2 (Language of Parts).
+    - 44x44 px minimum tap target on mobile (Architecture Decision 3 + WCAG).
+
+  RTL:
+    - When the current language is dir="rtl" (Arabic), the dropdown opens
+      from the inline start side. The data source order is preserved; the
+      visual flow follows CSS logical properties (no manual list reversal).
+
+  Flags:
+    - NEVER. Architecture Decision 3 forbids flags.
+  --------------------------------------------------------------------------
+*/}}
+
+{{ $currentLang := .Site.Language.Lang }}
+{{ $currentLangName := .Site.Language.LanguageName }}
+{{ $translationStatus := index .Site.Data.translation_status "pages" }}
+
+<nav class="lang-switcher"
+     aria-label="{{ i18n "language_switcher_label" }}"
+     data-current-lang="{{ $currentLang }}">
+
+  <button type="button"
+          class="lang-switcher__toggle"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="lang-switcher-menu"
+          data-lang-switcher-toggle>
+    <span lang="{{ $currentLang }}" class="lang-switcher__current-label">
+      {{ $currentLangName }}
+    </span>
+    <span class="lang-switcher__caret" aria-hidden="true">▾</span>
+  </button>
+
+  <ul id="lang-switcher-menu"
+      class="lang-switcher__menu"
+      role="listbox"
+      aria-label="{{ i18n "language_switcher_label" }}"
+      hidden>
+
+    {{- range .Site.Languages }}
+      {{ $linkLang := .Lang }}
+      {{ $linkName := .LanguageName }}
+      {{ $linkDir := "ltr" }}
+      {{ if eq $linkLang "ar" }}{{ $linkDir = "rtl" }}{{ end }}
+
+      {{/* Resolve the destination URL with three-step fallback:
+           1. Translated current page if status == live
+           2. Target-language home if status == live
+           3. English canonical home
+      */}}
+      {{ $destURL := "/" }}
+      {{ $isLive := false }}
+
+      {{ with $.AllTranslations }}
+        {{ range . }}
+          {{ if eq .Lang $linkLang }}
+            {{ $pageKey := printf "%s::%s" .RelPermalink $linkLang }}
+            {{ $statusForPage := index $translationStatus $pageKey | default "placeholder" }}
+            {{/* For the canonical English page we always consider it live. */}}
+            {{ if eq $linkLang "en" }}
+              {{ $destURL = .RelPermalink }}
+              {{ $isLive = true }}
+            {{ else if eq $statusForPage "live" }}
+              {{ $destURL = .RelPermalink }}
+              {{ $isLive = true }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ if not $isLive }}
+        {{/* Fallback: target-language home if its translation_status is live. */}}
+        {{ $homeKey := printf "/::%s" $linkLang }}
+        {{ $homeStatus := index $translationStatus $homeKey | default "placeholder" }}
+        {{ if or (eq $linkLang "en") (eq $homeStatus "live") }}
+          {{ if eq $linkLang "en" }}
+            {{ $destURL = "/" }}
+          {{ else }}
+            {{ $destURL = printf "/%s/" $linkLang }}
+          {{ end }}
+        {{ else }}
+          {{/* Last fallback: English canonical home. */}}
+          {{ $destURL = "/" }}
+        {{ end }}
+      {{ end }}
+
+      <li role="none" class="lang-switcher__item">
+        <a href="{{ $destURL }}"
+           role="option"
+           lang="{{ $linkLang }}"
+           dir="{{ $linkDir }}"
+           hreflang="{{ $linkLang }}"
+           class="lang-switcher__link{{ if eq $linkLang $currentLang }} is-current{{ end }}"
+           {{ if eq $linkLang $currentLang }}aria-current="true"{{ end }}>
+          <span class="lang-switcher__label">{{ $linkName }}</span>
+          {{- if eq $linkLang $currentLang -}}
+            <span class="lang-switcher__marker">— {{ i18n "current_language" }}</span>
+          {{- else if eq $linkLang "en" -}}
+            <span class="lang-switcher__marker">— {{ i18n "english_official_source" }}</span>
+          {{- end -}}
+        </a>
+      </li>
+    {{- end }}
+  </ul>
+</nav>
+
+{{/* Accessibility script — keyboard navigation + open/close.
+     Inline rather than external to keep first-paint zero-blocking on mobile
+     (Research §5.4 mobile-only voter share). No third-party JS.
+*/}}
+<script>
+(function () {
+  var toggle = document.querySelector('[data-lang-switcher-toggle]');
+  if (!toggle) return;
+  var menu = document.getElementById('lang-switcher-menu');
+  if (!menu) return;
+  var links = menu.querySelectorAll('.lang-switcher__link');
+
+  function setOpen(open) {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      menu.removeAttribute('hidden');
+    } else {
+      menu.setAttribute('hidden', '');
+    }
+  }
+
+  toggle.addEventListener('click', function () {
+    var isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    setOpen(!isOpen);
+    if (!isOpen && links.length) {
+      links[0].focus();
+    }
+  });
+
+  toggle.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      setOpen(true);
+      if (links.length) links[0].focus();
+    }
+  });
+
+  links.forEach(function (link, idx) {
+    link.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        var next = links[idx + 1] || links[0];
+        next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        var prev = links[idx - 1] || links[links.length - 1];
+        prev.focus();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        setOpen(false);
+        toggle.focus();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        links[0].focus();
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        links[links.length - 1].focus();
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!toggle.parentNode.contains(e.target)) {
+      setOpen(false);
+    }
+  });
+})();
+</script>
+
+{{/* End language-switcher.html */}}

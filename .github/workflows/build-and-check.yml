@@ -1,0 +1,68 @@
+name: build-and-check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# Permissions are minimal — read-only on contents. No write needed; deploy is
+# Cloudflare Pages on push-to-main, not GitHub Actions.
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    name: Phase 1 preflight checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+          fetch-depth: 1
+
+      - name: i18n key parity check
+        run: |
+          chmod +x bin/check-i18n-parity.sh
+          ./bin/check-i18n-parity.sh
+
+      - name: No JD/attorney/lawyer references (LOCKED constraint)
+        run: |
+          chmod +x bin/check-no-jd-references.sh
+          ./bin/check-no-jd-references.sh
+
+      - name: UTM hygiene on outbound CTAs (will run after Hugo build)
+        run: |
+          chmod +x bin/check-utm-hygiene.sh
+          echo "UTM hygiene check defers to post-build step (needs rendered HTML)."
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.125.7'
+          extended: true
+
+      - name: Build (Hugo)
+        run: |
+          hugo --minify --logLevel warn --gc
+
+      - name: UTM hygiene (post-build, on rendered HTML)
+        run: |
+          ./bin/check-utm-hygiene.sh public/
+
+      - name: FPPC footer present on every rendered page
+        run: |
+          chmod +x bin/check-fppc-footer.sh
+          ./bin/check-fppc-footer.sh public/
+
+      - name: translation_status.yaml consistency
+        run: |
+          chmod +x bin/check-translation-status.sh
+          ./bin/check-translation-status.sh
+
+  # No deploy job here — Cloudflare Pages is configured to deploy on push-to-main
+  # directly via its own integration. Keeping deploy outside GitHub Actions
+  # avoids the need for a Cloudflare API token in repo secrets (per audit F7).

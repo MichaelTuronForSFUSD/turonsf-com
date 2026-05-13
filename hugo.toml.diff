@@ -1,0 +1,118 @@
+--- hugo.toml	(v1.2.0)
++++ hugo.toml	(v1.3.0)
+@@ -1,10 +1,17 @@
+ baseURL = "https://turonsf.com/"
+-languageCode = "en-us"
+ title = "Michael Turon for SFUSD Board of Education"
+ theme = "turon-civic"
+ enableRobotsTXT = true
+ enableGitInfo = true
+ timeout = "60s"
++defaultContentLanguage = "en"
++defaultContentLanguageInSubdir = false
++
++# Language-aware content matching:
++# - .es.md, .zh-Hant.md, .zh-Hans.md, .tl.md, .vi.md, .ar.md suffixes
++#   link to the English source page with the same base name.
++# - English remains at root URLs (/about/), not /en/about/.
++# Reference: Architecture Decision 1; Hugo multilingual docs.
+ 
+ [params]
+   description = "Michael Turon, Data Scientist and SFUSD Parent, running for Board of Education November 3, 2026."
+@@ -16,6 +23,55 @@
+   email = "info@turonsf.com"
+   calendar_url = "https://calendar.app.google/Jqmp55mQB5MY64tU6"
+ 
++# ---------------------------------------------------------------------------
++# Multilingual configuration (v1.3.0)
++# Decision register: OIL 2026-05-12.
++# Locked language scope: en + es + zh-Hant + zh-Hans + tl + vi + ar.
++# Cantonese -> zh-Hant; Mandarin -> zh-Hans (SFUSD policy alignment).
++# ---------------------------------------------------------------------------
++
++[languages]
++
++  [languages.en]
++    languageCode = "en"
++    languageName = "English"
++    weight = 1
++    title = "Michael Turon for SFUSD Board of Education"
++    [languages.en.params]
++      languageName = "English"
++      dir = "ltr"
++
++  [languages.es]
++    languageCode = "es"
++    languageName = "Español"
++    weight = 2
++    title = "Michael Turon para el Consejo de Educación de SFUSD"
++    [languages.es.params]
++      languageName = "Español"
++      dir = "ltr"
++
++  [languages.zh-Hant]
++    languageCode = "zh-Hant"
++    languageName = "繁體中文"
++    weight = 3
++    title = "麥可・圖隆參選舊金山聯合校區教育委員會"
++    [languages.zh-Hant.params]
++      languageName = "繁體中文"
++      dir = "ltr"
++
++  [languages.zh-Hans]
++    languageCode = "zh-Hans"
++    languageName = "简体中文"
++    weight = 4
++    title = "麦可・图隆参选旧金山联合校区教育委员会"
++    [languages.zh-Hans.params]
++      languageName = "简体中文"
++      dir = "ltr"
++
++  [languages.tl]
++    languageCode = "tl"
++    languageName = "Tagalog"
++    weight = 5
++    title = "Michael Turon para sa SFUSD Board of Education"
++    [languages.tl.params]
++      languageName = "Tagalog"
++      dir = "ltr"
++
++  [languages.vi]
++    languageCode = "vi"
++    languageName = "Tiếng Việt"
++    weight = 6
++    title = "Michael Turon ứng cử Hội đồng Giáo dục SFUSD"
++    [languages.vi.params]
++      languageName = "Tiếng Việt"
++      dir = "ltr"
++
++  [languages.ar]
++    languageCode = "ar"
++    languageName = "العربية"
++    weight = 7
++    title = "مايكل تورون لمجلس تعليم منطقة سان فرانسيسكو"
++    [languages.ar.params]
++      languageName = "العربية"
++      dir = "rtl"
++
++[markup]
++  [markup.goldmark.renderer]
++    unsafe = true
++
++# translation_status drives noindex + hreflang inclusion at template time.
++# Non-live placeholder pages: render in target language, link to English source,
++# carry noindex, and stay out of sitemap+hreflang. See Architecture Decision 4.
++
+ [outputs]
+   home = ["HTML", "RSS"]
+   page = ["HTML"]
+
+# --- END OF DIFF -----------------------------------------------------------
+# Acceptance gates (Architecture Decision 11 §1):
+#   1. `hugo --minify` succeeds; reports building 7 languages.
+#   2. English builds at root URLs (e.g. /about/), not /en/about/.
+#   3. Non-English builds at /<lang>/ prefixes (e.g. /es/about/, /ar/about/).
+#   4. No "translation key has no destination" warnings.
+#   5. Trust-strip figures (Sequence F Option β) survive unchanged.
+#   6. Direction A design tokens (--navy-900, --accent, --cream-50) survive
+#      unchanged in tokens.css (verified by Deliverable 5 diff).

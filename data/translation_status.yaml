@@ -1,0 +1,118 @@
+# data/translation_status.yaml
+# Per-page per-language translation status table.
+# Architecture Decisions 1, 2, 4, 9.
+#
+# This is the SINGLE source of truth that drives:
+#   - hreflang inclusion/exclusion (themes/.../head-hreflang.html)
+#   - language switcher routing fallback (themes/.../language-switcher.html)
+#   - sitemap.xml live-page selection (layouts/sitemap.xml)
+#   - AI translation disclosure rendering vs translation-pending notice
+#     (themes/.../ai-translation-disclosure.html)
+#
+# Key format: "{page-relpath}::{lang}". Page relpath uses trailing slash and
+# starts with "/". Example: "/about/::es". The English row is the implicit
+# canonical and is always treated as live by the templates.
+#
+# Status values (Architecture Decision 9 §4):
+#   placeholder         scaffold exists; not translated; renders pending notice
+#   ai_translated       AI draft applied; pre-review; can publish for preview
+#   reviewed            operator + Sam Ray + Lauren review complete
+#   community_corrected updated after public correction from info@turonsf.com
+#   live                public production state
+#
+# v1.3.0 ships with every non-English entry at `placeholder`. The operator's
+# AI translation workflow (Phase1_Translation_Workflow.md) progresses each
+# entry through ai_translated -> reviewed -> live as each page completes.
+
+pages:
+
+  # ----- /  (home) -----
+  "/::es":      "placeholder"
+  "/::zh-Hant": "placeholder"
+  "/::zh-Hans": "placeholder"
+  "/::tl":      "placeholder"
+  "/::vi":      "placeholder"
+  "/::ar":      "placeholder"
+
+  # ----- /about/ -----
+  "/about/::es":      "placeholder"
+  "/about/::zh-Hant": "placeholder"
+  "/about/::zh-Hans": "placeholder"
+  "/about/::tl":      "placeholder"
+  "/about/::vi":      "placeholder"
+  "/about/::ar":      "placeholder"
+
+  # ----- /platform/ -----
+  "/platform/::es":      "placeholder"
+  "/platform/::zh-Hant": "placeholder"
+  "/platform/::zh-Hans": "placeholder"
+  "/platform/::tl":      "placeholder"
+  "/platform/::vi":      "placeholder"
+  "/platform/::ar":      "placeholder"
+
+  # ----- /platform/pillar-1/ (Special Education) -----
+  "/platform/pillar-1/::es":      "placeholder"
+  "/platform/pillar-1/::zh-Hant": "placeholder"
+  "/platform/pillar-1/::zh-Hans": "placeholder"
+  "/platform/pillar-1/::tl":      "placeholder"
+  "/platform/pillar-1/::vi":      "placeholder"
+  "/platform/pillar-1/::ar":      "placeholder"
+
+  # ----- /platform/pillar-2/ (Budget Discipline) -----
+  "/platform/pillar-2/::es":      "placeholder"
+  "/platform/pillar-2/::zh-Hant": "placeholder"
+  "/platform/pillar-2/::zh-Hans": "placeholder"
+  "/platform/pillar-2/::tl":      "placeholder"
+  "/platform/pillar-2/::vi":      "placeholder"
+  "/platform/pillar-2/::ar":      "placeholder"
+
+  # ----- /platform/pillar-3/ (Teacher Retention) -----
+  "/platform/pillar-3/::es":      "placeholder"
+  "/platform/pillar-3/::zh-Hant": "placeholder"
+  "/platform/pillar-3/::zh-Hans": "placeholder"
+  "/platform/pillar-3/::tl":      "placeholder"
+  "/platform/pillar-3/::vi":      "placeholder"
+  "/platform/pillar-3/::ar":      "placeholder"
+
+  # ----- /endorsements/ -----
+  "/endorsements/::es":      "placeholder"
+  "/endorsements/::zh-Hant": "placeholder"
+  "/endorsements/::zh-Hans": "placeholder"
+  "/endorsements/::tl":      "placeholder"
+  "/endorsements/::vi":      "placeholder"
+  "/endorsements/::ar":      "placeholder"
+
+  # ----- /volunteer/ -----
+  "/volunteer/::es":      "placeholder"
+  "/volunteer/::zh-Hant": "placeholder"
+  "/volunteer/::zh-Hans": "placeholder"
+  "/volunteer/::tl":      "placeholder"
+  "/volunteer/::vi":      "placeholder"
+  "/volunteer/::ar":      "placeholder"
+
+  # ----- /donate/ (note: /give/ is an alias, no separate scaffold) -----
+  "/donate/::es":      "placeholder"
+  "/donate/::zh-Hant": "placeholder"
+  "/donate/::zh-Hans": "placeholder"
+  "/donate/::tl":      "placeholder"
+  "/donate/::vi":      "placeholder"
+  "/donate/::ar":      "placeholder"
+
+  # ----- /contact/ -----
+  "/contact/::es":      "placeholder"
+  "/contact/::zh-Hant": "placeholder"
+  "/contact/::zh-Hans": "placeholder"
+  "/contact/::tl":      "placeholder"
+  "/contact/::vi":      "placeholder"
+  "/contact/::ar":      "placeholder"
+
+  # ----- /platform/uesf-questionnaire/ (CONDITIONAL — gated on Alex Schmaus permission) -----
+  # These rows are only consulted when content/platform/uesf-questionnaire.md
+  # has is_active: true. While is_active: false, the page returns 404 and
+  # these rows are inert. Templates check is_active first.
+  "/platform/uesf-questionnaire/::es":      "placeholder"
+  "/platform/uesf-questionnaire/::zh-Hant": "placeholder"
+  "/platform/uesf-questionnaire/::zh-Hans": "placeholder"
+  "/platform/uesf-questionnaire/::tl":      "placeholder"
+  "/platform/uesf-questionnaire/::vi":      "placeholder"
+  "/platform/uesf-questionnaire/::ar":      "placeholder"

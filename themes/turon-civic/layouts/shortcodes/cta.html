@@ -1,0 +1,107 @@
+{{/*
+  cta.html — campaign CTA wrapper for turonsf.com v1.3.0+
+
+  Auto-appends UTM parameters to outbound campaign URLs and attaches the
+  data-event + data-source attributes that the analytics.js shim reads to
+  fire Umami events on click. Operator never hand-codes UTM strings or
+  event names; the shortcode is the single source of truth for CTA wiring.
+
+  Usage:
+    {{< cta
+      kind="newsletter"
+      source="hero"
+      label_key="newsletter_cta_primary"
+      style="primary"
+    >}}
+
+  Parameters:
+    kind        Required. Must be one of: newsletter | donate | volunteer | platform | email
+                Resolves to the destination URL via site config:
+                  site.Params.cta_destinations.{kind}
+    source      Required. The location where this CTA renders.
+                Convention: hero | nav | footer | utility | pillar-1 | pillar-2 | pillar-3
+                            | ai_disclosure | pending_notice | endorsements_page
+                Used for the utm_content parameter (joined with the page language)
+                and the data-source attribute for Umami dimension reporting.
+    label_key   Required. i18n key for the visible CTA label.
+                The key must exist in every language TOML file in themes/turon-civic/i18n/.
+    style       Optional. Default "primary".
+                Must be one of: primary | secondary | tertiary | text | link
+                Renders the appropriate CSS class. The arrow glyph is appended
+                automatically for primary and secondary styles.
+
+  Reference: docs/Phase1_Analytics_Spec.md §3
+*/}}
+
+{{- $kind := .Get "kind" -}}
+{{- $source := .Get "source" -}}
+{{- $labelKey := .Get "label_key" -}}
+{{- $style := .Get "style" | default "primary" -}}
+{{- $lang := .Page.Lang -}}
+
+{{- /* Validate kind */ -}}
+{{- $validKinds := slice "newsletter" "donate" "volunteer" "platform" "email" -}}
+{{- if not (in $validKinds $kind) -}}
+  {{- errorf "cta.html: invalid kind %q (must be one of %v)" $kind $validKinds -}}
+{{- end -}}
+
+{{- /* Resolve destination from site config */ -}}
+{{- $destinations := .Site.Params.cta_destinations -}}
+{{- $baseURL := index $destinations $kind -}}
+{{- if not $baseURL -}}
+  {{- errorf "cta.html: no destination configured for kind %q. Add to hugo.toml [params.cta_destinations]." $kind -}}
+{{- end -}}
+
+{{- /* Build utm_content as {source}-{lang} */ -}}
+{{- $utmContent := printf "%s-%s" $source $lang -}}
+
+{{- /* Compose full URL with UTM parameters. mailto: links get the UTM in the
+       subject param so it survives mail-client roundtrips. */ -}}
+{{- $fullURL := "" -}}
+{{- if hasPrefix $baseURL "mailto:" -}}
+  {{- /* mailto: append UTM as subject suffix for backend log search */ -}}
+  {{- $subject := printf "Inquiry [%s]" $utmContent -}}
+  {{- $fullURL = printf "%s?subject=%s" $baseURL (urlquery $subject) -}}
+{{- else -}}
+  {{- /* http(s): append UTM via ?/&  */ -}}
+  {{- $separator := "?" -}}
+  {{- if in $baseURL "?" -}}{{- $separator = "&" -}}{{- end -}}
+  {{- $fullURL = printf "%s%sutm_source=turonsf&utm_medium=web&utm_campaign=phase1&utm_content=%s" $baseURL $separator $utmContent -}}
+{{- end -}}
+
+{{- /* Map kind to Umami event name */ -}}
+{{- $eventName := "" -}}
+{{- if eq $kind "newsletter" -}}{{- $eventName = "newsletter_cta_click" -}}
+{{- else if eq $kind "donate" -}}{{- $eventName = "donate_cta_click" -}}
+{{- else if eq $kind "volunteer" -}}{{- $eventName = "volunteer_cta_click" -}}
+{{- else if eq $kind "email" -}}{{- $eventName = "email_contact_click" -}}
+{{- else if eq $kind "platform" -}}{{- $eventName = "platform_link_click" -}}
+{{- end -}}
+
+{{- /* Map style to CSS class set */ -}}
+{{- $classes := slice "cta" -}}
+{{- if eq $style "primary" -}}{{- $classes = $classes | append "btn" "btn--primary" -}}
+{{- else if eq $style "secondary" -}}{{- $classes = $classes | append "btn" "btn--secondary" -}}
+{{- else if eq $style "tertiary" -}}{{- $classes = $classes | append "hero__platform-link" -}}
+{{- else if eq $style "text" -}}{{- $classes = $classes | append "hero__donate-link" -}}
+{{- else if eq $style "link" -}}{{- $classes = $classes | append "cta--inline" -}}
+{{- end -}}
+{{- $classes = $classes | append (printf "cta--%s" $kind) -}}
+
+{{- /* Mark primary hero CTA for the IntersectionObserver impression event */ -}}
+{{- $isHeroPrimary := and (eq $source "hero") (eq $kind "newsletter") (eq $style "primary") -}}
+
+<a href="{{ $fullURL }}"
+   class="{{ delimit $classes " " }}"
+   data-event="{{ $eventName }}"
+   data-source="{{ $source }}"
+   {{- if $isHeroPrimary }} data-cta-primary{{ end -}}
+   {{- if hasPrefix $baseURL "mailto:" }} rel="noopener"{{ else }} target="_blank" rel="noopener noreferrer"{{ end -}}
+   >
+  {{ i18n $labelKey }}
+  {{- if or (eq $style "primary") (eq $style "secondary") -}}
+    <span class="btn__arrow" aria-hidden="true">→</span>
+  {{- else if eq $style "text" -}}
+    <span class="arrow" aria-hidden="true">→</span>
+  {{- end -}}
+</a>
