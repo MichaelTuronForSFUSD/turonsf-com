@@ -86,7 +86,7 @@ hreflang.
 
 # AWAITING TRANSLATION for non-English. English source:
 # "Paid for by Michael Turon for SFUSD Board of Education 2026.
-#  FPPC ID 1482971. Treasurer: Lauren Turon."
+#  FPPC ID 1482971."
 # See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
 
 ## Crawler guidance
