@@ -28,7 +28,7 @@ a { color: var(--navy-900); text-decoration-thickness: 0.08em; text-underline-of
 .nav-links a { font-size: 0.95rem; text-decoration: none; }
 .lang-switcher { position: relative; }
 .lang-switcher__toggle { border: 1px solid var(--line); border-radius: 999px; background: transparent; padding: 0.45rem 0.7rem; cursor: pointer; }
-.lang-switcher__menu { position: absolute; right: 0; top: 115%; min-width: 230px; list-style: none; margin: 0; padding: 0.4rem; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 45px rgba(7, 26, 47, 0.14); }
+.lang-switcher__menu { z-index: 200; position: absolute; right: 0; top: 115%; min-width: 230px; list-style: none; margin: 0; padding: 0.4rem; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 45px rgba(7, 26, 47, 0.14); }
 .lang-switcher__link { display: block; padding: 0.55rem 0.65rem; text-decoration: none; border-radius: 10px; }
 .lang-switcher__link:hover, .lang-switcher__link:focus { background: var(--cream-50); }
 .hero { padding: clamp(3rem, 7vw, 7rem) 0 2.5rem; }
