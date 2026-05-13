@@ -67,3 +67,7 @@ a { color: var(--navy-900); text-decoration-thickness: 0.08em; text-underline-of
   .trust-cell { border-right: 0; border-bottom: 1px solid var(--line); }
   .trust-cell:last-child { border-bottom: 0; }
 }
+.newsletter-page { max-width: 600px; margin-inline: auto; padding: clamp(2rem, 5vw, 4rem) 1rem; }
+.newsletter-hero { margin-bottom: 2.5rem; }
+.newsletter-subhead { font-size: 1.1rem; color: var(--navy-900); max-width: 520px; line-height: 1.6; margin-top: 1rem; }
+.sib-form { margin-inline: auto; }

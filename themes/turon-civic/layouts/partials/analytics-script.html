@@ -8,3 +8,5 @@
 <script defer src="{{ $analytics.RelPermalink }}" integrity="{{ $analytics.Data.Integrity }}"></script>
 {{ $ls := resources.Get "js/lang-switcher.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $ls.RelPermalink }}" integrity="{{ $ls.Data.Integrity }}"></script>
+{{ $bc := resources.Get "js/brevo-config.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $bc.RelPermalink }}" integrity="{{ $bc.Data.Integrity }}"></script>

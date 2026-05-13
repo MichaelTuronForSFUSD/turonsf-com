@@ -116,3 +116,11 @@ pages:
   "/platform/uesf-questionnaire/::tl":      "placeholder"
   "/platform/uesf-questionnaire/::vi":      "placeholder"
   "/platform/uesf-questionnaire/::ar":      "placeholder"
+
+  # ----- /newsletter/ -----
+  "/newsletter/::es": "placeholder"
+  "/newsletter/::zh-Hant": "placeholder"
+  "/newsletter/::zh-Hans": "placeholder"
+  "/newsletter/::tl": "placeholder"
+  "/newsletter/::vi": "placeholder"
+  "/newsletter/::ar": "placeholder"

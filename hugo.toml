@@ -21,7 +21,7 @@ summaryLength = 32
   umami_website_id = ""
 
 [params.cta_destinations]
-  newsletter = "https://sibforms.com/serve/MUIFAA_REPLACE_BEFORE_LIVE"
+  newsletter = "/newsletter/"
   donate     = "https://secure.actblue.com/donate/turonsf"
   volunteer  = "https://actionnetwork.org/forms/turonsf-volunteer"
   email      = "mailto:info@turonsf.com"
