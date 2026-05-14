@@ -18,7 +18,7 @@
   <nav class="lang-eyebrow" aria-label="{{ i18n "language_switcher_label" }}">
     <div class="lang-eyebrow__inner">
       {{ $currentLang := .Site.Language.Lang }}
-      {{ $labels := dict "en" "EN" "es" "Español" "zh-Hant" "繁體" "zh-Hans" "简体" "tl" "Fil" "vi" "Việt" "ar" "عربي" }}
+      {{ $labels := dict "en" "EN" "es" "Español" "zh-hant" "繁體" "zh-hans" "简体" "tl" "Fil" "vi" "Việt" "ar" "عربي" }}
       {{ range $i, $lang := .Site.Languages }}
         {{ if $i }}<span class="lang-eyebrow__sep" aria-hidden="true">|</span>{{ end }}
         {{ $href := printf "/%s/" $lang.Lang }}
