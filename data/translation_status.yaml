@@ -27,84 +27,84 @@
 pages:
 
   # ----- /  (home) -----
-  "/::es":      "ai_translated"
+  "/::es":      "live"
   "/::zh-Hant": "live"
   "/::zh-Hans": "live"
-  "/::tl":      "ai_translated"
-  "/::vi":      "ai_translated"
-  "/::ar":      "ai_translated"
+  "/::tl":      "live"
+  "/::vi":      "live"
+  "/::ar":      "live"
 
   # ----- /about/ -----
-  "/about/::es":      "ai_translated"
+  "/about/::es":      "live"
   "/about/::zh-Hant": "live"
   "/about/::zh-Hans": "live"
-  "/about/::tl":      "ai_translated"
-  "/about/::vi":      "ai_translated"
-  "/about/::ar":      "ai_translated"
+  "/about/::tl":      "live"
+  "/about/::vi":      "live"
+  "/about/::ar":      "live"
 
   # ----- /platform/ -----
-  "/platform/::es":      "ai_translated"
+  "/platform/::es":      "live"
   "/platform/::zh-Hant": "live"
   "/platform/::zh-Hans": "live"
-  "/platform/::tl":      "ai_translated"
-  "/platform/::vi":      "ai_translated"
-  "/platform/::ar":      "ai_translated"
+  "/platform/::tl":      "live"
+  "/platform/::vi":      "live"
+  "/platform/::ar":      "live"
 
   # ----- /platform/pillar-1/ (Special Education) -----
-  "/platform/pillar-1/::es":      "ai_translated"
+  "/platform/pillar-1/::es":      "live"
   "/platform/pillar-1/::zh-Hant": "live"
   "/platform/pillar-1/::zh-Hans": "live"
-  "/platform/pillar-1/::tl":      "ai_translated"
-  "/platform/pillar-1/::vi":      "ai_translated"
-  "/platform/pillar-1/::ar":      "ai_translated"
+  "/platform/pillar-1/::tl":      "live"
+  "/platform/pillar-1/::vi":      "live"
+  "/platform/pillar-1/::ar":      "live"
 
   # ----- /platform/pillar-2/ (Budget Discipline) -----
-  "/platform/pillar-2/::es":      "ai_translated"
+  "/platform/pillar-2/::es":      "live"
   "/platform/pillar-2/::zh-Hant": "live"
   "/platform/pillar-2/::zh-Hans": "live"
-  "/platform/pillar-2/::tl":      "ai_translated"
-  "/platform/pillar-2/::vi":      "ai_translated"
-  "/platform/pillar-2/::ar":      "ai_translated"
+  "/platform/pillar-2/::tl":      "live"
+  "/platform/pillar-2/::vi":      "live"
+  "/platform/pillar-2/::ar":      "live"
 
   # ----- /platform/pillar-3/ (Teacher Retention) -----
-  "/platform/pillar-3/::es":      "ai_translated"
+  "/platform/pillar-3/::es":      "live"
   "/platform/pillar-3/::zh-Hant": "live"
   "/platform/pillar-3/::zh-Hans": "live"
-  "/platform/pillar-3/::tl":      "ai_translated"
-  "/platform/pillar-3/::vi":      "ai_translated"
-  "/platform/pillar-3/::ar":      "ai_translated"
+  "/platform/pillar-3/::tl":      "live"
+  "/platform/pillar-3/::vi":      "live"
+  "/platform/pillar-3/::ar":      "live"
 
   # ----- /endorsements/ -----
-  "/endorsements/::es":      "ai_translated"
+  "/endorsements/::es":      "live"
   "/endorsements/::zh-Hant": "live"
   "/endorsements/::zh-Hans": "live"
-  "/endorsements/::tl":      "ai_translated"
-  "/endorsements/::vi":      "ai_translated"
-  "/endorsements/::ar":      "ai_translated"
+  "/endorsements/::tl":      "live"
+  "/endorsements/::vi":      "live"
+  "/endorsements/::ar":      "live"
 
   # ----- /volunteer/ -----
-  "/volunteer/::es":      "ai_translated"
+  "/volunteer/::es":      "live"
   "/volunteer/::zh-Hant": "live"
   "/volunteer/::zh-Hans": "live"
-  "/volunteer/::tl":      "ai_translated"
-  "/volunteer/::vi":      "ai_translated"
-  "/volunteer/::ar":      "ai_translated"
+  "/volunteer/::tl":      "live"
+  "/volunteer/::vi":      "live"
+  "/volunteer/::ar":      "live"
 
   # ----- /donate/ (note: /give/ is an alias, no separate scaffold) -----
-  "/donate/::es":      "ai_translated"
+  "/donate/::es":      "live"
   "/donate/::zh-Hant": "live"
   "/donate/::zh-Hans": "live"
-  "/donate/::tl":      "ai_translated"
-  "/donate/::vi":      "ai_translated"
-  "/donate/::ar":      "ai_translated"
+  "/donate/::tl":      "live"
+  "/donate/::vi":      "live"
+  "/donate/::ar":      "live"
 
   # ----- /contact/ -----
-  "/contact/::es":      "ai_translated"
+  "/contact/::es":      "live"
   "/contact/::zh-Hant": "live"
   "/contact/::zh-Hans": "live"
-  "/contact/::tl":      "ai_translated"
-  "/contact/::vi":      "ai_translated"
-  "/contact/::ar":      "ai_translated"
+  "/contact/::tl":      "live"
+  "/contact/::vi":      "live"
+  "/contact/::ar":      "live"
 
   # ----- /platform/uesf-questionnaire/ (CONDITIONAL — gated on Alex Schmaus permission) -----
   # These rows are only consulted when content/platform/uesf-questionnaire.md
