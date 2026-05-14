@@ -145,7 +145,8 @@
    * --------------------------------------------------------------------- */
   window.addEventListener('sib_form_success', function (e) {
     var detail = (e && e.detail) || {};
-    track('newsletter_signup_submit', {
+    var evtName = window.location.pathname.indexOf('volunteer') !== -1 ? 'volunteer_signup_submit' : 'newsletter_signup_submit';
+    track(evtName, {
       source: detail.source || 'unknown',
       list_id: detail.list_id || ''
     });
