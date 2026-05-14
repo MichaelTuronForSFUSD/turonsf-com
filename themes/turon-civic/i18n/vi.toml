@@ -165,11 +165,7 @@ other = "info@turonsf.com"
 # Template labels
 # ---------------------------------------------------------------------------
 
-[utility_election_label]
-other = "Bầu cử"
 
-[election_date_display]
-other = "Ngày 3 tháng 11 năm 2026"
 
 [page_eyebrow]
 other = "Michael Turon · Hội đồng Giáo dục SFUSD · 2026"

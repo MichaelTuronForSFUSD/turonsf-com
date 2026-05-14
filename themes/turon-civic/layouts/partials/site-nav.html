@@ -8,5 +8,4 @@
     <a href="{{ "/contact/" | relLangURL }}" data-event="nav_click" data-source="contact">{{ i18n "contact" }}</a>
   </div>
   {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "donate" "source" "nav-donate" "label_key" "donate_cta" "style" "secondary") }}
-  {{ partial "language-switcher.html" . }}
 </nav>

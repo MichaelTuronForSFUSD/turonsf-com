@@ -15,7 +15,20 @@
 </head>
 <body>
   <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
-  <div class="utility-bar">{{ i18n "utility_election_label" }}: {{ i18n "election_date_display" }} — FPPC ID {{ .Site.Params.fppc_id }}</div>
+  <nav class="lang-eyebrow" aria-label="{{ i18n "language_switcher_label" }}">
+    <div class="lang-eyebrow__inner">
+      {{ $currentLang := .Site.Language.Lang }}
+      {{ $labels := dict "en" "EN" "es" "Español" "zh-Hant" "繁體" "zh-Hans" "简体" "tl" "Fil" "vi" "Việt" "ar" "عربي" }}
+      {{ range $i, $lang := .Site.Languages }}
+        {{ if $i }}<span class="lang-eyebrow__sep" aria-hidden="true">|</span>{{ end }}
+        {{ $href := printf "/%s/" $lang.Lang }}
+        {{ range $.AllTranslations }}{{ if eq .Lang $lang.Lang }}{{ $href = .RelPermalink }}{{ end }}{{ end }}
+        {{ $isActive := eq $lang.Lang $currentLang }}
+        {{ $label := index $labels $lang.Lang | default $lang.Lang }}
+        <a href="{{ $href }}" class="lang-eyebrow__link{{ if $isActive }} lang-eyebrow__link--active{{ end }}"{{ if $isActive }} aria-current="true"{{ end }} hreflang="{{ $lang.Lang }}">{{ if eq $lang.Lang "ar" }}<bdi dir="rtl">{{ $label }}</bdi>{{ else }}{{ $label }}{{ end }}</a>
+      {{ end }}
+    </div>
+  </nav>
   <header class="site-header">{{ partial "site-nav.html" . }}</header>
   <main id="main">
     {{ partial "ai-translation-disclosure.html" . }}

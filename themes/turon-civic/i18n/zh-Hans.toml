@@ -165,11 +165,7 @@ other = "info@turonsf.com"
 # Template labels
 # ---------------------------------------------------------------------------
 
-[utility_election_label]
-other = "选举"
 
-[election_date_display]
-other = "2026 年 11 月 3 日"
 
 [page_eyebrow]
 other = "Michael Turon · SFUSD 教育委员会 · 2026"
