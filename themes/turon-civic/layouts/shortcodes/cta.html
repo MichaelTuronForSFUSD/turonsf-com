@@ -58,15 +58,22 @@
 {{- /* Compose full URL with UTM parameters. mailto: links get the UTM in the
        subject param so it survives mail-client roundtrips. */ -}}
 {{- $fullURL := "" -}}
+{{- $isHTTP := or (hasPrefix $baseURL "https://") (hasPrefix $baseURL "http://") -}}
 {{- if hasPrefix $baseURL "mailto:" -}}
   {{- /* mailto: append UTM as subject suffix for backend log search */ -}}
   {{- $subject := printf "Inquiry [%s]" $utmContent -}}
   {{- $fullURL = printf "%s?subject=%s" $baseURL (urlquery $subject) -}}
-{{- else -}}
-  {{- /* http(s): append UTM via ?/&  */ -}}
+{{- else if $isHTTP -}}
+  {{- /* http(s): append UTM via ?/& */ -}}
   {{- $separator := "?" -}}
   {{- if in $baseURL "?" -}}{{- $separator = "&" -}}{{- end -}}
   {{- $fullURL = printf "%s%sutm_source=turonsf&utm_medium=web&utm_campaign=phase1&utm_content=%s" $baseURL $separator $utmContent -}}
+{{- else -}}
+  {{- /* Internal links localize through relLangURL and keep UTM for campaign attribution. */ -}}
+  {{- $localizedURL := $baseURL | relLangURL -}}
+  {{- $separator := "?" -}}
+  {{- if in $localizedURL "?" -}}{{- $separator = "&" -}}{{- end -}}
+  {{- $fullURL = printf "%s%sutm_source=turonsf&utm_medium=web&utm_campaign=phase1&utm_content=%s" $localizedURL $separator $utmContent -}}
 {{- end -}}
 
 {{- /* Map kind to Umami event name */ -}}
@@ -96,7 +103,7 @@
    data-event="{{ $eventName }}"
    data-source="{{ $source }}"
    {{- if $isHeroPrimary }} data-cta-primary{{ end -}}
-   {{- if hasPrefix $baseURL "mailto:" }} rel="noopener"{{ else }} target="_blank" rel="noopener noreferrer"{{ end -}}
+   {{- if hasPrefix $baseURL "mailto:" }} rel="noopener"{{ else if $isHTTP }} target="_blank" rel="noopener noreferrer"{{ end -}}
    >
   {{ i18n $labelKey }}
   {{- if or (eq $style "primary") (eq $style "secondary") -}}

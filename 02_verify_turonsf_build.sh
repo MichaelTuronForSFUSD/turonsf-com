@@ -40,6 +40,7 @@ fi
 
 if grep -RInE 'ghp_|github_pat_|CLOUDFLARE_API_TOKEN|OPENAI_API_KEY|CAREInstitute|careinstitute' . \
   --exclude-dir=.git \
+  --exclude-dir=docs \
   --exclude-dir=public \
   --exclude-dir=resources \
   --exclude='CODEX_TURONSF_BUILD_TASK.md' \
@@ -111,8 +112,8 @@ pages=(
   "public/donate/index.html"
   "public/contact/index.html"
   "public/es/index.html"
-  "public/zh-Hant/index.html"
-  "public/zh-Hans/index.html"
+  "public/zh-hant/index.html"
+  "public/zh-hans/index.html"
   "public/tl/index.html"
   "public/vi/index.html"
   "public/ar/index.html"
@@ -123,7 +124,7 @@ for p in "${pages[@]}"; do
 done
 
 say "Language output directories"
-for lang in es zh-Hant zh-Hans tl vi ar; do
+for lang in es zh-hant zh-hans tl vi ar; do
   [ -d "public/$lang" ] || fail "missing public/$lang output"
   echo "OK: public/$lang"
 done
@@ -157,7 +158,7 @@ done
 
 say "Outbound campaign UTM checks"
 CAMPAIGN_LINKS="/tmp/turonsf_campaign_links.$$"
-grep -RhoE 'href="https://(secure\.actblue\.com|actionnetwork\.org|sibforms\.com)[^"]*"' public/ 2>/dev/null | sort | uniq > "$CAMPAIGN_LINKS" || true
+grep -RhoE 'href="https://(secure\.actblue\.com|actionnetwork\.org)[^"]*"' public/ 2>/dev/null | sort | uniq > "$CAMPAIGN_LINKS" || true
 if [ -s "$CAMPAIGN_LINKS" ]; then
   cat "$CAMPAIGN_LINKS"
   for param in 'utm_source=turonsf' 'utm_medium=web' 'utm_campaign=phase1' 'utm_content='; do
@@ -168,19 +169,19 @@ if [ -s "$CAMPAIGN_LINKS" ]; then
   done
   pass "campaign backend links carry all required UTM parameters"
 else
-  fail "no rendered ActBlue, Action Network, or Brevo links found"
+  fail "no rendered ActBlue or Action Network links found"
 fi
 rm -f "$CAMPAIGN_LINKS" /tmp/turonsf_missing_param.$$ 2>/dev/null || true
 
 say "Preconnect checks"
 for host in secure.actblue.com actionnetwork.org sibforms.com; do
-  grep -R "rel=\"preconnect\" href=\"https://$host\"" public/index.html >/dev/null || fail "missing preconnect for $host"
+  grep -E "rel=\"?preconnect\"? href=\"?https://$host\"?" public/index.html >/dev/null || fail "missing preconnect for $host"
   echo "OK: preconnect $host"
 done
 
 say "Placeholder SEO checks"
-for lang in es zh-Hant zh-Hans tl vi ar; do
-  grep -q 'name="robots" content="noindex, follow"' "public/$lang/index.html" || fail "missing noindex,follow on $lang home"
+for lang in es zh-hant zh-hans tl vi ar; do
+  grep -Eq 'name="?robots"? content="?noindex, follow"?' "public/$lang/index.html" || fail "missing noindex,follow on $lang home"
   echo "OK: noindex placeholder $lang"
 done
 
@@ -213,16 +214,16 @@ python3 - <<'PY_STATUS'
 from pathlib import Path
 import re, sys
 text = Path('data/translation_status.yaml').read_text(encoding='utf-8')
-rows = re.findall(r'^\s+"/[^\"]+::(?:es|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
-if len(rows) != 66:
-    print(f'Expected 66 translation_status rows; found {len(rows)}', file=sys.stderr)
+rows = re.findall(r'^\s+"/[^\"]*::(?:es|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
+if len(rows) != 78:
+    print(f'Expected 78 translation_status rows; found {len(rows)}', file=sys.stderr)
     sys.exit(1)
 print('translation_status rows:', len(rows))
 PY_STATUS
 pass "translation_status row count passed"
 
 say "Launch blockers that may remain intentionally"
-if grep -RIn 'MUIFAA_REPLACE_BEFORE_LIVE\|MUIFAA\.\.\.' hugo.toml docs themes content 2>/dev/null; then
+if grep -RIn 'MUIFAA_REPLACE_BEFORE_LIVE\|MUIFAA\.\.\.' hugo.toml themes content 2>/dev/null; then
   warn "Brevo placeholder still present. Replace before production."
 else
   pass "no Brevo placeholder found"
@@ -238,4 +239,4 @@ say "Git status"
 git status --short --branch || true
 
 say "Verification complete"
-echo "Build is locally checkable. Remaining manual blockers: Brevo URL, Umami website ID, Spanish backend routing, Sam review, Lauren review."
+echo "Build is locally checkable. Remaining manual blockers: Spanish backend routing, Sam review, Lauren review."

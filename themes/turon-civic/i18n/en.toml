@@ -67,6 +67,61 @@ other = "Endorse"
 [book_call_cta]
 other = "Book a 15-minute call"
 
+[newsletter_cta_primary]
+other = "Get campaign updates"
+
+[donate_link_secondary]
+other = "Donate"
+
+[platform_link_tertiary]
+other = "Read the platform"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · Data Scientist · SFUSD Parent"
+
+[home_hero_title]
+other = "Three problems. In order."
+
+[home_hero_dek]
+other = "Special Education staffing. Budget discipline. Teacher retention. A school board campaign built around the problems families feel first."
+
+[trust_strip_label]
+other = "Trust signals"
+
+[trust_two_kids]
+other = "Two kids"
+
+[pillar_label_1]
+other = "Pillar 1"
+
+[pillar_label_2]
+other = "Pillar 2"
+
+[pillar_label_3]
+other = "Pillar 3"
+
+[pillar1_home_summary]
+other = "Staff the services students are legally entitled to receive."
+
+[pillar2_home_summary]
+other = "Bring board oversight back to dollars, delivery, and consequences."
+
+[pillar3_home_summary]
+other = "Keep great educators in classrooms by treating retention as a system problem."
+
+[pillar1_home_link]
+other = "How I’ll fix Special Education staffing"
+
+[pillar2_home_link]
+other = "How I’ll vote on board oversight"
+
+[pillar3_home_link]
+other = "Where I stand on teacher retention"
+
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
 # Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
@@ -100,6 +155,25 @@ other = "© 2026 Michael Turon for SFUSD Board of Education"
 
 [contact_email]
 other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[utility_election_label]
+other = "Election"
+
+[election_date_display]
+other = "November 3, 2026"
+
+[page_eyebrow]
+other = "Michael Turon · SFUSD Board of Education · 2026"
+
+[endorsement_notice_contact]
+other = "To endorse or request an endorsement conversation, email info@turonsf.com."
+
+[endorsement_notice_pending]
+other = "Endorsements will publish here once the first endorsement is active and reviewed."
 
 # ---------------------------------------------------------------------------
 # Form labels

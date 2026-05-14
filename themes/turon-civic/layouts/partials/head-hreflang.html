@@ -35,11 +35,13 @@
   --------------------------------------------------------------------------
 */}}
 
-{{ $currentLang := .Site.Language.Lang }}
-{{ $translationStatusData := index .Site.Data.translation_status "pages" }}
+{{ $currentLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Site.Language.Lang) }}
+{{ $translationStatusData := index (index hugo.Data "translation_status") "pages" }}
 
 {{/* Resolve translation_status for the current page (key: "{relpath}::{lang}"). */}}
-{{ $thisPageKey := printf "%s::%s" .RelPermalink $currentLang }}
+{{ $thisStatusPath := .RelPermalink }}
+{{ with .Params.canonical_path }}{{ $thisStatusPath = . }}{{ end }}
+{{ $thisPageKey := printf "%s::%s" $thisStatusPath $currentLang }}
 {{ $thisStatus := index $translationStatusData $thisPageKey | default "placeholder" }}
 
 {{/* English is always considered live. */}}
@@ -85,9 +87,11 @@
   {{/* Then every OTHER live translation of this page. */}}
   {{ with .AllTranslations }}
     {{ range . }}
-      {{ $altLang := .Lang }}
+      {{ $altLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Lang) }}
       {{ if ne $altLang $currentLang }}
-        {{ $altPageKey := printf "%s::%s" .RelPermalink $altLang }}
+        {{ $altStatusPath := .RelPermalink }}
+        {{ with .Params.canonical_path }}{{ $altStatusPath = . }}{{ end }}
+        {{ $altPageKey := printf "%s::%s" $altStatusPath $altLang }}
         {{ $altStatus := index $translationStatusData $altPageKey | default "placeholder" }}
         {{ if eq $altLang "en" }}{{ $altStatus = "live" }}{{ end }}
         {{ $altLive := or (eq $altStatus "live") (eq $altStatus "reviewed") (eq $altStatus "community_corrected") }}

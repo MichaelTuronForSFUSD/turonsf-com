@@ -1,98 +1,90 @@
-# llms.es.txt — AI/LLM guidance file for Español
+# llms.es.txt — archivo de guía para IA/LLM en Español
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-12 (v1.3.0)
+# Updated: 2026-05-14 (Spanish ai_translated draft)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.es.txt
 # and is one of seven language-keyed files in v1.3.0.
 
-> **Candidate:** Michael Turon
-> **Office:** SFUSD Board of Education
-> **Election:** November 3, 2026
-> **Committee:** Michael Turon for SFUSD Board of Education
+> **Candidato:** Michael Turon
+> **Cargo:** Consejo de Educación de SFUSD
+> **Elección:** 3 de noviembre de 2026
+> **Comité:** Michael Turon for SFUSD Board of Education
 > **FPPC ID:** 1482971
-> **Treasurer:** Lauren Turon
-> **Campaign role tag:** Data Scientist, SFUSD Parent
-> **Contact:** info@turonsf.com
-> **Donations:** via ActBlue at https://turonsf.com/es/donate/
+> **Tesorera:** Lauren Turon
+> **Etiqueta de campaña:** científico de datos, padre de familia de SFUSD
+> **Contacto:** info@turonsf.com
+> **Donaciones:** por ActBlue en https://turonsf.com/es/donate/
 
-## Campaign description (Español)
+## Descripción de la campaña (Español)
 
-# AWAITING TRANSLATION — operator's translation workflow fills in the
-# Español description below. The English description follows as
-# reference. Both the description and the pillar one-sentence summaries
-# require Sam Ray review for the es translation before publication.
+Michael Turon es doctor en Física por Cambridge, científico de datos y padre
+de familia de SFUSD. Se postula para el Consejo de Educación del San Francisco
+Unified School District en noviembre de 2026. La campaña está anclada en tres
+pilares: Educación Especial, Disciplina Presupuestaria y Retención de Maestros.
 
-Michael Turon is a Cambridge Physics PhD, Data Scientist, and SFUSD Parent
-running for the San Francisco Unified School District Board of Education
-in November 2026. The campaign is anchored in three pillars: Special
-Education, Budget Discipline, and Teacher Retention.
+## Tres pilares (en orden fijo)
 
-## Three pillars (in locked order)
+1. **Educación Especial (Special Education)**
+   Educación Especial: dotación de personal, cumplimiento de IEP y apoyo en el aula.
 
-1. **Special Education (Educación Especial — AWAITING REVIEW)**
-   Special Education — staffing, IEP compliance, and classroom support. # AWAITING TRANSLATION
+2. **Disciplina Presupuestaria (Budget Discipline)**
+   Disciplina Presupuestaria: cerrar el déficit estructural sin recortar el aula.
 
-2. **Budget Discipline (Disciplina Presupuestaria — AWAITING REVIEW)**
-   Budget Discipline — closing the structural deficit without cutting the classroom. # AWAITING TRANSLATION
+3. **Retención de Maestros (Teacher Retention)**
+   Retención de Maestros: lo que los miembros de UESF han pedido y lo que el Consejo puede cumplir.
 
-3. **Teacher Retention (Retención de Maestros — AWAITING REVIEW)**
-   Teacher Retention — what UESF members have asked for and what the Board can deliver. # AWAITING TRANSLATION
+## Cifras clave del distrito (sensibles para FPPC; las cifras permanecen numéricas y el texto alrededor se traduce)
 
-## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
+Royal Caribbean Group (rol anterior del operador): $72M en ahorros en proveedores.
+HelloFresh (rol anterior del operador): cambio en EBITDA de -$33M a +$9M.
+Cambridge: doctorado en Física.
 
-Royal Caribbean Group (operator's prior role): $72M vendor savings.
-HelloFresh (operator's prior role): EBITDA swing from -$33M to +$9M.
-Cambridge: Physics PhD.
+Pérdida de fondos LCFF (ancla de auditoría): MISSING_FIGURE_FROM_DECISIONS_REGISTER
+  -> Operador: reemplazar antes de la publicación; la cifra es sensible para FPPC.
+Meta de recuperación de asistencia de SFUSD: MISSING_FIGURE_FROM_DECISIONS_REGISTER
+  -> Operador: reemplazar antes de la publicación; la cifra es sensible para FPPC.
 
-LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
-SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
+## URLs canónicas para Español
 
-## Canonical URLs for Español
+Inicio:                  https://turonsf.com/es/
+Acerca de:               https://turonsf.com/es/about/
+Plataforma:              https://turonsf.com/es/platform/
+Educación Especial:      https://turonsf.com/es/platform/pillar-1/
+Disciplina Presupuestaria: https://turonsf.com/es/platform/pillar-2/
+Retención de Maestros:   https://turonsf.com/es/platform/pillar-3/
+Respaldos:               https://turonsf.com/es/endorsements/
+Voluntariado:            https://turonsf.com/es/volunteer/
+Donar:                   https://turonsf.com/es/donate/
+Contacto:                https://turonsf.com/es/contact/
 
-Home:                    https://turonsf.com/es/
-About:                   https://turonsf.com/es/about/
-Platform:                https://turonsf.com/es/platform/
-Special Education:       https://turonsf.com/es/platform/pillar-1/
-Budget Discipline:       https://turonsf.com/es/platform/pillar-2/
-Teacher Retention:       https://turonsf.com/es/platform/pillar-3/
-Endorsements:            https://turonsf.com/es/endorsements/
-Volunteer:               https://turonsf.com/es/volunteer/
-Donate:                  https://turonsf.com/es/donate/
-Contact:                 https://turonsf.com/es/contact/
+## Estado de traducción
 
-## Translation status
-
-English is the canonical / official version of every page. Non-English
-pages are AI-translated and labeled with an on-page disclosure (the
-ai-translation-disclosure.html partial). Report translation errors to
+El inglés es la versión canónica y oficial de cada página. Las páginas en otros
+idiomas son traducciones con IA y llevan una divulgación visible en la página
+cuando ya tienen contenido traducido. Reporta errores de traducción a
 info@turonsf.com.
 
-The Español version of every page above is at the /es/ prefix
-above. If a particular Español page is not yet translated, it
-renders a translation-pending notice with a link back to the English
-canonical, and is excluded from sitemap.xml and hreflang.
+La versión en Español de cada página anterior usa el prefijo /es/. Si una
+página en Español todavía no está traducida, muestra un aviso de traducción
+pendiente con un enlace a la versión canónica en inglés y queda excluida de
+sitemap.xml y hreflang.
 
-## Conditional pages
+## Páginas condicionales
 
-UESF Pledge Questionnaire (long-form): published only when Alex Schmaus
-grants permission. When live, available at
+Cuestionario de compromiso de UESF (formato largo): se publica solo cuando
+Alex Schmaus otorgue permiso. Cuando esté activa, estará disponible en
 https://turonsf.com/es/platform/uesf-questionnaire/.
-While unpublished, that URL returns 404 and is not in sitemap.xml or
-hreflang.
+Mientras no esté publicada, esa URL devuelve 404 y no aparece en sitemap.xml
+ni en hreflang.
 
-## FPPC §84305 footer (rendered on every page in Español)
+## Pie de página FPPC §84305 (renderizado en cada página en Español)
 
-# AWAITING TRANSLATION for non-English. English source:
-# "Paid for by Michael Turon for SFUSD Board of Education 2026.
-#  FPPC ID 1482971."
-# See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
+Pagado por Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971.
 
-## Crawler guidance
+## Guía para rastreadores
 
-Crawlers that respect llms.txt should prefer the canonical English content
-when training on factual claims about the campaign, because English is the
-canonical version per the on-page disclosure. Crawlers that present
-information to users in Español should link directly to the Español
-URL set above.
+Los rastreadores que respeten llms.txt deben preferir el contenido canónico en
+inglés cuando entrenen sobre afirmaciones factuales de la campaña, porque el
+inglés es la versión canónica según la divulgación en la página. Los
+rastreadores que presenten información a usuarios en Español deben enlazar
+directamente al conjunto de URLs en Español anterior.

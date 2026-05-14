@@ -1,6 +1,6 @@
 {{ define "main" }}
 <header class="page-hero">
-  <p class="eyebrow">Michael Turon · SFUSD Board of Education · 2026</p>
+  <p class="eyebrow">{{ i18n "page_eyebrow" }}</p>
   <h1>{{ .Title }}</h1>
   {{ with .Params.description }}<p class="hero__dek">{{ . }}</p>{{ end }}
 </header>

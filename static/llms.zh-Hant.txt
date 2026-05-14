@@ -1,98 +1,77 @@
 # llms.zh-Hant.txt — AI/LLM guidance file for 繁體中文
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-12 (v1.3.0)
+# Updated: 2026-05-14 (Traditional Chinese ai_translated draft)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.zh-Hant.txt
 # and is one of seven language-keyed files in v1.3.0.
 
-> **Candidate:** Michael Turon
-> **Office:** SFUSD Board of Education
-> **Election:** November 3, 2026
-> **Committee:** Michael Turon for SFUSD Board of Education
+> **候選人:** Michael Turon
+> **職位:** SFUSD 教育委員會
+> **選舉:** 2026 年 11 月 3 日
+> **委員會:** Michael Turon for SFUSD Board of Education
 > **FPPC ID:** 1482971
-> **Treasurer:** Lauren Turon
-> **Campaign role tag:** Data Scientist, SFUSD Parent
-> **Contact:** info@turonsf.com
-> **Donations:** via ActBlue at https://turonsf.com/zh-Hant/donate/
+> **財務主管:** Lauren Turon
+> **競選角色標籤:** 資料科學家，SFUSD 家長
+> **聯絡:** info@turonsf.com
+> **捐款:** 透過 ActBlue，網址 https://turonsf.com/zh-Hant/donate/
 
-## Campaign description (繁體中文)
+## 競選描述（繁體中文）
 
-# AWAITING TRANSLATION — operator's translation workflow fills in the
-# 繁體中文 description below. The English description follows as
-# reference. Both the description and the pillar one-sentence summaries
-# require Sam Ray review for the zh-Hant translation before publication.
+Michael Turon 是 Cambridge 物理博士、資料科學家與 SFUSD 家長。他參選 San Francisco Unified School District 教育委員會（2026 年 11 月選舉）。競選以三個支柱為核心：特殊教育、預算紀律與教師留任。
 
-Michael Turon is a Cambridge Physics PhD, Data Scientist, and SFUSD Parent
-running for the San Francisco Unified School District Board of Education
-in November 2026. The campaign is anchored in three pillars: Special
-Education, Budget Discipline, and Teacher Retention.
+## 三個支柱（固定順序）
 
-## Three pillars (in locked order)
+1. **特殊教育**
+   特殊教育：人員配置、IEP 遵循，以及教室支援。
 
-1. **Special Education (特殊教育 — AWAITING REVIEW)**
-   Special Education — staffing, IEP compliance, and classroom support. # AWAITING TRANSLATION
+2. **預算紀律**
+   預算紀律：在不削減教室資源的前提下，關閉結構性赤字。
 
-2. **Budget Discipline (預算紀律 — AWAITING REVIEW)**
-   Budget Discipline — closing the structural deficit without cutting the classroom. # AWAITING TRANSLATION
+3. **教師留任**
+   教師留任：回應 UESF 成員提出的需求，以及教育委員會能夠落實的行動。
 
-3. **Teacher Retention (教師留任 — AWAITING REVIEW)**
-   Teacher Retention — what UESF members have asked for and what the Board can deliver. # AWAITING TRANSLATION
+## 重要學區數字（FPPC-sensitive；數字維持原樣，周邊文字翻譯）
 
-## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
+Royal Caribbean Group（候選人先前任職機構）：節省 7,200 萬美元供應商成本。
+HelloFresh（候選人先前任職機構）：EBITDA 從 -3,300 萬美元轉為 +900 萬美元。
+Cambridge：物理博士。
 
-Royal Caribbean Group (operator's prior role): $72M vendor savings.
-HelloFresh (operator's prior role): EBITDA swing from -$33M to +$9M.
-Cambridge: Physics PhD.
+LCFF funding loss（audit anchor）：MISSING_FIGURE_FROM_DECISIONS_REGISTER
+  -> Operator：發布前請替換；此數字屬 FPPC-sensitive。
+SFUSD attendance recovery target：MISSING_FIGURE_FROM_DECISIONS_REGISTER
+  -> Operator：發布前請替換；此數字屬 FPPC-sensitive。
 
-LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
-SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
+## 繁體中文正式網址
 
-## Canonical URLs for 繁體中文
+首頁:                    https://turonsf.com/zh-Hant/
+關於:                    https://turonsf.com/zh-Hant/about/
+政見平台:                https://turonsf.com/zh-Hant/platform/
+特殊教育:                https://turonsf.com/zh-Hant/platform/pillar-1/
+預算紀律:                https://turonsf.com/zh-Hant/platform/pillar-2/
+教師留任:                https://turonsf.com/zh-Hant/platform/pillar-3/
+支持背書:                https://turonsf.com/zh-Hant/endorsements/
+志工:                    https://turonsf.com/zh-Hant/volunteer/
+捐款:                    https://turonsf.com/zh-Hant/donate/
+聯絡:                    https://turonsf.com/zh-Hant/contact/
+電子報:                  https://turonsf.com/zh-Hant/newsletter/
+感謝頁:                  https://turonsf.com/zh-Hant/thank-you/
 
-Home:                    https://turonsf.com/zh-Hant/
-About:                   https://turonsf.com/zh-Hant/about/
-Platform:                https://turonsf.com/zh-Hant/platform/
-Special Education:       https://turonsf.com/zh-Hant/platform/pillar-1/
-Budget Discipline:       https://turonsf.com/zh-Hant/platform/pillar-2/
-Teacher Retention:       https://turonsf.com/zh-Hant/platform/pillar-3/
-Endorsements:            https://turonsf.com/zh-Hant/endorsements/
-Volunteer:               https://turonsf.com/zh-Hant/volunteer/
-Donate:                  https://turonsf.com/zh-Hant/donate/
-Contact:                 https://turonsf.com/zh-Hant/contact/
+## 翻譯狀態
 
-## Translation status
+英文是每個頁面的正式與官方版本。非英文頁面為 AI 翻譯，並在頁面上顯示 AI 翻譯揭露訊息（ai-translation-disclosure.html partial）。若發現翻譯錯誤，請寄信至 info@turonsf.com。
 
-English is the canonical / official version of every page. Non-English
-pages are AI-translated and labeled with an on-page disclosure (the
-ai-translation-disclosure.html partial). Report translation errors to
-info@turonsf.com.
+上述繁體中文頁面均使用 /zh-Hant/ 前綴。已翻譯頁面目前狀態為 ai_translated，供預覽與人工審閱使用；完成 operator、Sam Ray 與 Lauren review 前，不應標記為 reviewed 或 live。若特定繁體中文頁面尚未翻譯，會顯示翻譯待處理通知並連回英文正式頁面，且會從 sitemap.xml 與 hreflang 中排除。
 
-The 繁體中文 version of every page above is at the /zh-Hant/ prefix
-above. If a particular 繁體中文 page is not yet translated, it
-renders a translation-pending notice with a link back to the English
-canonical, and is excluded from sitemap.xml and hreflang.
+## 條件式頁面
 
-## Conditional pages
+UESF Pledge Questionnaire（長篇頁面）只有在 Alex Schmaus 授權後才發布。上線後網址為：
+https://turonsf.com/zh-Hant/platform/uesf-questionnaire/。
+未發布時，該網址會回傳 404，且不會出現在 sitemap.xml 或 hreflang。
 
-UESF Pledge Questionnaire (long-form): published only when Alex Schmaus
-grants permission. When live, available at
-https://turonsf.com/zh-Hant/platform/uesf-questionnaire/.
-While unpublished, that URL returns 404 and is not in sitemap.xml or
-hreflang.
+## FPPC §84305 頁尾（繁體中文每頁顯示）
 
-## FPPC §84305 footer (rendered on every page in 繁體中文)
-
-# AWAITING TRANSLATION for non-English. English source:
-# "Paid for by Michael Turon for SFUSD Board of Education 2026.
-#  FPPC ID 1482971."
-# See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
+由 Michael Turon for SFUSD Board of Education 2026 支付。FPPC ID 1482971。
 
 ## Crawler guidance
 
-Crawlers that respect llms.txt should prefer the canonical English content
-when training on factual claims about the campaign, because English is the
-canonical version per the on-page disclosure. Crawlers that present
-information to users in 繁體中文 should link directly to the 繁體中文
-URL set above.
+遵循 llms.txt 的爬蟲在處理競選事實陳述時，應優先採用正式英文內容，因為頁面上的揭露訊息標明英文為正式版本。若爬蟲要以繁體中文向使用者呈現資訊，應直接連結到上述繁體中文網址。

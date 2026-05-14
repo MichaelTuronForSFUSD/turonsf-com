@@ -1,87 +1,25 @@
 ---
-title: "About Michael Turon"
-description: "About Michael Turon — Data Scientist, SFUSD Parent, and candidate for the SFUSD Board of Education November 3, 2026."
-summary: "About Michael Turon — Data Scientist, SFUSD Parent, and candidate for the SFUSD Board of Education November 3, 2026."
+title: "關於 Michael Turon"
+description: "關於 Michael Turon：資料科學家、SFUSD 家長，以及 2026 年 11 月 3 日 SFUSD 教育委員會候選人。"
+summary: "關於 Michael Turon：資料科學家、SFUSD 家長，以及 2026 年 11 月 3 日 SFUSD 教育委員會候選人。"
 date: 2026-05-12
-lastmod: 2026-05-12
+lastmod: 2026-05-14
 translationKey: "about"
 schema_type: "AboutPage"
 inLanguage: "zh-Hant"
 canonical_language: "en"
 canonical_path: "/about/"
-translation_status: "placeholder"
-translation_tool_primary: ""
-translation_tool_backup: ""
+translation_status: "ai_translated"
+translation_tool_primary: "openai:codex-gpt-5"
+translation_tool_backup: "not_run"
 translation_reviewer: ""
 translation_reviewed_at: ""
 include_in_llms: true
 fppc_sensitive: false
-
 ---
 
-<!--
-  AI TRANSLATION TARGET — see Phase1_Translation_Workflow.md.
+Michael Turon 是資料科學家，也是 SFUSD 家長。
 
-  Language: 繁體中文 (zh-Hant)
-  Direction: ltr
-  Source page: content/about.md
-  Status on this build: translation_status = placeholder.
+他參選教育委員會，是因為家庭需要一個能提出精準問題、看懂預算、追蹤執行進度，並讓學區持續以學生為中心的委員會。
 
-  GLOSSARY — STAY ENGLISH (Architecture Decision 9 §5):
-    Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF, Royal Caribbean,
-    HelloFresh, Cambridge, ActBlue, Cloudflare, Umami,
-    Brevo, MailChannels, Turnstile, Google Calendar, FPPC, FPPC ID 1482971,
-    info@turonsf.com.
-
-  GLOSSARY — LOCALIZE (Architecture Decision 9 §6):
-    Vote, Endorse, Volunteer, Donate, Give (Donate alias), Contact, Talk,
-    Platform, About, Special Education, Budget Discipline, Teacher Retention.
-
-  FINANCIAL FIGURES — NEVER CHANGE:
-    $72M (Royal Caribbean vendor savings)
-    -$33M -> +$9M (HelloFresh EBITDA swing)
-    Audit anchor figure and LCFF loss figure: pull verbatim from the
-    Decisions Register; do NOT round, restate, or paraphrase.
-
-  AI TRANSLATION DISCLOSURE:
-    The ai-translation-disclosure.html partial renders the disclosure
-    banner at the top of this page automatically when translation_status
-    moves from placeholder to ai_translated (or further). The Translation
-    Pipeline v1 / turon-translate CLI does NOT insert that disclosure into
-    this body. It is a template-rendered concern.
-
-  FPPC §84305 FOOTER:
-    The footer disclosure at the bottom of this file is the English
-    placeholder. The workflow translates it; Sam Ray reviews before merge.
-    The disclosure must read in the page's language for non-English pages
-    per Research §2.2 (FPPC Regulation 18435 "same-language" requirement).
--->
-
-<!--
-  AWAITING TRANSLATION.
-
-  English canonical body lives in the matching file without the .zh-Hant
-  suffix. The AI translation workflow reads that source and writes the
-  translated body here, preserving Markdown structure and all shortcodes.
--->
-
-<!-- AI TRANSLATION INPUT: English body from content/{matching English source} -->
-<!-- AI TRANSLATION OUTPUT: insert translated body here. -->
-
-<!--
-  FPPC §84305 FOOTER PLACEHOLDER (English source — see Deliverable 9).
-
-  English canonical text below. The workflow translates this for 繁體中文,
-  keeping proper nouns ("Michael Turon", "Lauren Turon", "FPPC", "SFUSD")
-  in Latin script and FPPC ID 1482971 as the literal numeric string.
-
-  REQUIRES SAM RAY REVIEW BEFORE PUBLICATION — FPPC §84305 disclosure
-  translation. Lauren Turon also reviews because she is the named
-  treasurer.
--->
-
-> Paid for by Michael Turon for SFUSD Board of Education 2026.
-> FPPC ID 1482971.
-> Treasurer: Lauren Turon.
-
-<!-- END FPPC FOOTER PLACEHOLDER -->
+這場競選聚焦三項優先事項：特殊教育、預算紀律與教師留任。

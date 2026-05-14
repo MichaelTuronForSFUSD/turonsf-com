@@ -1,9 +1,9 @@
 # llms.ar.txt — AI/LLM guidance file for العربية
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-12 (v1.3.0)
+# Updated: 2026-05-14 (Arabic ai_translated draft)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.ar.txt
-# and is one of seven language-keyed files in v1.3.0.
+# and is one of seven language-keyed files.
 
 > **Candidate:** Michael Turon
 > **Office:** SFUSD Board of Education
@@ -11,45 +11,37 @@
 > **Committee:** Michael Turon for SFUSD Board of Education
 > **FPPC ID:** 1482971
 > **Treasurer:** Lauren Turon
-> **Campaign role tag:** Data Scientist, SFUSD Parent
+> **Campaign role tag:** عالم بيانات، وليّ أمر في SFUSD
 > **Contact:** info@turonsf.com
 > **Donations:** via ActBlue at https://turonsf.com/ar/donate/
 
-## Campaign description (العربية)
+## وصف الحملة (العربية)
 
-# AWAITING TRANSLATION — operator's translation workflow fills in the
-# العربية description below. The English description follows as
-# reference. Both the description and the pillar one-sentence summaries
-# require Sam Ray review for the ar translation before publication.
+Michael Turon هو حاصل على دكتوراه في فيزياء Cambridge، وعالم بيانات، ووليّ أمر في SFUSD. يترشح لمجلس التعليم في San Francisco Unified School District في نوفمبر 2026. ترتكز الحملة على ثلاث ركائز: التعليم الخاص، والانضباط المالي، والاحتفاظ بالمعلّمين.
 
-Michael Turon is a Cambridge Physics PhD, Data Scientist, and SFUSD Parent
-running for the San Francisco Unified School District Board of Education
-in November 2026. The campaign is anchored in three pillars: Special
-Education, Budget Discipline, and Teacher Retention.
+## الركائز الثلاث (بالترتيب الثابت)
 
-## Three pillars (in locked order)
+1. **التعليم الخاص**
+   توفير الطواقم، والالتزام بخطط IEP، ودعم الصفوف.
 
-1. **Special Education (التعليم الخاص — AWAITING REVIEW)**
-   Special Education — staffing, IEP compliance, and classroom support. # AWAITING TRANSLATION
+2. **الانضباط المالي**
+   إغلاق العجز الهيكلي من دون خفض الدعم عن الصفوف.
 
-2. **Budget Discipline (الانضباط في الميزانية — AWAITING REVIEW)**
-   Budget Discipline — closing the structural deficit without cutting the classroom. # AWAITING TRANSLATION
+3. **الاحتفاظ بالمعلّمين**
+   الاستماع إلى ما طلبه أعضاء UESF وما يستطيع المجلس تنفيذه.
 
-3. **Teacher Retention (الاحتفاظ بالمعلمين — AWAITING REVIEW)**
-   Teacher Retention — what UESF members have asked for and what the Board can deliver. # AWAITING TRANSLATION
+## أرقام أساسية عن المنطقة التعليمية (حساسة لـ FPPC؛ تبقى الأرقام كما هي)
 
-## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
-
-Royal Caribbean Group (operator's prior role): $72M vendor savings.
-HelloFresh (operator's prior role): EBITDA swing from -$33M to +$9M.
-Cambridge: Physics PhD.
+Royal Caribbean Group (دور سابق للمرشح): $72M وفورات في تكاليف المورّدين.
+HelloFresh (دور سابق للمرشح): تحوّل EBITDA من -$33M إلى +$9M.
+Cambridge: دكتوراه في الفيزياء.
 
 LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
   -> Operator: replace before publication; figure is FPPC-sensitive.
 SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
   -> Operator: replace before publication; figure is FPPC-sensitive.
 
-## Canonical URLs for العربية
+## عناوين URL الرسمية للعربية
 
 Home:                    https://turonsf.com/ar/
 About:                   https://turonsf.com/ar/about/
@@ -61,38 +53,26 @@ Endorsements:            https://turonsf.com/ar/endorsements/
 Volunteer:               https://turonsf.com/ar/volunteer/
 Donate:                  https://turonsf.com/ar/donate/
 Contact:                 https://turonsf.com/ar/contact/
+Newsletter:              https://turonsf.com/ar/newsletter/
+Thank you:               https://turonsf.com/ar/thank-you/
 
-## Translation status
+## حالة الترجمة
 
-English is the canonical / official version of every page. Non-English
-pages are AI-translated and labeled with an on-page disclosure (the
-ai-translation-disclosure.html partial). Report translation errors to
-info@turonsf.com.
+النسخة English هي النسخة الرسمية لكل صفحة. الصفحات غير الإنجليزية مترجمة بالذكاء الاصطناعي وتظهر عليها ملاحظة واضحة في أعلى الصفحة عبر ai-translation-disclosure.html. يمكن الإبلاغ عن أخطاء الترجمة عبر info@turonsf.com.
 
-The العربية version of every page above is at the /ar/ prefix
-above. If a particular العربية page is not yet translated, it
-renders a translation-pending notice with a link back to the English
-canonical, and is excluded from sitemap.xml and hreflang.
+كل الصفحات العربية أعلاه تستخدم بادئة /ar/. الحالة الحالية للصفحات المترجمة هي ai_translated للمعاينة والمراجعة البشرية؛ لا تُعلّم reviewed أو live قبل اكتمال مراجعة operator وSam Ray وLauren. إذا لم تُترجم صفحة عربية بعد، فستعرض ملاحظة translation-pending تؤدي إلى النسخة English الرسمية، وتُستبعد من sitemap.xml وhreflang.
 
-## Conditional pages
+## صفحات مشروطة
 
-UESF Pledge Questionnaire (long-form): published only when Alex Schmaus
-grants permission. When live, available at
+UESF Pledge Questionnaire (long-form): يُنشر فقط عندما يمنح Alex Schmaus الإذن. عند نشره سيكون متاحاً على
 https://turonsf.com/ar/platform/uesf-questionnaire/.
-While unpublished, that URL returns 404 and is not in sitemap.xml or
-hreflang.
+ما دام غير منشور، لا يظهر في sitemap.xml أو hreflang.
 
-## FPPC §84305 footer (rendered on every page in العربية)
+## إفصاح FPPC §84305 في التذييل (يظهر على كل صفحة عربية)
 
-# AWAITING TRANSLATION for non-English. English source:
-# "Paid for by Michael Turon for SFUSD Board of Education 2026.
-#  FPPC ID 1482971."
-# See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
+مدفوع من قِبل Michael Turon for SFUSD Board of Education 2026.
+FPPC ID 1482971.
 
-## Crawler guidance
+## إرشادات للزواحف
 
-Crawlers that respect llms.txt should prefer the canonical English content
-when training on factual claims about the campaign, because English is the
-canonical version per the on-page disclosure. Crawlers that present
-information to users in العربية should link directly to the العربية
-URL set above.
+على الزواحف التي تحترم llms.txt تفضيل المحتوى English الرسمي عند التدريب على الادعاءات الواقعية عن الحملة، لأن English هي النسخة الرسمية بحسب الإفصاح الظاهر على الصفحة. وعند عرض المعلومات للمستخدمين بالعربية، ينبغي الربط مباشرة بمجموعة عناوين URL العربية أعلاه.

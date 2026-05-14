@@ -20,7 +20,7 @@ if [[ ! -f "$YAML" ]]; then
 fi
 
 # Extract page paths from YAML keys like "/about/::es"
-ENTRIES=$(grep -oE '"/[^:]*::[a-zA-Z\-]+"' "$YAML" | tr -d '"' || true)
+ENTRIES=$(grep -oE '^[[:space:]]*"/[^"]*::[a-zA-Z\-]+"' "$YAML" | sed -E 's/^[[:space:]]*"//; s/"$//' || true)
 
 if [[ -z "$ENTRIES" ]]; then
   echo "WARN: no translation_status entries found"

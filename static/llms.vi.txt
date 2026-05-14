@@ -1,55 +1,47 @@
 # llms.vi.txt — AI/LLM guidance file for Tiếng Việt
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-12 (v1.3.0)
+# Updated: 2026-05-14 (Vietnamese ai_translated draft)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.vi.txt
 # and is one of seven language-keyed files in v1.3.0.
 
-> **Candidate:** Michael Turon
-> **Office:** SFUSD Board of Education
-> **Election:** November 3, 2026
-> **Committee:** Michael Turon for SFUSD Board of Education
+> **Ứng cử viên:** Michael Turon
+> **Chức vụ:** Hội đồng Giáo dục SFUSD
+> **Bầu cử:** Ngày 3 tháng 11 năm 2026
+> **Ủy ban:** Michael Turon for SFUSD Board of Education
 > **FPPC ID:** 1482971
-> **Treasurer:** Lauren Turon
-> **Campaign role tag:** Data Scientist, SFUSD Parent
-> **Contact:** info@turonsf.com
-> **Donations:** via ActBlue at https://turonsf.com/vi/donate/
+> **Thủ quỹ:** Lauren Turon
+> **Nhãn vai trò chiến dịch:** Nhà khoa học dữ liệu, Phụ huynh SFUSD
+> **Liên hệ:** info@turonsf.com
+> **Đóng góp:** qua ActBlue tại https://turonsf.com/vi/donate/
 
-## Campaign description (Tiếng Việt)
+## Mô tả chiến dịch (Tiếng Việt)
 
-# AWAITING TRANSLATION — operator's translation workflow fills in the
-# Tiếng Việt description below. The English description follows as
-# reference. Both the description and the pillar one-sentence summaries
-# require Sam Ray review for the vi translation before publication.
+Michael Turon là Cambridge Physics PhD, nhà khoa học dữ liệu, và phụ huynh SFUSD. Anh ứng cử San Francisco Unified School District Board of Education trong cuộc bầu cử tháng 11 năm 2026. Chiến dịch dựa trên ba trụ cột: Giáo dục Đặc biệt, Kỷ luật Ngân sách, và Giữ chân Giáo viên.
 
-Michael Turon is a Cambridge Physics PhD, Data Scientist, and SFUSD Parent
-running for the San Francisco Unified School District Board of Education
-in November 2026. The campaign is anchored in three pillars: Special
-Education, Budget Discipline, and Teacher Retention.
+## Ba trụ cột (thứ tự cố định)
 
-## Three pillars (in locked order)
+1. **Giáo dục Đặc biệt**
+   Giáo dục Đặc biệt: nhân sự, tuân thủ IEP, và hỗ trợ lớp học.
 
-1. **Special Education (Giáo dục Đặc biệt — AWAITING REVIEW)**
-   Special Education — staffing, IEP compliance, and classroom support. # AWAITING TRANSLATION
+2. **Kỷ luật Ngân sách**
+   Kỷ luật Ngân sách: đóng thâm hụt cơ cấu mà không cắt giảm lớp học.
 
-2. **Budget Discipline (Kỷ luật Ngân sách — AWAITING REVIEW)**
-   Budget Discipline — closing the structural deficit without cutting the classroom. # AWAITING TRANSLATION
+3. **Giữ chân Giáo viên**
+   Giữ chân Giáo viên: những gì thành viên UESF đã yêu cầu và những gì Board có thể thực hiện.
 
-3. **Teacher Retention (Giữ chân Giáo viên — AWAITING REVIEW)**
-   Teacher Retention — what UESF members have asked for and what the Board can deliver. # AWAITING TRANSLATION
+## Các con số quan trọng của học khu (FPPC-sensitive; giữ nguyên số)
 
-## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
-
-Royal Caribbean Group (operator's prior role): $72M vendor savings.
-HelloFresh (operator's prior role): EBITDA swing from -$33M to +$9M.
+Royal Caribbean Group (vai trò trước đây của ứng cử viên): $72M vendor savings.
+HelloFresh (vai trò trước đây của ứng cử viên): EBITDA swing từ -$33M đến +$9M.
 Cambridge: Physics PhD.
 
 LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
+  -> Operator: thay trước khi xuất bản; con số này là FPPC-sensitive.
 SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
+  -> Operator: thay trước khi xuất bản; con số này là FPPC-sensitive.
 
-## Canonical URLs for Tiếng Việt
+## Canonical URLs cho Tiếng Việt
 
 Home:                    https://turonsf.com/vi/
 About:                   https://turonsf.com/vi/about/
@@ -61,38 +53,25 @@ Endorsements:            https://turonsf.com/vi/endorsements/
 Volunteer:               https://turonsf.com/vi/volunteer/
 Donate:                  https://turonsf.com/vi/donate/
 Contact:                 https://turonsf.com/vi/contact/
+Newsletter:              https://turonsf.com/vi/newsletter/
+Thank you:               https://turonsf.com/vi/thank-you/
 
-## Translation status
+## Trạng thái bản dịch
 
-English is the canonical / official version of every page. Non-English
-pages are AI-translated and labeled with an on-page disclosure (the
-ai-translation-disclosure.html partial). Report translation errors to
-info@turonsf.com.
+English là phiên bản canonical và chính thức của mọi trang. Các trang không phải English được AI dịch và có disclosure trên trang (ai-translation-disclosure.html partial). Hãy báo lỗi dịch thuật tới info@turonsf.com.
 
-The Tiếng Việt version of every page above is at the /vi/ prefix
-above. If a particular Tiếng Việt page is not yet translated, it
-renders a translation-pending notice with a link back to the English
-canonical, and is excluded from sitemap.xml and hreflang.
+Các trang Tiếng Việt ở trên dùng tiền tố /vi/. Trạng thái hiện tại của các trang đã dịch là ai_translated để phục vụ preview và human review; không đánh dấu reviewed hoặc live cho đến khi hoàn tất operator, Sam Ray, và Lauren review. Nếu một trang Tiếng Việt chưa được dịch, trang đó sẽ hiển thị translation-pending notice dẫn về English canonical, và sẽ bị loại khỏi sitemap.xml và hreflang.
 
-## Conditional pages
+## Trang có điều kiện
 
-UESF Pledge Questionnaire (long-form): published only when Alex Schmaus
-grants permission. When live, available at
+UESF Pledge Questionnaire (long-form): chỉ xuất bản khi Alex Schmaus cho phép. Khi live, trang sẽ ở:
 https://turonsf.com/vi/platform/uesf-questionnaire/.
-While unpublished, that URL returns 404 and is not in sitemap.xml or
-hreflang.
+Khi chưa xuất bản, URL đó trả về 404 và không có trong sitemap.xml hoặc hreflang.
 
-## FPPC §84305 footer (rendered on every page in Tiếng Việt)
+## FPPC §84305 footer (hiển thị trên mỗi trang Tiếng Việt)
 
-# AWAITING TRANSLATION for non-English. English source:
-# "Paid for by Michael Turon for SFUSD Board of Education 2026.
-#  FPPC ID 1482971."
-# See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
+Được chi trả bởi Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971.
 
 ## Crawler guidance
 
-Crawlers that respect llms.txt should prefer the canonical English content
-when training on factual claims about the campaign, because English is the
-canonical version per the on-page disclosure. Crawlers that present
-information to users in Tiếng Việt should link directly to the Tiếng Việt
-URL set above.
+Các crawler tôn trọng llms.txt nên ưu tiên nội dung English canonical khi huấn luyện trên các factual claims về chiến dịch, vì English là canonical version theo on-page disclosure. Các crawler trình bày thông tin cho người dùng bằng Tiếng Việt nên liên kết trực tiếp đến bộ URL Tiếng Việt ở trên.

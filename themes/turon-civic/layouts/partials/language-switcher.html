@@ -29,9 +29,10 @@
   --------------------------------------------------------------------------
 */}}
 
-{{ $currentLang := .Site.Language.Lang }}
+{{ $currentLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Site.Language.Lang) }}
+{{ $currentLangSlug := .Site.Language.Lang }}
 {{ $currentLangName := .Site.Language.LanguageName }}
-{{ $translationStatus := index .Site.Data.translation_status "pages" }}
+{{ $translationStatus := index (index hugo.Data "translation_status") "pages" }}
 
 <nav class="lang-switcher"
      aria-label="{{ i18n "language_switcher_label" }}"
@@ -55,9 +56,10 @@
       aria-label="{{ i18n "language_switcher_label" }}"
       hidden>
 
-    {{- range .Site.Languages }}
-      {{ $linkLang := .Lang }}
-      {{ $linkName := .LanguageName }}
+    {{- range hugo.Sites }}
+      {{ $linkLang := .Language.Params.bcp47 | default (.Language.LanguageCode | default .Language.Lang) }}
+      {{ $linkSlug := .Language.Lang }}
+      {{ $linkName := .Language.LanguageName }}
       {{ $linkDir := "ltr" }}
       {{ if eq $linkLang "ar" }}{{ $linkDir = "rtl" }}{{ end }}
 
@@ -71,11 +73,16 @@
 
       {{ with $.AllTranslations }}
         {{ range . }}
-          {{ if eq .Lang $linkLang }}
-            {{ $pageKey := printf "%s::%s" .RelPermalink $linkLang }}
+          {{ if eq .Lang $linkSlug }}
+            {{ $pageStatusPath := .RelPermalink }}
+            {{ with .Params.canonical_path }}{{ $pageStatusPath = . }}{{ end }}
+            {{ $pageKey := printf "%s::%s" $pageStatusPath $linkLang }}
             {{ $statusForPage := index $translationStatus $pageKey | default "placeholder" }}
             {{/* For the canonical English page we always consider it live. */}}
-            {{ if eq $linkLang "en" }}
+            {{ if eq $linkSlug $currentLangSlug }}
+              {{ $destURL = .RelPermalink }}
+              {{ $isLive = true }}
+            {{ else if eq $linkLang "en" }}
               {{ $destURL = .RelPermalink }}
               {{ $isLive = true }}
             {{ else if eq $statusForPage "live" }}
@@ -94,7 +101,7 @@
           {{ if eq $linkLang "en" }}
             {{ $destURL = "/" }}
           {{ else }}
-            {{ $destURL = printf "/%s/" $linkLang }}
+            {{ $destURL = printf "/%s/" $linkSlug }}
           {{ end }}
         {{ else }}
           {{/* Last fallback: English canonical home. */}}
@@ -108,10 +115,13 @@
            lang="{{ $linkLang }}"
            dir="{{ $linkDir }}"
            hreflang="{{ $linkLang }}"
-           class="lang-switcher__link{{ if eq $linkLang $currentLang }} is-current{{ end }}"
-           {{ if eq $linkLang $currentLang }}aria-current="true"{{ end }}>
+           data-event="language_switcher_select"
+           data-from="{{ $currentLang }}"
+           data-to="{{ $linkLang }}"
+           class="lang-switcher__link{{ if eq $linkSlug $currentLangSlug }} is-current{{ end }}"
+           {{ if eq $linkSlug $currentLangSlug }}aria-current="true"{{ end }}>
           <span class="lang-switcher__label">{{ $linkName }}</span>
-          {{- if eq $linkLang $currentLang -}}
+          {{- if eq $linkSlug $currentLangSlug -}}
             <span class="lang-switcher__marker">— {{ i18n "current_language" }}</span>
           {{- else if eq $linkLang "en" -}}
             <span class="lang-switcher__marker">— {{ i18n "english_official_source" }}</span>

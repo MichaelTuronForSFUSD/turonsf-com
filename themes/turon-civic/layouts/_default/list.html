@@ -1,12 +1,12 @@
 {{ define "main" }}
 <header class="page-hero">
-  <p class="eyebrow">Michael Turon · SFUSD Board of Education · 2026</p>
+  <p class="eyebrow">{{ i18n "page_eyebrow" }}</p>
   <h1>{{ .Title }}</h1>
   {{ with .Params.description }}<p class="hero__dek">{{ . }}</p>{{ end }}
 </header>
 <article class="prose">
   {{ .Content }}
-  {{ range .Pages }}
+  {{ range sort .Pages "Params.translationKey" "asc" }}
     {{ if (.Params.is_active | default true) }}
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       {{ with .Summary }}<p>{{ . }}</p>{{ end }}

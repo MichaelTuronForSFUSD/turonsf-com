@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section class="hero">
-  <p class="eyebrow">Michael Turon · Data Scientist · SFUSD Parent</p>
-  <h1>Three problems. In order.</h1>
-  <p class="hero__dek">Special Education staffing. Budget discipline. Teacher retention. A school board campaign built around the problems families feel first.</p>
+  <p class="eyebrow">{{ i18n "home_hero_eyebrow" }}</p>
+  <h1>{{ i18n "home_hero_title" }}</h1>
+  <p class="hero__dek">{{ i18n "home_hero_dek" }}</p>
   <div class="cta-row" data-cta-primary>
     {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "newsletter" "source" "hero" "label_key" "newsletter_cta_primary" "style" "primary") }}
     {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "donate" "source" "hero-donate" "label_key" "donate_link_secondary" "style" "text") }}
@@ -10,22 +10,22 @@
   </div>
 </section>
 
-<section class="trust-strip" aria-label="Trust signals" data-trust-strip>
-  <div class="trust-cell"><strong>$72M</strong><span>Royal Caribbean vendor savings</span></div>
-  <div class="trust-cell"><strong>Two kids</strong><span>SFUSD parent</span></div>
-  <div class="trust-cell"><strong>-$33M → +$9M</strong><span>HelloFresh EBITDA swing</span></div>
-  <div class="trust-cell"><strong>Cambridge</strong><span>Physics PhD</span></div>
+<section class="trust-strip" aria-label="{{ i18n "trust_strip_label" }}" data-trust-strip>
+  <div class="trust-cell"><strong>$72M</strong><span>Royal Caribbean {{ i18n "vendor_savings" }}</span></div>
+  <div class="trust-cell"><strong>{{ i18n "trust_two_kids" }}</strong><span>{{ i18n "sfusd_parent" }}</span></div>
+  <div class="trust-cell"><strong>-$33M → +$9M</strong><span>HelloFresh {{ i18n "ebitda_swing" }}</span></div>
+  <div class="trust-cell"><strong>Cambridge</strong><span>{{ i18n "cambridge_phd" }}</span></div>
 </section>
 
-<section class="pillar-grid" aria-label="Campaign platform pillars">
+<section class="pillar-grid" aria-label="{{ i18n "platform" }}">
   <a class="pillar-card" href="{{ "/platform/pillar-1/" | relLangURL }}" data-event="pillar_click" data-pillar="1" data-source="home">
-    <p class="eyebrow">Pillar 1</p><h2>Special Education</h2><p>Staff the services students are legally entitled to receive.</p><strong>How I’ll fix Special Education staffing →</strong>
+    <p class="eyebrow">{{ i18n "pillar_label_1" }}</p><h2>{{ i18n "pillar1" }}</h2><p>{{ i18n "pillar1_home_summary" }}</p><strong>{{ i18n "pillar1_home_link" }} →</strong>
   </a>
   <a class="pillar-card" href="{{ "/platform/pillar-2/" | relLangURL }}" data-event="pillar_click" data-pillar="2" data-source="home">
-    <p class="eyebrow">Pillar 2</p><h2>Budget Discipline</h2><p>Bring board oversight back to dollars, delivery, and consequences.</p><strong>How I’ll vote on board oversight →</strong>
+    <p class="eyebrow">{{ i18n "pillar_label_2" }}</p><h2>{{ i18n "pillar2" }}</h2><p>{{ i18n "pillar2_home_summary" }}</p><strong>{{ i18n "pillar2_home_link" }} →</strong>
   </a>
   <a class="pillar-card" href="{{ "/platform/pillar-3/" | relLangURL }}" data-event="pillar_click" data-pillar="3" data-source="home">
-    <p class="eyebrow">Pillar 3</p><h2>Teacher Retention</h2><p>Keep great educators in classrooms by treating retention as a system problem.</p><strong>Where I stand on teacher retention →</strong>
+    <p class="eyebrow">{{ i18n "pillar_label_3" }}</p><h2>{{ i18n "pillar3" }}</h2><p>{{ i18n "pillar3_home_summary" }}</p><strong>{{ i18n "pillar3_home_link" }} →</strong>
   </a>
 </section>
 

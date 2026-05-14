@@ -1,32 +1,43 @@
 ---
-title: "Stay Updated — Michael Turon for SFUSD"
-description: "Get updates on Special Education, Budget Discipline, and Teacher Retention from Michael Turon's campaign for SFUSD Board of Education."
+title: "接收最新消息 — Michael Turon for SFUSD"
+description: "接收 Michael Turon 参选 SFUSD 教育委员会关于特殊教育、预算纪律与教师留任的最新消息。"
+summary: "接收 Michael Turon 参选 SFUSD 教育委员会的最新消息。"
 date: 2026-05-13
-lastmod: 2026-05-13
+lastmod: 2026-05-14
 translationKey: "newsletter"
 schema_type: "WebPage"
 layout: "newsletter"
+inLanguage: "zh-Hans"
+canonical_language: "en"
+canonical_path: "/newsletter/"
+translation_status: "ai_translated"
+translation_tool_primary: "openai:codex-gpt-5"
+translation_tool_backup: "not_run"
+translation_reviewer: ""
+translation_reviewed_at: ""
+include_in_llms: true
+fppc_sensitive: false
 ---
 
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
 <div class="newsletter-page">
   <div class="newsletter-hero">
-    <p class="eyebrow">Campaign Updates</p>
-    <h1>Be the first to know.</h1>
-    <p class="newsletter-subhead">Special Education staffing. Budget discipline. Teacher retention. Updates from Michael Turon's campaign for SFUSD Board of Education — no spam, unsubscribe anytime.</p>
+    <p class="eyebrow">竞选消息</p>
+    <h1>第一时间掌握消息。</h1>
+    <p class="newsletter-subhead">特殊教育人员配置。预算纪律。教师留任。接收 Michael Turon 参选 SFUSD 教育委员会的最新消息：不发垃圾邮件，随时可以取消订阅。</p>
   </div>
 
   <div class="sib-form" style="background-color:#f9f6ef;">
     <div id="sib-form-container" class="sib-form-container">
       <div id="error-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:16px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:3px;max-width:540px;">
         <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-          <span class="sib-form-message-panel__inner-text">Something went wrong. Please try again.</span>
+          <span class="sib-form-message-panel__inner-text">出了点问题。请再试一次。</span>
         </div>
       </div>
       <div id="success-message" class="sib-form-message-panel" style="font-family:Helvetica,sans-serif;font-size:16px;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:3px;max-width:540px;">
         <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-          <span class="sib-form-message-panel__inner-text">You&#39;re in. Watch for updates from Michael.</span>
+          <span class="sib-form-message-panel__inner-text">你已加入。请留意 Michael 的最新消息。</span>
         </div>
       </div>
       <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px;text-align:center;background-color:rgba(249,246,239,1);border-width:1px;border-style:solid;border-color:#b8c2d0;border-radius:8px;direction:ltr">
@@ -35,9 +46,9 @@ layout: "newsletter"
             <div class="sib-input sib-form-block">
               <div class="form__entry entry_block">
                 <div class="form__label-row">
-                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="FIRSTNAME" data-required="*">First name</label>
+                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="FIRSTNAME" data-required="*">名字</label>
                   <div class="entry__field">
-                    <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="given-name" placeholder="First name" data-required="true" required />
+                    <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="given-name" placeholder="名字" data-required="true" required />
                   </div>
                 </div>
                 <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:14px;color:#661d1d;"></label>
@@ -48,9 +59,9 @@ layout: "newsletter"
             <div class="sib-input sib-form-block">
               <div class="form__entry entry_block">
                 <div class="form__label-row">
-                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="LASTNAME" data-required="*">Last name</label>
+                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="LASTNAME" data-required="*">姓氏</label>
                   <div class="entry__field">
-                    <input class="input" maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="family-name" placeholder="Last name" data-required="true" required />
+                    <input class="input" maxlength="200" type="text" id="LASTNAME" name="LASTNAME" autocomplete="family-name" placeholder="姓氏" data-required="true" required />
                   </div>
                 </div>
                 <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:14px;color:#661d1d;"></label>
@@ -61,9 +72,9 @@ layout: "newsletter"
             <div class="sib-input sib-form-block">
               <div class="form__entry entry_block">
                 <div class="form__label-row">
-                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="EMAIL" data-required="*">Email</label>
+                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="EMAIL" data-required="*">电子邮件</label>
                   <div class="entry__field">
-                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="your@email.com" data-required="true" required />
+                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="you@email.com" data-required="true" required />
                   </div>
                 </div>
                 <label class="entry__error entry__error--primary" style="font-family:Helvetica,sans-serif;font-size:14px;color:#661d1d;"></label>
@@ -74,9 +85,9 @@ layout: "newsletter"
             <div class="sib-sms-field sib-form-block">
               <div class="form__entry entry_block">
                 <div class="form__label-row">
-                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="LANDLINE_NUMBER" data-required="*">Cell phone</label>
+                  <label class="entry__label" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#0d1f3c;" for="LANDLINE_NUMBER" data-required="*">手机</label>
                   <div class="sib-sms-input-wrapper" style="direction:ltr">
-                    <div class="sib-sms-input" data-placeholder="Cell phone" data-required="true" data-country-code="US" data-value="" data-attributename="LANDLINE_NUMBER">
+                    <div class="sib-sms-input" data-placeholder="手机" data-required="true" data-country-code="US" data-value="" data-attributename="LANDLINE_NUMBER">
                       <div class="entry__field">
                         <select class="input" name="LANDLINE_NUMBER__COUNTRY_CODE" data-required="true" style="max-width:120px;">
                           <option value="+1" selected>+1 US</option>
@@ -95,12 +106,12 @@ layout: "newsletter"
           <div style="padding:24px 0;">
             <div class="sib-form-block" style="text-align:left">
               <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-family:Helvetica,sans-serif;font-size:16px;font-weight:700;color:#ffffff;background-color:#c2410c;border-width:0;border-radius:999px;padding:0.75rem 1.5rem;cursor:pointer;" form="sib-form" type="submit">
-                Get updates →
+                接收最新消息 →
               </button>
             </div>
           </div>
           <input type="text" name="email_address_check" value="" class="input--hidden">
-          <input type="hidden" name="locale" value="en">
+          <input type="hidden" name="locale" value="zh-Hans">
         </form>
       </div>
     </div>

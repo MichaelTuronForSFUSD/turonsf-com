@@ -42,15 +42,17 @@
   --------------------------------------------------------------------------
 */}}
 
-{{ $currentLang := .Site.Language.Lang }}
+{{ $currentLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Site.Language.Lang) }}
 
 {{/* English: never render. */}}
 {{ if eq $currentLang "en" }}
   {{/* intentionally empty */}}
 {{ else }}
 
-  {{ $translationStatusData := index .Site.Data.translation_status "pages" }}
-  {{ $thisPageKey := printf "%s::%s" .RelPermalink $currentLang }}
+  {{ $translationStatusData := index (index hugo.Data "translation_status") "pages" }}
+  {{ $thisStatusPath := .RelPermalink }}
+  {{ with .Params.canonical_path }}{{ $thisStatusPath = . }}{{ end }}
+  {{ $thisPageKey := printf "%s::%s" $thisStatusPath $currentLang }}
   {{ $thisStatus := index $translationStatusData $thisPageKey | default "placeholder" }}
 
   {{/* Build mailto subject so the operator's inbox sorts translation feedback
@@ -71,7 +73,8 @@
     <aside class="translation-notice translation-notice--pending"
            role="note"
            aria-label="{{ i18n "translation_pending_notice" }}"
-           lang="{{ $currentLang }}">
+           lang="{{ $currentLang }}"
+           data-pending-notice>
       <p class="translation-notice__body">
         {{ i18n "translation_pending_notice" }}
       </p>
@@ -79,6 +82,8 @@
         <p class="translation-notice__action">
           <a href="{{ $englishPage.Permalink }}"
              class="translation-notice__link"
+             data-event="language_pending_to_english_click"
+             data-source="translation-pending"
              hreflang="en"
              lang="en">{{ i18n "translation_pending_link" }}</a>
         </p>

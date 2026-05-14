@@ -2,24 +2,12 @@
 # Modern Standard Arabic; RTL
 # Direction: rtl
 #
-# AWAITING TRANSLATION — scaffold only.
-# This file mirrors the key set of i18n/en.toml exactly. Values are the
-# English placeholder text. The operator's AI-translation workflow
-# (Phase1_Translation_Workflow.md) replaces each value with the العربية
-# translation and removes the # AWAITING TRANSLATION marker on the affected
-# key block.
-#
-# Glossary discipline (Architecture Decision 9 §5):
-#   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
-#                 Royal Caribbean, HelloFresh, Cambridge, FPPC, FPPC ID 1482971,
-#                 ActBlue, Cloudflare, Umami, Brevo,
-#                 MailChannels, Turnstile, Google Calendar, info@turonsf.com.
-#                 Financial figures unchanged: $72M, -$33M, +$9M.
-#   LOCALIZE: Vote, Endorse, Volunteer, Donate, Contact, Talk, Platform,
-#             About, Special Education, Budget Discipline, Teacher Retention.
-#
-# FPPC §84305 footer translation: requires SAM RAY review before publication.
-# Financial figures: require LAUREN review before publication.
+# AI TRANSLATION DRAFT — requires operator, Sam Ray, and Lauren review before
+# publication. Glossary discipline from Architecture Decision 9 is preserved:
+# Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF, Royal Caribbean,
+# HelloFresh, Cambridge, ActBlue, Cloudflare, Umami, Brevo, MailChannels,
+# Turnstile, Google Calendar, FPPC, FPPC ID 1482971, and info@turonsf.com stay
+# in Latin script. Financial figures stay unchanged: $72M, -$33M, +$9M.
 #
 # Do not change the [section] header tokens — Hugo i18n keys are global.
 # ----------------------------------------------------------------------------
@@ -29,60 +17,115 @@
 # ---------------------------------------------------------------------------
 
 [home]
-other = "Home"  # AWAITING TRANSLATION
+other = "الرئيسية"
 
 [about]
-other = "About"  # AWAITING TRANSLATION
+other = "عن Michael"
 
 [platform]
-other = "Platform"  # AWAITING TRANSLATION
+other = "البرنامج"
 
 [pillar1]
-other = "Special Education"  # AWAITING TRANSLATION
+other = "التعليم الخاص"
 
 [pillar2]
-other = "Budget Discipline"  # AWAITING TRANSLATION
+other = "الانضباط المالي"
 
 [pillar3]
-other = "Teacher Retention"  # AWAITING TRANSLATION
+other = "الاحتفاظ بالمعلّمين"
 
 [endorsements]
-other = "Endorsements"  # AWAITING TRANSLATION
+other = "التأييدات"
 
 [volunteer]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "تطوّع"
 
 [donate]
-other = "Donate"  # AWAITING TRANSLATION
+other = "تبرّع"
 
 [contact]
-other = "Contact"  # AWAITING TRANSLATION
+other = "تواصل"
 
 # DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [letters]
-other = "Letters"  # AWAITING TRANSLATION
+other = "رسائل"
 
 # DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [talk]
-other = "Talk"  # AWAITING TRANSLATION
+other = "حديث"
 
 # ---------------------------------------------------------------------------
 # Hero CTAs
 # ---------------------------------------------------------------------------
 
 [donate_cta]
-other = "Donate"  # AWAITING TRANSLATION
+other = "تبرّع"
 
 [volunteer_cta]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "تطوّع"
 
 [endorse_cta]
-other = "Endorse"  # AWAITING TRANSLATION
+other = "أعلن تأييدك"
 
 [book_call_cta]
-other = "Book a 15-minute call"  # AWAITING TRANSLATION
+other = "احجز مكالمة لمدة 15 دقيقة"
+
+[newsletter_cta_primary]
+other = "احصل على تحديثات الحملة"
+
+[donate_link_secondary]
+other = "تبرّع"
+
+[platform_link_tertiary]
+other = "اقرأ البرنامج"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · عالم بيانات · وليّ أمر في SFUSD"
+
+[home_hero_title]
+other = "ثلاث مشكلات. بالترتيب الصحيح."
+
+[home_hero_dek]
+other = "توفير طاقم التعليم الخاص. الانضباط المالي. الاحتفاظ بالمعلّمين. حملة لمجلس التعليم مبنية حول المشكلات التي تشعر بها العائلات أولاً."
+
+[trust_strip_label]
+other = "إشارات الثقة"
+
+[trust_two_kids]
+other = "طفلان"
+
+[pillar_label_1]
+other = "الركيزة 1"
+
+[pillar_label_2]
+other = "الركيزة 2"
+
+[pillar_label_3]
+other = "الركيزة 3"
+
+[pillar1_home_summary]
+other = "توفير الطواقم للخدمات التي يحق للطلاب الحصول عليها قانونياً."
+
+[pillar2_home_summary]
+other = "إعادة رقابة المجلس إلى المال والتنفيذ والمساءلة."
+
+[pillar3_home_summary]
+other = "إبقاء المعلّمين الممتازين في الصفوف عبر التعامل مع الاحتفاظ بهم كمشكلة نظامية."
+
+[pillar1_home_link]
+other = "كيف سأحسّن توفير طاقم التعليم الخاص"
+
+[pillar2_home_link]
+other = "كيف سأصوّت بشأن رقابة المجلس"
+
+[pillar3_home_link]
+other = "موقفي من الاحتفاظ بالمعلّمين"
 
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
@@ -91,16 +134,16 @@ other = "Book a 15-minute call"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [vendor_savings]
-other = "vendor savings"  # AWAITING TRANSLATION
+other = "وفورات في تكاليف المورّدين"
 
 [sfusd_parent]
-other = "SFUSD parent"  # AWAITING TRANSLATION
+other = "وليّ أمر في SFUSD"
 
 [ebitda_swing]
-other = "EBITDA swing"  # AWAITING TRANSLATION
+other = "تحوّل في EBITDA"
 
 [cambridge_phd]
-other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
+other = "دكتوراه في فيزياء Cambridge"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)
@@ -110,54 +153,73 @@ other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [fppc_disclaimer]
-other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."  # AWAITING TRANSLATION
+other = "مدفوع من قِبل Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."
 
 [copyright]
-other = "© 2026 Michael Turon for SFUSD Board of Education"  # AWAITING TRANSLATION
+other = "© 2026 Michael Turon for SFUSD Board of Education"
 
 [contact_email]
-other = "info@turonsf.com"  # AWAITING TRANSLATION
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[utility_election_label]
+other = "الانتخابات"
+
+[election_date_display]
+other = "3 نوفمبر 2026"
+
+[page_eyebrow]
+other = "Michael Turon · مجلس التعليم في SFUSD · 2026"
+
+[endorsement_notice_contact]
+other = "لإعلان التأييد أو طلب محادثة حول التأييد، راسل info@turonsf.com."
+
+[endorsement_notice_pending]
+other = "ستُنشر التأييدات هنا بعد تفعيل أول تأييد ومراجعته."
 
 # ---------------------------------------------------------------------------
 # Form labels
 # ---------------------------------------------------------------------------
 
 [name]
-other = "Name"  # AWAITING TRANSLATION
+other = "الاسم"
 
 [email]
-other = "Email"  # AWAITING TRANSLATION
+other = "البريد الإلكتروني"
 
 [organization]
-other = "Organization"  # AWAITING TRANSLATION
+other = "المنظمة"
 
 [message]
-other = "Message"  # AWAITING TRANSLATION
+other = "الرسالة"
 
 [submit]
-other = "Submit"  # AWAITING TRANSLATION
+other = "إرسال"
 
 [form_success]
-other = "Thank you. We received your message and will reply within two business days."  # AWAITING TRANSLATION
+other = "شكراً لك. وصلتنا رسالتك وسنرد خلال يومي عمل."
 
 [form_error]
-other = "We could not send your message. Please try again or email info@turonsf.com."  # AWAITING TRANSLATION
+other = "تعذّر إرسال رسالتك. يرجى المحاولة مرة أخرى أو مراسلة info@turonsf.com."
 
 # ---------------------------------------------------------------------------
 # Language switcher (Architecture Decision 3)
 # ---------------------------------------------------------------------------
 
 [language_switcher_label]
-other = "Select language"  # AWAITING TRANSLATION
+other = "اختر اللغة"
 
 [current_language]
-other = "Current"  # AWAITING TRANSLATION
+other = "الحالية"
 
 [english_official_source]
-other = "English — official source"  # AWAITING TRANSLATION
+other = "English — النسخة الرسمية"
 
 [ai_translated_marker]
-other = "AI translated"  # AWAITING TRANSLATION
+other = "مترجم بالذكاء الاصطناعي"
 
 # ---------------------------------------------------------------------------
 # AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
@@ -166,10 +228,10 @@ other = "AI translated"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."  # AWAITING TRANSLATION
+other = "تُرجمت هذه الصفحة بالذكاء الاصطناعي. النسخة English هي النسخة الرسمية."
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
+other = "هل وجدت خطأ؟ راسل info@turonsf.com."
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
@@ -177,23 +239,23 @@ other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [translation_pending_notice]
-other = "This page is not yet translated. Please read the English version for now."  # AWAITING TRANSLATION
+other = "هذه الصفحة لم تُترجم بعد. يرجى قراءة النسخة English حالياً."
 
 [translation_pending_link]
-other = "Read the English version"  # AWAITING TRANSLATION
+other = "اقرأ النسخة English"
 
 # ---------------------------------------------------------------------------
 # Generic UX
 # ---------------------------------------------------------------------------
 
 [read_more]
-other = "Read more"  # AWAITING TRANSLATION
+other = "اقرأ المزيد"
 
 [skip_to_content]
-other = "Skip to main content"  # AWAITING TRANSLATION
+other = "تخطَّ إلى المحتوى الرئيسي"
 
 [menu]
-other = "Menu"  # AWAITING TRANSLATION
+other = "القائمة"
 
 [close]
-other = "Close"  # AWAITING TRANSLATION
+other = "إغلاق"

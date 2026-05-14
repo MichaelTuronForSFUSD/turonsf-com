@@ -57,13 +57,14 @@
 
 {{ $utmContent := printf "%s-%s" $source $lang }}
 {{ $isExternal := or (hasPrefix $baseURL "https://") (hasPrefix $baseURL "http://") (hasPrefix $baseURL "mailto:") }}
-{{ $isInternalPlatform := eq $kind "platform" }}
 {{ $fullURL := $baseURL }}
 
-{{ if and $isExternal (not $isInternalPlatform) }}
+{{ if $isExternal }}
   {{ $separator := "?" }}
   {{ if in $baseURL "?" }}{{ $separator = "&" }}{{ end }}
   {{ $fullURL = printf "%s%sutm_source=turonsf&utm_medium=web&utm_campaign=phase1&utm_content=%s" $baseURL $separator $utmContent }}
+{{ else }}
+  {{ $fullURL = $baseURL | relLangURL }}
 {{ end }}
 
 {{ $eventName := "" }}

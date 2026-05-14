@@ -2,24 +2,12 @@
 # Latin-script Vietnamese with full tone diacritics
 # Direction: ltr
 #
-# AWAITING TRANSLATION — scaffold only.
-# This file mirrors the key set of i18n/en.toml exactly. Values are the
-# English placeholder text. The operator's AI-translation workflow
-# (Phase1_Translation_Workflow.md) replaces each value with the Tiếng Việt
-# translation and removes the # AWAITING TRANSLATION marker on the affected
-# key block.
-#
-# Glossary discipline (Architecture Decision 9 §5):
-#   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
-#                 Royal Caribbean, HelloFresh, Cambridge, FPPC, FPPC ID 1482971,
-#                 ActBlue, Cloudflare, Umami, Brevo,
-#                 MailChannels, Turnstile, Google Calendar, info@turonsf.com.
-#                 Financial figures unchanged: $72M, -$33M, +$9M.
-#   LOCALIZE: Vote, Endorse, Volunteer, Donate, Contact, Talk, Platform,
-#             About, Special Education, Budget Discipline, Teacher Retention.
-#
-# FPPC §84305 footer translation: requires SAM RAY review before publication.
-# Financial figures: require LAUREN review before publication.
+# AI TRANSLATION DRAFT — requires operator, Sam Ray, and Lauren review before
+# publication. Glossary discipline from Architecture Decision 9 is preserved:
+# Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF, Royal Caribbean,
+# HelloFresh, Cambridge, ActBlue, Cloudflare, Umami, Brevo, MailChannels,
+# Turnstile, Google Calendar, FPPC, FPPC ID 1482971, and info@turonsf.com stay
+# in Latin script. Financial figures stay unchanged: $72M, -$33M, +$9M.
 #
 # Do not change the [section] header tokens — Hugo i18n keys are global.
 # ----------------------------------------------------------------------------
@@ -29,60 +17,115 @@
 # ---------------------------------------------------------------------------
 
 [home]
-other = "Home"  # AWAITING TRANSLATION
+other = "Trang chủ"
 
 [about]
-other = "About"  # AWAITING TRANSLATION
+other = "Giới thiệu"
 
 [platform]
-other = "Platform"  # AWAITING TRANSLATION
+other = "Cương lĩnh"
 
 [pillar1]
-other = "Special Education"  # AWAITING TRANSLATION
+other = "Giáo dục Đặc biệt"
 
 [pillar2]
-other = "Budget Discipline"  # AWAITING TRANSLATION
+other = "Kỷ luật Ngân sách"
 
 [pillar3]
-other = "Teacher Retention"  # AWAITING TRANSLATION
+other = "Giữ chân Giáo viên"
 
 [endorsements]
-other = "Endorsements"  # AWAITING TRANSLATION
+other = "Ủng hộ"
 
 [volunteer]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "Tình nguyện"
 
 [donate]
-other = "Donate"  # AWAITING TRANSLATION
+other = "Đóng góp"
 
 [contact]
-other = "Contact"  # AWAITING TRANSLATION
+other = "Liên hệ"
 
 # DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [letters]
-other = "Letters"  # AWAITING TRANSLATION
+other = "Thư"
 
 # DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [talk]
-other = "Talk"  # AWAITING TRANSLATION
+other = "Trao đổi"
 
 # ---------------------------------------------------------------------------
 # Hero CTAs
 # ---------------------------------------------------------------------------
 
 [donate_cta]
-other = "Donate"  # AWAITING TRANSLATION
+other = "Đóng góp"
 
 [volunteer_cta]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "Tình nguyện"
 
 [endorse_cta]
-other = "Endorse"  # AWAITING TRANSLATION
+other = "Ủng hộ"
 
 [book_call_cta]
-other = "Book a 15-minute call"  # AWAITING TRANSLATION
+other = "Đặt lịch gọi 15 phút"
+
+[newsletter_cta_primary]
+other = "Nhận tin từ chiến dịch"
+
+[donate_link_secondary]
+other = "Đóng góp"
+
+[platform_link_tertiary]
+other = "Đọc cương lĩnh"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · Nhà khoa học dữ liệu · Phụ huynh SFUSD"
+
+[home_hero_title]
+other = "Ba vấn đề. Theo đúng thứ tự."
+
+[home_hero_dek]
+other = "Nhân sự Giáo dục Đặc biệt. Kỷ luật ngân sách. Giữ chân giáo viên. Một chiến dịch hội đồng giáo dục tập trung vào những vấn đề gia đình cảm nhận trước tiên."
+
+[trust_strip_label]
+other = "Dấu hiệu tin cậy"
+
+[trust_two_kids]
+other = "Hai con"
+
+[pillar_label_1]
+other = "Trụ cột 1"
+
+[pillar_label_2]
+other = "Trụ cột 2"
+
+[pillar_label_3]
+other = "Trụ cột 3"
+
+[pillar1_home_summary]
+other = "Bố trí đủ nhân sự cho các dịch vụ mà học sinh có quyền được nhận."
+
+[pillar2_home_summary]
+other = "Đưa vai trò giám sát của board trở lại với tiền, thực thi, và trách nhiệm."
+
+[pillar3_home_summary]
+other = "Giữ những educator giỏi trong lớp học bằng cách xem retention là một vấn đề hệ thống."
+
+[pillar1_home_link]
+other = "Cách tôi sẽ cải thiện nhân sự Giáo dục Đặc biệt"
+
+[pillar2_home_link]
+other = "Cách tôi sẽ bỏ phiếu về giám sát của board"
+
+[pillar3_home_link]
+other = "Lập trường của tôi về giữ chân giáo viên"
 
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
@@ -91,16 +134,16 @@ other = "Book a 15-minute call"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [vendor_savings]
-other = "vendor savings"  # AWAITING TRANSLATION
+other = "tiết kiệm chi phí nhà cung cấp"
 
 [sfusd_parent]
-other = "SFUSD parent"  # AWAITING TRANSLATION
+other = "phụ huynh SFUSD"
 
 [ebitda_swing]
-other = "EBITDA swing"  # AWAITING TRANSLATION
+other = "chuyển biến EBITDA"
 
 [cambridge_phd]
-other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
+other = "Cambridge Physics PhD"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)
@@ -110,54 +153,73 @@ other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [fppc_disclaimer]
-other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."  # AWAITING TRANSLATION
+other = "Được chi trả bởi Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."
 
 [copyright]
-other = "© 2026 Michael Turon for SFUSD Board of Education"  # AWAITING TRANSLATION
+other = "© 2026 Michael Turon for SFUSD Board of Education"
 
 [contact_email]
-other = "info@turonsf.com"  # AWAITING TRANSLATION
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[utility_election_label]
+other = "Bầu cử"
+
+[election_date_display]
+other = "Ngày 3 tháng 11 năm 2026"
+
+[page_eyebrow]
+other = "Michael Turon · Hội đồng Giáo dục SFUSD · 2026"
+
+[endorsement_notice_contact]
+other = "Để ủng hộ hoặc yêu cầu trao đổi về endorsement, hãy gửi email tới info@turonsf.com."
+
+[endorsement_notice_pending]
+other = "Các endorsement sẽ được đăng tại đây sau khi endorsement đầu tiên được kích hoạt và duyệt."
 
 # ---------------------------------------------------------------------------
 # Form labels
 # ---------------------------------------------------------------------------
 
 [name]
-other = "Name"  # AWAITING TRANSLATION
+other = "Tên"
 
 [email]
-other = "Email"  # AWAITING TRANSLATION
+other = "Email"
 
 [organization]
-other = "Organization"  # AWAITING TRANSLATION
+other = "Tổ chức"
 
 [message]
-other = "Message"  # AWAITING TRANSLATION
+other = "Tin nhắn"
 
 [submit]
-other = "Submit"  # AWAITING TRANSLATION
+other = "Gửi"
 
 [form_success]
-other = "Thank you. We received your message and will reply within two business days."  # AWAITING TRANSLATION
+other = "Cảm ơn. Chúng tôi đã nhận được tin nhắn của bạn và sẽ trả lời trong vòng hai ngày làm việc."
 
 [form_error]
-other = "We could not send your message. Please try again or email info@turonsf.com."  # AWAITING TRANSLATION
+other = "Chúng tôi không gửi được tin nhắn của bạn. Vui lòng thử lại hoặc gửi email tới info@turonsf.com."
 
 # ---------------------------------------------------------------------------
 # Language switcher (Architecture Decision 3)
 # ---------------------------------------------------------------------------
 
 [language_switcher_label]
-other = "Select language"  # AWAITING TRANSLATION
+other = "Chọn ngôn ngữ"
 
 [current_language]
-other = "Current"  # AWAITING TRANSLATION
+other = "Hiện tại"
 
 [english_official_source]
-other = "English — official source"  # AWAITING TRANSLATION
+other = "English — bản chính thức"
 
 [ai_translated_marker]
-other = "AI translated"  # AWAITING TRANSLATION
+other = "AI dịch"
 
 # ---------------------------------------------------------------------------
 # AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
@@ -166,10 +228,10 @@ other = "AI translated"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."  # AWAITING TRANSLATION
+other = "Trang này được AI dịch. Phiên bản English là phiên bản chính thức."
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
+other = "Thấy lỗi? Hãy gửi email tới info@turonsf.com."
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
@@ -177,23 +239,23 @@ other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [translation_pending_notice]
-other = "This page is not yet translated. Please read the English version for now."  # AWAITING TRANSLATION
+other = "Trang này chưa được dịch. Vui lòng đọc phiên bản English trong lúc này."
 
 [translation_pending_link]
-other = "Read the English version"  # AWAITING TRANSLATION
+other = "Đọc phiên bản English"
 
 # ---------------------------------------------------------------------------
 # Generic UX
 # ---------------------------------------------------------------------------
 
 [read_more]
-other = "Read more"  # AWAITING TRANSLATION
+other = "Đọc thêm"
 
 [skip_to_content]
-other = "Skip to main content"  # AWAITING TRANSLATION
+other = "Bỏ qua đến nội dung chính"
 
 [menu]
-other = "Menu"  # AWAITING TRANSLATION
+other = "Menu"
 
 [close]
-other = "Close"  # AWAITING TRANSLATION
+other = "Đóng"

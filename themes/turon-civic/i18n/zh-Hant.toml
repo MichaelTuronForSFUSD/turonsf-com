@@ -2,12 +2,9 @@
 # Traditional Chinese script (Cantonese-reading population per SFUSD policy)
 # Direction: ltr
 #
-# AWAITING TRANSLATION — scaffold only.
-# This file mirrors the key set of i18n/en.toml exactly. Values are the
-# English placeholder text. The operator's AI-translation workflow
-# (Phase1_Translation_Workflow.md) replaces each value with the 繁體中文
-# translation and removes the # AWAITING TRANSLATION marker on the affected
-# key block.
+# AI TRANSLATION DRAFT — 繁體中文 (zh-Hant).
+# Status: ai_translated; pending operator, Sam Ray, and Lauren Turon review
+# where required by Phase1_Translation_Workflow.md.
 #
 # Glossary discipline (Architecture Decision 9 §5):
 #   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
@@ -29,60 +26,115 @@
 # ---------------------------------------------------------------------------
 
 [home]
-other = "Home"  # AWAITING TRANSLATION
+other = "首頁"
 
 [about]
-other = "About"  # AWAITING TRANSLATION
+other = "關於"
 
 [platform]
-other = "Platform"  # AWAITING TRANSLATION
+other = "政見平台"
 
 [pillar1]
-other = "Special Education"  # AWAITING TRANSLATION
+other = "特殊教育"
 
 [pillar2]
-other = "Budget Discipline"  # AWAITING TRANSLATION
+other = "預算紀律"
 
 [pillar3]
-other = "Teacher Retention"  # AWAITING TRANSLATION
+other = "教師留任"
 
 [endorsements]
-other = "Endorsements"  # AWAITING TRANSLATION
+other = "支持背書"
 
 [volunteer]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "志工"
 
 [donate]
-other = "Donate"  # AWAITING TRANSLATION
+other = "捐款"
 
 [contact]
-other = "Contact"  # AWAITING TRANSLATION
+other = "聯絡"
 
 # DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [letters]
-other = "Letters"  # AWAITING TRANSLATION
+other = "信件"
 
 # DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [talk]
-other = "Talk"  # AWAITING TRANSLATION
+other = "對話"
 
 # ---------------------------------------------------------------------------
 # Hero CTAs
 # ---------------------------------------------------------------------------
 
 [donate_cta]
-other = "Donate"  # AWAITING TRANSLATION
+other = "捐款"
 
 [volunteer_cta]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "加入志工"
 
 [endorse_cta]
-other = "Endorse"  # AWAITING TRANSLATION
+other = "支持背書"
 
 [book_call_cta]
-other = "Book a 15-minute call"  # AWAITING TRANSLATION
+other = "預約 15 分鐘通話"
+
+[newsletter_cta_primary]
+other = "接收競選消息"
+
+[donate_link_secondary]
+other = "捐款"
+
+[platform_link_tertiary]
+other = "閱讀政見平台"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · 資料科學家 · SFUSD 家長"
+
+[home_hero_title]
+other = "三個問題。依序處理。"
+
+[home_hero_dek]
+other = "特殊教育人員配置。預算紀律。教師留任。一場以家庭最先感受到的問題為核心的教育委員會競選。"
+
+[trust_strip_label]
+other = "信任指標"
+
+[trust_two_kids]
+other = "兩個孩子"
+
+[pillar_label_1]
+other = "支柱 1"
+
+[pillar_label_2]
+other = "支柱 2"
+
+[pillar_label_3]
+other = "支柱 3"
+
+[pillar1_home_summary]
+other = "為學生依法有權獲得的服務配足人力。"
+
+[pillar2_home_summary]
+other = "讓委員會監督重新回到經費、執行與後果。"
+
+[pillar3_home_summary]
+other = "把留任視為系統問題，讓優秀教育工作者留在教室。"
+
+[pillar1_home_link]
+other = "我將如何改善特殊教育人員配置"
+
+[pillar2_home_link]
+other = "我將如何就委員會監督投票"
+
+[pillar3_home_link]
+other = "我對教師留任的立場"
 
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
@@ -91,16 +143,16 @@ other = "Book a 15-minute call"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [vendor_savings]
-other = "vendor savings"  # AWAITING TRANSLATION
+other = "供應商成本節省"
 
 [sfusd_parent]
-other = "SFUSD parent"  # AWAITING TRANSLATION
+other = "SFUSD 家長"
 
 [ebitda_swing]
-other = "EBITDA swing"  # AWAITING TRANSLATION
+other = "EBITDA 轉變"
 
 [cambridge_phd]
-other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
+other = "Cambridge 物理博士"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)
@@ -110,54 +162,73 @@ other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [fppc_disclaimer]
-other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."  # AWAITING TRANSLATION
+other = "由 Michael Turon for SFUSD Board of Education 2026 支付。FPPC ID 1482971。"
 
 [copyright]
-other = "© 2026 Michael Turon for SFUSD Board of Education"  # AWAITING TRANSLATION
+other = "© 2026 Michael Turon for SFUSD Board of Education"
 
 [contact_email]
-other = "info@turonsf.com"  # AWAITING TRANSLATION
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[utility_election_label]
+other = "選舉"
+
+[election_date_display]
+other = "2026 年 11 月 3 日"
+
+[page_eyebrow]
+other = "Michael Turon · SFUSD 教育委員會 · 2026"
+
+[endorsement_notice_contact]
+other = "若要支持背書或要求進行背書相關對話，請寄信至 info@turonsf.com。"
+
+[endorsement_notice_pending]
+other = "第一項背書啟用並完成審查後，將在此公布。"
 
 # ---------------------------------------------------------------------------
 # Form labels
 # ---------------------------------------------------------------------------
 
 [name]
-other = "Name"  # AWAITING TRANSLATION
+other = "姓名"
 
 [email]
-other = "Email"  # AWAITING TRANSLATION
+other = "電子郵件"
 
 [organization]
-other = "Organization"  # AWAITING TRANSLATION
+other = "組織"
 
 [message]
-other = "Message"  # AWAITING TRANSLATION
+other = "訊息"
 
 [submit]
-other = "Submit"  # AWAITING TRANSLATION
+other = "送出"
 
 [form_success]
-other = "Thank you. We received your message and will reply within two business days."  # AWAITING TRANSLATION
+other = "謝謝。我們已收到你的訊息，並會在兩個工作天內回覆。"
 
 [form_error]
-other = "We could not send your message. Please try again or email info@turonsf.com."  # AWAITING TRANSLATION
+other = "我們無法送出你的訊息。請再試一次，或寄信至 info@turonsf.com。"
 
 # ---------------------------------------------------------------------------
 # Language switcher (Architecture Decision 3)
 # ---------------------------------------------------------------------------
 
 [language_switcher_label]
-other = "Select language"  # AWAITING TRANSLATION
+other = "選擇語言"
 
 [current_language]
-other = "Current"  # AWAITING TRANSLATION
+other = "目前語言"
 
 [english_official_source]
-other = "English — official source"  # AWAITING TRANSLATION
+other = "英文 — 官方版本"
 
 [ai_translated_marker]
-other = "AI translated"  # AWAITING TRANSLATION
+other = "AI 翻譯"
 
 # ---------------------------------------------------------------------------
 # AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
@@ -166,10 +237,10 @@ other = "AI translated"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."  # AWAITING TRANSLATION
+other = "本頁由 AI 翻譯。英文版本為官方版本。"
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
+other = "發現錯誤嗎？請寄信至 info@turonsf.com。"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
@@ -177,23 +248,23 @@ other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [translation_pending_notice]
-other = "This page is not yet translated. Please read the English version for now."  # AWAITING TRANSLATION
+other = "本頁尚未翻譯。請暫時閱讀英文版本。"
 
 [translation_pending_link]
-other = "Read the English version"  # AWAITING TRANSLATION
+other = "閱讀英文版本"
 
 # ---------------------------------------------------------------------------
 # Generic UX
 # ---------------------------------------------------------------------------
 
 [read_more]
-other = "Read more"  # AWAITING TRANSLATION
+other = "閱讀更多"
 
 [skip_to_content]
-other = "Skip to main content"  # AWAITING TRANSLATION
+other = "跳至主要內容"
 
 [menu]
-other = "Menu"  # AWAITING TRANSLATION
+other = "選單"
 
 [close]
-other = "Close"  # AWAITING TRANSLATION
+other = "關閉"

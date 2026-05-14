@@ -2,24 +2,12 @@
 # Simplified Chinese script (Mandarin-reading population per SFUSD policy)
 # Direction: ltr
 #
-# AWAITING TRANSLATION — scaffold only.
-# This file mirrors the key set of i18n/en.toml exactly. Values are the
-# English placeholder text. The operator's AI-translation workflow
-# (Phase1_Translation_Workflow.md) replaces each value with the 简体中文
-# translation and removes the # AWAITING TRANSLATION marker on the affected
-# key block.
-#
-# Glossary discipline (Architecture Decision 9 §5):
-#   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
-#                 Royal Caribbean, HelloFresh, Cambridge, FPPC, FPPC ID 1482971,
-#                 ActBlue, Cloudflare, Umami, Brevo,
-#                 MailChannels, Turnstile, Google Calendar, info@turonsf.com.
-#                 Financial figures unchanged: $72M, -$33M, +$9M.
-#   LOCALIZE: Vote, Endorse, Volunteer, Donate, Contact, Talk, Platform,
-#             About, Special Education, Budget Discipline, Teacher Retention.
-#
-# FPPC §84305 footer translation: requires SAM RAY review before publication.
-# Financial figures: require LAUREN review before publication.
+# AI TRANSLATION DRAFT — requires operator, Sam Ray, and Lauren review before
+# publication. Glossary discipline from Architecture Decision 9 is preserved:
+# Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF, Royal Caribbean,
+# HelloFresh, Cambridge, ActBlue, Cloudflare, Umami, Brevo, MailChannels,
+# Turnstile, Google Calendar, FPPC, FPPC ID 1482971, and info@turonsf.com stay
+# in Latin script. Financial figures stay unchanged: $72M, -$33M, +$9M.
 #
 # Do not change the [section] header tokens — Hugo i18n keys are global.
 # ----------------------------------------------------------------------------
@@ -29,60 +17,115 @@
 # ---------------------------------------------------------------------------
 
 [home]
-other = "Home"  # AWAITING TRANSLATION
+other = "首页"
 
 [about]
-other = "About"  # AWAITING TRANSLATION
+other = "关于"
 
 [platform]
-other = "Platform"  # AWAITING TRANSLATION
+other = "政见平台"
 
 [pillar1]
-other = "Special Education"  # AWAITING TRANSLATION
+other = "特殊教育"
 
 [pillar2]
-other = "Budget Discipline"  # AWAITING TRANSLATION
+other = "预算纪律"
 
 [pillar3]
-other = "Teacher Retention"  # AWAITING TRANSLATION
+other = "教师留任"
 
 [endorsements]
-other = "Endorsements"  # AWAITING TRANSLATION
+other = "支持背书"
 
 [volunteer]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "志愿者"
 
 [donate]
-other = "Donate"  # AWAITING TRANSLATION
+other = "捐款"
 
 [contact]
-other = "Contact"  # AWAITING TRANSLATION
+other = "联系"
 
 # DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [letters]
-other = "Letters"  # AWAITING TRANSLATION
+other = "信件"
 
 # DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [talk]
-other = "Talk"  # AWAITING TRANSLATION
+other = "对话"
 
 # ---------------------------------------------------------------------------
 # Hero CTAs
 # ---------------------------------------------------------------------------
 
 [donate_cta]
-other = "Donate"  # AWAITING TRANSLATION
+other = "捐款"
 
 [volunteer_cta]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "加入志愿者"
 
 [endorse_cta]
-other = "Endorse"  # AWAITING TRANSLATION
+other = "支持背书"
 
 [book_call_cta]
-other = "Book a 15-minute call"  # AWAITING TRANSLATION
+other = "预约 15 分钟通话"
+
+[newsletter_cta_primary]
+other = "接收竞选消息"
+
+[donate_link_secondary]
+other = "捐款"
+
+[platform_link_tertiary]
+other = "阅读政见平台"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · 数据科学家 · SFUSD 家长"
+
+[home_hero_title]
+other = "三个问题。按顺序处理。"
+
+[home_hero_dek]
+other = "特殊教育人员配置。预算纪律。教师留任。一场以家庭最先感受到的问题为核心的教育委员会竞选。"
+
+[trust_strip_label]
+other = "信任指标"
+
+[trust_two_kids]
+other = "两个孩子"
+
+[pillar_label_1]
+other = "支柱 1"
+
+[pillar_label_2]
+other = "支柱 2"
+
+[pillar_label_3]
+other = "支柱 3"
+
+[pillar1_home_summary]
+other = "为学生依法有权获得的服务配足人力。"
+
+[pillar2_home_summary]
+other = "让委员会监督重新回到经费、执行与后果。"
+
+[pillar3_home_summary]
+other = "把留任视为系统问题，让优秀教育工作者留在教室。"
+
+[pillar1_home_link]
+other = "我将如何改善特殊教育人员配置"
+
+[pillar2_home_link]
+other = "我将如何就委员会监督投票"
+
+[pillar3_home_link]
+other = "我对教师留任的立场"
 
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
@@ -91,16 +134,16 @@ other = "Book a 15-minute call"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [vendor_savings]
-other = "vendor savings"  # AWAITING TRANSLATION
+other = "供应商成本节省"
 
 [sfusd_parent]
-other = "SFUSD parent"  # AWAITING TRANSLATION
+other = "SFUSD 家长"
 
 [ebitda_swing]
-other = "EBITDA swing"  # AWAITING TRANSLATION
+other = "EBITDA 转变"
 
 [cambridge_phd]
-other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
+other = "Cambridge 物理博士"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)
@@ -110,54 +153,73 @@ other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [fppc_disclaimer]
-other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."  # AWAITING TRANSLATION
+other = "由 Michael Turon for SFUSD Board of Education 2026 支付。FPPC ID 1482971。"
 
 [copyright]
-other = "© 2026 Michael Turon for SFUSD Board of Education"  # AWAITING TRANSLATION
+other = "© 2026 Michael Turon for SFUSD Board of Education"
 
 [contact_email]
-other = "info@turonsf.com"  # AWAITING TRANSLATION
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[utility_election_label]
+other = "选举"
+
+[election_date_display]
+other = "2026 年 11 月 3 日"
+
+[page_eyebrow]
+other = "Michael Turon · SFUSD 教育委员会 · 2026"
+
+[endorsement_notice_contact]
+other = "若要支持背书或要求进行背书相关对话，请发送邮件至 info@turonsf.com。"
+
+[endorsement_notice_pending]
+other = "第一项背书启用并完成审核后，将在此公布。"
 
 # ---------------------------------------------------------------------------
 # Form labels
 # ---------------------------------------------------------------------------
 
 [name]
-other = "Name"  # AWAITING TRANSLATION
+other = "姓名"
 
 [email]
-other = "Email"  # AWAITING TRANSLATION
+other = "电子邮件"
 
 [organization]
-other = "Organization"  # AWAITING TRANSLATION
+other = "组织"
 
 [message]
-other = "Message"  # AWAITING TRANSLATION
+other = "留言"
 
 [submit]
-other = "Submit"  # AWAITING TRANSLATION
+other = "提交"
 
 [form_success]
-other = "Thank you. We received your message and will reply within two business days."  # AWAITING TRANSLATION
+other = "谢谢。我们已收到你的留言，并会在两个工作日内回复。"
 
 [form_error]
-other = "We could not send your message. Please try again or email info@turonsf.com."  # AWAITING TRANSLATION
+other = "无法发送你的留言。请再试一次，或发送邮件至 info@turonsf.com。"
 
 # ---------------------------------------------------------------------------
 # Language switcher (Architecture Decision 3)
 # ---------------------------------------------------------------------------
 
 [language_switcher_label]
-other = "Select language"  # AWAITING TRANSLATION
+other = "选择语言"
 
 [current_language]
-other = "Current"  # AWAITING TRANSLATION
+other = "当前语言"
 
 [english_official_source]
-other = "English — official source"  # AWAITING TRANSLATION
+other = "英文 — 官方版本"
 
 [ai_translated_marker]
-other = "AI translated"  # AWAITING TRANSLATION
+other = "AI 翻译"
 
 # ---------------------------------------------------------------------------
 # AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
@@ -166,10 +228,10 @@ other = "AI translated"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."  # AWAITING TRANSLATION
+other = "本页由 AI 翻译。英文版本为官方版本。"
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
+other = "发现错误吗？请发送邮件至 info@turonsf.com。"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
@@ -177,23 +239,23 @@ other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [translation_pending_notice]
-other = "This page is not yet translated. Please read the English version for now."  # AWAITING TRANSLATION
+other = "本页尚未翻译。请暂时阅读英文版本。"
 
 [translation_pending_link]
-other = "Read the English version"  # AWAITING TRANSLATION
+other = "阅读英文版本"
 
 # ---------------------------------------------------------------------------
 # Generic UX
 # ---------------------------------------------------------------------------
 
 [read_more]
-other = "Read more"  # AWAITING TRANSLATION
+other = "阅读更多"
 
 [skip_to_content]
-other = "Skip to main content"  # AWAITING TRANSLATION
+other = "跳至主要内容"
 
 [menu]
-other = "Menu"  # AWAITING TRANSLATION
+other = "菜单"
 
 [close]
-other = "Close"  # AWAITING TRANSLATION
+other = "关闭"

@@ -5,6 +5,12 @@
   if (!menu) return;
   var links = menu.querySelectorAll('.lang-switcher__link');
 
+  function trackOpen() {
+    if (window.turonAnalytics && typeof window.turonAnalytics.track === 'function') {
+      window.turonAnalytics.track('language_switcher_open', { source: 'header' });
+    }
+  }
+
   function setOpen(open) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     if (open) {
@@ -18,6 +24,7 @@
     var isOpen = toggle.getAttribute('aria-expanded') === 'true';
     setOpen(!isOpen);
     if (!isOpen && links.length) {
+      trackOpen();
       links[0].focus();
     }
   });
@@ -25,6 +32,9 @@
   toggle.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
+      if (toggle.getAttribute('aria-expanded') !== 'true') {
+        trackOpen();
+      }
       setOpen(true);
       if (links.length) links[0].focus();
     }

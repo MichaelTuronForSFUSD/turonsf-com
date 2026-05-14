@@ -37,6 +37,7 @@ summaryLength = 32
     [languages.en.params]
       languageName = "English"
       dir = "ltr"
+      bcp47 = "en"
 
   [languages.es]
     languageCode = "es"
@@ -46,33 +47,38 @@ summaryLength = 32
     [languages.es.params]
       languageName = "Español"
       dir = "ltr"
+      bcp47 = "es"
 
   [languages.zh-Hant]
     languageCode = "zh-Hant"
     languageName = "繁體中文"
     weight = 3
-    title = "麥可・圖隆參選舊金山聯合校區教育委員會"
+    title = "Michael Turon 參選 SFUSD 教育委員會"
     [languages.zh-Hant.params]
       languageName = "繁體中文"
       dir = "ltr"
+      bcp47 = "zh-Hant"
 
   [languages.zh-Hans]
     languageCode = "zh-Hans"
     languageName = "简体中文"
     weight = 4
-    title = "麦可・图隆参选旧金山联合校区教育委员会"
+    title = "Michael Turon 参选 SFUSD 教育委员会"
     [languages.zh-Hans.params]
       languageName = "简体中文"
       dir = "ltr"
+      bcp47 = "zh-Hans"
 
   [languages.tl]
     languageCode = "tl"
+    locale = "fil"
     languageName = "Tagalog"
     weight = 5
-    title = "Michael Turon para sa SFUSD Board of Education"
+    title = "Michael Turon para sa Lupon ng Edukasyon ng SFUSD"
     [languages.tl.params]
       languageName = "Tagalog"
       dir = "ltr"
+      bcp47 = "tl"
 
   [languages.vi]
     languageCode = "vi"
@@ -82,6 +88,7 @@ summaryLength = 32
     [languages.vi.params]
       languageName = "Tiếng Việt"
       dir = "ltr"
+      bcp47 = "vi"
 
   [languages.ar]
     languageCode = "ar"
@@ -91,6 +98,7 @@ summaryLength = 32
     [languages.ar.params]
       languageName = "العربية"
       dir = "rtl"
+      bcp47 = "ar"
 
 [markup]
   [markup.goldmark.renderer]

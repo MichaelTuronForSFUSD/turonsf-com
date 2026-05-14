@@ -2,24 +2,12 @@
 # Latin-script Tagalog (BCP 47 tl; not generic Filipino)
 # Direction: ltr
 #
-# AWAITING TRANSLATION — scaffold only.
-# This file mirrors the key set of i18n/en.toml exactly. Values are the
-# English placeholder text. The operator's AI-translation workflow
-# (Phase1_Translation_Workflow.md) replaces each value with the Tagalog
-# translation and removes the # AWAITING TRANSLATION marker on the affected
-# key block.
-#
-# Glossary discipline (Architecture Decision 9 §5):
-#   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
-#                 Royal Caribbean, HelloFresh, Cambridge, FPPC, FPPC ID 1482971,
-#                 ActBlue, Cloudflare, Umami, Brevo,
-#                 MailChannels, Turnstile, Google Calendar, info@turonsf.com.
-#                 Financial figures unchanged: $72M, -$33M, +$9M.
-#   LOCALIZE: Vote, Endorse, Volunteer, Donate, Contact, Talk, Platform,
-#             About, Special Education, Budget Discipline, Teacher Retention.
-#
-# FPPC §84305 footer translation: requires SAM RAY review before publication.
-# Financial figures: require LAUREN review before publication.
+# AI TRANSLATION DRAFT — requires operator, Sam Ray, and Lauren review before
+# publication. Glossary discipline from Architecture Decision 9 is preserved:
+# Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF, Royal Caribbean,
+# HelloFresh, Cambridge, ActBlue, Cloudflare, Umami, Brevo, MailChannels,
+# Turnstile, Google Calendar, FPPC, FPPC ID 1482971, and info@turonsf.com stay
+# in Latin script. Financial figures stay unchanged: $72M, -$33M, +$9M.
 #
 # Do not change the [section] header tokens — Hugo i18n keys are global.
 # ----------------------------------------------------------------------------
@@ -29,60 +17,115 @@
 # ---------------------------------------------------------------------------
 
 [home]
-other = "Home"  # AWAITING TRANSLATION
+other = "Home"
 
 [about]
-other = "About"  # AWAITING TRANSLATION
+other = "Tungkol"
 
 [platform]
-other = "Platform"  # AWAITING TRANSLATION
+other = "Plataporma"
 
 [pillar1]
-other = "Special Education"  # AWAITING TRANSLATION
+other = "Espesyal na Edukasyon"
 
 [pillar2]
-other = "Budget Discipline"  # AWAITING TRANSLATION
+other = "Disiplina sa Badyet"
 
 [pillar3]
-other = "Teacher Retention"  # AWAITING TRANSLATION
+other = "Pagpapanatili ng Guro"
 
 [endorsements]
-other = "Endorsements"  # AWAITING TRANSLATION
+other = "Mga Suporta"
 
 [volunteer]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "Magboluntaryo"
 
 [donate]
-other = "Donate"  # AWAITING TRANSLATION
+other = "Magbigay"
 
 [contact]
-other = "Contact"  # AWAITING TRANSLATION
+other = "Makipag-ugnayan"
 
 # DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [letters]
-other = "Letters"  # AWAITING TRANSLATION
+other = "Mga Liham"
 
 # DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
 # key retained for re-enable cycle (no removal). See MANIFEST §8.
 [talk]
-other = "Talk"  # AWAITING TRANSLATION
+other = "Makipag-usap"
 
 # ---------------------------------------------------------------------------
 # Hero CTAs
 # ---------------------------------------------------------------------------
 
 [donate_cta]
-other = "Donate"  # AWAITING TRANSLATION
+other = "Magbigay"
 
 [volunteer_cta]
-other = "Volunteer"  # AWAITING TRANSLATION
+other = "Magboluntaryo"
 
 [endorse_cta]
-other = "Endorse"  # AWAITING TRANSLATION
+other = "Magbigay ng suporta"
 
 [book_call_cta]
-other = "Book a 15-minute call"  # AWAITING TRANSLATION
+other = "Mag-book ng 15 minutong tawag"
+
+[newsletter_cta_primary]
+other = "Tumanggap ng balita sa kampanya"
+
+[donate_link_secondary]
+other = "Magbigay"
+
+[platform_link_tertiary]
+other = "Basahin ang plataporma"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · Data Scientist · Magulang sa SFUSD"
+
+[home_hero_title]
+other = "Tatlong problema. Sa tamang pagkakasunod."
+
+[home_hero_dek]
+other = "Staffing sa Espesyal na Edukasyon. Disiplina sa badyet. Pagpapanatili ng guro. Isang kampanya para sa lupon ng paaralan na nakasentro sa mga problemang unang nararamdaman ng mga pamilya."
+
+[trust_strip_label]
+other = "Mga palatandaan ng tiwala"
+
+[trust_two_kids]
+other = "Dalawang anak"
+
+[pillar_label_1]
+other = "Haligi 1"
+
+[pillar_label_2]
+other = "Haligi 2"
+
+[pillar_label_3]
+other = "Haligi 3"
+
+[pillar1_home_summary]
+other = "Lagyan ng sapat na tauhan ang mga serbisyong legal na karapatan ng mga estudyante."
+
+[pillar2_home_summary]
+other = "Ibalik ang oversight ng board sa pera, pagpapatupad, at pananagutan."
+
+[pillar3_home_summary]
+other = "Panatilihin ang mahuhusay na educator sa mga silid-aralan sa pamamagitan ng pagtingin sa retention bilang sistemang problema."
+
+[pillar1_home_link]
+other = "Paano ko aayusin ang staffing sa Espesyal na Edukasyon"
+
+[pillar2_home_link]
+other = "Paano ako boboto sa oversight ng board"
+
+[pillar3_home_link]
+other = "Ang paninindigan ko sa pagpapanatili ng guro"
 
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
@@ -91,16 +134,16 @@ other = "Book a 15-minute call"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [vendor_savings]
-other = "vendor savings"  # AWAITING TRANSLATION
+other = "natipid sa vendor"
 
 [sfusd_parent]
-other = "SFUSD parent"  # AWAITING TRANSLATION
+other = "magulang sa SFUSD"
 
 [ebitda_swing]
-other = "EBITDA swing"  # AWAITING TRANSLATION
+other = "pagbabago sa EBITDA"
 
 [cambridge_phd]
-other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
+other = "Cambridge Physics PhD"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)
@@ -110,54 +153,73 @@ other = "Cambridge Physics PhD"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [fppc_disclaimer]
-other = "Paid for by Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."  # AWAITING TRANSLATION
+other = "Binayaran ng Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971."
 
 [copyright]
-other = "© 2026 Michael Turon for SFUSD Board of Education"  # AWAITING TRANSLATION
+other = "© 2026 Michael Turon for SFUSD Board of Education"
 
 [contact_email]
-other = "info@turonsf.com"  # AWAITING TRANSLATION
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[utility_election_label]
+other = "Halalan"
+
+[election_date_display]
+other = "Nobyembre 3, 2026"
+
+[page_eyebrow]
+other = "Michael Turon · Lupon ng Edukasyon ng SFUSD · 2026"
+
+[endorsement_notice_contact]
+other = "Para magbigay ng suporta o humiling ng pag-uusap tungkol sa endorsement, mag-email sa info@turonsf.com."
+
+[endorsement_notice_pending]
+other = "Ilalathala rito ang mga suporta kapag aktibo at nasuri na ang unang endorsement."
 
 # ---------------------------------------------------------------------------
 # Form labels
 # ---------------------------------------------------------------------------
 
 [name]
-other = "Name"  # AWAITING TRANSLATION
+other = "Pangalan"
 
 [email]
-other = "Email"  # AWAITING TRANSLATION
+other = "Email"
 
 [organization]
-other = "Organization"  # AWAITING TRANSLATION
+other = "Organisasyon"
 
 [message]
-other = "Message"  # AWAITING TRANSLATION
+other = "Mensahe"
 
 [submit]
-other = "Submit"  # AWAITING TRANSLATION
+other = "Isumite"
 
 [form_success]
-other = "Thank you. We received your message and will reply within two business days."  # AWAITING TRANSLATION
+other = "Salamat. Natanggap namin ang iyong mensahe at sasagot kami sa loob ng dalawang araw ng negosyo."
 
 [form_error]
-other = "We could not send your message. Please try again or email info@turonsf.com."  # AWAITING TRANSLATION
+other = "Hindi namin naipadala ang iyong mensahe. Subukan muli o mag-email sa info@turonsf.com."
 
 # ---------------------------------------------------------------------------
 # Language switcher (Architecture Decision 3)
 # ---------------------------------------------------------------------------
 
 [language_switcher_label]
-other = "Select language"  # AWAITING TRANSLATION
+other = "Pumili ng wika"
 
 [current_language]
-other = "Current"  # AWAITING TRANSLATION
+other = "Kasalukuyan"
 
 [english_official_source]
-other = "English — official source"  # AWAITING TRANSLATION
+other = "English — opisyal na source"
 
 [ai_translated_marker]
-other = "AI translated"  # AWAITING TRANSLATION
+other = "Isinalin ng AI"
 
 # ---------------------------------------------------------------------------
 # AI translation disclosure (Deliverable 8 / Architecture Decision 6.5)
@@ -166,10 +228,10 @@ other = "AI translated"  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."  # AWAITING TRANSLATION
+other = "Isinalin ng AI ang pahinang ito. English ang opisyal na bersyon."
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
+other = "May nakita kang mali? Mag-email sa info@turonsf.com."
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
@@ -177,23 +239,23 @@ other = "Find an error? Email info@turonsf.com."  # AWAITING TRANSLATION
 # ---------------------------------------------------------------------------
 
 [translation_pending_notice]
-other = "This page is not yet translated. Please read the English version for now."  # AWAITING TRANSLATION
+other = "Hindi pa naisalin ang pahinang ito. Basahin muna ang English na bersyon."
 
 [translation_pending_link]
-other = "Read the English version"  # AWAITING TRANSLATION
+other = "Basahin ang English na bersyon"
 
 # ---------------------------------------------------------------------------
 # Generic UX
 # ---------------------------------------------------------------------------
 
 [read_more]
-other = "Read more"  # AWAITING TRANSLATION
+other = "Magbasa pa"
 
 [skip_to_content]
-other = "Skip to main content"  # AWAITING TRANSLATION
+other = "Lumaktaw sa pangunahing nilalaman"
 
 [menu]
-other = "Menu"  # AWAITING TRANSLATION
+other = "Menu"
 
 [close]
-other = "Close"  # AWAITING TRANSLATION
+other = "Isara"
