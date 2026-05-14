@@ -124,3 +124,11 @@ pages:
   "/newsletter/::tl": "placeholder"
   "/newsletter/::vi": "placeholder"
   "/newsletter/::ar": "placeholder"
+
+  # ----- /thank-you/ -----
+  "/thank-you/::es": "placeholder"
+  "/thank-you/::zh-Hant": "placeholder"
+  "/thank-you/::zh-Hans": "placeholder"
+  "/thank-you/::tl": "placeholder"
+  "/thank-you/::vi": "placeholder"
+  "/thank-you/::ar": "placeholder"

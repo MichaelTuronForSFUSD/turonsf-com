@@ -71,3 +71,6 @@ a { color: var(--navy-900); text-decoration-thickness: 0.08em; text-underline-of
 .newsletter-hero { margin-bottom: 2.5rem; }
 .newsletter-subhead { font-size: 1.1rem; color: var(--navy-900); max-width: 520px; line-height: 1.6; margin-top: 1rem; }
 .sib-form { margin-inline: auto; }
+.thank-you-page { max-width: 600px; margin-inline: auto; padding: clamp(3rem, 7vw, 6rem) 1rem; }
+.thank-you-subhead { font-size: 1.1rem; color: var(--navy-900); max-width: 520px; line-height: 1.6; margin: 1rem 0 2.5rem; }
+.thank-you-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
