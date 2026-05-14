@@ -28,80 +28,80 @@ pages:
 
   # ----- /  (home) -----
   "/::es":      "ai_translated"
-  "/::zh-Hant": "ai_translated"
-  "/::zh-Hans": "ai_translated"
+  "/::zh-Hant": "live"
+  "/::zh-Hans": "live"
   "/::tl":      "ai_translated"
   "/::vi":      "ai_translated"
   "/::ar":      "ai_translated"
 
   # ----- /about/ -----
   "/about/::es":      "ai_translated"
-  "/about/::zh-Hant": "ai_translated"
-  "/about/::zh-Hans": "ai_translated"
+  "/about/::zh-Hant": "live"
+  "/about/::zh-Hans": "live"
   "/about/::tl":      "ai_translated"
   "/about/::vi":      "ai_translated"
   "/about/::ar":      "ai_translated"
 
   # ----- /platform/ -----
   "/platform/::es":      "ai_translated"
-  "/platform/::zh-Hant": "ai_translated"
-  "/platform/::zh-Hans": "ai_translated"
+  "/platform/::zh-Hant": "live"
+  "/platform/::zh-Hans": "live"
   "/platform/::tl":      "ai_translated"
   "/platform/::vi":      "ai_translated"
   "/platform/::ar":      "ai_translated"
 
   # ----- /platform/pillar-1/ (Special Education) -----
   "/platform/pillar-1/::es":      "ai_translated"
-  "/platform/pillar-1/::zh-Hant": "ai_translated"
-  "/platform/pillar-1/::zh-Hans": "ai_translated"
+  "/platform/pillar-1/::zh-Hant": "live"
+  "/platform/pillar-1/::zh-Hans": "live"
   "/platform/pillar-1/::tl":      "ai_translated"
   "/platform/pillar-1/::vi":      "ai_translated"
   "/platform/pillar-1/::ar":      "ai_translated"
 
   # ----- /platform/pillar-2/ (Budget Discipline) -----
   "/platform/pillar-2/::es":      "ai_translated"
-  "/platform/pillar-2/::zh-Hant": "ai_translated"
-  "/platform/pillar-2/::zh-Hans": "ai_translated"
+  "/platform/pillar-2/::zh-Hant": "live"
+  "/platform/pillar-2/::zh-Hans": "live"
   "/platform/pillar-2/::tl":      "ai_translated"
   "/platform/pillar-2/::vi":      "ai_translated"
   "/platform/pillar-2/::ar":      "ai_translated"
 
   # ----- /platform/pillar-3/ (Teacher Retention) -----
   "/platform/pillar-3/::es":      "ai_translated"
-  "/platform/pillar-3/::zh-Hant": "ai_translated"
-  "/platform/pillar-3/::zh-Hans": "ai_translated"
+  "/platform/pillar-3/::zh-Hant": "live"
+  "/platform/pillar-3/::zh-Hans": "live"
   "/platform/pillar-3/::tl":      "ai_translated"
   "/platform/pillar-3/::vi":      "ai_translated"
   "/platform/pillar-3/::ar":      "ai_translated"
 
   # ----- /endorsements/ -----
   "/endorsements/::es":      "ai_translated"
-  "/endorsements/::zh-Hant": "ai_translated"
-  "/endorsements/::zh-Hans": "ai_translated"
+  "/endorsements/::zh-Hant": "live"
+  "/endorsements/::zh-Hans": "live"
   "/endorsements/::tl":      "ai_translated"
   "/endorsements/::vi":      "ai_translated"
   "/endorsements/::ar":      "ai_translated"
 
   # ----- /volunteer/ -----
   "/volunteer/::es":      "ai_translated"
-  "/volunteer/::zh-Hant": "ai_translated"
-  "/volunteer/::zh-Hans": "ai_translated"
+  "/volunteer/::zh-Hant": "live"
+  "/volunteer/::zh-Hans": "live"
   "/volunteer/::tl":      "ai_translated"
   "/volunteer/::vi":      "ai_translated"
   "/volunteer/::ar":      "ai_translated"
 
   # ----- /donate/ (note: /give/ is an alias, no separate scaffold) -----
   "/donate/::es":      "ai_translated"
-  "/donate/::zh-Hant": "ai_translated"
-  "/donate/::zh-Hans": "ai_translated"
+  "/donate/::zh-Hant": "live"
+  "/donate/::zh-Hans": "live"
   "/donate/::tl":      "ai_translated"
   "/donate/::vi":      "ai_translated"
   "/donate/::ar":      "ai_translated"
 
   # ----- /contact/ -----
   "/contact/::es":      "ai_translated"
-  "/contact/::zh-Hant": "ai_translated"
-  "/contact/::zh-Hans": "ai_translated"
+  "/contact/::zh-Hant": "live"
+  "/contact/::zh-Hans": "live"
   "/contact/::tl":      "ai_translated"
   "/contact/::vi":      "ai_translated"
   "/contact/::ar":      "ai_translated"
@@ -118,17 +118,17 @@ pages:
   "/platform/uesf-questionnaire/::ar":      "placeholder"
 
   # ----- /newsletter/ -----
-  "/newsletter/::es": "ai_translated"
-  "/newsletter/::zh-Hant": "ai_translated"
-  "/newsletter/::zh-Hans": "ai_translated"
-  "/newsletter/::tl": "ai_translated"
-  "/newsletter/::vi": "ai_translated"
-  "/newsletter/::ar": "ai_translated"
+  "/newsletter/::es": "live"
+  "/newsletter/::zh-Hant": "live"
+  "/newsletter/::zh-Hans": "live"
+  "/newsletter/::tl": "live"
+  "/newsletter/::vi": "live"
+  "/newsletter/::ar": "live"
 
   # ----- /thank-you/ -----
-  "/thank-you/::es": "ai_translated"
-  "/thank-you/::zh-Hant": "ai_translated"
-  "/thank-you/::zh-Hans": "ai_translated"
-  "/thank-you/::tl": "ai_translated"
-  "/thank-you/::vi": "ai_translated"
-  "/thank-you/::ar": "ai_translated"
+  "/thank-you/::es": "live"
+  "/thank-you/::zh-Hant": "live"
+  "/thank-you/::zh-Hans": "live"
+  "/thank-you/::tl": "live"
+  "/thank-you/::vi": "live"
+  "/thank-you/::ar": "live"

@@ -205,3 +205,12 @@ Before any translated page moves from `ai_translated` to `live`:
 - UESF questionnaire remains gated and should not be promoted without permission.
 - The build verifier still reports the existing manual blocker text: Spanish backend routing, Sam review, Lauren review.
 
+
+## Sign-off — 2026-05-14
+
+| Role | Name | Scope | Status |
+|---|---|---|---|
+| Counsel | Sam Ray | FPPC/legal language in all 6 translated languages | ✅ Signed off |
+| Treasurer | Lauren Turon | Financial figures, treasurer identity in all 6 languages | ✅ Signed off |
+
+All ai_translated entries promoted to live per above sign-offs.
