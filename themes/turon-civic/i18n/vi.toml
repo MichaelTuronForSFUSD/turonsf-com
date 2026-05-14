@@ -228,6 +228,8 @@ other = "Chúng tôi muốn gia đình bạn được đọc trang này bằng t
 
 [ai_translation_disclosure_link_text]
 other = "Góp ý giúp thêm nhiều gia đình"
+[disclosure_copied]
+other = "Đã sao chép! Viết thư cho chúng tôi: help@turonsf.com"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)

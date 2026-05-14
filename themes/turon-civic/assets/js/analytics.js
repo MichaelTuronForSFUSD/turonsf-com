@@ -174,4 +174,95 @@
     }
   });
 
+  // ── Disclosure link: copy-to-clipboard (v1.3.5c) ────────────────────────
+  // Mobile  (<768px): .disclosure-link--mailto visible, handled by native href.
+  // Desktop (≥768px): .disclosure-link--copy visible, handled by this handler.
+  // data-copy-email: email address to copy (help@turonsf.com)
+  // data-toast:      i18n confirmation string rendered by Hugo at build time
+
+  function _discShowToast(msg) {
+    var el = document.createElement('div');
+    el.className = 'disclosure-toast';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    el.textContent = msg;
+    document.body.appendChild(el);
+    // Double rAF forces CSS transition to fire after paint
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        el.classList.add('disclosure-toast--visible');
+      });
+    });
+    setTimeout(function () {
+      el.classList.remove('disclosure-toast--visible');
+      setTimeout(function () {
+        if (el.parentNode) el.parentNode.removeChild(el);
+      }, 300);
+    }, 2500);
+  }
+
+  function _discFallbackCopy(email, toast) {
+    var ta = document.createElement('textarea');
+    ta.value = email;
+    ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none;';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); _discShowToast(toast); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-copy-email]');
+    if (!btn) return;
+    var email = btn.getAttribute('data-copy-email');
+    var toast = btn.getAttribute('data-toast') || 'Copied!';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email)
+        .then(function () { _discShowToast(toast); })
+        .catch(function () { _discFallbackCopy(email, toast); });
+    } else {
+      _discFallbackCopy(email, toast);
+    }
+  });
+  // ── end disclosure copy handler ───────────────────────────────────────────
+
+  // ── Disclosure copy-to-clipboard (v1.3.5c) ────────────────────────────────
+  function _discShowToast(msg) {
+    var el = document.createElement('div');
+    el.className = 'disclosure-toast';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    el.textContent = msg;
+    document.body.appendChild(el);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { el.classList.add('disclosure-toast--visible'); });
+    });
+    setTimeout(function () {
+      el.classList.remove('disclosure-toast--visible');
+      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 300);
+    }, 2500);
+  }
+  function _discFallbackCopy(email, toast) {
+    var ta = document.createElement('textarea');
+    ta.value = email;
+    ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none;';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    try { document.execCommand('copy'); _discShowToast(toast); } catch(err) {}
+    document.body.removeChild(ta);
+  }
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-copy-email]');
+    if (!btn) return;
+    var email = btn.getAttribute('data-copy-email');
+    var toast = btn.getAttribute('data-toast') || 'Copied!';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email)
+        .then(function() { _discShowToast(toast); })
+        .catch(function() { _discFallbackCopy(email, toast); });
+    } else { _discFallbackCopy(email, toast); }
+  });
+  // ── end disclosure copy handler ───────────────────────────────────────────
+
 })();

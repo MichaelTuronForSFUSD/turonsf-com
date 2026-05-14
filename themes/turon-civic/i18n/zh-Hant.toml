@@ -237,6 +237,8 @@ other = "為讓您的家人能用中文閱讀 · 我們借助AI進行了翻譯�
 
 [ai_translation_disclosure_link_text]
 other = "您的寶貴意見能讓更多家庭受益"
+[disclosure_copied]
+other = "已複製 · 歡迎來信：help@turonsf.com"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)

@@ -63,12 +63,11 @@
     </div>
   {{ else }}
     {{/* AI disclosure bar — ai_translated, reviewed, community_corrected, live. */}}
-    {{ $copied := i18n "disclosure_copied" }}
     <div class="disclosure-slim" role="note" lang="{{ $currentLang }}">
       <span class="disclosure-slim__icon" aria-hidden="true">🌐</span>
       <span class="disclosure-slim__body">{{ i18n "ai_translation_disclosure_body" }}</span>
       <span class="disclosure-slim__sep" aria-hidden="true">·</span>
-      <a class="disclosure-slim__link disclosure-link--mailto" href="{{ $mailto }}">{{ i18n "ai_translation_disclosure_link_text" }}</a><button class="disclosure-slim__link disclosure-link--copy" type="button" data-copy-email="help@turonsf.com" data-toast="{{ $copied }}">{{ i18n "ai_translation_disclosure_link_text" }}</button>
+      <a class="disclosure-slim__link disclosure-link--mailto" href="{{ $mailto }}">{{ i18n "ai_translation_disclosure_link_text" }}</a><button class="disclosure-slim__link disclosure-link--copy" type="button" data-copy-email="help@turonsf.com" data-toast="{{ i18n \"disclosure_copied\" }}">{{ i18n "ai_translation_disclosure_link_text" }}</button>
     </div>
   {{ end }}
 {{ end }}

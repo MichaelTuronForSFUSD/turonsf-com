@@ -228,6 +228,8 @@ other = "Ginawa namin itong pahina sa Filipino para sa inyong pamilya. AI ang gi
 
 [ai_translation_disclosure_link_text]
 other = "Tulungan kami na mapabuti para sa lahat"
+[disclosure_copied]
+other = "Nakopya! Mag-email sa amin: help@turonsf.com"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
