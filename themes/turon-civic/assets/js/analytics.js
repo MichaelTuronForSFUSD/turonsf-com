@@ -156,5 +156,22 @@
    * Expose track() for inline use from partials that need to fire events
    * outside the data-event click pattern (e.g., form-submit handlers).
    * --------------------------------------------------------------------- */
-  window.turonAnalytics = { track: track };
+  window.turonAnalytics = { track: track };  /* Copy-link button handler for desktop volunteer share */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-copy-url]');
+    if (!btn) return;
+    var url = btn.dataset.copyUrl;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () {
+        var arrow = btn.querySelector('.btn__arrow');
+        btn.childNodes[0].textContent = 'Link copied! ';
+        if (arrow) arrow.textContent = '✓';
+        setTimeout(function () {
+          btn.childNodes[0].textContent = 'Copy volunteer link ';
+          if (arrow) arrow.textContent = '→';
+        }, 2000);
+      });
+    }
+  });
+
 })();
