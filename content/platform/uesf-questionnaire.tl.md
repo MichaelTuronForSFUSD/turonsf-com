@@ -35,7 +35,7 @@ fppc_sensitive: true
 
   GLOSSARY — STAY ENGLISH (Architecture Decision 9 §5):
     Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF, Royal Caribbean,
-    HelloFresh, Cambridge, ActBlue, Cloudflare, Umami, Action Network,
+    HelloFresh, Cambridge, ActBlue, Cloudflare, Umami,
     Brevo, MailChannels, Turnstile, Google Calendar, FPPC, FPPC ID 1482971,
     info@turonsf.com.
 

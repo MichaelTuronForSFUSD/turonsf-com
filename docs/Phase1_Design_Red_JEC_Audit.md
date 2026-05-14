@@ -83,7 +83,7 @@ Eighteen findings landed. Each carries severity (P0 ship-blocking / P1 deploy-we
 **Resolution:** Add to `<head>`:
 ```html
 <link rel="preconnect" href="https://secure.actblue.com" crossorigin>
-<link rel="preconnect" href="https://actionnetwork.org" crossorigin>
+<link rel="preconnect" href="" crossorigin>
 <link rel="preconnect" href="https://sibforms.com" crossorigin>
 ```
 

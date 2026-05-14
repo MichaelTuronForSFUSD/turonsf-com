@@ -156,7 +156,7 @@ All sixteen Cycle 1 findings have direct resolutions; no decline. Cycle 2 surfac
 **Resolution:** Add `_headers` file (Cloudflare Pages convention) at the static-output root:
 ```text
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://us.umami.is; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://us.umami.is https://secure.actblue.com https://actionnetwork.org https://sibforms.com; frame-ancestors 'none'; base-uri 'self';
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://us.umami.is; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://us.umami.is https://secure.actblue.com  https://sibforms.com; frame-ancestors 'none'; base-uri 'self';
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin

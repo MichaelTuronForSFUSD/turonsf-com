@@ -97,7 +97,7 @@ Open `hugo.toml` and replace placeholder destinations:
 [params.cta_destinations]
   newsletter = "https://sibforms.com/serve/<live-brevo-form>"
   donate     = "https://secure.actblue.com/donate/turonsf"
-  volunteer  = "https://actionnetwork.org/forms/<live-volunteer-form>"
+  volunteer  = ""
   email      = "mailto:info@turonsf.com"
   platform   = "/platform/"
 ```
@@ -108,7 +108,7 @@ Do not guess Spanish URL parameters. Use language-specific override maps only af
 [params.cta_destinations_es]
   newsletter = "https://sibforms.com/serve/<tested-spanish-brevo-form>"
   donate     = "https://secure.actblue.com/donate/<tested-spanish-actblue-form>"
-  volunteer  = "https://actionnetwork.org/forms/<tested-spanish-action-network-form>"
+  volunteer  = ""
 ```
 
 If Spanish pages are still `placeholder` and do not expose Spanish CTAs, the override map can remain absent.

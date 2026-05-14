@@ -52,7 +52,7 @@ Every event is dimensioned by `language` (the active page language) and `viewpor
 
 ## 2. UTM scheme on outbound CTAs
 
-Every link that leaves turonsf.com for a campaign backend carries the four UTM parameters below. Source attribution flows back: ActBlue dashboards, Brevo segments, Action Network reports all surface the `utm_*` values.
+Every link that leaves turonsf.com for a campaign backend carries the four UTM parameters below. Source attribution flows back: ActBlue dashboards, Brevo segments reports all surface the `utm_*` values.
 
 ### 2.1 Parameter spec
 
@@ -154,7 +154,7 @@ To avoid scattering UTM logic across templates, the campaign theme adds one shor
 [params.cta_destinations]
   newsletter = "https://sibforms.com/serve/MUIFAA..."          # Brevo embed URL — operator confirms before deploy
   donate     = "https://secure.actblue.com/donate/turonsf"      # ActBlue donate page
-  volunteer  = "https://actionnetwork.org/forms/turonsf-volunteer"  # Action Network form
+  volunteer  = ""  # Action Network form
   email      = "mailto:info@turonsf.com"
   platform   = "/platform/"
 ```

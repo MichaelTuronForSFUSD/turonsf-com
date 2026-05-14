@@ -267,12 +267,12 @@ $EDITOR hugo.toml
 [params.cta_destinations]
   newsletter = "https://sibforms.com/serve/MUIFA..."
   donate     = "https://secure.actblue.com/donate/turonsf"
-  volunteer  = "https://actionnetwork.org/forms/turonsf-volunteer"
+  volunteer  = ""
   email      = "mailto:info@turonsf.com"
   platform   = "/platform/"
 ```
 
-Replace placeholders with the actual Brevo signup form URL, ActBlue donate page URL, Action Network volunteer form URL. **These must be set before deploy.**
+Replace placeholders with the actual Brevo signup form URL, ActBlue donate page URL volunteer form URL. **These must be set before deploy.**
 
 ### 6.4 — Rebuild and verify Umami script renders
 ```zsh

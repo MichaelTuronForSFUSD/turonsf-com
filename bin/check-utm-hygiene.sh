@@ -21,7 +21,7 @@ if [[ ! -d "$PUBLIC_DIR" ]]; then
 fi
 
 # Campaign backend hostnames that must carry UTMs
-CAMPAIGN_HOSTS_PATTERN='secure\.actblue\.com|actionnetwork\.org|sibforms\.com'
+CAMPAIGN_HOSTS_PATTERN='secure\.actblue\.com|sibforms\.com'
 
 REQUIRED_UTMS=(utm_source utm_medium utm_campaign utm_content)
 
