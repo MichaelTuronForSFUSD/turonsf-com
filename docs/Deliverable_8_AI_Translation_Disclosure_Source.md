@@ -1,224 +1,252 @@
 # Deliverable 8: AI Translation Transparency Disclosure — English Source
 
-**Status:** SAM RAY REVIEW REQUIRED — AI translation transparency disclosure
-English source. Verify FPPC §84305 standard footer disclosure (Deliverable 9)
-remains separate and unaltered.
+**Version:** v1.3.5d
+**Last updated:** 2026-05-14
+**Status:** CLOSED — Sam Ray sign-off recorded below.
 
-**Sam Ray sign-off:** _____________________  Date: _____________________
+**Sam Ray sign-off:** Sam Ray, Colla & Ray LLP (SBN 308921)
+**Date:** 2026-05-14
+**Scope:** Disclosure strings (all 6 languages), email routing (help@),
+removal of "English is official version" clause, slim bar design (Option A).
+Confirms: clear-and-conspicuous standard satisfied.
 
-**Lauren Turon notice-of-review:** _____________________  Date: _____________________
+**Lauren Turon notice-of-review:** Lauren Turon (CFRO)
+**Date:** 2026-05-14
 *(Lauren is not the primary reviewer for D8 — only D9 — but is notified that
 the disclosure language exists alongside the FPPC footer and that the
 ai-translation-disclosure.html partial renders both correctly.)*
 
----
-
-## 8.1 Final English source (JEC-converged through 3 cycles)
-
-The body string rendered by `themes/turon-civic/layouts/partials/ai-translation-disclosure.html`
-at the top of every live non-English page is split across two i18n keys so
-the operator's translation workflow can localize the prompt-to-action
-("Find an error? Email info@turonsf.com.") independently from the disclosure
-statement itself. Per Deliverable 4.5 the partial composes both into a
-single visual block.
-
-### Key: `ai_translation_disclosure_body`
-
-> **This page was translated by AI. English is the official version.**
-
-(11 words. Three short sentences? No — two sentences. Plain words. Translates
-cleanly across all six target languages.)
-
-### Key: `ai_translation_disclosure_link_text`
-
-> **Find an error? Email info@turonsf.com.**
-
-(7 words plus an email address. Question form invites engagement without
-violating the Bloomberg Businessweek deadpan tone.)
-
-### Combined render
-
-> **This page was translated by AI. English is the official version.
-> Find an error? Email info@turonsf.com.**
-
-**Word count:** 18 words (+1 email address token).
-**Sentence count:** 4 (very short sentences average 4.5 words each).
-**Flesch Reading Ease, computed on the 18 words excluding the email token:**
-≈82. Comfortably above the prompt's ≥75 target.
+**Related decision record:** DR-V1.3.5-001 (2026-05-14) — supersedes OIL
+Decision 2 disclosure design provisions.
 
 ---
 
-## 8.2 JEC convergence trace
+## 8.1 Current live strings (v1.3.5d — JEC-converged 2026-05-14)
 
-### Cycle 1 — candidate variants
+The disclosure is a single-line slim bar (`class="disclosure-slim"`)
+positioned between the language eyebrow and site header. It renders on all
+non-English pages where `translation_status` is `live` or `ai_translated`.
 
-**Variant A — prompt draft (28 words):**
-> This page was translated from English by AI. English is the canonical
-> version. Find an error? Email info@turonsf.com and we'll fix it.
+Strings are split across three i18n keys per language:
 
-**Variant B — architecture draft (20 words):**
-> This page was translated by AI from English. English is the official
-> version. Please send fixes to info@turonsf.com.
+- `ai_translation_disclosure_body` — disclosure statement
+- `ai_translation_disclosure_link_text` — CTA / feedback invitation
+- `disclosure_copied` — desktop clipboard toast confirmation
 
-**Variant C — synthesis attempt (24 words):**
-> This page was translated by AI from English. English is the canonical
-> version. Find an error? Email info@turonsf.com — we'll fix it.
-
-### Cycle 2 — Red Team objections
-
-**Red Team (Adversarial Reviewer):** "canonical" is jargon for a voter
-audience and translates badly across Tagalog/Vietnamese. Use "official."
-
-**Red Team (Naive Reader, Spanish-speaking SF parent):** "we'll fix it" is a
-promise the campaign cannot guarantee in 24 hours. Drop the commitment;
-keep the action.
-
-**Red Team (Hugo i18n Architect):** Splitting the disclosure into two i18n
-keys is better than one — the second clause is a call to action that the
-operator may want to localize register-aware (formal vs. friendly) without
-restating the technical fact in the first clause.
-
-**Red Team (FPPC defensibility):** "from English" is redundant once the
-next sentence names English as the official version. Drop.
-
-### Cycle 3 — Blue Team rebuttal + final
-
-**Blue Team accepts:** Drop "canonical" → "official." Drop "we'll fix it"
-commitment. Drop "from English." Split into two i18n keys.
-
-**Final disclosure body (key `ai_translation_disclosure_body`):**
-> This page was translated by AI. English is the official version.
-> *(11 words)*
-
-**Final disclosure CTA (key `ai_translation_disclosure_link_text`):**
-> Find an error? Email info@turonsf.com.
-> *(7 words + email token)*
-
-**Combined: 18 words.** Flesch ≈82. All three required elements present:
-(a) page is AI-translated, (b) English is canonical, (c) report errors to
-info@turonsf.com.
-
----
-
-## 8.3 FPPC defensibility trace
-
-This disclosure does **not** replace and is **not equivalent to** the
-Cal. Gov. Code §84305 paid-for footer (Deliverable 9). Both render on every
-translated page (Architecture Decision 6.5; OIL Decision 2).
-
-- **D8 (this disclosure)** speaks to translation method. It sits at the top
-  of the page, immediately below the global header, and tells the reader
-  the page is AI-translated and where to report errors.
-- **D9 (FPPC §84305 footer)** speaks to payment / committee identity. It
-  sits in the footer, in the page's language per FPPC Regulation 18435
-  same-language requirement (Research §2.2), and identifies the campaign
-  committee, FPPC ID 1482971, and treasurer.
-
-The two disclosures do not overlap textually and do not interfere with each
-other. The partial that renders D8 (`ai-translation-disclosure.html`) does
-not render the FPPC footer. The footer partial that renders D9 does not
-render D8. They are independent surfaces.
-
-### Traceability to Research §2.7 / §2.9 / §6.6
-
-Research §2.7 catalogs five FPPC-compatible disclaimer patterns. The chosen
-English source is closest to:
-
-- **§2.7 row 2 "AI Disclosure":** "Translated by artificial intelligence
-  for accessibility. We welcome community feedback at info@turonsf.com to
-  improve accuracy."
-- **§2.7 row 4 "Legal Standard":** "English is the canonical language of
-  this campaign. Translated content is not intended to create legal or
-  binding obligations."
-
-The final English source synthesizes both: AI-translation acknowledgement
-+ English-as-official + community feedback channel. The "Legal Standard"
-row's "not intended to create legal or binding obligations" clause is
-deliberately omitted because (a) it is legal jargon, (b) it does not
-satisfy the voter-readable constraint, and (c) Research §2.8 / AB 2655 /
-AB 2839 caselaw (Judge Menendez, October 2024) make explicit AI
-labeling the legally safer pattern without requiring legal-disclaimer
-language.
-
-Research §6.6 identifies the target quality tier as **Tier 2: AI-assisted
-with human spot-check.** The phrase "translated by AI" is sufficient to
-locate the campaign in Tier 2 from the reader's perspective; "English is
-the official version" sets the canonical-source expectation; "Find an
-error? Email info@turonsf.com" operationalizes the human-loop.
-
----
-
-## 8.4 i18n key allocation
-
-The English-source keys are declared in `i18n/en.toml`:
+### English (parity only — EN pages never show disclosure)
 
 ```toml
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."
+other = "This page was translated by AI so your family can read it in their language."
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."
+other = "Help us improve it for more families."
+
+[disclosure_copied]
+other = "Copied! Email us at help@turonsf.com"
 ```
 
-The six non-English string tables in `i18n/{es,zh-Hant,zh-Hans,tl,vi,ar}.toml`
-ship with these two keys present, containing the English placeholder text,
-and a `# AWAITING TRANSLATION` marker. The operator's translation workflow
-fills in the translated values.
+### Español (ES) — JEC panel 9.5/10
 
-Per Architecture Decision 6.5, the `ai-translation-disclosure.html` partial
-renders these keys ONLY when:
+```toml
+[ai_translation_disclosure_body]
+other = "Queremos que tu familia pueda leer esto en español, como otras familias. Lo hicimos con ayuda de IA."
 
-1. `.Site.Language.Lang` is not `en`, AND
-2. `translation_status` is not `placeholder` (placeholder pages render
-   the translation-pending notice instead).
+[ai_translation_disclosure_link_text]
+other = "¿Nos ayudas a mejorarlo?"
+
+[disclosure_copied]
+other = "¡Copiado! Escríbenos a help@turonsf.com"
+```
+
+### 繁體 Traditional Chinese (zh-Hant) — JEC panel 9.5/10
+
+```toml
+[ai_translation_disclosure_body]
+other = "為讓您的家人能用中文閱讀 · 我們借助AI進行了翻譯。"
+
+[ai_translation_disclosure_link_text]
+other = "您的寶貴意見能讓更多家庭受益"
+
+[disclosure_copied]
+other = "已複製 · 歡迎來信：help@turonsf.com"
+```
+
+### 简体 Simplified Chinese (zh-Hans) — JEC panel 9.5/10
+
+```toml
+[ai_translation_disclosure_body]
+other = "为让您的家人能用中文阅读，我们真诚地借助AI进行了翻译。"
+
+[ai_translation_disclosure_link_text]
+other = "您的意见能让更多家庭受益"
+
+[disclosure_copied]
+other = "已复制 · 欢迎来信：help@turonsf.com"
+```
+
+### Filipino/Tagalog (tl) — JEC panel 9.33/10
+
+```toml
+[ai_translation_disclosure_body]
+other = "Ginawa namin itong pahina sa Filipino para sa inyong pamilya. AI ang ginamit."
+
+[ai_translation_disclosure_link_text]
+other = "Tulungan kami na mapabuti para sa lahat"
+
+[disclosure_copied]
+other = "Nakopya! Mag-email sa amin: help@turonsf.com"
+```
+
+*Note: 9.33 due to Lorna (62, Tagalog-dominant) at irreducible 9.0 on AI
+terminology. Jose and Maria both 9.5. Panel consensus: "AI" is the
+correct term; "makina" (machine) less accurate.*
+
+### Tiếng Việt (vi) — JEC panel 9.5/10
+
+```toml
+[ai_translation_disclosure_body]
+other = "Chúng tôi muốn gia đình bạn được đọc trang này bằng tiếng Việt. AI đã dịch."
+
+[ai_translation_disclosure_link_text]
+other = "Góp ý giúp thêm nhiều gia đình"
+
+[disclosure_copied]
+other = "Đã sao chép! Viết thư cho chúng tôi: help@turonsf.com"
+```
+
+### عربي Arabic (ar) — JEC panel 9.5/10
+
+```toml
+[ai_translation_disclosure_body]
+other = "حتى تقرأ عائلتك هذه الصفحة بالعربية، استعنّا بالذكاء الاصطناعي للترجمة."
+
+[ai_translation_disclosure_link_text]
+other = "شاركنا رأيك لتستفيد عائلات أخرى"
+
+[disclosure_copied]
+other = "نُسخ بنجاح · راسلنا: help@turonsf.com"
+```
 
 ---
 
-## 8.5 Translation guidance for the six target languages
+## 8.2 Design (v1.3.5d)
 
-The English source is deliberately structured to translate cleanly:
+**Visual form:** Single-line slim bar (`class="disclosure-slim"`).
+Background: `rgba(7,26,47,0.055)`. Border-bottom: `1px solid rgba(7,26,47,0.10)`.
+Padding: `0.4rem 1rem`. Font: `0.78rem`. Height: ~32px (vs. ~80–100px box in v1.3.0).
 
-| Language    | Notes                                                                                                  |
-|-------------|--------------------------------------------------------------------------------------------------------|
-| es          | Use formal register (`usted` if any pronouns enter the translation). "Oficial" not "canónica."         |
-| zh-Hant     | Traditional characters only — do NOT mix Simplified in. SF parent register, not mainland register.     |
-| zh-Hans     | Simplified characters only. "官方" is the cleanest "official" rendering.                                 |
-| tl          | Plain Tagalog, no Taglish. "Opisyal" is the cleanest "official" rendering. Avoid name transliteration. |
-| vi          | Plain Vietnamese with full tone diacritics. "Chính thức" for "official."                                |
-| ar          | Modern Standard Arabic. Preserve `info@turonsf.com` in Latin script with bidi isolation.                |
+**Placement:** Between `<nav class="lang-eyebrow">` and `<header class="site-header">`
+in `baseof.html`. Renders before any page content.
 
-Each translation is reviewed by Sam Ray before publication because the
-disclosure interacts with FPPC §84305 / Regulation 18435 same-language
-requirements (Research §2.2).
+**Link UX:**
+- Mobile (<768px): `<a href="mailto:help@turonsf.com?subject=...">` — native mail app
+- Desktop (≥768px): JS intercepts click, `e.preventDefault()`, copies
+  `help@turonsf.com` to clipboard, shows language-native toast for 2.5s
 
----
+**mailto subject:** Auto-populates "Translation feedback - [Page Title] ([Language])"
+for operator inbox triage. Implemented via Hugo `printf` in the partial.
 
-## 8.6 Non-dismissibility (OIL Decision 2 contract)
+**Non-dismissible:** No close button, no JS toggle, no localStorage flag.
+OIL Decision 2 contract preserved.
 
-The disclosure is **not dismissible.** The partial renders no close button,
-no JS toggle, no `localStorage` hide flag, and no per-session suppression.
-Dismissibility would undermine the transparency commitment and create a
-discoverability inconsistency for voters who have JS disabled or who clear
-storage.
-
-If a future build introduces user-preference controls (font-size,
-high-contrast, etc.), the disclosure is explicitly out-of-scope for those
-controls. This is documented in the preflight checklist (Deliverable 12 §6).
+**Partial path:** `themes/turon-civic/layouts/partials/ai-translation-disclosure.html`
 
 ---
 
-## 8.7 Acceptance gates
+## 8.3 Email routing (v1.3.5d)
 
-- [ ] Sam Ray sign-off recorded above.
-- [ ] English source string locked: "This page was translated by AI.
-      English is the official version. Find an error? Email info@turonsf.com."
-- [ ] `ai_translation_disclosure_body` key present in all 7 i18n files.
-- [ ] `ai_translation_disclosure_link_text` key present in all 7 i18n files.
-- [ ] `ai-translation-disclosure.html` partial renders on every live
-      non-English page (Preflight §6).
-- [ ] Partial does NOT render on English canonical pages (Preflight §6).
-- [ ] Partial does NOT render the FPPC footer; D9 stays separate (Preflight §5).
-- [ ] Partial is not dismissible — no close UI in DOM (Preflight §6).
-- [ ] Disclosure uses only Direction A tokens (`--navy-900`, `--accent`,
-      `--cream-50`) (Preflight §3).
-- [ ] mailto: subject auto-populates with page title + language for triage.
+| Address | Purpose |
+|---|---|
+| `help@turonsf.com` | Translation feedback only — disclosure bar mailto + clipboard copy |
+| `info@turonsf.com` | General campaign contact — all other site uses unchanged |
+
+`help@turonsf.com` is a dedicated triage address. Sam Ray confirmed this
+routing satisfies clear-and-conspicuous standard (2026-05-14). Inbox setup
+and auto-tagging recommended before May 20 in-home event.
+
+---
+
+## 8.4 FPPC defensibility (unchanged from v1.3.0)
+
+This disclosure does **not** replace and is **not equivalent to** the
+Cal. Gov. Code §84305 paid-for footer (Deliverable 9). Both render on
+every translated page (Architecture Decision 6.5; OIL Decision 2).
+
+**D8 (this disclosure)** speaks to translation method and community
+access. It sits between the eyebrow and site header.
+
+**D9 (FPPC §84305 footer)** speaks to payment / committee identity. It
+sits in the footer with FPPC ID 1482971, committee name, and treasurer.
+
+The removal of "English is the official version" from the bar does not
+affect FPPC defensibility because: (a) English canonicality is implicit
+in the site architecture (EN pages have no disclosure), (b) this clause
+is not required by FPPC §84305 or Regulation 18435, and (c) Sam Ray
+confirmed the omission satisfies clear-and-conspicuous standard.
+
+Traceability to Research §2.7 / §2.9 / §6.6 remains valid. The v1.3.5d
+strings satisfy the same AI-labeling + community-feedback-channel pattern
+identified in Research §6.6 Tier 2. The "English is official" clause
+was never a FPPC requirement — it was an internal conservatism that
+Sam Ray confirmed is no longer needed in the bar.
+
+---
+
+## 8.5 JEC convergence trace (v1.3.5 — 2026-05-14)
+
+### Five design rules locked (DR-V1.3.5-001)
+
+1. **Purpose leads** — WHY (family can read this) before HOW (AI)
+2. **AI as tool** — "with AI's help / AI-assisted" not "AI translated"
+3. **Family frame** — authentic for SFUSD parent candidate
+4. **Collective-benefit CTA** — help more families, not report errors
+5. **Zero error priming** — feedback/opinion/share, never error/mistake
+
+### Panel composition
+
+- ES: 5 panelists (Valentina, Marcos, Isabel, Roberto, Carmen)
+- 繁體: 5 panelists (Mrs. Lam, Kevin, Alice, Mr. Wong, Linda)
+- 简体: 5 panelists (Wei, Helen, Jason, Mei, Lily)
+- TL: 3 panelists (Maria, Jose, Lorna)
+- VI: 3 panelists (Linh, Thanh, Bà Nguyễn)
+- AR: 3 panelists (Fatima, Kareem, Nadia)
+
+### Convergence summary
+
+4 cycles run. Cycles 1–3 tested body/link text; Cycle 4 tested toast copy
+and `help@` vs `info@`. `help@` outperformed `info@` by 1.0–2.0 points
+across all 6 languages unanimously. All panels reached 9.5 by Cycle 4
+(TL 9.33 due to Lorna AI-term floor).
+
+Full JEC trace documented in session log 2026-05-14.
+
+---
+
+## 8.6 Version history
+
+| Version | Date | Change |
+|---|---|---|
+| v1.3.0 | 2026-05-12 | Initial — heavy box, "Find an error?", info@, "English is official" |
+| v1.3.5 | 2026-05-14 | Slim bar, JEC body/link strings, help@ routing |
+| v1.3.5b | 2026-05-14 | Data path fix (partial render bug) |
+| v1.3.5c | 2026-05-14 | Desktop clipboard handler, JEC toast strings |
+| v1.3.5d | 2026-05-14 | Single-element link, JS desktop intercept |
+
+---
+
+## 8.7 Acceptance gates (v1.3.5d state)
+
+- [x] Sam Ray sign-off recorded above — 2026-05-14
+- [x] `ai_translation_disclosure_body` key present in all 7 i18n files
+- [x] `ai_translation_disclosure_link_text` key present in all 7 i18n files
+- [x] `disclosure_copied` key present in all 7 i18n files
+- [x] `ai-translation-disclosure.html` partial renders on every live non-English page
+- [x] Partial does NOT render on English canonical pages
+- [x] Partial does NOT render the FPPC footer; D9 stays separate
+- [x] Partial is not dismissible — no close UI in DOM
+- [x] mailto: subject auto-populates page title + language for triage
+- [x] help@turonsf.com in mailto and clipboard copy; info@ unchanged elsewhere
+- [x] Desktop: clipboard copy + toast on ≥768px
+- [x] Mobile: native mailto: on <768px
+- [x] 6/6 CI gates passing at v1.3.5d (build, i18n parity, FPPC, UTM, no-JD, translation-status)
