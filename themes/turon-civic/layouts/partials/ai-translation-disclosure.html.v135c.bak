@@ -68,7 +68,7 @@
       <span class="disclosure-slim__icon" aria-hidden="true">🌐</span>
       <span class="disclosure-slim__body">{{ i18n "ai_translation_disclosure_body" }}</span>
       <span class="disclosure-slim__sep" aria-hidden="true">·</span>
-      <a class="disclosure-slim__link" href="{{ $mailto }}" data-copy-email="help@turonsf.com" data-toast="{{ $copied }}">{{ i18n "ai_translation_disclosure_link_text" }}</a>
+      <a class="disclosure-slim__link disclosure-link--mailto" href="{{ $mailto }}">{{ i18n "ai_translation_disclosure_link_text" }}</a><button class="disclosure-slim__link disclosure-link--copy" type="button" data-copy-email="help@turonsf.com" data-toast="{{ $copied }}">{{ i18n "ai_translation_disclosure_link_text" }}</button>
     </div>
   {{ end }}
 {{ end }}

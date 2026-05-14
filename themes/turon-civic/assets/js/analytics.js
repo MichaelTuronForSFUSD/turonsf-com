@@ -213,16 +213,21 @@
   }
 
   document.addEventListener('click', function (e) {
-    var btn = e.target.closest('[data-copy-email]');
-    if (!btn) return;
-    var email = btn.getAttribute('data-copy-email');
-    var toast = btn.getAttribute('data-toast') || 'Copied!';
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(email)
-        .then(function () { _discShowToast(toast); })
-        .catch(function () { _discFallbackCopy(email, toast); });
-    } else {
-      _discFallbackCopy(email, toast);
+    var link = e.target.closest('[data-copy-email]');
+    if (!link) return;
+    // Desktop (≥768px): prevent mailto: navigation, copy to clipboard instead.
+    // Mobile (<768px): fall through — href='mailto:...' opens natively.
+    if (window.matchMedia && window.matchMedia('(min-width: 768px)').matches) {
+      e.preventDefault();
+      var email = link.getAttribute('data-copy-email');
+      var toast = link.getAttribute('data-toast') || 'Copied!';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email)
+          .then(function () { _discShowToast(toast); })
+          .catch(function () { _discFallbackCopy(email, toast); });
+      } else {
+        _discFallbackCopy(email, toast);
+      }
     }
   });
   // ── end disclosure copy handler ───────────────────────────────────────────
