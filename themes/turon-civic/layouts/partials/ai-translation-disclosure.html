@@ -1,112 +1,29 @@
 {{/*
   ai-translation-disclosure.html
-  --------------------------------------------------------------------------
-  Renders the AI-translation transparency disclosure at the top of every
-  live non-English page (Architecture Decision 6.5, OIL Decision 2,
-  Deliverable 4.5 / 8).
+  Option A slim bar — single persistent line between eyebrow and site-nav.
+  JEC 6-language panel convergence v1.3.5 — 2026-05-14.
 
-  Behavior matrix:
+  Design rules (5 locked):
+    1. Purpose leads — WHY before HOW
+    2. AI as tool ("with AI's help"), not author ("AI translated")
+    3. Family frame — authentic for SFUSD parent candidate
+    4. Collective-benefit CTA — help more families, not report errors
+    5. Zero error priming — feedback/share/opinion, never error/mistake
 
-    page.lang  translation_status   Render
-    ---------  -------------------  ----------------------------------------
-    en         (any)                NOTHING (English is canonical)
-    non-en     placeholder          Translation-pending notice + English link
-    non-en     ai_translated        AI disclosure banner
-    non-en     reviewed             AI disclosure banner
-    non-en     community_corrected  AI disclosure banner
-    non-en     live                 AI disclosure banner
-
-  Placement (enforced by inclusion order in baseof.html):
-    1. <header> / global nav.
-    2. THIS PARTIAL.
-    3. Page title.
-    4. Main content.
-    5. CTAs.
-    6. <footer> with FPPC §84305 disclosure (separate from this disclosure).
-
-  Critical contract (OIL Decision 2):
-    - NOT dismissible. No close button, no localStorage hide flag, no JS toggle.
-    - Uses only existing Direction A design tokens (--navy-900, --accent,
-      --cream-50). No new colors, no new fonts.
-    - Visible on mobile and desktop without horizontal scroll.
-    - Does NOT replace the FPPC §84305 footer (Deliverable 9). Both render.
-    - Subject line of the mailto: auto-populates with page title + language
-      so the operator can triage incoming translation feedback at info@turonsf.com.
-
-  Accessibility:
-    - <aside role="note"> with aria-label so screen readers announce it before
-      page content but don't treat it as primary navigation.
-    - Translated copy uses {{ i18n "ai_translation_disclosure_body" }} which
-      renders in the page's language.
-    - The mailto link is keyboard-reachable and contrasts with cream-50.
-  --------------------------------------------------------------------------
+  Renders on non-EN pages where translation_status is "live" or "ai_translated".
+  Translation status lookup: data/translation_status.yaml
+  Key format: "/canonical/path/::lang" (uses canonical_path frontmatter if set)
 */}}
-
-{{ $currentLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Site.Language.Lang) }}
-
-{{/* English: never render. */}}
-{{ if eq $currentLang "en" }}
-  {{/* intentionally empty */}}
-{{ else }}
-
-  {{ $translationStatusData := index (index hugo.Data "translation_status") "pages" }}
-  {{ $thisStatusPath := .RelPermalink }}
-  {{ with .Params.canonical_path }}{{ $thisStatusPath = . }}{{ end }}
-  {{ $thisPageKey := printf "%s::%s" $thisStatusPath $currentLang }}
-  {{ $thisStatus := index $translationStatusData $thisPageKey | default "placeholder" }}
-
-  {{/* Build mailto subject so the operator's inbox sorts translation feedback
-       by (page title, language) automatically. Per Deliverable 4.5 spec. */}}
-  {{ $titleEscaped := .Title | urlquery }}
-  {{ $langName := .Site.Language.LanguageName }}
-  {{ $mailto := printf "mailto:info@turonsf.com?subject=Translation%%20feedback%%20-%%20%s%%20(%s)" $titleEscaped $langName }}
-
-  {{ if eq $thisStatus "placeholder" }}
-    {{/* Translation-pending notice. */}}
-    {{ $englishPage := "" }}
-    {{ with .AllTranslations }}
-      {{ range . }}
-        {{ if eq .Lang "en" }}{{ $englishPage = . }}{{ end }}
-      {{ end }}
-    {{ end }}
-
-    <aside class="translation-notice translation-notice--pending"
-           role="note"
-           aria-label="{{ i18n "translation_pending_notice" }}"
-           lang="{{ $currentLang }}"
-           data-pending-notice>
-      <p class="translation-notice__body">
-        {{ i18n "translation_pending_notice" }}
-      </p>
-      {{ if $englishPage }}
-        <p class="translation-notice__action">
-          <a href="{{ $englishPage.Permalink }}"
-             class="translation-notice__link"
-             data-event="language_pending_to_english_click"
-             data-source="translation-pending"
-             hreflang="en"
-             lang="en">{{ i18n "translation_pending_link" }}</a>
-        </p>
-      {{ end }}
-    </aside>
-
-  {{ else }}
-    {{/* AI disclosure banner — for ai_translated, reviewed, community_corrected, live. */}}
-    <aside class="translation-notice translation-notice--ai"
-           role="note"
-           aria-label="{{ i18n "ai_translation_disclosure_body" }}"
-           lang="{{ $currentLang }}">
-      <p class="translation-notice__body">
-        {{ i18n "ai_translation_disclosure_body" }}
-      </p>
-      <p class="translation-notice__action">
-        <a href="{{ $mailto }}"
-           class="translation-notice__link"
-           lang="{{ $currentLang }}">{{ i18n "ai_translation_disclosure_link_text" }}</a>
-      </p>
-    </aside>
-  {{ end }}
-
+{{ $statusPath := .RelPermalink }}
+{{ with .Params.canonical_path }}{{ $statusPath = . }}{{ end }}
+{{ $lang := .Site.Language.Lang }}
+{{ $key := printf "%s::%s" $statusPath $lang }}
+{{ $status := index .Site.Data.translation_status $key }}
+{{ if and (ne $lang "en") (or (eq $status "live") (eq $status "ai_translated")) }}
+<div class="disclosure-slim" role="note">
+  <span class="disclosure-slim__icon" aria-hidden="true">🌐</span>
+  <span class="disclosure-slim__body">{{ i18n "ai_translation_disclosure_body" }}</span>
+  <span class="disclosure-slim__sep" aria-hidden="true">·</span>
+  <a class="disclosure-slim__link" href="mailto:{{ i18n "contact_email" }}">{{ i18n "ai_translation_disclosure_link_text" }}</a>
+</div>
 {{ end }}
-
-{{/* End ai-translation-disclosure.html */}}

@@ -219,10 +219,10 @@ other = "AI translated"
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "This page was translated by AI. English is the official version."
+other = "This page was translated by AI so your family can read it in their language."
 
 [ai_translation_disclosure_link_text]
-other = "Find an error? Email info@turonsf.com."
+other = "Help us improve it for more families."
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)

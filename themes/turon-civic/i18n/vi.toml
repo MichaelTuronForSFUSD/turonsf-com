@@ -224,10 +224,10 @@ other = "AI dịch"
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "Trang này được AI dịch. Phiên bản English là phiên bản chính thức."
+other = "Chúng tôi muốn gia đình bạn được đọc trang này bằng tiếng Việt. AI đã dịch."
 
 [ai_translation_disclosure_link_text]
-other = "Thấy lỗi? Hãy gửi email tới info@turonsf.com."
+other = "Góp ý giúp thêm nhiều gia đình"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)

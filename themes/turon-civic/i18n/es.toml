@@ -233,10 +233,10 @@ other = "Traducción con IA"
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "Esta página fue traducida por IA. La versión oficial es la versión en inglés."
+other = "Queremos que tu familia pueda leer esto en español, como otras familias. Lo hicimos con ayuda de IA."
 
 [ai_translation_disclosure_link_text]
-other = "¿Encontraste un error? Escribe a info@turonsf.com."
+other = "¿Nos ayudas a mejorarlo?"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)

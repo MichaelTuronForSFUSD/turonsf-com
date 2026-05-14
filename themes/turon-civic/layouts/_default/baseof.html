@@ -29,9 +29,9 @@
       {{ end }}
     </div>
   </nav>
+  {{ partial "ai-translation-disclosure.html" . }}
   <header class="site-header">{{ partial "site-nav.html" . }}</header>
   <main id="main">
-    {{ partial "ai-translation-disclosure.html" . }}
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "site-footer.html" . }}

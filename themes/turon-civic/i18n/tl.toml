@@ -224,10 +224,10 @@ other = "Isinalin ng AI"
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "Isinalin ng AI ang pahinang ito. English ang opisyal na bersyon."
+other = "Ginawa namin itong pahina sa Filipino para sa inyong pamilya. AI ang ginamit."
 
 [ai_translation_disclosure_link_text]
-other = "May nakita kang mali? Mag-email sa info@turonsf.com."
+other = "Tulungan kami na mapabuti para sa lahat"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)

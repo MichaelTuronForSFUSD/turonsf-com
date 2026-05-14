@@ -224,10 +224,10 @@ other = "AI 翻译"
 # ---------------------------------------------------------------------------
 
 [ai_translation_disclosure_body]
-other = "本页由 AI 翻译。英文版本为官方版本。"
+other = "为让您的家人能用中文阅读，我们真诚地借助AI进行了翻译。"
 
 [ai_translation_disclosure_link_text]
-other = "发现错误吗？请发送邮件至 info@turonsf.com。"
+other = "您的意见能让更多家庭受益"
 
 # ---------------------------------------------------------------------------
 # Translation-pending notice (Architecture Decision 4)
