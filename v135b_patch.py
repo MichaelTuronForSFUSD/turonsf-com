@@ -1,3 +1,33 @@
+#!/usr/bin/env python3
+"""
+v1.3.5b patch — fix ai-translation-disclosure.html data path
+Two root causes from bak inspection:
+  1. Data path: index (index hugo.Data "translation_status") "pages"
+     NOT .Site.Data.translation_status (misses nested "pages" key → nil → no render)
+  2. Lang variable: must use bcp47 chain, not bare .Site.Language.Lang
+  3. Restores placeholder state + mailto subject (page title + language for triage)
+Run from: /Users/turonbot/www/turonsf_com
+  python3 v135b_patch.py
+"""
+import sys
+from pathlib import Path
+
+BASE  = Path("/Users/turonbot/www/turonsf_com")
+THEME = BASE / "themes/turon-civic"
+
+# ── Rewrite partial with correct data path ────────────────────────────────────
+print("1. Rewriting ai-translation-disclosure.html (data path fix)")
+
+PARTIAL = THEME / "layouts/partials/ai-translation-disclosure.html"
+
+# Keep .v134.bak intact — don't overwrite it.
+# Write a .v135a.bak of the broken version for audit.
+bak = PARTIAL.with_suffix(".html.v135a.bak")
+import shutil
+shutil.copy2(PARTIAL, bak)
+print(f"  BAK   {bak.relative_to(BASE)}")
+
+NEW_PARTIAL = """\
 {{/*
   ai-translation-disclosure.html
   Option A slim bar — JEC v1.3.5 — 2026-05-14
@@ -72,3 +102,43 @@
   {{ end }}
 {{ end }}
 {{/* End ai-translation-disclosure.html */}}
+"""
+
+PARTIAL.write_text(NEW_PARTIAL, encoding="utf-8")
+print(f"  OK    ai-translation-disclosure.html (broken v1.3.5 saved as .v135a.bak)")
+
+# ── done ──────────────────────────────────────────────────────────────────────
+print("""
+Fix applied. Run CI gates then deploy:
+
+  hugo --minify --logLevel warn 2>/dev/null && echo "build OK" && \\
+  ./bin/check-i18n-parity.sh && \\
+  ./bin/check-fppc-footer.sh public/ && \\
+  ./bin/check-utm-hygiene.sh public/ && \\
+  ./bin/check-no-jd-references.sh && \\
+  ./bin/check-translation-status.sh
+
+Verify disclosure renders before deploy:
+
+  hugo --minify --logLevel warn 2>/dev/null
+  grep -c "disclosure-slim" public/es/index.html
+  grep -c "disclosure-slim" public/zh-hant/index.html
+  grep -c "disclosure-slim" public/ar/index.html
+
+Expected: 1 on each. Then:
+
+  npx wrangler pages deploy public/ --project-name turonsf-com
+
+Confirm live:
+
+  curl -s https://turonsf.com/es/ | grep -o "disclosure-slim[^<]*" | head -3
+  curl -s https://turonsf.com/ar/ | grep -o "disclosure-slim[^<]*" | head -3
+
+Then commit:
+
+  git add -A
+  git commit -m "fix(disclosure): correct data path + bcp47 lang — slim bar now renders (v1.3.5b)"
+  git push origin main
+  git tag v1.3.5b
+  git push origin v1.3.5b
+""")

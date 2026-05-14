@@ -1,0 +1,29 @@
+{{/*
+  ai-translation-disclosure.html
+  Option A slim bar — single persistent line between eyebrow and site-nav.
+  JEC 6-language panel convergence v1.3.5 — 2026-05-14.
+
+  Design rules (5 locked):
+    1. Purpose leads — WHY before HOW
+    2. AI as tool ("with AI's help"), not author ("AI translated")
+    3. Family frame — authentic for SFUSD parent candidate
+    4. Collective-benefit CTA — help more families, not report errors
+    5. Zero error priming — feedback/share/opinion, never error/mistake
+
+  Renders on non-EN pages where translation_status is "live" or "ai_translated".
+  Translation status lookup: data/translation_status.yaml
+  Key format: "/canonical/path/::lang" (uses canonical_path frontmatter if set)
+*/}}
+{{ $statusPath := .RelPermalink }}
+{{ with .Params.canonical_path }}{{ $statusPath = . }}{{ end }}
+{{ $lang := .Site.Language.Lang }}
+{{ $key := printf "%s::%s" $statusPath $lang }}
+{{ $status := index .Site.Data.translation_status $key }}
+{{ if and (ne $lang "en") (or (eq $status "live") (eq $status "ai_translated")) }}
+<div class="disclosure-slim" role="note">
+  <span class="disclosure-slim__icon" aria-hidden="true">🌐</span>
+  <span class="disclosure-slim__body">{{ i18n "ai_translation_disclosure_body" }}</span>
+  <span class="disclosure-slim__sep" aria-hidden="true">·</span>
+  <a class="disclosure-slim__link" href="mailto:{{ i18n "contact_email" }}">{{ i18n "ai_translation_disclosure_link_text" }}</a>
+</div>
+{{ end }}
