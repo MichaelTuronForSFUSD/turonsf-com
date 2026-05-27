@@ -130,14 +130,14 @@ other = "موقفي من الاحتفاظ بالمعلّمين"
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
 # Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
-# English. Only the descriptors translate. Financial figures never change.
+# English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[vendor_savings]
-other = "وفورات في تكاليف المورّدين"
+[royal_caribbean_savings]
+other = "توفير في التكاليف لدى Royal Caribbean"
 
 [sfusd_parent]
-other = "وليّ أمر في SFUSD"
+other = "وليّ أمر في SFUSD حتى عام 2040"
 
 [ebitda_swing]
 other = "تحوّل في EBITDA"

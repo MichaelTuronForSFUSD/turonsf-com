@@ -148,7 +148,7 @@ After sign-offs in `docs/Phase1_Preflight_Checklist.md` Section 10, merge. The f
 ## 4. Locked constraints (preserved across v1.3.0)
 
 - **Direction A design tokens:** `--navy-900`, `--accent`, `--cream-50`, font choices — UNCHANGED.
-- **Trust strip Sequence F Option β:** Royal Caribbean $72M → SFUSD Parent → HelloFresh −$33M→+$9M → Cambridge — UNCHANGED, DOM order locked.
+- **Trust strip Sequence F Option β:** $72M cost savings at Royal Caribbean → Two kids / SFUSD parent through 2040 → HelloFresh −$33M→+$9M → Cambridge — DOM order locked.
 - **Three-pillar order:** Special Education → Budget Discipline → Teacher Retention — LOCKED.
 - **Hero copy structure:** operator-credential anchored headline + three-pillar reference subheadline + dual CTA — UNCHANGED.
 - **info@turonsf.com:** canonical email.

@@ -70,7 +70,7 @@ Every adjustment a campaign typically wants falls into one of four buckets.
 These are not "hard to change" — they're "shouldn't change without explicit operator + counsel sign-off":
 
 - Direction A design tokens (`--navy-900`, `--accent`, `--cream-50`, font choices)
-- Trust strip Sequence F Option β (Royal Caribbean → SFUSD Parent → HelloFresh → Cambridge order + financial figures)
+- Trust strip Sequence F Option β ($72M cost savings at Royal Caribbean → Two kids / SFUSD parent through 2040 → HelloFresh → Cambridge order + financial figures)
 - Three-pillar order (Special Ed → Budget Discipline → Teacher Retention)
 - Hero copy structure (operator-credential anchored headline + three-pillar reference subhead + dual CTA)
 - Role tag "Data Scientist, SFUSD Parent" — never JD/attorney/lawyer/Juris Doctor in any language

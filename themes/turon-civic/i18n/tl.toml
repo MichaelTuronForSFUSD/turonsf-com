@@ -130,14 +130,14 @@ other = "Ang paninindigan ko sa pagpapanatili ng guro"
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
 # Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
-# English. Only the descriptors translate. Financial figures never change.
+# English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[vendor_savings]
-other = "natipid sa vendor"
+[royal_caribbean_savings]
+other = "Pagtitipid sa gastos sa Royal Caribbean"
 
 [sfusd_parent]
-other = "magulang sa SFUSD"
+other = "magulang sa SFUSD hanggang 2040"
 
 [ebitda_swing]
 other = "pagbabago sa EBITDA"

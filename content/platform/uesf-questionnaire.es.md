@@ -44,7 +44,7 @@ fppc_sensitive: true
     Platform, About, Special Education, Budget Discipline, Teacher Retention.
 
   FINANCIAL FIGURES — NEVER CHANGE:
-    $72M (Royal Caribbean vendor savings)
+    $72M (cost savings at Royal Caribbean)
     -$33M -> +$9M (HelloFresh EBITDA swing)
     Audit anchor figure and LCFF loss figure: pull verbatim from the
     Decisions Register; do NOT round, restate, or paraphrase.

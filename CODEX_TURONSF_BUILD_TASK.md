@@ -88,7 +88,7 @@ The repo must carry event wiring for:
 - Hero primary CTA is newsletter.
 - Hero donate is a subordinate text-level CTA.
 - Nav donate is subordinate.
-- Trust strip says `Two kids`.
+- Trust strip says `Two kids` with `SFUSD parent through 2040`.
 - Add preconnects for ActBlue, Action Network, and Brevo.
 - Add language pending notice and English fallback.
 - Use system mono stack, not JetBrains Mono.

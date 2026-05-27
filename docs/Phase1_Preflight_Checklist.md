@@ -40,7 +40,7 @@ Walk top to bottom. Note the result in column 3 (✅ / ❌ / ⚠️).
 | 2.1 | All v1.2.0 page URLs resolve unchanged (home, /about/, /platform/, /platform/pillar-1/, /platform/pillar-2/, /platform/pillar-3/, /endorsements/, /volunteer/, /donate/, /contact/). **BLOCKING.** | |
 | 2.2 | Hero copy structure unchanged from v1.2.0 (operator-credential anchored headline; three-pillar reference subheadline; dual CTA). **BLOCKING.** | |
 | 2.3 | Three-pillar order preserved: Special Education → Budget Discipline → Teacher Retention. **BLOCKING.** | |
-| 2.4 | Trust strip Sequence F Option β intact: Royal Caribbean $72M → SFUSD Parent → HelloFresh −$33M→+$9M → Cambridge. DOM order unchanged. **BLOCKING.** | |
+| 2.4 | Trust strip Sequence F Option β intact: $72M cost savings at Royal Caribbean → Two kids / SFUSD parent through 2040 → HelloFresh −$33M→+$9M → Cambridge. DOM order unchanged. **BLOCKING.** | |
 | 2.5 | All four trust-strip financial figures render with the exact v1.2.0 strings (no recomputation, no rephrasing). **BLOCKING.** | |
 | 2.6 | `/endorsements/` renders dormant copy + two signup forms because `is_active: false` and `data/endorsements.yaml` empty. **BLOCKING.** | |
 | 2.7 | `/platform/uesf-questionnaire/` returns 404 because `is_active: false`. Not in nav. Not in sitemap. **BLOCKING.** | |

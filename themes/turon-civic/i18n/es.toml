@@ -139,14 +139,14 @@ other = "Mi postura sobre la retención de maestros"
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
 # Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
-# English. Only the descriptors translate. Financial figures never change.
+# English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[vendor_savings]
-other = "ahorros en proveedores"
+[royal_caribbean_savings]
+other = "Ahorros de costos en Royal Caribbean"
 
 [sfusd_parent]
-other = "padre de familia de SFUSD"
+other = "padre de familia de SFUSD hasta 2040"
 
 [ebitda_swing]
 other = "cambio en EBITDA"

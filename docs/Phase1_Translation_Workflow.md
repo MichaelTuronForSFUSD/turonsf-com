@@ -141,7 +141,7 @@ These get the tightest review loop and the highest score threshold (≥ 97 compo
 
 - The FPPC §84305 footer disclosure (Deliverable 9). Glossary contract: "FPPC", "ID 1482971", "Michael Turon", "Lauren Turon", "SFUSD" stay English; the surrounding clauses translate.
 - The AI translation disclosure body (Deliverable 8). Glossary contract: "info@turonsf.com" stays Latin-script; the surrounding clauses translate.
-- Trust-strip credential descriptors: "Royal Caribbean", "HelloFresh", "Cambridge" stay English; descriptors like "(vendor savings)", "(EBITDA swing)", "(Physics PhD)" translate.
+- Trust-strip credential descriptors: "Royal Caribbean", "HelloFresh", "Cambridge" stay English; surrounding text like "Cost savings at", "EBITDA swing", "Physics PhD", and "SFUSD parent through 2040" translates.
 - Financial figures in trust strip ($72M, −$33M → +$9M): figures themselves never change. For Arabic, wrap with `<bdi dir="ltr">` so they read LTR inside the RTL flow.
 - Pillar-1 LCFF / attendance figures: same contract — figures stay numeric, surrounding prose translates.
 

@@ -138,14 +138,14 @@ other = "我對留住老師嘅立場"
 # ---------------------------------------------------------------------------
 # Trust strip descriptors
 # Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
-# English. Only the descriptors translate. Financial figures never change.
+# English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[vendor_savings]
-other = "供應商開支節省"
+[royal_caribbean_savings]
+other = "喺 Royal Caribbean 節省成本"
 
 [sfusd_parent]
-other = "SFUSD 家長"
+other = "到 2040 年都係 SFUSD 家長"
 
 [ebitda_swing]
 other = "EBITDA 轉變"
