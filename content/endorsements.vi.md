@@ -44,10 +44,3 @@ Nếu bạn muốn ủng hộ, hoặc đại diện cho một tổ chức đang 
   submit_action="action_network"
   thank_you_message="form_success"
 >}}
-
-{{< endorsement-form
-  kind="organization"
-  fields="organization_name,contact_name,email,role,why,logo_upload"
-  submit_action="action_network"
-  thank_you_message="form_success"
->}}

@@ -68,10 +68,3 @@ If you want to endorse, or if you represent an organization that wants to evalua
   submit_action="action_network"
   thank_you_message="form_success"
 >}}
-
-{{< endorsement-form
-  kind="organization"
-  fields="organization_name,contact_name,email,role,why,logo_upload"
-  submit_action="action_network"
-  thank_you_message="form_success"
->}}
