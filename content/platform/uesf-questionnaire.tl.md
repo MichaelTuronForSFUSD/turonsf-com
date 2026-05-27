@@ -44,8 +44,9 @@ fppc_sensitive: true
     Platform, About, Special Education, Budget Discipline, Teacher Retention.
 
   FINANCIAL FIGURES — NEVER CHANGE:
-    $72M (cost savings at Royal Caribbean)
-    -$33M -> +$9M (HelloFresh EBITDA swing)
+    Cut $72M without layoffs — Royal Caribbean
+    Turned $33M losses into $9M profit — HelloFresh
+    Cambridge Physics PhD — built for hard problems
     Audit anchor figure and LCFF loss figure: pull verbatim from the
     Decisions Register; do NOT round, restate, or paraphrase.
 

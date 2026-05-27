@@ -40,9 +40,9 @@ Education, Budget Discipline, and Teacher Retention.
 
 ## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
 
-Royal Caribbean Group (operator's prior role): $72M cost savings at Royal Caribbean.
-HelloFresh (operator's prior role): EBITDA swing from -$33M to +$9M.
-Cambridge: Physics PhD.
+Royal Caribbean Group (operator's prior role): Cut $72M without layoffs — Royal Caribbean.
+HelloFresh (operator's prior role): Turned $33M losses into $9M profit — HelloFresh.
+Cambridge: Cambridge Physics PhD — built for hard problems.
 
 LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
   -> Operator: replace before publication; figure is FPPC-sensitive.

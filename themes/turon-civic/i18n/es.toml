@@ -142,17 +142,26 @@ other = "Mi postura sobre la retención de maestros"
 # English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[royal_caribbean_savings]
-other = "Ahorros de costos en Royal Caribbean"
+[trust_rc_head]
+other = "Recortó $72M"
+
+[trust_rc_body]
+other = "sin despidos — Royal Caribbean"
 
 [sfusd_parent]
 other = "padre de familia de SFUSD hasta 2040"
 
-[ebitda_swing]
-other = "cambio en EBITDA"
+[trust_hf_head]
+other = "Convirtió pérdidas de $33M"
 
-[cambridge_phd]
-other = "doctorado en Física de Cambridge"
+[trust_hf_body]
+other = "en $9M de ganancias — HelloFresh"
+
+[trust_cambridge_head]
+other = "Doctorado en Física de Cambridge"
+
+[trust_cambridge_body]
+other = "formado para problemas difíciles"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)

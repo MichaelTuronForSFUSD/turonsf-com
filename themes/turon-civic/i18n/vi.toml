@@ -133,17 +133,26 @@ other = "Lập trường của tôi về giữ chân giáo viên"
 # English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[royal_caribbean_savings]
-other = "Tiết kiệm chi phí tại Royal Caribbean"
+[trust_rc_head]
+other = "Cắt giảm $72M"
+
+[trust_rc_body]
+other = "không sa thải — Royal Caribbean"
 
 [sfusd_parent]
 other = "phụ huynh SFUSD đến năm 2040"
 
-[ebitda_swing]
-other = "chuyển biến EBITDA"
+[trust_hf_head]
+other = "Biến lỗ $33M"
 
-[cambridge_phd]
-other = "Cambridge Physics PhD"
+[trust_hf_body]
+other = "thành lãi $9M — HelloFresh"
+
+[trust_cambridge_head]
+other = "Tiến sĩ Vật lý Cambridge"
+
+[trust_cambridge_body]
+other = "được rèn cho vấn đề khó"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)

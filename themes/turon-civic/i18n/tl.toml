@@ -133,17 +133,26 @@ other = "Ang paninindigan ko sa pagpapanatili ng guro"
 # English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[royal_caribbean_savings]
-other = "Pagtitipid sa gastos sa Royal Caribbean"
+[trust_rc_head]
+other = "Nagbawas ng $72M"
+
+[trust_rc_body]
+other = "nang walang tanggalan — Royal Caribbean"
 
 [sfusd_parent]
 other = "magulang sa SFUSD hanggang 2040"
 
-[ebitda_swing]
-other = "pagbabago sa EBITDA"
+[trust_hf_head]
+other = "Mula $33M losses"
 
-[cambridge_phd]
+[trust_hf_body]
+other = "ginawang $9M profit — HelloFresh"
+
+[trust_cambridge_head]
 other = "Cambridge Physics PhD"
+
+[trust_cambridge_body]
+other = "handa sa mahihirap na problema"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)

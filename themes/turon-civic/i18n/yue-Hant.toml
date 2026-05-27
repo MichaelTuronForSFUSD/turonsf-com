@@ -141,17 +141,26 @@ other = "我對留住老師嘅立場"
 # English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[royal_caribbean_savings]
-other = "喺 Royal Caribbean 節省成本"
+[trust_rc_head]
+other = "削減 $72M"
+
+[trust_rc_body]
+other = "冇裁員 — Royal Caribbean"
 
 [sfusd_parent]
 other = "到 2040 年都係 SFUSD 家長"
 
-[ebitda_swing]
-other = "EBITDA 轉變"
+[trust_hf_head]
+other = "將 $33M 虧損"
 
-[cambridge_phd]
+[trust_hf_body]
+other = "扭轉成 $9M 盈利 — HelloFresh"
+
+[trust_cambridge_head]
 other = "Cambridge 物理博士"
+
+[trust_cambridge_body]
+other = "專攻棘手難題"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure

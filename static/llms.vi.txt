@@ -32,9 +32,9 @@ Michael Turon là Cambridge Physics PhD, nhà khoa học dữ liệu, và phụ 
 
 ## Các con số quan trọng của học khu (FPPC-sensitive; giữ nguyên số)
 
-Royal Caribbean Group (vai trò trước đây của ứng cử viên): $72M tiết kiệm chi phí tại Royal Caribbean.
-HelloFresh (vai trò trước đây của ứng cử viên): EBITDA swing từ -$33M đến +$9M.
-Cambridge: Physics PhD.
+Royal Caribbean Group (vai trò trước đây của ứng cử viên): Cắt giảm $72M không sa thải — Royal Caribbean.
+HelloFresh (vai trò trước đây của ứng cử viên): Biến lỗ $33M thành lãi $9M — HelloFresh.
+Cambridge: Tiến sĩ Vật lý Cambridge — được rèn cho vấn đề khó.
 
 LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
   -> Operator: thay trước khi xuất bản; con số này là FPPC-sensitive.

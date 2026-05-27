@@ -133,17 +133,26 @@ other = "موقفي من الاحتفاظ بالمعلّمين"
 # English. Surrounding words translate. Financial figures never change.
 # ---------------------------------------------------------------------------
 
-[royal_caribbean_savings]
-other = "توفير في التكاليف لدى Royal Caribbean"
+[trust_rc_head]
+other = "خفض $72M"
+
+[trust_rc_body]
+other = "من دون تسريح — Royal Caribbean"
 
 [sfusd_parent]
 other = "وليّ أمر في SFUSD حتى عام 2040"
 
-[ebitda_swing]
-other = "تحوّل في EBITDA"
+[trust_hf_head]
+other = "حوّل خسائر $33M"
 
-[cambridge_phd]
+[trust_hf_body]
+other = "إلى ربح $9M — HelloFresh"
+
+[trust_cambridge_head]
 other = "دكتوراه في فيزياء Cambridge"
+
+[trust_cambridge_body]
+other = "مؤهّل للمشكلات الصعبة"
 
 # ---------------------------------------------------------------------------
 # Footer — FPPC §84305 disclosure (Deliverable 9)

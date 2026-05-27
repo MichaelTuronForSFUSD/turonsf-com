@@ -32,9 +32,9 @@ Michael Turon 是 Cambridge 物理博士、数据科学家与 SFUSD 家长。他
 
 ## 重要学区数字（FPPC-sensitive；数字保持原样，周边文字翻译）
 
-Royal Caribbean Group（候选人先前任职机构）：在 Royal Caribbean 节省成本 $72M。
-HelloFresh（候选人先前任职机构）：EBITDA 从 -3,300 万美元转为 +900 万美元。
-Cambridge：物理博士。
+Royal Caribbean Group（候选人先前任职机构）：削减 $72M，不裁员 — Royal Caribbean。
+HelloFresh（候选人先前任职机构）：将 $33M 亏损转为 $9M 盈利 — HelloFresh。
+Cambridge：Cambridge 物理博士 — 擅长处理艰难问题。
 
 LCFF funding loss（audit anchor）：MISSING_FIGURE_FROM_DECISIONS_REGISTER
   -> Operator：发布前请替换；此数字属 FPPC-sensitive。

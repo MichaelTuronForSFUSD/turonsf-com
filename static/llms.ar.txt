@@ -32,9 +32,9 @@ Michael Turon هو حاصل على دكتوراه في فيزياء Cambridge، 
 
 ## أرقام أساسية عن المنطقة التعليمية (حساسة لـ FPPC؛ تبقى الأرقام كما هي)
 
-Royal Caribbean Group (دور سابق للمرشح): $72M توفير في التكاليف لدى Royal Caribbean.
-HelloFresh (دور سابق للمرشح): تحوّل EBITDA من -$33M إلى +$9M.
-Cambridge: دكتوراه في الفيزياء.
+Royal Caribbean Group (دور سابق للمرشح): خفض $72M من دون تسريح — Royal Caribbean.
+HelloFresh (دور سابق للمرشح): حوّل خسائر $33M إلى ربح $9M — HelloFresh.
+Cambridge: دكتوراه في فيزياء Cambridge — مؤهّل للمشكلات الصعبة.
 
 LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
   -> Operator: replace before publication; figure is FPPC-sensitive.
