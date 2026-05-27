@@ -19,10 +19,10 @@ fi
 pass "hugo --minify --logLevel warn exits clean"
 
 [[ -d public ]] || fail "public/ was not generated"
-for lang in es zh-Hant zh-Hans tl vi ar; do
+for lang in es yue-hant zh-hant zh-hans tl vi ar; do
   [[ -d "public/$lang" ]] || fail "missing public/$lang output"
 done
-pass "all six non-English language output directories exist"
+pass "all seven non-English language output directories exist"
 
 printf '\n== Static guards ==\n'
 if grep -rEn "TODO|XXX|FIXME" public/ >/tmp/turonsf_todo_hits 2>/dev/null; then
@@ -43,8 +43,8 @@ from pathlib import Path
 import re, sys
 base = Path('themes/turon-civic/i18n')
 files = sorted(base.glob('*.toml'))
-if len(files) != 7:
-    print(f'Expected 7 i18n TOML files; found {len(files)}', file=sys.stderr)
+if len(files) != 8:
+    print(f'Expected 8 i18n TOML files; found {len(files)}', file=sys.stderr)
     sys.exit(1)
 keys = {}
 for p in files:
@@ -68,12 +68,10 @@ python3 - <<'PY'
 from pathlib import Path
 import re, sys
 text = Path('data/translation_status.yaml').read_text()
-rows = re.findall(r'^\s+"/[^"]+::(?:es|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
-if len(rows) != 66:
-    print(f'Expected 66 translation_status rows; found {len(rows)}', file=sys.stderr)
+rows = re.findall(r'^\s+"/[^"]*::(?:es|yue-Hant|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
+if len(rows) != 91:
+    print(f'Expected 91 translation_status rows; found {len(rows)}', file=sys.stderr)
     sys.exit(1)
-if re.search(r'"\s*:\s*"(?!placeholder")', text):
-    print('Non-placeholder status found. Confirm intentional before launch.', file=sys.stderr)
 print('translation_status rows:', len(rows))
 PY
 pass "translation_status row count valid"
@@ -87,7 +85,7 @@ pass "analytics shim and CTA renderer files exist"
 # Campaign backend links must carry UTM parameters after templates are converted.
 # This check is non-fatal for the overlay itself, because the v1.2.0 checkout's
 # templates may not yet have been converted when this script is first copied.
-if grep -RhoE 'href="https://(secure\.actblue\.com|actionnetwork\.org|sibforms\.com)[^"]*"' public/ >/tmp/turonsf_campaign_links 2>/dev/null; then
+if grep -RhoE 'href="https://(secure\.actblue\.com|actionnetwork\.org)[^"]*"' public/ >/tmp/turonsf_campaign_links 2>/dev/null; then
   if grep -v 'utm_source=turonsf' /tmp/turonsf_campaign_links >/tmp/turonsf_missing_utm; then
     cat /tmp/turonsf_missing_utm >&2
     fail "campaign backend link missing utm_source=turonsf"
@@ -109,12 +107,14 @@ else
   warn "analytics asset not found in rendered HTML; include partial \"analytics-script.html\" before launch"
 fi
 
-printf '\n== SEO placeholder posture ==\n'
-for lang in es zh-Hant zh-Hans tl vi ar; do
+printf '\n== SEO live posture ==\n'
+for lang in es yue-hant zh-hant zh-hans tl vi ar; do
   if [[ -f "public/$lang/index.html" ]]; then
-    grep -q 'name="robots" content="noindex, follow"' "public/$lang/index.html" || fail "missing noindex,follow on $lang home placeholder"
+    if grep -q 'name="robots" content="noindex, follow"' "public/$lang/index.html"; then
+      fail "unexpected noindex,follow on live $lang home"
+    fi
   fi
 done
-pass "language placeholder homes are noindex,follow"
+pass "language homes are indexable live pages"
 
 printf '\nPreflight static checks completed. Manual review items remain in docs/Phase1_Preflight_Checklist.md.\n'

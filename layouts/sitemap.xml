@@ -42,7 +42,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {{ $translationStatusData := index .Data.Sites.First.Data.translation_status "pages" }}
 {{ $englishSite := index .Data.Sites.ByLanguage "en" }}
-{{ $allLangs := slice "en" "es" "zh-Hant" "zh-Hans" "tl" "vi" "ar" }}
+{{ $allLangs := slice "en" "es" "yue-Hant" "zh-Hant" "zh-Hans" "tl" "vi" "ar" }}
 
 {{/* Iterate the English (default-language) pages. Each page produces one
      <url> with hreflang alternates pointing to every live translation. */}}
@@ -93,7 +93,7 @@
     {{ if eq $emitLang "en" }}
       {{ $emitURL = printf "%s%s" $emitSite.BaseURL (strings.TrimPrefix "/" $relPath) }}
     {{ else }}
-      {{ $emitURL = printf "%s%s/%s" $emitSite.BaseURL $emitLang (strings.TrimPrefix "/" $relPath) }}
+      {{ $emitURL = printf "%s%s/%s" $emitSite.BaseURL $emitSite.Language.Lang (strings.TrimPrefix "/" $relPath) }}
     {{ end }}
   <url>
     <loc>{{ $emitURL }}</loc>
@@ -111,7 +111,7 @@
       {{ if eq $altLang "en" }}
         {{ $altURL = printf "%s%s" $altSite.BaseURL (strings.TrimPrefix "/" $relPath) }}
       {{ else }}
-        {{ $altURL = printf "%s%s/%s" $altSite.BaseURL $altLang (strings.TrimPrefix "/" $relPath) }}
+        {{ $altURL = printf "%s%s/%s" $altSite.BaseURL $altSite.Language.Lang (strings.TrimPrefix "/" $relPath) }}
       {{ end }}
     <xhtml:link rel="alternate" hreflang="{{ $altLang }}" href="{{ $altURL }}" />
     {{ end }}

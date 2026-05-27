@@ -13,6 +13,14 @@
   --serif: Fraunces, Georgia, serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
+html:lang(yue-Hant), html:lang(zh-Hant) {
+  --sans: "PingFang TC", "Noto Sans CJK TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: "Noto Serif CJK TC", "Songti TC", "PMingLiU", Georgia, serif;
+}
+html:lang(zh-Hans) {
+  --sans: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: "Noto Serif CJK SC", "Songti SC", "SimSun", Georgia, serif;
+}
 * { box-sizing: border-box; }
 html { background: var(--cream-50); color: var(--ink); font-family: var(--sans); line-height: 1.55; text-rendering: optimizeLegibility; }
 body { margin: 0; font-size: 18px; }

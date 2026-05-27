@@ -20,7 +20,7 @@
     - 44x44 px minimum tap target on mobile (Architecture Decision 3 + WCAG).
 
   RTL:
-    - When the current language is dir="rtl" (Arabic), the dropdown opens
+    - When a language is dir="rtl", the dropdown opens
       from the inline start side. The data source order is preserved; the
       visual flow follows CSS logical properties (no manual list reversal).
 
@@ -60,8 +60,7 @@
       {{ $linkLang := .Language.Params.bcp47 | default (.Language.LanguageCode | default .Language.Lang) }}
       {{ $linkSlug := .Language.Lang }}
       {{ $linkName := .Language.LanguageName }}
-      {{ $linkDir := "ltr" }}
-      {{ if eq $linkLang "ar" }}{{ $linkDir = "rtl" }}{{ end }}
+      {{ $linkDir := .Language.Params.dir | default "ltr" }}
 
       {{/* Resolve the destination URL with three-step fallback:
            1. Translated current page if status == live

@@ -1,6 +1,6 @@
 # robots.txt — turonsf.com (v1.3.0)
 # Architecture Decision 8: robots directives are language-neutral. The same
-# rules apply across /, /es/, /zh-Hant/, /zh-Hans/, /tl/, /vi/, /ar/.
+# rules apply across /, /es/, /yue-Hant/, /zh-Hant/, /zh-Hans/, /tl/, /vi/, /ar/.
 #
 # Language-specific bot directives are NOT used because they would make this
 # file harder to audit and would not solve translation-quality issues.
@@ -27,7 +27,7 @@ Disallow: /.well-known/private/
 # ---------------------------------------------------------------------------
 # 11-AI-bot allowlist (preserved unchanged from v1.2.0, policy line G-2).
 # Each of these agents may crawl the canonical English content and all
-# six target-language variants. The on-page AI translation disclosure
+# seven target-language variants. The on-page AI translation disclosure
 # (Deliverable 4.5 / 8) is the campaign's transparency signal to these
 # crawlers; the canonical-tag points to the English source for
 # translated pages whose translation_status is placeholder.
@@ -84,6 +84,7 @@ Sitemap: https://turonsf.com/sitemap.xml
 # Canonical English (also discoverable at the conventional location):
 #   https://turonsf.com/llms.en.txt
 #   https://turonsf.com/llms.es.txt
+#   https://turonsf.com/llms.yue-Hant.txt
 #   https://turonsf.com/llms.zh-Hant.txt
 #   https://turonsf.com/llms.zh-Hans.txt
 #   https://turonsf.com/llms.tl.txt

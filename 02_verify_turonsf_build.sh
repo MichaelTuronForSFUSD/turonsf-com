@@ -112,6 +112,7 @@ pages=(
   "public/donate/index.html"
   "public/contact/index.html"
   "public/es/index.html"
+  "public/yue-hant/index.html"
   "public/zh-hant/index.html"
   "public/zh-hans/index.html"
   "public/tl/index.html"
@@ -124,7 +125,7 @@ for p in "${pages[@]}"; do
 done
 
 say "Language output directories"
-for lang in es zh-hant zh-hans tl vi ar; do
+for lang in es yue-hant zh-hant zh-hans tl vi ar; do
   [ -d "public/$lang" ] || fail "missing public/$lang output"
   echo "OK: public/$lang"
 done
@@ -180,9 +181,11 @@ for host in secure.actblue.com actionnetwork.org sibforms.com; do
 done
 
 say "Placeholder SEO checks"
-for lang in es zh-hant zh-hans tl vi ar; do
-  grep -Eq 'name="?robots"? content="?noindex, follow"?' "public/$lang/index.html" || fail "missing noindex,follow on $lang home"
-  echo "OK: noindex placeholder $lang"
+for lang in es yue-hant zh-hant zh-hans tl vi ar; do
+  if grep -Eq 'name="?robots"? content="?noindex, follow"?' "public/$lang/index.html"; then
+    fail "unexpected noindex,follow on live $lang home"
+  fi
+  echo "OK: live home indexable $lang"
 done
 
 say "i18n parity"
@@ -191,8 +194,8 @@ from pathlib import Path
 import re, sys
 base = Path('themes/turon-civic/i18n')
 files = sorted(base.glob('*.toml'))
-if len(files) != 7:
-    print(f'Expected 7 i18n TOML files; found {len(files)}', file=sys.stderr)
+if len(files) != 8:
+    print(f'Expected 8 i18n TOML files; found {len(files)}', file=sys.stderr)
     sys.exit(1)
 keys = {}
 for p in files:
@@ -214,9 +217,9 @@ python3 - <<'PY_STATUS'
 from pathlib import Path
 import re, sys
 text = Path('data/translation_status.yaml').read_text(encoding='utf-8')
-rows = re.findall(r'^\s+"/[^\"]*::(?:es|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
-if len(rows) != 78:
-    print(f'Expected 78 translation_status rows; found {len(rows)}', file=sys.stderr)
+rows = re.findall(r'^\s+"/[^\"]*::(?:es|yue-Hant|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
+if len(rows) != 91:
+    print(f'Expected 91 translation_status rows; found {len(rows)}', file=sys.stderr)
     sys.exit(1)
 print('translation_status rows:', len(rows))
 PY_STATUS
@@ -239,4 +242,4 @@ say "Git status"
 git status --short --branch || true
 
 say "Verification complete"
-echo "Build is locally checkable. Remaining manual blockers: Spanish backend routing, Sam review, Lauren review."
+echo "Build is locally checkable. Remaining manual blockers: Cantonese native-speaker review, Sam review, Lauren review."

@@ -1,0 +1,260 @@
+# i18n/yue-Hant.toml
+# Cantonese in Traditional Chinese script for San Francisco families.
+# Direction: ltr
+#
+# AI TRANSLATION DRAFT — 廣東話 (yue-Hant).
+# Status: ai_translated; pending operator, Sam Ray, Lauren Turon, and native
+# Cantonese reviewer approval where required by Phase1_Translation_Workflow.md.
+#
+# Glossary discipline:
+#   STAY ENGLISH: Michael Turon, Lauren Turon, Sam Ray, SFUSD, UESF,
+#                 Royal Caribbean, HelloFresh, Cambridge, FPPC, FPPC ID 1482971,
+#                 ActBlue, Cloudflare, Umami, Brevo,
+#                 MailChannels, Turnstile, Google Calendar, info@turonsf.com.
+#                 Financial figures unchanged: $72M, -$33M, +$9M.
+#   LOCALIZE: Vote, Endorse, Volunteer, Donate, Contact, Talk, Platform,
+#             About, Special Education, Budget Discipline, Teacher Retention.
+#
+# Tone: polished written Cantonese, civic, warm, and professional. Avoid
+# mainland PRC vocabulary and avoid slang that would feel unserious on a
+# campaign site.
+# ----------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# Navigation
+# ---------------------------------------------------------------------------
+
+[home]
+other = "首頁"
+
+[about]
+other = "關於"
+
+[platform]
+other = "政綱"
+
+[pillar1]
+other = "特殊教育"
+
+[pillar2]
+other = "預算紀律"
+
+[pillar3]
+other = "留住好老師"
+
+[endorsements]
+other = "支持背書"
+
+[volunteer]
+other = "做義工"
+
+[donate]
+other = "捐款"
+
+[contact]
+other = "聯絡"
+
+# DEFERRED FROM v1.3.0 — /letters/uesf-2026-05-12/ page gated draft:true;
+# key retained for re-enable cycle (no removal). See MANIFEST §8.
+[letters]
+other = "信件"
+
+# DEFERRED FROM v1.3.0 — /talk/ page gated draft:true;
+# key retained for re-enable cycle (no removal). See MANIFEST §8.
+[talk]
+other = "傾談"
+
+# ---------------------------------------------------------------------------
+# Hero CTAs
+# ---------------------------------------------------------------------------
+
+[donate_cta]
+other = "捐款"
+
+[volunteer_cta]
+other = "做義工"
+
+[endorse_cta]
+other = "支持背書"
+
+[book_call_cta]
+other = "預約 15 分鐘傾談"
+
+[newsletter_cta_primary]
+other = "收取競選消息"
+
+[donate_link_secondary]
+other = "捐款"
+
+[platform_link_tertiary]
+other = "睇政綱"
+
+# ---------------------------------------------------------------------------
+# Home page
+# ---------------------------------------------------------------------------
+
+[home_hero_eyebrow]
+other = "Michael Turon · 數據科學家 · SFUSD 家長"
+
+[home_hero_title]
+other = "三個問題。按次序解決。"
+
+[home_hero_dek]
+other = "特殊教育人手。預算紀律。留住好老師。呢場教育委員會選戰，係由家庭最先感受到嘅問題出發。"
+
+[trust_strip_label]
+other = "可信資料"
+
+[trust_two_kids]
+other = "兩個孩子"
+
+[pillar_label_1]
+other = "第一支柱"
+
+[pillar_label_2]
+other = "第二支柱"
+
+[pillar_label_3]
+other = "第三支柱"
+
+[pillar1_home_summary]
+other = "學生依法應得嘅服務，必須有足夠人手去落實。"
+
+[pillar2_home_summary]
+other = "令教育委員會監督重新回到錢、執行同問責。"
+
+[pillar3_home_summary]
+other = "留住好老師唔係口號，而係一個需要系統處理嘅問題。"
+
+[pillar1_home_link]
+other = "我會點樣改善特殊教育人手"
+
+[pillar2_home_link]
+other = "我會點樣處理委員會監督"
+
+[pillar3_home_link]
+other = "我對留住老師嘅立場"
+
+# ---------------------------------------------------------------------------
+# Trust strip descriptors
+# Locked: company names ("Royal Caribbean", "HelloFresh", "Cambridge") stay
+# English. Only the descriptors translate. Financial figures never change.
+# ---------------------------------------------------------------------------
+
+[vendor_savings]
+other = "供應商開支節省"
+
+[sfusd_parent]
+other = "SFUSD 家長"
+
+[ebitda_swing]
+other = "EBITDA 轉變"
+
+[cambridge_phd]
+other = "Cambridge 物理博士"
+
+# ---------------------------------------------------------------------------
+# Footer — FPPC §84305 disclosure
+# ---------------------------------------------------------------------------
+
+[fppc_disclaimer]
+other = "由 Michael Turon for SFUSD Board of Education 2026 支付。FPPC ID 1482971。"
+
+[copyright]
+other = "© 2026 Michael Turon for SFUSD Board of Education"
+
+[contact_email]
+other = "info@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Template labels
+# ---------------------------------------------------------------------------
+
+[page_eyebrow]
+other = "Michael Turon · SFUSD 教育委員會 · 2026"
+
+[endorsement_notice_contact]
+other = "如想支持背書，或者想同競選團隊傾背書事宜，請電郵 info@turonsf.com。"
+
+[endorsement_notice_pending]
+other = "第一項背書啟用並完成審核後，會喺呢度公布。"
+
+# ---------------------------------------------------------------------------
+# Form labels
+# ---------------------------------------------------------------------------
+
+[name]
+other = "姓名"
+
+[email]
+other = "電郵"
+
+[organization]
+other = "機構"
+
+[message]
+other = "訊息"
+
+[submit]
+other = "送出"
+
+[form_success]
+other = "多謝。我哋已經收到你嘅訊息，會喺兩個工作天內回覆。"
+
+[form_error]
+other = "你嘅訊息暫時未能送出。請再試一次，或者電郵 info@turonsf.com。"
+
+# ---------------------------------------------------------------------------
+# Language switcher
+# ---------------------------------------------------------------------------
+
+[language_switcher_label]
+other = "選擇語言"
+
+[current_language]
+other = "目前語言"
+
+[english_official_source]
+other = "英文 — 官方版本"
+
+[ai_translated_marker]
+other = "AI 翻譯"
+
+# ---------------------------------------------------------------------------
+# AI translation disclosure
+# ---------------------------------------------------------------------------
+
+[ai_translation_disclosure_body]
+other = "呢一頁用 AI 翻譯，等你同屋企人可以用廣東話閱讀。"
+
+[ai_translation_disclosure_link_text]
+other = "幫我哋改得更貼地、更清楚。"
+
+[disclosure_copied]
+other = "已複製。歡迎電郵 help@turonsf.com"
+
+# ---------------------------------------------------------------------------
+# Translation-pending notice
+# ---------------------------------------------------------------------------
+
+[translation_pending_notice]
+other = "呢一頁暫時未有廣東話版本。請先閱讀英文版本。"
+
+[translation_pending_link]
+other = "閱讀英文版本"
+
+# ---------------------------------------------------------------------------
+# Generic UX
+# ---------------------------------------------------------------------------
+
+[read_more]
+other = "睇更多"
+
+[skip_to_content]
+other = "跳到主要內容"
+
+[menu]
+other = "選單"
+
+[close]
+other = "關閉"

@@ -28,6 +28,7 @@ pages:
 
   # ----- /  (home) -----
   "/::es":      "live"
+  "/::yue-Hant": "live"
   "/::zh-Hant": "live"
   "/::zh-Hans": "live"
   "/::tl":      "live"
@@ -36,6 +37,7 @@ pages:
 
   # ----- /about/ -----
   "/about/::es":      "live"
+  "/about/::yue-Hant": "live"
   "/about/::zh-Hant": "live"
   "/about/::zh-Hans": "live"
   "/about/::tl":      "live"
@@ -44,6 +46,7 @@ pages:
 
   # ----- /platform/ -----
   "/platform/::es":      "live"
+  "/platform/::yue-Hant": "live"
   "/platform/::zh-Hant": "live"
   "/platform/::zh-Hans": "live"
   "/platform/::tl":      "live"
@@ -52,6 +55,7 @@ pages:
 
   # ----- /platform/pillar-1/ (Special Education) -----
   "/platform/pillar-1/::es":      "live"
+  "/platform/pillar-1/::yue-Hant": "live"
   "/platform/pillar-1/::zh-Hant": "live"
   "/platform/pillar-1/::zh-Hans": "live"
   "/platform/pillar-1/::tl":      "live"
@@ -60,6 +64,7 @@ pages:
 
   # ----- /platform/pillar-2/ (Budget Discipline) -----
   "/platform/pillar-2/::es":      "live"
+  "/platform/pillar-2/::yue-Hant": "live"
   "/platform/pillar-2/::zh-Hant": "live"
   "/platform/pillar-2/::zh-Hans": "live"
   "/platform/pillar-2/::tl":      "live"
@@ -68,6 +73,7 @@ pages:
 
   # ----- /platform/pillar-3/ (Teacher Retention) -----
   "/platform/pillar-3/::es":      "live"
+  "/platform/pillar-3/::yue-Hant": "live"
   "/platform/pillar-3/::zh-Hant": "live"
   "/platform/pillar-3/::zh-Hans": "live"
   "/platform/pillar-3/::tl":      "live"
@@ -76,6 +82,7 @@ pages:
 
   # ----- /endorsements/ -----
   "/endorsements/::es":      "live"
+  "/endorsements/::yue-Hant": "live"
   "/endorsements/::zh-Hant": "live"
   "/endorsements/::zh-Hans": "live"
   "/endorsements/::tl":      "live"
@@ -84,6 +91,7 @@ pages:
 
   # ----- /volunteer/ -----
   "/volunteer/::es":      "live"
+  "/volunteer/::yue-Hant": "live"
   "/volunteer/::zh-Hant": "live"
   "/volunteer/::zh-Hans": "live"
   "/volunteer/::tl":      "live"
@@ -92,6 +100,7 @@ pages:
 
   # ----- /donate/ (note: /give/ is an alias, no separate scaffold) -----
   "/donate/::es":      "live"
+  "/donate/::yue-Hant": "live"
   "/donate/::zh-Hant": "live"
   "/donate/::zh-Hans": "live"
   "/donate/::tl":      "live"
@@ -100,6 +109,7 @@ pages:
 
   # ----- /contact/ -----
   "/contact/::es":      "live"
+  "/contact/::yue-Hant": "live"
   "/contact/::zh-Hant": "live"
   "/contact/::zh-Hans": "live"
   "/contact/::tl":      "live"
@@ -111,6 +121,7 @@ pages:
   # has is_active: true. While is_active: false, the page returns 404 and
   # these rows are inert. Templates check is_active first.
   "/platform/uesf-questionnaire/::es":      "placeholder"
+  "/platform/uesf-questionnaire/::yue-Hant": "placeholder"
   "/platform/uesf-questionnaire/::zh-Hant": "placeholder"
   "/platform/uesf-questionnaire/::zh-Hans": "placeholder"
   "/platform/uesf-questionnaire/::tl":      "placeholder"
@@ -119,6 +130,7 @@ pages:
 
   # ----- /newsletter/ -----
   "/newsletter/::es": "live"
+  "/newsletter/::yue-Hant": "live"
   "/newsletter/::zh-Hant": "live"
   "/newsletter/::zh-Hans": "live"
   "/newsletter/::tl": "live"
@@ -127,6 +139,7 @@ pages:
 
   # ----- /thank-you/ -----
   "/thank-you/::es": "live"
+  "/thank-you/::yue-Hant": "live"
   "/thank-you/::zh-Hant": "live"
   "/thank-you/::zh-Hans": "live"
   "/thank-you/::tl": "live"

@@ -2,8 +2,8 @@
 #
 # check-i18n-parity.sh
 #
-# Verifies that the [section] key sets in all 7 i18n TOML files are identical.
-# A key added or removed in one language must be reflected in all seven, or
+# Verifies that the [section] key sets in all 8 i18n TOML files are identical.
+# A key added or removed in one language must be reflected in all tables, or
 # this script fails CI.
 #
 # Reference: docs/Phase1_to_Phase2_Architecture_Readiness.md §2.1 + audit F11.
@@ -11,7 +11,7 @@
 set -euo pipefail
 
 I18N_DIR="themes/turon-civic/i18n"
-LANGS=(en es zh-Hant zh-Hans tl vi ar)
+LANGS=(en es yue-Hant zh-Hant zh-Hans tl vi ar)
 
 if [[ ! -d "$I18N_DIR" ]]; then
   echo "ERROR: $I18N_DIR not found" >&2
@@ -35,8 +35,8 @@ done
 
 if [[ $FAIL -eq 1 ]]; then
   echo ""
-  echo "i18n key parity check FAILED. All 7 language files must share the same [section] keys."
+  echo "i18n key parity check FAILED. All ${#LANGS[@]} language files must share the same [section] keys."
   exit 1
 fi
 
-echo "i18n key parity: OK (7 language files, all sections match)"
+echo "i18n key parity: OK (${#LANGS[@]} language files, all sections match)"
