@@ -17,6 +17,9 @@ other = "Home"
 [about]
 other = "About"
 
+[meet]
+other = "Meet"
+
 [platform]
 other = "Platform"
 

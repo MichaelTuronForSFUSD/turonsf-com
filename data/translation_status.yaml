@@ -44,6 +44,15 @@ pages:
   "/about/::vi":      "live"
   "/about/::ar":      "live"
 
+  # ----- /meet/ -----
+  "/meet/::es":      "live"
+  "/meet/::yue-Hant": "live"
+  "/meet/::zh-Hant": "live"
+  "/meet/::zh-Hans": "live"
+  "/meet/::tl":      "live"
+  "/meet/::vi":      "live"
+  "/meet/::ar":      "live"
+
   # ----- /platform/ -----
   "/platform/::es":      "live"
   "/platform/::yue-Hant": "live"

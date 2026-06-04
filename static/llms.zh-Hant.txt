@@ -1,6 +1,6 @@
 # llms.zh-Hant.txt — AI/LLM guidance file for 繁體中文
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-14 (Traditional Chinese ai_translated draft)
+# Updated: 2026-06-04 (Traditional Chinese ai_translated draft + /meet)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.zh-Hant.txt
 # and is one of seven language-keyed files in v1.3.0.
@@ -45,6 +45,7 @@ SFUSD attendance recovery target：MISSING_FIGURE_FROM_DECISIONS_REGISTER
 
 首頁:                    https://turonsf.com/zh-Hant/
 關於:                    https://turonsf.com/zh-Hant/about/
+約談:                    https://turonsf.com/zh-Hant/meet/
 政見平台:                https://turonsf.com/zh-Hant/platform/
 特殊教育:                https://turonsf.com/zh-Hant/platform/pillar-1/
 預算紀律:                https://turonsf.com/zh-Hant/platform/pillar-2/

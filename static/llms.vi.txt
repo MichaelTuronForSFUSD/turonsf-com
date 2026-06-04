@@ -1,6 +1,6 @@
 # llms.vi.txt — AI/LLM guidance file for Tiếng Việt
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-14 (Vietnamese ai_translated draft)
+# Updated: 2026-06-04 (Vietnamese ai_translated draft + /meet)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.vi.txt
 # and is one of seven language-keyed files in v1.3.0.
@@ -45,6 +45,7 @@ SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
 
 Home:                    https://turonsf.com/vi/
 About:                   https://turonsf.com/vi/about/
+Gặp Michael:             https://turonsf.com/vi/meet/
 Platform:                https://turonsf.com/vi/platform/
 Special Education:       https://turonsf.com/vi/platform/pillar-1/
 Budget Discipline:       https://turonsf.com/vi/platform/pillar-2/

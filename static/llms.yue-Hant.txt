@@ -50,6 +50,7 @@ Trust strip phrasing:
 
 首頁: https://turonsf.com/yue-hant/
 關於: https://turonsf.com/yue-hant/about/
+傾談: https://turonsf.com/yue-hant/meet/
 政綱: https://turonsf.com/yue-hant/platform/
 特殊教育: https://turonsf.com/yue-hant/platform/pillar-1/
 預算紀律: https://turonsf.com/yue-hant/platform/pillar-2/

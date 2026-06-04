@@ -69,8 +69,8 @@ from pathlib import Path
 import re, sys
 text = Path('data/translation_status.yaml').read_text()
 rows = re.findall(r'^\s+"/[^"]*::(?:es|yue-Hant|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
-if len(rows) != 91:
-    print(f'Expected 91 translation_status rows; found {len(rows)}', file=sys.stderr)
+if len(rows) != 98:
+    print(f'Expected 98 translation_status rows; found {len(rows)}', file=sys.stderr)
     sys.exit(1)
 print('translation_status rows:', len(rows))
 PY

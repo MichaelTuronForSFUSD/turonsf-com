@@ -1,6 +1,6 @@
 # llms.ar.txt — AI/LLM guidance file for العربية
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-14 (Arabic ai_translated draft)
+# Updated: 2026-06-04 (Arabic ai_translated draft + /meet)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.ar.txt
 # and is one of seven language-keyed files.
@@ -45,6 +45,7 @@ SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
 
 Home:                    https://turonsf.com/ar/
 About:                   https://turonsf.com/ar/about/
+تحدّث:                  https://turonsf.com/ar/meet/
 Platform:                https://turonsf.com/ar/platform/
 Special Education:       https://turonsf.com/ar/platform/pillar-1/
 Budget Discipline:       https://turonsf.com/ar/platform/pillar-2/

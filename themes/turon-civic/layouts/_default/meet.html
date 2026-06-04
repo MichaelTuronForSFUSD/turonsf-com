@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $bookingURL := .Site.Params.calendar_url }}
+<section class="meet-page" aria-labelledby="meet-title">
+  <section class="meet-copy">
+    {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1 id="meet-title">{{ .Title }}</h1>
+    {{ with .Params.intro }}<p class="meet-lead">{{ . }}</p>{{ end }}
+    {{ with .Params.audience }}<p class="meet-dek">{{ . }}</p>{{ end }}
+
+    <div class="meet-actions">
+      <a class="cta cta--primary cta--meet" href="{{ $bookingURL }}" data-event="meet_booking_click" data-source="meet-primary" target="_blank" rel="noopener noreferrer">{{ .Params.cta_label }} <span aria-hidden="true">→</span></a>
+    </div>
+
+    <section class="meet-expectations" aria-labelledby="meet-expect-title">
+      <h2 id="meet-expect-title">{{ .Params.expect_heading }}</h2>
+      <ul>
+        {{ range .Params.expectations }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </section>
+
+    {{ with .Params.group_note }}<p class="meet-group-note">{{ . }}</p>{{ end }}
+
+    <div class="meet-actions">
+      <a class="cta cta--primary cta--meet" href="{{ $bookingURL }}" data-event="meet_booking_click" data-source="meet-secondary" target="_blank" rel="noopener noreferrer">{{ .Params.cta_label }} <span aria-hidden="true">→</span></a>
+    </div>
+
+    <p class="meet-press">{{ .Params.press_label }}: <a href="mailto:{{ .Params.press_email }}" data-event="email_contact_click" data-source="meet-press"><bdi dir="ltr">{{ .Params.press_email }}</bdi></a></p>
+  </section>
+
+  <aside class="meet-qr" aria-label="{{ .Params.scan_caption }}">
+    <a href="{{ $bookingURL }}" data-event="meet_booking_click" data-source="meet-qr" target="_blank" rel="noopener noreferrer">
+      <img src="/img/meet/meet_qr.png" alt="{{ .Params.qr_alt }}" width="296" height="296">
+    </a>
+    <p>{{ .Params.scan_caption }}</p>
+  </aside>
+
+  {{ with .Params.signoff }}<p class="meet-signoff">{{ . }}</p>{{ end }}
+</section>
+{{ end }}

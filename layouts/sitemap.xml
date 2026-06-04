@@ -1,121 +1,79 @@
-{{/*
-  sitemap.xml
-  --------------------------------------------------------------------------
-  Single multilingual sitemap with hreflang alternates for LIVE pages only.
+{{- /*
+  Multilingual sitemap for each Hugo language site.
 
-  Architecture Decision 8: one sitemap (not per-language), driven by
-  data/translation_status.yaml, with <xhtml:link rel="alternate" hreflang>
-  entries that mirror head-hreflang.html.
-
-  Inclusion rules (must match head-hreflang.html for consistency):
-    - English pages: always listed (English is canonical and always live).
-    - Non-English pages: listed only if status ∈ {reviewed, community_corrected, live}.
-      Placeholder and ai_translated pages are EXCLUDED. This prevents Google
-      from indexing scaffolds and prevents the duplicate-content problem
-      Research §4.5 warns about.
-    - Conditional pages (is_active:false in frontmatter): excluded entirely
-      via Hugo's standard sitemap exclusion (the page returns 404 until the
-      operator flips is_active).
-    - /give/ is a redirect alias to /donate/ (Cloudflare Pages redirect rule)
-      and intentionally has no sitemap entry of its own.
-
-  hreflang on each entry:
-    - <xhtml:link rel="alternate" hreflang="..." href="..."> for every LIVE
-      translation of the page (including self-reference)
-    - x-default → English canonical for that page
-
-  Output: standard sitemaps.org 0.9 schema + xhtml extension for hreflang.
-  Hugo emits one <url> per Page in .Site.Pages, so we iterate the default
-  language pages and look up live translations via translation_status.yaml.
-
-  Architecture Decision 7 priority/changefreq calibration:
-    - home, platform                                       → priority 0.9, weekly
-    - pillars, about                                       → priority 0.8, monthly
-    - endorsements                                         → priority 0.7, weekly
-      (activates and changes once endorsers flow in)
-    - donate, volunteer, contact                           → priority 0.7, monthly
-    - /platform/uesf-questionnaire/ (when active)          → priority 0.8, monthly
-  --------------------------------------------------------------------------
-*/}}
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+  Hugo emits a root sitemap index for multilingual builds, then one sitemap per
+  language. This template fills each language sitemap with live pages and the
+  matching hreflang alternate set.
+*/ -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML -}}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{{ $translationStatusData := index .Data.Sites.First.Data.translation_status "pages" }}
-{{ $englishSite := index .Data.Sites.ByLanguage "en" }}
-{{ $allLangs := slice "en" "es" "yue-Hant" "zh-Hant" "zh-Hans" "tl" "vi" "ar" }}
+{{- $translationStatusData := (index hugo.Data "translation_status").pages -}}
+{{- $liveStatuses := slice "reviewed" "community_corrected" "live" -}}
+{{- $currentLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Site.Language.Lang) -}}
+{{- $includedKinds := slice "home" "section" "page" -}}
+{{- range .Site.Pages -}}
+  {{- $page := . -}}
+  {{- if not (in $includedKinds .Kind) }}{{ continue }}{{ end -}}
+  {{- $canonicalPath := .Params.canonical_path | default .RelPermalink -}}
+  {{- $isActive := .Params.is_active | default true -}}
+  {{- if not $isActive }}{{ continue }}{{ end -}}
 
-{{/* Iterate the English (default-language) pages. Each page produces one
-     <url> with hreflang alternates pointing to every live translation. */}}
-{{ range $englishSite.RegularPages }}
-  {{ $page := . }}
-  {{ $relPath := .RelPermalink }}
+  {{- if ne $currentLang "en" -}}
+    {{- $currentKey := printf "%s::%s" $canonicalPath $currentLang -}}
+    {{- $currentStatus := index $translationStatusData $currentKey | default "placeholder" -}}
+    {{- if not (in $liveStatuses $currentStatus) }}{{ continue }}{{ end -}}
+  {{- end -}}
 
-  {{/* Skip conditional pages that are not active yet. */}}
-  {{ $isActive := .Params.is_active | default true }}
-  {{ if not $isActive }}{{ continue }}{{ end }}
+  {{- $priority := "0.7" -}}
+  {{- $changefreq := "monthly" -}}
+  {{- if or (eq $canonicalPath "/") (eq $canonicalPath "/platform/") -}}
+    {{- $priority = "0.9" -}}
+    {{- $changefreq = "weekly" -}}
+  {{- else if or (hasPrefix $canonicalPath "/platform/pillar-") (eq $canonicalPath "/about/") (eq $canonicalPath "/meet/") -}}
+    {{- $priority = "0.8" -}}
+    {{- $changefreq = "monthly" -}}
+  {{- else if eq $canonicalPath "/endorsements/" -}}
+    {{- $priority = "0.7" -}}
+    {{- $changefreq = "weekly" -}}
+  {{- else if eq $canonicalPath "/platform/uesf-questionnaire/" -}}
+    {{- $priority = "0.8" -}}
+    {{- $changefreq = "monthly" -}}
+  {{- end -}}
 
-  {{/* Calibrate priority + changefreq by page role. */}}
-  {{ $priority := "0.7" }}
-  {{ $changefreq := "monthly" }}
-  {{ if or (eq $relPath "/") (eq $relPath "/platform/") }}
-    {{ $priority = "0.9" }}
-    {{ $changefreq = "weekly" }}
-  {{ else if or (hasPrefix $relPath "/platform/pillar-") (eq $relPath "/about/") }}
-    {{ $priority = "0.8" }}
-    {{ $changefreq = "monthly" }}
-  {{ else if eq $relPath "/endorsements/" }}
-    {{ $priority = "0.7" }}
-    {{ $changefreq = "weekly" }}
-  {{ else if eq $relPath "/platform/uesf-questionnaire/" }}
-    {{ $priority = "0.8" }}
-    {{ $changefreq = "monthly" }}
-  {{ end }}
+  {{- $liveTranslations := slice -}}
+  {{- range $page.AllTranslations -}}
+    {{- $translation := . -}}
+    {{- $translationLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Lang) -}}
+    {{- $translationCanonicalPath := .Params.canonical_path | default $canonicalPath -}}
+    {{- if eq $translationLang "en" -}}
+      {{- $liveTranslations = $liveTranslations | append $translation -}}
+    {{- else -}}
+      {{- $key := printf "%s::%s" $translationCanonicalPath $translationLang -}}
+      {{- $status := index $translationStatusData $key | default "placeholder" -}}
+      {{- if in $liveStatuses $status -}}
+        {{- $liveTranslations = $liveTranslations | append $translation -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 
-  {{/* Build the list of LIVE languages for this page. English is always live. */}}
-  {{ $liveLangs := slice "en" }}
-  {{ range $allLangs }}
-    {{ $lang := . }}
-    {{ if ne $lang "en" }}
-      {{ $key := printf "%s::%s" $relPath $lang }}
-      {{ $status := index $translationStatusData $key | default "placeholder" }}
-      {{ if or (eq $status "reviewed") (eq $status "community_corrected") (eq $status "live") }}
-        {{ $liveLangs = $liveLangs | append $lang }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
-  {{/* Emit one <url> for the English canonical and one <url> per live
-       translation. Each <url> carries the full hreflang alternate list. */}}
-  {{ range $liveLangs }}
-    {{ $emitLang := . }}
-    {{ $emitSite := index $.Data.Sites.ByLanguage $emitLang }}
-    {{ $emitURL := "" }}
-    {{ if eq $emitLang "en" }}
-      {{ $emitURL = printf "%s%s" $emitSite.BaseURL (strings.TrimPrefix "/" $relPath) }}
-    {{ else }}
-      {{ $emitURL = printf "%s%s/%s" $emitSite.BaseURL $emitSite.Language.Lang (strings.TrimPrefix "/" $relPath) }}
-    {{ end }}
+  {{- $defaultURL := "" -}}
+  {{- range $liveTranslations -}}
+    {{- $translationLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Lang) -}}
+    {{- if eq $translationLang "en" -}}{{- $defaultURL = .Permalink -}}{{- end -}}
+  {{- end }}
   <url>
-    <loc>{{ $emitURL }}</loc>
+    <loc>{{ $page.Permalink }}</loc>
     <lastmod>{{ $page.Lastmod.Format "2006-01-02" }}</lastmod>
     <changefreq>{{ $changefreq }}</changefreq>
     <priority>{{ $priority }}</priority>
-    {{/* x-default → English canonical for this page */}}
-    {{ $defaultURL := printf "%s%s" $englishSite.BaseURL (strings.TrimPrefix "/" $relPath) }}
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ $defaultURL }}" />
-    {{/* One alternate per live language, including self */}}
-    {{ range $liveLangs }}
-      {{ $altLang := . }}
-      {{ $altSite := index $.Data.Sites.ByLanguage $altLang }}
-      {{ $altURL := "" }}
-      {{ if eq $altLang "en" }}
-        {{ $altURL = printf "%s%s" $altSite.BaseURL (strings.TrimPrefix "/" $relPath) }}
-      {{ else }}
-        {{ $altURL = printf "%s%s/%s" $altSite.BaseURL $altSite.Language.Lang (strings.TrimPrefix "/" $relPath) }}
-      {{ end }}
-    <xhtml:link rel="alternate" hreflang="{{ $altLang }}" href="{{ $altURL }}" />
-    {{ end }}
+    {{- with $defaultURL }}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ . }}" />
+    {{- end -}}
+    {{- range $liveTranslations }}
+    {{- $translationLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Lang) }}
+    <xhtml:link rel="alternate" hreflang="{{ $translationLang }}" href="{{ .Permalink }}" />
+    {{- end }}
   </url>
-  {{ end }}
-{{ end }}
+{{- end }}
 </urlset>

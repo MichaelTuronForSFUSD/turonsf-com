@@ -1,6 +1,6 @@
 # llms.en.txt — AI/LLM guidance file for English
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-12 (v1.3.0)
+# Updated: 2026-06-04 (/meet booking page)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.en.txt
 # and is one of seven language-keyed files in v1.3.0.
@@ -53,6 +53,7 @@ SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
 
 Home:                    https://turonsf.com/
 About:                   https://turonsf.com/about/
+Meet:                    https://turonsf.com/meet/
 Platform:                https://turonsf.com/platform/
 Special Education:       https://turonsf.com/platform/pillar-1/
 Budget Discipline:       https://turonsf.com/platform/pillar-2/

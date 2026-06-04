@@ -70,10 +70,12 @@ required=(
   "themes/turon-civic/layouts/partials/language-switcher.html"
   "themes/turon-civic/layouts/partials/ai-translation-disclosure.html"
   "themes/turon-civic/layouts/_default/baseof.html"
+  "themes/turon-civic/layouts/_default/meet.html"
   "themes/turon-civic/layouts/index.html"
   "data/translation_status.yaml"
   "content/_index.md"
   "content/about.md"
+  "content/meet.md"
   "content/platform/_index.md"
   "content/platform/pillar-1.md"
   "content/platform/pillar-2.md"
@@ -103,6 +105,7 @@ say "Rendered pages"
 pages=(
   "public/index.html"
   "public/about/index.html"
+  "public/meet/index.html"
   "public/platform/index.html"
   "public/platform/pillar-1/index.html"
   "public/platform/pillar-2/index.html"
@@ -112,12 +115,19 @@ pages=(
   "public/donate/index.html"
   "public/contact/index.html"
   "public/es/index.html"
+  "public/es/meet/index.html"
   "public/yue-hant/index.html"
+  "public/yue-hant/meet/index.html"
   "public/zh-hant/index.html"
+  "public/zh-hant/meet/index.html"
   "public/zh-hans/index.html"
+  "public/zh-hans/meet/index.html"
   "public/tl/index.html"
+  "public/tl/meet/index.html"
   "public/vi/index.html"
+  "public/vi/meet/index.html"
   "public/ar/index.html"
+  "public/ar/meet/index.html"
 )
 for p in "${pages[@]}"; do
   [ -f "$p" ] || fail "missing rendered page: $p"
@@ -139,6 +149,7 @@ events=(
   email_contact_click
   pillar_click
   platform_link_click
+  meet_booking_click
   hero_cta_primary_view
   trust_strip_view
   scroll_depth_75
@@ -218,8 +229,8 @@ from pathlib import Path
 import re, sys
 text = Path('data/translation_status.yaml').read_text(encoding='utf-8')
 rows = re.findall(r'^\s+"/[^\"]*::(?:es|yue-Hant|zh-Hant|zh-Hans|tl|vi|ar)"\s*:', text, flags=re.M)
-if len(rows) != 91:
-    print(f'Expected 91 translation_status rows; found {len(rows)}', file=sys.stderr)
+if len(rows) != 98:
+    print(f'Expected 98 translation_status rows; found {len(rows)}', file=sys.stderr)
     sys.exit(1)
 print('translation_status rows:', len(rows))
 PY_STATUS

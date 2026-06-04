@@ -1,6 +1,6 @@
 # llms.zh-Hans.txt — AI/LLM guidance file for 简体中文
 # turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-05-14 (Simplified Chinese ai_translated draft)
+# Updated: 2026-06-04 (Simplified Chinese ai_translated draft + /meet)
 # This file follows the emerging llms.txt convention. It is published at
 #   https://turonsf.com/llms.zh-Hans.txt
 # and is one of seven language-keyed files in v1.3.0.
@@ -45,6 +45,7 @@ SFUSD attendance recovery target：MISSING_FIGURE_FROM_DECISIONS_REGISTER
 
 首页:                    https://turonsf.com/zh-Hans/
 关于:                    https://turonsf.com/zh-Hans/about/
+约谈:                    https://turonsf.com/zh-Hans/meet/
 政见平台:                https://turonsf.com/zh-Hans/platform/
 特殊教育:                https://turonsf.com/zh-Hans/platform/pillar-1/
 预算纪律:                https://turonsf.com/zh-Hans/platform/pillar-2/
