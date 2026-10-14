@@ -5,8 +5,11 @@
   Links: data/hub_links.yaml.
   Flow: status → endorsed candidates → shared answers → differences → official voting info.
 */}}
-{{ $c := index hugo.Data.hub_copy (lower .Site.Language.Lang) }}
+{{ $lang := lower .Site.Language.Lang }}
+{{ $c := index hugo.Data.hub_copy $lang }}
 {{ $L := hugo.Data.hub_links }}
+{{ $guide := index $L.voter_guides $lang }}
+{{ $guideEdition := cond (eq $guide $L.voter_guides.en) "en" "translated" }}
 {{ $track := site.Params.track_candidate_clicks }}
 
 <section class="hub-hero" aria-labelledby="page-title">
@@ -37,7 +40,8 @@
           {{ range .evidence }}
             {{ $label := index $c .label_key }}
             {{ if .named }}{{ $label = replace $label "{name}" $cand.name }}{{ end }}
-            {{ $url := cond (isset . "official") (index $L.official (.official | default "")) (index $L.sources (.source | default "")) }}
+            {{ $url := index $L.sources (.source | default "") }}
+            {{ if .statement }}{{ $url = printf "%s#page=%d" $guide (index $cand.guide_page $guideEdition) }}{{ end }}
             <li>{{ partial "hub-link.html" (dict "label" $label "url" $url) }}</li>
           {{ end }}
         </ul>
@@ -89,9 +93,9 @@
   <p>{{ $c.voting_text }}</p>
   <ul class="hub-official-links">
     <li>{{ partial "hub-link.html" (dict "label" $c.official_election "url" $L.official.election) }}</li>
-    <li>{{ partial "hub-link.html" (dict "label" $c.voter_guide "url" $L.official.voter_guide) }}</li>
+    <li>{{ partial "hub-link.html" (dict "label" $c.voter_guide "url" $guide) }}</li>
     <li>{{ partial "hub-link.html" (dict "label" $c.voter_portal "url" $L.official.voter_portal) }}</li>
-    <li>{{ partial "hub-link.html" (dict "label" $c.accessible_guide "url" $L.official.accessible_guide) }}</li>
+    <li>{{ partial "hub-link.html" (dict "label" $c.audio_guide "url" $L.official.audio_guide) }}</li>
   </ul>
 </section>
 {{ end }}

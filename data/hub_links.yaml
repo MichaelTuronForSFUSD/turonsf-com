@@ -1,18 +1,31 @@
 # data/hub_links.yaml
 # Outbound destinations for the v3 endorsement hub (home page, all languages).
-# Copy lives in data/hub_copy.json (generated from the October 4 redesign
-# package, 09-localized-copy.json). Candidate order is editorial only.
+# Copy lives in data/hub_copy.json. Candidate order is editorial only.
 #
 # Campaign and donate links were followed from each candidate's own site on
-# 2026-10-04 (package audit) and rechecked 2026-10-14. Keep them free of
+# 2026-10-04 (package audit) and rechecked 2026-10-14, when every claim in
+# data/hub_copy.json was also checked against these sources. Keep them free of
 # tracking parameters.
 
 official:
   candidate: "https://www.sf.gov/candidates-november-3-2026-general-election"
   election: "https://www.sf.gov/november-3-2026-consolidated-general-election"
   voter_portal: "https://sfelections.gov/voterportal"
-  voter_guide: "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
-  accessible_guide: "https://sfelections.gov/vip"
+  # English only; 73 MB ZIP of MP3 chapters, linked from the election page.
+  audio_guide: "https://api.sf.gov/documents/63945/N26_Audio_VIP.zip"
+
+# Official voter guide (dated August 31) in each route's language. The city
+# publishes English, Chinese (Traditional script), Spanish, Filipino, and
+# Vietnamese; Arabic readers get the English guide.
+voter_guides:
+  en: "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+  es: "https://media.api.sf.gov/documents/N26_SP_VIP.pdf"
+  yue-hant: "https://media.api.sf.gov/documents/N26_CH_VIP.pdf"
+  zh-hant: "https://media.api.sf.gov/documents/N26_CH_VIP.pdf"
+  zh-hans: "https://media.api.sf.gov/documents/N26_CH_VIP.pdf"
+  tl: "https://media.api.sf.gov/documents/N26_FI_VIP.pdf"
+  vi: "https://media.api.sf.gov/documents/N26_VI_VIP.pdf"
+  ar: "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
 
 sources:
   instruction: "https://missionlocal.org/2026/08/san-francisco-school-board-meet-the-candidates-math-english-targets/"
@@ -39,8 +52,9 @@ candidates:
     site: "https://www.alidafisher.com/"
     donate: "https://secure.actblue.com/donate/reelect-alida-fisher"
     questionnaire: "https://sfparentaction.org/wp-content/uploads/Alida-Fisher-November-2026-Candidate-Questionnaire.pdf"
+    guide_page: { en: 31, translated: 23 }
     evidence:
-      - { label_key: "src_pamphlet", official: "voter_guide" }
+      - { label_key: "src_pamphlet", statement: true, named: true }
       - { label_key: "src_retention", source: "retention", named: true }
   - id: "ryan"
     name: "Ryan Hazelton"
@@ -48,6 +62,7 @@ candidates:
     site: "https://www.ryanforsfschools.com/"
     donate: "https://secure.actblue.com/donate/ryanhazelton"
     questionnaire: "https://sfparentaction.org/wp-content/uploads/Ryan-Hazelton-November-2026-Candidate-Questionnaire.pdf"
+    guide_page: { en: 31, translated: 24 }
     evidence:
-      - { label_key: "src_assignment", source: "assignment" }
+      - { label_key: "src_pamphlet", statement: true, named: true }
       - { label_key: "src_retention", source: "retention", named: true }

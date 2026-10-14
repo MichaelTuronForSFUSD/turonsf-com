@@ -50,3 +50,7 @@ Michael withdrew on **July 20, 2026**, not October 3 as the redesign package sta
 - The voting section dropped two sentences that said the August 31 voter guide came before the decision and did not explain its effect on the ballot. Both stopped being true once the decision moved before August 31. The guide was checked: it does not mention Michael.
 
 The source package in `~/Projects/.../Website Redesign/` still says October 3.
+
+## Copy audit and rewrite (2026-10-14)
+
+The English copy was checked claim by claim against its sources. Thirteen errors and overclaims were fixed, and the copy was rewritten to remove AI writing patterns. All seven translations were rewritten from the new English. Each language now links its own official voter guide. See `docs/V3_Red_Team_Audit_2026-10-14.md`. Translations remain `ai_translated` until a human native speaker reviews them.

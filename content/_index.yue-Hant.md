@@ -1,7 +1,7 @@
 ---
-title: "我退出教育委員會選舉，並支持三位候選人"
-description: "Michael J. Turon 關於退出 2026 年教育委員會選舉及支持三位候選人的個人聲明。"
-summary: "Michael J. Turon 關於退出 2026 年教育委員會選舉及支持三位候選人的個人聲明。"
+title: "我嘅教育委員會選舉決定同支持嘅候選人"
+description: "Michael J. Turon 喺 7 月 20 日退出 2026 年三藩市教育委員會選舉，並支持 Phil Kim、Alida Fisher 同 Ryan Hazelton。"
+summary: "Michael J. Turon 喺 7 月 20 日退出 2026 年三藩市教育委員會選舉，並支持 Phil Kim、Alida Fisher 同 Ryan Hazelton。"
 date: 2026-05-12
 lastmod: 2026-10-14
 translationKey: "home"

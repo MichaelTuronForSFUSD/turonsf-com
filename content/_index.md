@@ -1,7 +1,7 @@
 ---
 title: "My school board decision and endorsements"
-description: "A personal statement by Michael J. Turon about his 2026 school board campaign decision and three endorsements."
-summary: "A personal statement by Michael J. Turon about his 2026 school board campaign decision and three endorsements."
+description: "Michael J. Turon withdrew from the 2026 San Francisco school board race on July 20 and endorses Phil Kim, Alida Fisher, and Ryan Hazelton."
+summary: "Michael J. Turon withdrew from the 2026 San Francisco school board race on July 20 and endorses Phil Kim, Alida Fisher, and Ryan Hazelton."
 date: 2026-05-12
 lastmod: 2026-10-14
 translationKey: "home"

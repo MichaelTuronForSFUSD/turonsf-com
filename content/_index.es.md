@@ -1,7 +1,7 @@
 ---
-title: "Mi decisión sobre la Junta Escolar y mis respaldos"
-description: "Declaración personal de Michael J. Turon sobre su decisión en la campaña escolar de 2026 y sus tres respaldos."
-summary: "Declaración personal de Michael J. Turon sobre su decisión en la campaña escolar de 2026 y sus tres respaldos."
+title: "Mi decisión sobre la Junta de Educación y mis respaldos"
+description: "Michael J. Turon se retiró el 20 de julio de la contienda de 2026 por la Junta de Educación de San Francisco y respalda a Phil Kim, Alida Fisher y Ryan Hazelton."
+summary: "Michael J. Turon se retiró el 20 de julio de la contienda de 2026 por la Junta de Educación de San Francisco y respalda a Phil Kim, Alida Fisher y Ryan Hazelton."
 date: 2026-05-12
 lastmod: 2026-10-14
 translationKey: "home"
