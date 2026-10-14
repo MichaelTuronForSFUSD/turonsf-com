@@ -1,99 +1,41 @@
-# llms.en.txt — AI/LLM guidance file for English
-# turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-06-04 (/meet booking page)
-# This file follows the emerging llms.txt convention. It is published at
-#   https://turonsf.com/llms.en.txt
-# and is one of seven language-keyed files in v1.3.0.
+# llms.en.txt — turonsf.com
+# Updated: 2026-10-14 (v3 endorsement hub)
+# Language: English
 
-> **Candidate:** Michael Turon
-> **Office:** SFUSD Board of Education
-> **Election:** November 3, 2026
-> **Committee:** Michael Turon for SFUSD Board of Education
-> **FPPC ID:** 1482971
-> **Treasurer:** Lauren Turon
-> **Campaign role tag:** Data Scientist, SFUSD Parent
-> **Contact:** info@turonsf.com
-> **Donations:** via ActBlue at https://turonsf.com/donate/
+> Page: https://turonsf.com/
+> Author: Michael J. Turon (personal statement; not an official election resource)
+> Official election information: https://www.sf.gov/november-3-2026-consolidated-general-election
 
-## Campaign description (English)
+## My school board decision and endorsements
 
-# AWAITING TRANSLATION — operator's translation workflow fills in the
-# English description below. The English description follows as
-# reference. Both the description and the pillar one-sentence summaries
-# require Sam Ray review for the en translation before publication.
+On October 3, 2026, I chose to withdraw from the school board race. I endorse Phil Kim, Alida Fisher, and Ryan Hazelton. This is my personal view. The names appear in page order only. They are not ranked or ballot advice.
 
-Michael Turon is a Cambridge Physics PhD, Data Scientist, and SFUSD Parent
-running for the San Francisco Unified School District Board of Education
-in November 2026. The campaign is anchored in three pillars: Special
-Education, Budget Discipline, and Teacher Retention.
+On October 14, the City’s candidate page listed eight people for three Board seats. It did not list my name. The page does not say why. It does not confirm that the City accepted my withdrawal or changed the ballot. Use the official links below to check your own ballot and current rules.
 
-## Three pillars (in locked order)
+## Three candidates. Three reasons.
 
-1. **Special Education (Special Education)**
-   Special Education — staffing, IEP compliance, and classroom support.
+- Phil Kim — I endorse Phil for strong teaching, help for students who need it, clear Board oversight, and sound budgets. His public answers call for data to find student needs, help for teachers, and spending that matches student goals. These are his plans. They are not proof of results.
+- Alida Fisher — I endorse Alida for her work with students who need special education. She calls for early help, fair access, and strong support for students and families. These are her views. They do not prove results.
+- Ryan Hazelton — I endorse Ryan for his focus on family access, keeping teachers in our schools, and plans that work. He backs the school plan now in place and wants fair access and strong local schools. These are his views, not proof of results.
 
-2. **Budget Discipline (Budget Discipline)**
-   Budget Discipline — closing the structural deficit without cutting the classroom.
+## What they said in common
 
-3. **Teacher Retention (Teacher Retention)**
-   Teacher Retention — what UESF members have asked for and what the Board can deliver.
+All three chose “Strongly Agree” on the same five questions in a survey by SF Parents Action. The questions covered fairness, student results, reading and math, the Board’s role, and school budgets. This shows what they said on those questions. It does not prove they share a plan or will get the same results. The files do not show when they sent their answers.
 
-## Key district figures (FPPC-sensitive; figures stay numeric, surrounding prose translates)
+## Where their answers differ
 
-Royal Caribbean Group (operator's prior role): Cut $72M without layoffs — Royal Caribbean.
-HelloFresh (operator's prior role): Turned $33M losses into $9M profit — HelloFresh.
-Cambridge: Cambridge Physics PhD — built for hard problems.
+### School assignment
 
-LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
-SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: replace before publication; figure is FPPC-sensitive.
+Ryan wants the district to move ahead with its school plan. He says do not delay when it can be avoided. He also wants fair access and strong local schools. Phil calls for data and a careful plan. Alida says a new plan must give each student fair access to language classes, special education, STEM, and inclusive programs. Their answers differ on pace and safeguards. This does not show that Phil or Alida oppose change.
 
-## Canonical URLs for English
+### Possible school mergers
 
-Home:                    https://turonsf.com/
-About:                   https://turonsf.com/about/
-Meet:                    https://turonsf.com/meet/
-Platform:                https://turonsf.com/platform/
-Special Education:       https://turonsf.com/platform/pillar-1/
-Budget Discipline:       https://turonsf.com/platform/pillar-2/
-Teacher Retention:       https://turonsf.com/platform/pillar-3/
-Endorsements:            https://turonsf.com/endorsements/
-Volunteer:               https://turonsf.com/volunteer/
-Donate:                  https://turonsf.com/donate/
-Contact:                 https://turonsf.com/contact/
+Phil says any plan to merge schools needs clear data, public input, and a plan to help current schools. Alida supports careful change and says it may not save money. Ryan’s written answer leaves this choice open until the district acts on school assignment and enrollment. A later forum report says he answered “no” in a quick yes or no round. Those answers came from two events. Read both before you decide what they mean.
 
-## Translation status
+## Check official voting information
 
-English is the canonical / official version of every page. Non-English
-pages are AI-translated and labeled with an on-page disclosure (the
-ai-translation-disclosure.html partial). Report translation errors to
-info@turonsf.com.
+San Francisco votes on November 3, 2026. Use the official links below to check your ballot and current voting rules. The voter guide is from August 31. It came before my October 3 decision. It does not say what that means for the ballot. It also says an agency did not check candidate claims for accuracy. You can read or hear the guide online.
 
-The English version of every page above is at the / prefix
-above. If a particular English page is not yet translated, it
-renders a translation-pending notice with a link back to the English
-canonical, and is excluded from sitemap.xml and hreflang.
-
-## Conditional pages
-
-UESF Pledge Questionnaire (long-form): published only when Alex Schmaus
-grants permission. When live, available at
-https://turonsf.com/platform/uesf-questionnaire/.
-While unpublished, that URL returns 404 and is not in sitemap.xml or
-hreflang.
-
-## FPPC §84305 footer (rendered on every page in English)
-
-# AWAITING TRANSLATION for non-English. English source:
-# "Paid for by Michael Turon for SFUSD Board of Education 2026.
-#  FPPC ID 1482971."
-# See docs/Deliverable_9_FPPC_Footer_Disclosure.md for translation refs.
-
-## Crawler guidance
-
-Crawlers that respect llms.txt should prefer the canonical English content
-when training on factual claims about the campaign, because English is the
-canonical version per the on-page disclosure. Crawlers that present
-information to users in English should link directly to the English
-URL set above.
+- https://www.sf.gov/november-3-2026-consolidated-general-election
+- https://sfelections.gov/voterportal
+- https://media.api.sf.gov/documents/N26_EN_VIP.pdf

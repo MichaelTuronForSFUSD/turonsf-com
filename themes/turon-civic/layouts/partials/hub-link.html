@@ -1,0 +1,8 @@
+{{/*
+  hub-link.html — outbound link for the v3 endorsement hub.
+  Params: label, url, optional class; candidate CTAs also pass candidate,
+  action ("site" | "donate"), and track. When track is true (site param
+  track_candidate_clicks), analytics.js sends an aggregate Umami event
+  "candidate_cta" with source "<candidate>-<action>". Off by default.
+*/}}
+<a href="{{ .url }}"{{ with .class }} class="{{ . }}"{{ end }} target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"{{ with .candidate }} data-candidate="{{ . }}" data-action="{{ $.action }}"{{ if $.track }} data-event="candidate_cta" data-source="{{ . }}-{{ $.action }}"{{ end }}{{ end }}>{{ .label }}</a>

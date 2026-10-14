@@ -1,91 +1,41 @@
-# llms.es.txt — archivo de guía para IA/LLM en Español
-# turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-06-04 (Spanish ai_translated draft + /meet)
-# This file follows the emerging llms.txt convention. It is published at
-#   https://turonsf.com/llms.es.txt
-# and is one of seven language-keyed files in v1.3.0.
+# llms.es.txt — turonsf.com
+# Updated: 2026-10-14 (v3 endorsement hub)
+# Language: Spanish — AI-assisted translation; not yet reviewed by a human editor
 
-> **Candidato:** Michael Turon
-> **Cargo:** Consejo de Educación de SFUSD
-> **Elección:** 3 de noviembre de 2026
-> **Comité:** Michael Turon for SFUSD Board of Education
-> **FPPC ID:** 1482971
-> **Tesorera:** Lauren Turon
-> **Etiqueta de campaña:** científico de datos, padre de familia de SFUSD
-> **Contacto:** info@turonsf.com
-> **Donaciones:** por ActBlue en https://turonsf.com/es/donate/
+> Page: https://turonsf.com/es/
+> Author: Michael J. Turon (personal statement; not an official election resource)
+> Official election information: https://www.sf.gov/november-3-2026-consolidated-general-election
 
-## Descripción de la campaña (Español)
+## Mi decisión sobre la Junta Escolar y mis respaldos
 
-Michael Turon es doctor en Física por Cambridge, científico de datos y padre
-de familia de SFUSD. Se postula para el Consejo de Educación del San Francisco
-Unified School District en noviembre de 2026. La campaña está anclada en tres
-pilares: Educación Especial, Disciplina Presupuestaria y Retención de Maestros.
+El 3 de octubre de 2026 decidí retirarme de la contienda para la Junta Escolar. Respaldo a Phil Kim, Alida Fisher y Ryan Hazelton. Esta es mi opinión personal. Los nombres aparecen en orden editorial. No indican una clasificación ni cómo votar.
 
-## Tres pilares (en orden fijo)
+El 14 de octubre, la página de candidaturas de la Ciudad mostraba a ocho personas para tres puestos de la Junta. Mi nombre no aparecía. La página no explica por qué. Tampoco confirma que la Ciudad aceptó mi retiro ni que cambió la boleta. Usa los enlaces oficiales para revisar tu boleta y las reglas vigentes.
 
-1. **Educación Especial (Special Education)**
-   Educación Especial: dotación de personal, cumplimiento de IEP y apoyo en el aula.
+## Tres candidaturas. Tres razones.
 
-2. **Disciplina Presupuestaria (Budget Discipline)**
-   Disciplina Presupuestaria: cerrar el déficit estructural sin recortar el aula.
+- Phil Kim — Respaldo a Phil porque se centra en una enseñanza sólida, apoyo para estudiantes que lo necesitan, supervisión clara de la Junta y presupuestos responsables. En sus respuestas públicas, propone usar datos para detectar necesidades, apoyar la formación docente y vincular el gasto con las metas del alumnado. Son sus propuestas, no resultados comprobados.
+- Alida Fisher — Respaldo a Alida por su trabajo con estudiantes que necesitan educación especial. Ella propone ayuda temprana, acceso equitativo y apoyo sólido para estudiantes y familias. Estas son sus posturas; no prueban resultados.
+- Ryan Hazelton — Respaldo a Ryan por su enfoque en el acceso de las familias, mantener a los docentes en las escuelas y poner los planes en práctica. Apoya avanzar con el plan escolar actual y procurar un acceso justo y escuelas de barrio sólidas. Estas son sus posturas, no resultados comprobados.
 
-3. **Retención de Maestros (Teacher Retention)**
-   Retención de Maestros: lo que los miembros de UESF han pedido y lo que el Consejo puede cumplir.
+## Lo que tienen en común
 
-## Cifras clave del distrito (sensibles para FPPC; las cifras permanecen numéricas y el texto alrededor se traduce)
+Los tres marcaron “Totalmente de acuerdo” en las mismas cinco preguntas de una encuesta de SF Parents Action. Las preguntas trataban sobre equidad, resultados estudiantiles, lectura y matemáticas, la función de la Junta y los presupuestos escolares. Esto muestra lo que respondieron a esas preguntas. No demuestra que tengan el mismo plan ni que logren los mismos resultados. Los archivos no indican cuándo enviaron sus respuestas.
 
-Royal Caribbean Group (rol anterior del operador): Recortó $72M sin despidos — Royal Caribbean.
-HelloFresh (rol anterior del operador): Convirtió pérdidas de $33M en $9M de ganancias — HelloFresh.
-Cambridge: Doctorado en Física de Cambridge — formado para problemas difíciles.
+## En qué difieren sus respuestas
 
-Pérdida de fondos LCFF (ancla de auditoría): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operador: reemplazar antes de la publicación; la cifra es sensible para FPPC.
-Meta de recuperación de asistencia de SFUSD: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operador: reemplazar antes de la publicación; la cifra es sensible para FPPC.
+### Asignación escolar
 
-## URLs canónicas para Español
+Ryan pide avanzar con el plan escolar vigente y evitar demoras que se puedan evitar. También busca un acceso equitativo y escuelas de barrio sólidas. Phil pide datos y una planificación cuidadosa. Alida dice que todo plan nuevo debe dar a cada estudiante acceso justo a clases de idiomas, educación especial, STEM y programas inclusivos. Sus respuestas difieren en el ritmo y las garantías. Esto no significa que Phil o Alida se opongan al cambio.
 
-Inicio:                  https://turonsf.com/es/
-Acerca de:               https://turonsf.com/es/about/
-Conocer:                 https://turonsf.com/es/meet/
-Plataforma:              https://turonsf.com/es/platform/
-Educación Especial:      https://turonsf.com/es/platform/pillar-1/
-Disciplina Presupuestaria: https://turonsf.com/es/platform/pillar-2/
-Retención de Maestros:   https://turonsf.com/es/platform/pillar-3/
-Respaldos:               https://turonsf.com/es/endorsements/
-Voluntariado:            https://turonsf.com/es/volunteer/
-Donar:                   https://turonsf.com/es/donate/
-Contacto:                https://turonsf.com/es/contact/
+### Posibles fusiones de escuelas
 
-## Estado de traducción
+Phil dice que todo plan para unir escuelas debe usar datos claros, escuchar al público y ayudar a las escuelas actuales. Alida apoya cambios cuidadosos y dice que quizá no generen ahorros. La respuesta escrita de Ryan deja abierta una futura consolidación hasta que el distrito avance con la asignación escolar y la matrícula. Un informe posterior de un foro dice que contestó “no” en una ronda rápida de sí o no. Son dos registros distintos. Conviene leer ambos antes de sacar conclusiones.
 
-El inglés es la versión canónica y oficial de cada página. Las páginas en otros
-idiomas son traducciones con IA y llevan una divulgación visible en la página
-cuando ya tienen contenido traducido. Reporta errores de traducción a
-info@turonsf.com.
+## Consulta la información electoral oficial
 
-La versión en Español de cada página anterior usa el prefijo /es/. Si una
-página en Español todavía no está traducida, muestra un aviso de traducción
-pendiente con un enlace a la versión canónica en inglés y queda excluida de
-sitemap.xml y hreflang.
+San Francisco votará el 3 de noviembre de 2026. Usa los enlaces oficiales para revisar tu boleta de muestra y las reglas vigentes. La guía electoral oficial tiene fecha del 31 de agosto. Se publicó antes de mi decisión del 3 de octubre. No explica qué significa esa decisión para la boleta. También indica que ninguna agencia revisó la exactitud de las declaraciones de candidatura. Puedes leer o escuchar la guía en línea.
 
-## Páginas condicionales
-
-Cuestionario de compromiso de UESF (formato largo): se publica solo cuando
-Alex Schmaus otorgue permiso. Cuando esté activa, estará disponible en
-https://turonsf.com/es/platform/uesf-questionnaire/.
-Mientras no esté publicada, esa URL devuelve 404 y no aparece en sitemap.xml
-ni en hreflang.
-
-## Pie de página FPPC §84305 (renderizado en cada página en Español)
-
-Pagado por Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971.
-
-## Guía para rastreadores
-
-Los rastreadores que respeten llms.txt deben preferir el contenido canónico en
-inglés cuando entrenen sobre afirmaciones factuales de la campaña, porque el
-inglés es la versión canónica según la divulgación en la página. Los
-rastreadores que presenten información a usuarios en Español deben enlazar
-directamente al conjunto de URLs en Español anterior.
+- https://www.sf.gov/november-3-2026-consolidated-general-election
+- https://sfelections.gov/voterportal
+- https://media.api.sf.gov/documents/N26_EN_VIP.pdf

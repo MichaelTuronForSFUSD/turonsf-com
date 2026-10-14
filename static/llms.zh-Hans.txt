@@ -1,78 +1,41 @@
-# llms.zh-Hans.txt — AI/LLM guidance file for 简体中文
-# turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-06-04 (Simplified Chinese ai_translated draft + /meet)
-# This file follows the emerging llms.txt convention. It is published at
-#   https://turonsf.com/llms.zh-Hans.txt
-# and is one of seven language-keyed files in v1.3.0.
+# llms.zh-Hans.txt — turonsf.com
+# Updated: 2026-10-14 (v3 endorsement hub)
+# Language: Simplified Chinese — AI-assisted translation; not yet reviewed by a human editor
 
-> **候选人:** Michael Turon
-> **职位:** SFUSD 教育委员会
-> **选举:** 2026 年 11 月 3 日
-> **委员会:** Michael Turon for SFUSD Board of Education
-> **FPPC ID:** 1482971
-> **财务主管:** Lauren Turon
-> **竞选角色标签:** 数据科学家，SFUSD 家长
-> **联系:** info@turonsf.com
-> **捐款:** 通过 ActBlue，网址 https://turonsf.com/zh-Hans/donate/
+> Page: https://turonsf.com/zh-hans/
+> Author: Michael J. Turon (personal statement; not an official election resource)
+> Official election information: https://www.sf.gov/november-3-2026-consolidated-general-election
 
-## 竞选描述（简体中文）
+## 我退出教育委员会选举，并支持三位候选人
 
-Michael Turon 是 Cambridge 物理博士、数据科学家与 SFUSD 家长。他参选 San Francisco Unified School District 教育委员会（2026 年 11 月选举）。竞选以三个支柱为核心：特殊教育、预算纪律与教师留任。
+2026 年 10 月 3 日，我决定退出教育委员会选举。我支持 Phil Kim、Alida Fisher 和 Ryan Hazelton。这是我的个人看法。姓名只按页面顺序排列，不代表排名或投票建议。
 
-## 三个支柱（固定顺序）
+截至 10 月 14 日，市政府候选人信息页列出教育委员会三个席位的八名参选人，没有列出我。该页面没有说明原因，也未确认市政府已接受我的退选决定或更改选票。请通过以下官方链接查看自己的选票和最新规则。
 
-1. **特殊教育**
-   特殊教育：人员配置、IEP 合规，以及教室支持。
+## 三位候选人，三个支持理由
 
-2. **预算纪律**
-   预算纪律：在不削减教室资源的前提下，关闭结构性赤字。
+- Phil Kim — 我支持 Phil，因为他重视课堂教学、帮助有需要的学生、加强教育委员会监督，以及审慎编制预算。他公开发表的回答建议用数据找出学生需求、支持教师进修，并让支出配合学生学习目标。这些是他的主张，不是已经证实的成果。
+- Alida Fisher — 我支持 Alida，欣赏她为有特殊教育需求的学生争取支持。她主张及早提供帮助、公平获得服务，并支持学生和家庭。这些是她的立场，不代表成效已经得到证实。
+- Ryan Hazelton — 我支持 Ryan，因为他重视家庭获得教育资源、留住教师，以及落实计划。他支持推进现行学校安排方案，同时追求公平入学机会和资源充足的社区学校。这些是他的立场，不是已经证实的成果。
 
-3. **教师留任**
-   教师留任：回应 UESF 成员提出的需求，以及教育委员会能够落实的行动。
+## 三人共同认同的部分
 
-## 重要学区数字（FPPC-sensitive；数字保持原样，周边文字翻译）
+三位候选人在 SF Parents Action 问卷中，对相同的五个问题都选择了“非常同意”。问题涉及公平、学生表现、阅读和数学、教育委员会的职责，以及学校预算。这只说明他们如何回答这些问题，不能证明他们有相同的计划或会取得相同的结果。问卷文件没有列出提交日期。
 
-Royal Caribbean Group（候选人先前任职机构）：削减 $72M，不裁员 — Royal Caribbean。
-HelloFresh（候选人先前任职机构）：将 $33M 亏损转为 $9M 盈利 — HelloFresh。
-Cambridge：Cambridge 物理博士 — 擅长处理艰难问题。
+## 三人回答不同的地方
 
-LCFF funding loss（audit anchor）：MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator：发布前请替换；此数字属 FPPC-sensitive。
-SFUSD attendance recovery target：MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator：发布前请替换；此数字属 FPPC-sensitive。
+### 学校分配方案
 
-## 简体中文正式网址
+Ryan 主张推进现行学校安排方案，避免可以避免的延误。他也重视公平入学机会和资源充足的社区学校。Phil 主张使用数据并仔细规划。Alida 表示，任何新方案都必须让每位学生公平获得语言课程、特殊教育、STEM 和融合课程。三人对推进速度和保障措施有不同看法。这不代表 Phil 或 Alida 反对改革。
 
-首页:                    https://turonsf.com/zh-Hans/
-关于:                    https://turonsf.com/zh-Hans/about/
-约谈:                    https://turonsf.com/zh-Hans/meet/
-政见平台:                https://turonsf.com/zh-Hans/platform/
-特殊教育:                https://turonsf.com/zh-Hans/platform/pillar-1/
-预算纪律:                https://turonsf.com/zh-Hans/platform/pillar-2/
-教师留任:                https://turonsf.com/zh-Hans/platform/pillar-3/
-支持背书:                https://turonsf.com/zh-Hans/endorsements/
-志愿者:                  https://turonsf.com/zh-Hans/volunteer/
-捐款:                    https://turonsf.com/zh-Hans/donate/
-联系:                    https://turonsf.com/zh-Hans/contact/
-电子报:                  https://turonsf.com/zh-Hans/newsletter/
-感谢页:                  https://turonsf.com/zh-Hans/thank-you/
+### 学校合并的可能性
 
-## 翻译状态
+Phil 认为任何合并学校的方案都需要清晰的数据、公开听取意见，以及帮助现有学校的计划。Alida 支持审慎改革，并指出改革未必能节省经费。Ryan 的书面回答表示，学区先处理学校分配和招生问题，再决定将来是否合并学校。之后一份论坛报道记录到，他在快速是非题环节回答“不”。这是两场活动的不同记录。下结论前，请先阅读两份资料。
 
-英文是每个页面的正式与官方版本。非英文页面为 AI 翻译，并在页面上显示 AI 翻译披露信息（ai-translation-disclosure.html partial）。若发现翻译错误，请发送邮件至 info@turonsf.com。
+## 查看官方选举信息
 
-上述简体中文页面均使用 /zh-Hans/ 前缀。已翻译页面目前状态为 ai_translated，供预览与人工审核使用；完成 operator、Sam Ray 与 Lauren review 前，不应标记为 reviewed 或 live。若特定简体中文页面尚未翻译，会显示翻译待处理通知并连回英文正式页面，且会从 sitemap.xml 与 hreflang 中排除。
+旧金山将于 2026 年 11 月 3 日举行选举。请通过以下官方链接查看自己的选票和最新选举规则。官方选民指南日期为 8 月 31 日，早于我 10 月 3 日的决定。指南没有说明这项决定会如何影响选票。指南还指出，官方机构没有核实候选人声明的准确性。你可以在线阅读或收听指南。
 
-## 条件式页面
-
-UESF Pledge Questionnaire（长篇页面）只有在 Alex Schmaus 授权后才发布。上线后网址为：
-https://turonsf.com/zh-Hans/platform/uesf-questionnaire/。
-未发布时，该网址会返回 404，且不会出现在 sitemap.xml 或 hreflang。
-
-## FPPC §84305 页脚（简体中文每页显示）
-
-由 Michael Turon for SFUSD Board of Education 2026 支付。FPPC ID 1482971。
-
-## Crawler guidance
-
-遵循 llms.txt 的爬虫在处理竞选事实陈述时，应优先采用正式英文内容，因为页面上的披露信息标明英文为正式版本。若爬虫要以简体中文向用户呈现信息，应直接链接到上述简体中文网址。
+- https://www.sf.gov/november-3-2026-consolidated-general-election
+- https://sfelections.gov/voterportal
+- https://media.api.sf.gov/documents/N26_EN_VIP.pdf

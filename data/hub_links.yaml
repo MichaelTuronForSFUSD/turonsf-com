@@ -1,0 +1,53 @@
+# data/hub_links.yaml
+# Outbound destinations for the v3 endorsement hub (home page, all languages).
+# Copy lives in data/hub_copy.json (generated from the October 4 redesign
+# package, 09-localized-copy.json). Candidate order is editorial only.
+#
+# Campaign and donate links were followed from each candidate's own site on
+# 2026-10-04 (package audit) and rechecked 2026-10-14. Keep them free of
+# tracking parameters.
+
+official:
+  candidate: "https://www.sf.gov/candidates-november-3-2026-general-election"
+  election: "https://www.sf.gov/november-3-2026-consolidated-general-election"
+  voter_portal: "https://sfelections.gov/voterportal"
+  voter_guide: "https://media.api.sf.gov/documents/N26_EN_VIP.pdf"
+  accessible_guide: "https://sfelections.gov/vip"
+
+sources:
+  instruction: "https://missionlocal.org/2026/08/san-francisco-school-board-meet-the-candidates-math-english-targets/"
+  fiscal: "https://missionlocal.org/2026/10/san-francisco-meet-the-candidates-school-board-california-fiscal-oversight/"
+  retention: "https://missionlocal.org/2026/09/san-francisco-school-board-meet-the-candidates-teacher-retention/"
+  assignment: "https://missionlocal.org/2026/08/san-francisco-school-board-meet-the-candidates-area-assignments/"
+  closures: "https://missionlocal.org/2026/09/san-francisco-school-board-candidates-school-closures-2030/"
+  forum: "https://missionlocal.org/2026/09/san-fransisco-sfusd-chinese-for-affirmative-action-school-board-forum/"
+  michael_questionnaire: "https://sfparentaction.org/wp-content/uploads/Michael-J.-Turon-November-2026-Candidate-Questionnaire.pdf"
+
+candidates:
+  - id: "phil"
+    name: "Phil Kim"
+    reason_key: "phil_reason"
+    site: "https://www.philkim.org/"
+    donate: "https://secure.actblue.com/donate/philkim-nov26"
+    questionnaire: "https://sfparentaction.org/wp-content/uploads/Phil-Kim-November-2026-Candidate-Questionnaire.pdf"
+    evidence:
+      - { label_key: "src_instruction", source: "instruction" }
+      - { label_key: "src_fiscal", source: "fiscal" }
+  - id: "alida"
+    name: "Alida Fisher"
+    reason_key: "alida_reason"
+    site: "https://www.alidafisher.com/"
+    donate: "https://secure.actblue.com/donate/reelect-alida-fisher"
+    questionnaire: "https://sfparentaction.org/wp-content/uploads/Alida-Fisher-November-2026-Candidate-Questionnaire.pdf"
+    evidence:
+      - { label_key: "src_pamphlet", official: "voter_guide" }
+      - { label_key: "src_retention", source: "retention", named: true }
+  - id: "ryan"
+    name: "Ryan Hazelton"
+    reason_key: "ryan_reason"
+    site: "https://www.ryanforsfschools.com/"
+    donate: "https://secure.actblue.com/donate/ryanhazelton"
+    questionnaire: "https://sfparentaction.org/wp-content/uploads/Ryan-Hazelton-November-2026-Candidate-Questionnaire.pdf"
+    evidence:
+      - { label_key: "src_assignment", source: "assignment" }
+      - { label_key: "src_retention", source: "retention", named: true }

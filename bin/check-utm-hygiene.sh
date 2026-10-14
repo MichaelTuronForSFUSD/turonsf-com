@@ -21,17 +21,27 @@ if [[ ! -d "$PUBLIC_DIR" ]]; then
 fi
 
 # Campaign backend hostnames that must carry UTMs
-CAMPAIGN_HOSTS_PATTERN='secure\.actblue\.com|sibforms\.com'
-
+# Michael's own campaign backends (v2 CTAs). The v3 hub has none of these.
+CAMPAIGN_HOSTS_PATTERN='secure\.actblue\.com/donate/turonsf|sibforms\.com'
 REQUIRED_UTMS=(utm_source utm_medium utm_campaign utm_content)
 
-# Find every href to a campaign backend hostname
-URLS=$(grep -rohE "<a [^>]*href=\"https?://(${CAMPAIGN_HOSTS_PATTERN})[^\"]*\"" "$PUBLIC_DIR" | grep -oE "href=\"[^\"]*\"" | sed 's/^href="//;s/"$//' \
-  | sed 's/^href="//; s/"$//' \
-  | sort -u || true)
+# Extract every absolute <a> href, quoted or unquoted (hugo --minify drops quotes).
+ALL_URLS=$(grep -rohE "<a [^>]*href=(\"[^\"]*\"|[^ >]+)" "$PUBLIC_DIR" --include='*.html' \
+  | sed -E 's/.*href=//; s/^"//; s/"$//' | grep -E '^https?://' | sort -u || true)
+
+# v3: links to endorsed candidates' sites and donation pages, and to sources,
+# must carry NO tracking parameters (redesign spec, "Candidate actions and privacy").
+LEAKS=$(echo "$ALL_URLS" | grep -vE "^https?://(www\.)?turonsf\.com" | grep -vE "${CAMPAIGN_HOSTS_PATTERN}" | grep -E '[?&]utm_' || true)
+if [[ -n "$LEAKS" ]]; then
+  echo "FAIL: tracking parameters on non-campaign outbound links:"
+  echo "$LEAKS"
+  exit 1
+fi
+
+URLS=$(echo "$ALL_URLS" | grep -E "^https?://(${CAMPAIGN_HOSTS_PATTERN})" || true)
 
 if [[ -z "$URLS" ]]; then
-  echo "WARN: no outbound campaign URLs found in $PUBLIC_DIR. Expected at least donate + volunteer + newsletter links."
+  echo "UTM hygiene: OK (no campaign-backend CTAs; $(echo "$ALL_URLS" | grep -c . ) outbound links carry no utm_ parameters)"
   exit 0
 fi
 

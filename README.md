@@ -1,6 +1,6 @@
 # turonsf.com
 
-Hugo static site for Michael Turon for SFUSD Board of Education.
+Hugo static site for Michael J. Turon. v3 (branch `v3-endorsement-hub`) is a single endorsement hub in eight languages; the v2 campaign site is preserved at tag `v2-campaign-site-final`. See `docs/V3_Endorsement_Hub_Release_Notes.md`.
 
 ## Local build
 
@@ -14,9 +14,12 @@ hugo --minify
 hugo server --bind 127.0.0.1 --baseURL http://127.0.0.1:1313/
 ```
 
-## Live blockers before production
+## Editing the hub
 
-- Replace the Brevo placeholder URL in `hugo.toml`.
-- Fill the live Umami `umami_website_id`.
-- Verify ActBlue, Action Network, and Brevo backend destinations.
-- Complete Sam Ray and Lauren Turon preflight review.
+- Copy, all languages: `data/hub_copy.json`
+- Links and candidate order: `data/hub_links.yaml`
+- Translation state per language: `data/translation_status.yaml`
+
+## Before pushing v3 to `main`
+
+Cloudflare Pages deploys on push to `main`. Work through "Still required before pushing" in the v3 release notes first.

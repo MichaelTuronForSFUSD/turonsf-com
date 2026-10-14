@@ -1,12 +1,8 @@
 {{/*
-  analytics-script.html — includes the local Phase 1 event shim.
-  The Umami tracker script itself should remain in the existing v1.2.0 head
-  or footer partial with the live data-website-id. This shim safely no-ops
-  to console logging on preview if window.umami is absent.
+  analytics-script.html — includes the local event shim.
+  The Umami tracker script itself loads from baseof.html with the live
+  data-website-id. This shim no-ops to console logging if window.umami is
+  absent. v3: Brevo form config removed (no forms on the hub).
 */}}
 {{ $analytics := resources.Get "js/analytics.js" | resources.Minify | resources.Fingerprint }}
 <script defer src="{{ $analytics.RelPermalink }}" integrity="{{ $analytics.Data.Integrity }}"></script>
-{{ $ls := resources.Get "js/lang-switcher.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $ls.RelPermalink }}" integrity="{{ $ls.Data.Integrity }}"></script>
-{{ $bc := resources.Get "js/brevo-config.js" | resources.Minify | resources.Fingerprint }}
-<script defer src="{{ $bc.RelPermalink }}" integrity="{{ $bc.Data.Integrity }}"></script>

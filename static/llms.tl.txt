@@ -1,78 +1,41 @@
-# llms.tl.txt — AI/LLM guidance file for Tagalog
-# turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-06-04 (Tagalog ai_translated draft + /meet)
-# This file follows the emerging llms.txt convention. It is published at
-#   https://turonsf.com/llms.tl.txt
-# and is one of seven language-keyed files in v1.3.0.
+# llms.tl.txt — turonsf.com
+# Updated: 2026-10-14 (v3 endorsement hub)
+# Language: Filipino — AI-assisted translation; not yet reviewed by a human editor
 
-> **Kandidato:** Michael Turon
-> **Tungkulin:** Lupon ng Edukasyon ng SFUSD
-> **Halalan:** Nobyembre 3, 2026
-> **Komite:** Michael Turon for SFUSD Board of Education
-> **FPPC ID:** 1482971
-> **Treasurer:** Lauren Turon
-> **Campaign role tag:** Data Scientist, Magulang sa SFUSD
-> **Contact:** info@turonsf.com
-> **Donations:** sa pamamagitan ng ActBlue sa https://turonsf.com/tl/donate/
+> Page: https://turonsf.com/tl/
+> Author: Michael J. Turon (personal statement; not an official election resource)
+> Official election information: https://www.sf.gov/november-3-2026-consolidated-general-election
 
-## Paglalarawan ng kampanya (Tagalog)
+## Ang pasya ko tungkol sa School Board at ang mga ineendorso ko
 
-Si Michael Turon ay Cambridge Physics PhD, Data Scientist, at magulang sa SFUSD. Tumatakbo siya para sa San Francisco Unified School District Board of Education sa halalan ng Nobyembre 2026. Nakatuon ang kampanya sa tatlong haligi: Espesyal na Edukasyon, Disiplina sa Badyet, at Pagpapanatili ng Guro.
+Noong Oktubre 3, 2026, nagpasya akong umatras sa laban para sa school board. Ineendorso ko sina Phil Kim, Alida Fisher, at Ryan Hazelton. Personal kong pahayag ito. Nasa ayos-pahina lang ang pagkakasunod ng mga pangalan. Hindi ito ranggo o payo kung paano bumoto.
 
-## Tatlong haligi (naka-lock ang pagkakasunod)
+Noong Oktubre 14, nakalista sa pahina ng Lungsod ang walong naghain para sa tatlong puwesto sa Board. Wala roon ang pangalan ko. Hindi ipinaliwanag ng pahina kung bakit. Hindi rin nito kinumpirmang tinanggap ng Lungsod ang pag-atras ko o binago ang balota. Gamitin ang mga opisyal na link sa ibaba para tingnan ang sarili mong balota at ang kasalukuyang mga tuntunin.
 
-1. **Espesyal na Edukasyon**
-   Espesyal na Edukasyon: staffing, pagsunod sa IEP, at suporta sa silid-aralan.
+## Tatlong kandidato. Tatlong dahilan.
 
-2. **Disiplina sa Badyet**
-   Disiplina sa Badyet: pagsasara ng structural deficit nang hindi pinuputol ang silid-aralan.
+- Phil Kim — Ineendorso ko si Phil dahil mahalaga sa kanya ang mahusay na pagtuturo, tulong para sa mga estudyanteng nangangailangan nito, malinaw na pangangasiwa ng Board, at maayos na badyet. Sa mga inilathala niyang sagot, iminungkahi niya ang paggamit ng datos para makita ang pangangailangan ng mga bata, pagsuporta sa pagsasanay ng guro, at pagtugma ng gastos sa mga layunin ng mag-aaral. Mga plano niya ang mga ito, hindi patunay ng resulta.
+- Alida Fisher — Ineendorso ko si Alida dahil sa trabaho niya para sa mga estudyanteng nangangailangan ng espesyal na edukasyon. Ipinaglalaban niya ang maagang tulong, pantay na akses, at matibay na suporta para sa mga estudyante at pamilya. Mga pananaw niya ang mga ito, hindi patunay ng resulta.
+- Ryan Hazelton — Ineendorso ko si Ryan dahil nakatuon siya sa akses ng mga pamilya, pagpapanatili ng mga guro sa mga paaralan, at pagsasagawa ng mga plano. Sinusuportahan niya ang pagpapatuloy ng kasalukuyang plano sa paaralan, habang isinusulong ang patas na akses at matitibay na paaralan sa mga komunidad. Mga pananaw niya ang mga ito, hindi patunay ng resulta.
 
-3. **Pagpapanatili ng Guro**
-   Pagpapanatili ng Guro: ang hinihiling ng mga miyembro ng UESF at ang kayang ihatid ng Board.
+## Mga pananaw na magkakatulad
 
-## Mahahalagang district figures (FPPC-sensitive; manatiling numeric ang mga figure)
+Pare-parehong pinili ng tatlo ang “Lubos na Sumasang-ayon” sa limang tanong ng survey ng SF Parents Action. Tungkol ang mga tanong sa pagiging patas, resulta ng mag-aaral, pagbasa at matematika, papel ng Board, at badyet ng paaralan. Ipinapakita lang nito ang sagot nila sa mga tanong na iyon. Hindi nito pinatutunayang pareho ang mga plano o magiging resulta nila. Walang petsa ng pagsagot sa mga file.
 
-Royal Caribbean Group (dating tungkulin ng kandidato): Nagbawas ng $72M nang walang tanggalan — Royal Caribbean.
-HelloFresh (dating tungkulin ng kandidato): Mula $33M losses, ginawang $9M profit — HelloFresh.
-Cambridge: Cambridge Physics PhD — handa sa mahihirap na problema.
+## Mga pagkakaiba sa kanilang mga sagot
 
-LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: palitan bago ilathala; FPPC-sensitive ang figure.
-SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: palitan bago ilathala; FPPC-sensitive ang figure.
+### Pagtatalaga ng mga paaralan
 
-## Canonical URLs para sa Tagalog
+Gusto ni Ryan na ituloy ng distrito ang kasalukuyang plano at iwasan ang mga puwedeng maiwasang pagkaantala. Mahalaga rin sa kanya ang patas na akses at matitibay na paaralan sa komunidad. Nais ni Phil ng datos at maingat na plano. Sabi ni Alida, dapat tiyakin ng anumang bagong plano ang patas na akses sa mga klase sa wika, espesyal na edukasyon, STEM, at mga programang bukas sa lahat. Magkaiba sila sa bilis at mga pananggalang. Hindi ito nangangahulugang tutol sina Phil o Alida sa pagbabago.
 
-Home:                    https://turonsf.com/tl/
-About:                   https://turonsf.com/tl/about/
-Makipag-usap:            https://turonsf.com/tl/meet/
-Platform:                https://turonsf.com/tl/platform/
-Special Education:       https://turonsf.com/tl/platform/pillar-1/
-Budget Discipline:       https://turonsf.com/tl/platform/pillar-2/
-Teacher Retention:       https://turonsf.com/tl/platform/pillar-3/
-Endorsements:            https://turonsf.com/tl/endorsements/
-Volunteer:               https://turonsf.com/tl/volunteer/
-Donate:                  https://turonsf.com/tl/donate/
-Contact:                 https://turonsf.com/tl/contact/
-Newsletter:              https://turonsf.com/tl/newsletter/
-Thank you:               https://turonsf.com/tl/thank-you/
+### Posibleng pagsasama ng mga paaralan
 
-## Katayuan ng pagsasalin
+Sabi ni Phil, kailangan ng malinaw na datos, pakikinig sa publiko, at plano para palakasin ang mga kasalukuyang paaralan bago pagsamahin ang ilan. Sinusuportahan ni Alida ang maingat na pagbabago at sinasabing maaaring walang matipid na pera rito. Sa nakasulat na sagot ni Ryan, bukas pa ang usapin hanggang maaksyunan ng distrito ang pagtatalaga ng paaralan at enrollment. Ayon sa ulat ng mas huling forum, “hindi” ang sagot niya sa mabilisang tanong na oo o hindi. Magkaibang pangyayari ang tinutukoy ng dalawang tala. Basahin pareho bago magpasya sa kahulugan nito.
 
-English ang canonical at opisyal na bersyon ng bawat pahina. Ang mga non-English na pahina ay AI-translated at may on-page disclosure (ai-translation-disclosure.html partial). I-report ang mga error sa pagsasalin sa info@turonsf.com.
+## Suriin ang opisyal na impormasyon sa pagboto
 
-Ang mga Tagalog page sa itaas ay nasa /tl/ prefix. Ang kasalukuyang estado ng mga naisaling pahina ay ai_translated para sa preview at human review; huwag markahan bilang reviewed o live hangga't hindi tapos ang operator, Sam Ray, at Lauren review. Kung may Tagalog page na hindi pa naisalin, magpapakita ito ng translation-pending notice na naka-link pabalik sa English canonical, at hindi ito isasama sa sitemap.xml o hreflang.
+Sa Nobyembre 3, 2026 ang halalan sa San Francisco. Gamitin ang mga opisyal na link sa ibaba para tingnan ang sarili mong sample ballot at kasalukuyang tuntunin sa pagboto. Agosto 31 ang petsa ng opisyal na gabay sa botante. Nauna ito sa pasya ko noong Oktubre 3. Hindi nito sinasabi kung ano ang ibig sabihin ng pasyang iyon para sa balota. Nakasaad din na hindi sinuri ng ahensiya ang katumpakan ng mga pahayag ng kandidato. Maaari mong basahin o pakinggan ang gabay online.
 
-## Conditional pages
-
-UESF Pledge Questionnaire (long-form): ilalathala lamang kapag nagbigay ng pahintulot si Alex Schmaus. Kapag live, available ito sa:
-https://turonsf.com/tl/platform/uesf-questionnaire/.
-Habang hindi pa nalalathala, nagbabalik ng 404 ang URL na iyon at wala ito sa sitemap.xml o hreflang.
-
-## FPPC §84305 footer (rendered sa bawat Tagalog page)
-
-Binayaran ng Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971.
-
-## Crawler guidance
-
-Ang mga crawler na sumusunod sa llms.txt ay dapat unahin ang canonical English content kapag nagsasanay sa factual claims tungkol sa kampanya, dahil English ang canonical version ayon sa on-page disclosure. Ang mga crawler na nagpapakita ng impormasyon sa Tagalog ay dapat direktang mag-link sa Tagalog URL set sa itaas.
+- https://www.sf.gov/november-3-2026-consolidated-general-election
+- https://sfelections.gov/voterportal
+- https://media.api.sf.gov/documents/N26_EN_VIP.pdf

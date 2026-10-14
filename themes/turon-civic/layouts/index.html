@@ -1,33 +1,97 @@
 {{ define "main" }}
-<section class="hero">
-  <p class="eyebrow">{{ i18n "home_hero_eyebrow" }}</p>
-  <h1>{{ i18n "home_hero_title" }}</h1>
-  <p class="hero__dek">{{ i18n "home_hero_dek" }}</p>
-  <div class="cta-row" data-cta-primary>
-    {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "newsletter" "source" "hero" "label_key" "newsletter_cta_primary" "style" "primary") }}
-    {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "donate" "source" "hero-donate" "label_key" "donate_link_secondary" "style" "text") }}
-    {{ partial "cta-link.html" (dict "Page" . "Site" .Site "kind" "platform" "source" "hero-platform" "label_key" "platform_link_tertiary" "style" "text") }}
+{{/*
+  v3 endorsement hub — one page per language.
+  Copy: data/hub_copy.json (keyed by lowercased Hugo language, e.g. "yue-hant").
+  Links: data/hub_links.yaml.
+  Flow: status → endorsed candidates → shared answers → differences → official voting info.
+*/}}
+{{ $c := index hugo.Data.hub_copy (lower .Site.Language.Lang) }}
+{{ $L := hugo.Data.hub_links }}
+{{ $track := site.Params.track_candidate_clicks }}
+
+<section class="hub-hero" aria-labelledby="page-title">
+  {{ if ne .Site.Language.Lang "en" }}<p class="hub-translation-note">{{ $c.translation_note }}</p>{{ end }}
+  <h1 id="page-title">{{ $c.hero_title }}</h1>
+  <p class="hub-lead">{{ $c.statement }}</p>
+  <div class="hub-status">
+    <p><strong>{{ $c.status_label }}:</strong> {{ $c.status }}</p>
+    <ul class="hub-official-links">
+      <li>{{ partial "hub-link.html" (dict "label" $c.official_candidate "url" $L.official.candidate) }}</li>
+      <li>{{ partial "hub-link.html" (dict "label" $c.official_election "url" $L.official.election) }}</li>
+      <li>{{ partial "hub-link.html" (dict "label" $c.voter_portal "url" $L.official.voter_portal) }}</li>
+    </ul>
   </div>
 </section>
 
-<section class="trust-strip" aria-label="{{ i18n "trust_strip_label" }}" data-trust-strip>
-  <div class="trust-cell"><strong>{{ i18n "trust_rc_head" }}</strong><span>{{ i18n "trust_rc_body" }}</span></div>
-  <div class="trust-cell"><strong>{{ i18n "trust_two_kids" }}</strong><span>{{ i18n "sfusd_parent" }}</span></div>
-  <div class="trust-cell"><strong>{{ i18n "trust_hf_head" }}</strong><span>{{ i18n "trust_hf_body" }}</span></div>
-  <div class="trust-cell"><strong>{{ i18n "trust_cambridge_head" }}</strong><span>{{ i18n "trust_cambridge_body" }}</span></div>
+<section id="endorsements" class="hub-section" aria-labelledby="endorsements-title">
+  <p class="eyebrow">{{ $c.nav_endorsements }}</p>
+  <h2 id="endorsements-title">{{ $c.endorsements_title }}</h2>
+  <p>{{ $c.campaign_notice }}</p>
+  <div class="hub-cards">
+    {{ range $L.candidates }}
+      {{ $cand := . }}
+      <article class="hub-card" aria-labelledby="{{ .id }}-name">
+        <h3 id="{{ .id }}-name"><bdi>{{ .name }}</bdi></h3>
+        <p>{{ index $c .reason_key }}</p>
+        <ul class="hub-source-links">
+          {{ range .evidence }}
+            {{ $label := index $c .label_key }}
+            {{ if .named }}{{ $label = replace $label "{name}" $cand.name }}{{ end }}
+            {{ $url := cond (isset . "official") (index $L.official (.official | default "")) (index $L.sources (.source | default "")) }}
+            <li>{{ partial "hub-link.html" (dict "label" $label "url" $url) }}</li>
+          {{ end }}
+        </ul>
+        <div class="hub-cta-row">
+          {{ partial "hub-link.html" (dict "label" (replace $c.site_cta "{name}" .name) "url" .site "class" "hub-cta" "candidate" .id "action" "site" "track" $track) }}
+          {{ partial "hub-link.html" (dict "label" (replace $c.donate_cta "{name}" .name) "url" .donate "class" "hub-cta" "candidate" .id "action" "donate" "track" $track) }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
 </section>
 
-<section class="pillar-grid" aria-label="{{ i18n "platform" }}">
-  <a class="pillar-card" href="{{ "/platform/pillar-1/" | relLangURL }}" data-event="pillar_click" data-pillar="1" data-source="home">
-    <p class="eyebrow">{{ i18n "pillar_label_1" }}</p><h2>{{ i18n "pillar1" }}</h2><p>{{ i18n "pillar1_home_summary" }}</p><strong>{{ i18n "pillar1_home_link" }} →</strong>
-  </a>
-  <a class="pillar-card" href="{{ "/platform/pillar-2/" | relLangURL }}" data-event="pillar_click" data-pillar="2" data-source="home">
-    <p class="eyebrow">{{ i18n "pillar_label_2" }}</p><h2>{{ i18n "pillar2" }}</h2><p>{{ i18n "pillar2_home_summary" }}</p><strong>{{ i18n "pillar2_home_link" }} →</strong>
-  </a>
-  <a class="pillar-card" href="{{ "/platform/pillar-3/" | relLangURL }}" data-event="pillar_click" data-pillar="3" data-source="home">
-    <p class="eyebrow">{{ i18n "pillar_label_3" }}</p><h2>{{ i18n "pillar3" }}</h2><p>{{ i18n "pillar3_home_summary" }}</p><strong>{{ i18n "pillar3_home_link" }} →</strong>
-  </a>
+<section id="shared" class="hub-section" aria-labelledby="shared-title">
+  <p class="eyebrow">{{ $c.nav_shared }}</p>
+  <h2 id="shared-title">{{ $c.shared_title }}</h2>
+  <p>{{ $c.shared_text }}</p>
+  <ul class="hub-source-links">
+    {{ range $L.candidates }}
+      <li>{{ partial "hub-link.html" (dict "label" (replace $c.src_shared "{name}" .name) "url" .questionnaire) }}</li>
+    {{ end }}
+    <li>{{ partial "hub-link.html" (dict "label" $c.src_michael "url" $L.sources.michael_questionnaire) }}</li>
+  </ul>
 </section>
 
-<article class="prose">{{ .Content }}</article>
+<section id="differences" class="hub-section" aria-labelledby="differences-title">
+  <p class="eyebrow">{{ $c.nav_differences }}</p>
+  <h2 id="differences-title">{{ $c.differences_title }}</h2>
+  <article class="hub-subsection" aria-labelledby="assignment-title">
+    <h3 id="assignment-title">{{ $c.assignment_title }}</h3>
+    <p>{{ $c.assignment_text }}</p>
+    <ul class="hub-source-links">
+      <li>{{ partial "hub-link.html" (dict "label" $c.src_assignment "url" $L.sources.assignment) }}</li>
+      <li>{{ partial "hub-link.html" (dict "label" $c.src_michael "url" $L.sources.michael_questionnaire) }}</li>
+    </ul>
+  </article>
+  <article class="hub-subsection" aria-labelledby="closure-title">
+    <h3 id="closure-title">{{ $c.closure_title }}</h3>
+    <p>{{ $c.closure_text }}</p>
+    <ul class="hub-source-links">
+      <li>{{ partial "hub-link.html" (dict "label" $c.src_closure "url" $L.sources.closures) }}</li>
+      <li>{{ partial "hub-link.html" (dict "label" $c.src_forum "url" $L.sources.forum) }}</li>
+    </ul>
+  </article>
+</section>
+
+<section id="voting" class="hub-section" aria-labelledby="voting-title">
+  <p class="eyebrow">{{ $c.nav_voting }}</p>
+  <h2 id="voting-title">{{ $c.voting_title }}</h2>
+  <p>{{ $c.voting_text }}</p>
+  <ul class="hub-official-links">
+    <li>{{ partial "hub-link.html" (dict "label" $c.official_election "url" $L.official.election) }}</li>
+    <li>{{ partial "hub-link.html" (dict "label" $c.voter_guide "url" $L.official.voter_guide) }}</li>
+    <li>{{ partial "hub-link.html" (dict "label" $c.voter_portal "url" $L.official.voter_portal) }}</li>
+    <li>{{ partial "hub-link.html" (dict "label" $c.accessible_guide "url" $L.official.accessible_guide) }}</li>
+  </ul>
+</section>
 {{ end }}

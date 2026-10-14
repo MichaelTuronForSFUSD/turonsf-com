@@ -1,9 +1,9 @@
 ---
-title: "Michael Turon for SFUSD Board of Education"
-description: "Michael Turon, Data Scientist and SFUSD Parent, running for Board of Education November 3, 2026."
-summary: "Michael Turon, Data Scientist and SFUSD Parent, running for Board of Education November 3, 2026."
+title: "My school board decision and endorsements"
+description: "A personal statement by Michael J. Turon about his 2026 school board campaign decision and three endorsements."
+summary: "A personal statement by Michael J. Turon about his 2026 school board campaign decision and three endorsements."
 date: 2026-05-12
-lastmod: 2026-05-12
+lastmod: 2026-10-14
 translationKey: "home"
 schema_type: "WebPage"
 inLanguage: "en"
@@ -13,5 +13,3 @@ translation_status: "live"
 include_in_llms: true
 fppc_sensitive: false
 ---
-
-Michael Turon is running for the SFUSD Board of Education to focus the board on service delivery, fiscal discipline, and keeping great educators in classrooms.

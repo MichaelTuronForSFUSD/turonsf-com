@@ -1,21 +1,15 @@
 ---
-title: "Michael Turon لمجلس التعليم في SFUSD"
-description: "Michael Turon، عالم بيانات ووليّ أمر في SFUSD، يرشّح نفسه لمجلس التعليم في 3 نوفمبر 2026."
-summary: "Michael Turon، عالم بيانات ووليّ أمر في SFUSD، يرشّح نفسه لمجلس التعليم في 3 نوفمبر 2026."
+title: "قراري بشأن مجلس التعليم والمرشحين الذين أؤيدهم"
+description: "بيان شخصي لمايكل جيه. تورون عن قراره في حملة مجلس التعليم لعام 2026 والمرشحين الثلاثة الذين يؤيدهم."
+summary: "بيان شخصي لمايكل جيه. تورون عن قراره في حملة مجلس التعليم لعام 2026 والمرشحين الثلاثة الذين يؤيدهم."
 date: 2026-05-12
-lastmod: 2026-05-14
+lastmod: 2026-10-14
 translationKey: "home"
 schema_type: "WebPage"
 inLanguage: "ar"
 canonical_language: "en"
 canonical_path: "/"
 translation_status: "ai_translated"
-translation_tool_primary: "openai:codex-gpt-5"
-translation_tool_backup: "not_run"
-translation_reviewer: ""
-translation_reviewed_at: ""
 include_in_llms: true
 fppc_sensitive: false
 ---
-
-يخوض Michael Turon انتخابات مجلس التعليم في SFUSD لمساعدة المجلس على التركيز على تقديم الخدمات، والانضباط المالي، وإبقاء المعلّمين الممتازين في الصفوف.

@@ -1,78 +1,41 @@
-# llms.vi.txt — AI/LLM guidance file for Tiếng Việt
-# turonsf.com — Michael Turon for SFUSD Board of Education
-# Updated: 2026-06-04 (Vietnamese ai_translated draft + /meet)
-# This file follows the emerging llms.txt convention. It is published at
-#   https://turonsf.com/llms.vi.txt
-# and is one of seven language-keyed files in v1.3.0.
+# llms.vi.txt — turonsf.com
+# Updated: 2026-10-14 (v3 endorsement hub)
+# Language: Vietnamese — AI-assisted translation; not yet reviewed by a human editor
 
-> **Ứng cử viên:** Michael Turon
-> **Chức vụ:** Hội đồng Giáo dục SFUSD
-> **Bầu cử:** Ngày 3 tháng 11 năm 2026
-> **Ủy ban:** Michael Turon for SFUSD Board of Education
-> **FPPC ID:** 1482971
-> **Thủ quỹ:** Lauren Turon
-> **Nhãn vai trò chiến dịch:** Nhà khoa học dữ liệu, Phụ huynh SFUSD
-> **Liên hệ:** info@turonsf.com
-> **Đóng góp:** qua ActBlue tại https://turonsf.com/vi/donate/
+> Page: https://turonsf.com/vi/
+> Author: Michael J. Turon (personal statement; not an official election resource)
+> Official election information: https://www.sf.gov/november-3-2026-consolidated-general-election
 
-## Mô tả chiến dịch (Tiếng Việt)
+## Quyết định của tôi về Hội đồng Giáo dục và các ứng cử viên tôi ủng hộ
 
-Michael Turon là Cambridge Physics PhD, nhà khoa học dữ liệu, và phụ huynh SFUSD. Anh ứng cử San Francisco Unified School District Board of Education trong cuộc bầu cử tháng 11 năm 2026. Chiến dịch dựa trên ba trụ cột: Giáo dục Đặc biệt, Kỷ luật Ngân sách, và Giữ chân Giáo viên.
+Ngày 3 tháng 10 năm 2026, tôi quyết định rút khỏi cuộc đua vào hội đồng giáo dục. Tôi ủng hộ Phil Kim, Alida Fisher và Ryan Hazelton. Đây là tuyên bố cá nhân của tôi. Tên được xếp theo thứ tự trên trang, không phải thứ hạng hay lời khuyên bỏ phiếu.
 
-## Ba trụ cột (thứ tự cố định)
+Tính đến ngày 14 tháng 10, trang thông tin ứng cử viên của Thành phố liệt kê tám người nộp hồ sơ cho ba ghế trong Hội đồng. Trang không có tên tôi. Trang không giải thích lý do. Trang cũng không xác nhận Thành phố đã chấp nhận việc tôi rút lui hay thay đổi lá phiếu. Hãy dùng các liên kết chính thức dưới đây để kiểm tra lá phiếu và quy định hiện hành.
 
-1. **Giáo dục Đặc biệt**
-   Giáo dục Đặc biệt: nhân sự, tuân thủ IEP, và hỗ trợ lớp học.
+## Ba ứng cử viên. Ba lý do.
 
-2. **Kỷ luật Ngân sách**
-   Kỷ luật Ngân sách: đóng thâm hụt cơ cấu mà không cắt giảm lớp học.
+- Phil Kim — Tôi ủng hộ Phil vì ông chú trọng việc dạy học tốt, hỗ trợ học sinh cần giúp đỡ, giám sát rõ ràng của Hội đồng và ngân sách hợp lý. Trong các câu trả lời công khai, ông đề xuất dùng dữ liệu để tìm ra nhu cầu của học sinh, hỗ trợ giáo viên học tập và gắn chi tiêu với mục tiêu của học sinh. Đây là kế hoạch của ông, không phải kết quả đã được chứng minh.
+- Alida Fisher — Tôi ủng hộ Alida vì công việc của bà nhằm hỗ trợ học sinh cần giáo dục đặc biệt. Bà đề cao hỗ trợ sớm, cơ hội công bằng và sự hỗ trợ thiết thực cho học sinh cùng gia đình. Đây là quan điểm của bà, không phải kết quả đã được chứng minh.
+- Ryan Hazelton — Tôi ủng hộ Ryan vì ông quan tâm đến khả năng tiếp cận của gia đình, giữ giáo viên ở lại trường và thực hiện kế hoạch. Ông ủng hộ việc tiếp tục kế hoạch trường học hiện nay, đồng thời hướng tới cơ hội công bằng và trường học vững mạnh trong khu dân cư. Đây là quan điểm của ông, không phải kết quả đã được chứng minh.
 
-3. **Giữ chân Giáo viên**
-   Giữ chân Giáo viên: những gì thành viên UESF đã yêu cầu và những gì Board có thể thực hiện.
+## Những điểm họ cùng đồng ý
 
-## Các con số quan trọng của học khu (FPPC-sensitive; giữ nguyên số)
+Cả ba đều chọn “Hoàn toàn đồng ý” cho cùng năm câu hỏi trong khảo sát của SF Parents Action. Câu hỏi đề cập đến sự công bằng, kết quả học tập, môn đọc và toán, vai trò của Hội đồng và ngân sách trường học. Điều này chỉ cho biết họ trả lời các câu hỏi đó ra sao. Điều này không chứng minh họ có cùng kế hoạch hay sẽ đạt kết quả như nhau. Các tệp không ghi ngày gửi câu trả lời.
 
-Royal Caribbean Group (vai trò trước đây của ứng cử viên): Cắt giảm $72M không sa thải — Royal Caribbean.
-HelloFresh (vai trò trước đây của ứng cử viên): Biến lỗ $33M thành lãi $9M — HelloFresh.
-Cambridge: Tiến sĩ Vật lý Cambridge — được rèn cho vấn đề khó.
+## Những điểm khác nhau trong câu trả lời
 
-LCFF funding loss (audit anchor): MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: thay trước khi xuất bản; con số này là FPPC-sensitive.
-SFUSD attendance recovery target: MISSING_FIGURE_FROM_DECISIONS_REGISTER
-  -> Operator: thay trước khi xuất bản; con số này là FPPC-sensitive.
+### Phân trường
 
-## Canonical URLs cho Tiếng Việt
+Ryan muốn học khu tiếp tục kế hoạch trường học hiện nay và tránh những trì hoãn có thể tránh được. Ông cũng muốn có cơ hội công bằng và trường học vững mạnh trong khu dân cư. Phil đề cao dữ liệu và kế hoạch thận trọng. Alida nói kế hoạch mới phải bảo đảm mỗi học sinh được tiếp cận công bằng với lớp ngôn ngữ, giáo dục đặc biệt, STEM và chương trình hòa nhập. Họ khác nhau về tiến độ và biện pháp bảo vệ. Điều này không có nghĩa Phil hay Alida phản đối thay đổi.
 
-Home:                    https://turonsf.com/vi/
-About:                   https://turonsf.com/vi/about/
-Gặp Michael:             https://turonsf.com/vi/meet/
-Platform:                https://turonsf.com/vi/platform/
-Special Education:       https://turonsf.com/vi/platform/pillar-1/
-Budget Discipline:       https://turonsf.com/vi/platform/pillar-2/
-Teacher Retention:       https://turonsf.com/vi/platform/pillar-3/
-Endorsements:            https://turonsf.com/vi/endorsements/
-Volunteer:               https://turonsf.com/vi/volunteer/
-Donate:                  https://turonsf.com/vi/donate/
-Contact:                 https://turonsf.com/vi/contact/
-Newsletter:              https://turonsf.com/vi/newsletter/
-Thank you:               https://turonsf.com/vi/thank-you/
+### Khả năng sáp nhập trường
 
-## Trạng thái bản dịch
+Phil nói mọi kế hoạch sáp nhập trường cần có dữ liệu rõ ràng, ý kiến công chúng và kế hoạch hỗ trợ các trường hiện có. Alida ủng hộ thay đổi thận trọng và nói rằng thay đổi có thể không tiết kiệm tiền. Câu trả lời bằng văn bản của Ryan để ngỏ lựa chọn này cho đến khi học khu giải quyết việc phân trường và tuyển sinh. Một bản tin về diễn đàn sau đó cho biết ông trả lời “không” trong phần hỏi nhanh có hoặc không. Đây là ghi chép từ hai sự kiện khác nhau. Hãy đọc cả hai trước khi kết luận.
 
-English là phiên bản canonical và chính thức của mọi trang. Các trang không phải English được AI dịch và có disclosure trên trang (ai-translation-disclosure.html partial). Hãy báo lỗi dịch thuật tới info@turonsf.com.
+## Kiểm tra thông tin bầu cử chính thức
 
-Các trang Tiếng Việt ở trên dùng tiền tố /vi/. Trạng thái hiện tại của các trang đã dịch là ai_translated để phục vụ preview và human review; không đánh dấu reviewed hoặc live cho đến khi hoàn tất operator, Sam Ray, và Lauren review. Nếu một trang Tiếng Việt chưa được dịch, trang đó sẽ hiển thị translation-pending notice dẫn về English canonical, và sẽ bị loại khỏi sitemap.xml và hreflang.
+San Francisco sẽ bầu cử vào ngày 3 tháng 11 năm 2026. Hãy dùng các liên kết chính thức dưới đây để kiểm tra lá phiếu mẫu và quy định bầu cử hiện hành. Cẩm nang cử tri có ngày 31 tháng 8. Cẩm nang được phát hành trước quyết định ngày 3 tháng 10 của tôi. Cẩm nang không cho biết quyết định đó ảnh hưởng thế nào đến lá phiếu. Cẩm nang cũng nói cơ quan chính thức không kiểm tra độ chính xác của tuyên bố ứng cử viên. Bạn có thể đọc hoặc nghe cẩm nang trực tuyến.
 
-## Trang có điều kiện
-
-UESF Pledge Questionnaire (long-form): chỉ xuất bản khi Alex Schmaus cho phép. Khi live, trang sẽ ở:
-https://turonsf.com/vi/platform/uesf-questionnaire/.
-Khi chưa xuất bản, URL đó trả về 404 và không có trong sitemap.xml hoặc hreflang.
-
-## FPPC §84305 footer (hiển thị trên mỗi trang Tiếng Việt)
-
-Được chi trả bởi Michael Turon for SFUSD Board of Education 2026. FPPC ID 1482971.
-
-## Crawler guidance
-
-Các crawler tôn trọng llms.txt nên ưu tiên nội dung English canonical khi huấn luyện trên các factual claims về chiến dịch, vì English là canonical version theo on-page disclosure. Các crawler trình bày thông tin cho người dùng bằng Tiếng Việt nên liên kết trực tiếp đến bộ URL Tiếng Việt ở trên.
+- https://www.sf.gov/november-3-2026-consolidated-general-election
+- https://sfelections.gov/voterportal
+- https://media.api.sf.gov/documents/N26_EN_VIP.pdf
