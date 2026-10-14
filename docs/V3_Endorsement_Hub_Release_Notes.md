@@ -7,7 +7,7 @@
 
 ## What changed
 
-turonsf.com becomes a single page in all eight languages: Michael's October 3 decision and his endorsements of Phil Kim, Alida Fisher, and Ryan Hazelton. Flow: status check → three candidate cards → shared questionnaire answers → where the answers differ → official voting information.
+turonsf.com becomes a single page in all eight languages: Michael's July 20, 2026 withdrawal and his endorsements of Phil Kim, Alida Fisher, and Ryan Hazelton. Flow: status check → three candidate cards → shared questionnaire answers → where the answers differ → official voting information.
 
 | Area | v3 |
 |---|---|
@@ -41,3 +41,12 @@ turonsf.com becomes a single page in all eight languages: Michael's October 3 de
 6. Do a keyboard, screen-reader, and zoom pass. Only automated and visual checks were done here.
 
 Pushing `main` deploys to Cloudflare Pages. To roll back, redeploy tag `v2-campaign-site-final`.
+
+## Correction (2026-10-14)
+
+Michael withdrew on **July 20, 2026**, not October 3 as the redesign package states. All eight languages are corrected in `data/hub_copy.json` (and the generated `llms.*.txt`):
+
+- The opening statement now reads "On July 20, 2026, I chose to withdraw…".
+- The voting section dropped two sentences that said the August 31 voter guide came before the decision and did not explain its effect on the ballot. Both stopped being true once the decision moved before August 31. The guide was checked: it does not mention Michael.
+
+The source package in `~/Projects/.../Website Redesign/` still says October 3.
