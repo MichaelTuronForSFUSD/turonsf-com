@@ -9,7 +9,7 @@ schema_type: "WebPage"
 inLanguage: "zh-Hans"
 canonical_language: "en"
 canonical_path: "/"
-translation_status: "ai_translated"
+translation_status: "ai_published"
 include_in_llms: true
 fppc_sensitive: false
 ---

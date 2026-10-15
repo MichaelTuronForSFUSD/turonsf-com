@@ -40,18 +40,25 @@
 | Freshness signal | Fail | Pass (visible date and `dateModified`) |
 | Consistent names (Michael J. Turon; candidates' full names) | Pass | Pass |
 
-## The biggest remaining gap: translations are noindex
+## Translations are indexable (owner's decision, 2026-10-15)
 
-The seven translated pages are `ai_translated` in `data/translation_status.yaml`. That makes them `noindex`, canonical to English, and absent from the sitemap. Spanish, Chinese, Filipino, Vietnamese, and Arabic searches won't surface them, and Lighthouse would flag them as blocked from indexing.
+The seven translated pages are now `ai_published` in `data/translation_status.yaml`, a new status meaning "AI-translated, published for search, not yet human-reviewed". Each page:
 
-This is deliberate: no native speaker has reviewed them yet. After a reviewer signs off on a language, change that language's line from `ai_translated` to `reviewed`. It then becomes indexable, joins hreflang and the sitemap, and canonicals to itself. No code change is needed.
+- canonicalizes to itself and has no `noindex`;
+- is listed in hreflang on every page (8 languages plus x-default) and in its language sitemap;
+- still shows the AI disclosure bar and the "not yet reviewed by a human editor" note.
+
+When a native speaker reviews a language, change its status to `reviewed`. Nothing else changes.
+
+The Cantonese page uses `hreflang="zh-HK"`, because Google accepts only ISO 639-1 language codes and `yue` isn't one. Its `lang` attribute stays `yue-Hant`.
+
+**Risk to weigh:** these pages are now visible in Spanish, Chinese, Filipino, Vietnamese, and Arabic search results. Any translation error is now public under Michael's name, and the AI notice is the only safeguard until review.
 
 ## Other recommendations (not done)
 
 1. **After deploying,** submit `https://turonsf.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, and request indexing of the home page. Bing's index feeds ChatGPT search and Copilot.
 2. **Links from elsewhere** (the candidates' sites, local coverage of the endorsement) will matter more for ranking than anything on the page. That's outside this repo.
 3. **Refresh the date** in `data/hub_copy.json` (`updated`, and the date in `status`) and `data/hub_links.yaml` (`updated`) whenever the official candidate list is rechecked.
-4. **Empty language sitemaps:** Hugo lists one sitemap per language in `/sitemap.xml`. The seven translated ones are empty while noindex. That's harmless; they fill in once a language is promoted.
 
 ## Files changed
 

@@ -70,6 +70,9 @@ summaryLength = 32
     title = "Michael J. Turon"
     [languages.yue-Hant.params]
       og_locale = "zh_HK"
+      # Google hreflang needs an ISO 639-1 code; "yue" is not one. The page
+      # lang attribute stays yue-Hant.
+      hreflang = "zh-HK"
       languageName = "廣東話"
       dir = "ltr"
       bcp47 = "yue-Hant"

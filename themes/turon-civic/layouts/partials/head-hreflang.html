@@ -48,7 +48,7 @@
 {{/* English is always considered live. */}}
 {{ if eq $currentLang "en" }}{{ $thisStatus = "live" }}{{ end }}
 
-{{ $isLive := or (eq $thisStatus "live") (eq $thisStatus "reviewed") (eq $thisStatus "community_corrected") }}
+{{ $isLive := or (eq $thisStatus "live") (eq $thisStatus "reviewed") (eq $thisStatus "community_corrected") (eq $thisStatus "ai_published") }}
 
 {{/* Locate the English canonical translation for this page (always required
      because every page either IS English or has an English source). */}}
@@ -83,7 +83,7 @@
 {{ if $isLive }}
 
   {{/* Self-reference first. */}}
-  <link rel="alternate" hreflang="{{ $currentLang }}" href="{{ .Permalink }}" />
+  <link rel="alternate" hreflang="{{ .Site.Language.Params.hreflang | default $currentLang }}" href="{{ .Permalink }}" />
 
   {{/* Then every OTHER live translation of this page. */}}
   {{ with .AllTranslations }}
@@ -95,9 +95,9 @@
         {{ $altPageKey := printf "%s::%s" $altStatusPath $altLang }}
         {{ $altStatus := index $translationStatusData $altPageKey | default "placeholder" }}
         {{ if eq $altLang "en" }}{{ $altStatus = "live" }}{{ end }}
-        {{ $altLive := or (eq $altStatus "live") (eq $altStatus "reviewed") (eq $altStatus "community_corrected") }}
+        {{ $altLive := or (eq $altStatus "live") (eq $altStatus "reviewed") (eq $altStatus "community_corrected") (eq $altStatus "ai_published") }}
         {{ if $altLive }}
-          <link rel="alternate" hreflang="{{ $altLang }}" href="{{ .Permalink }}" />
+          <link rel="alternate" hreflang="{{ .Site.Language.Params.hreflang | default $altLang }}" href="{{ .Permalink }}" />
         {{ end }}
       {{ end }}
     {{ end }}

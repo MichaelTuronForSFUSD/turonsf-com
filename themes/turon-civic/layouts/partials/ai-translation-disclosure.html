@@ -15,7 +15,8 @@
     ---------  ------------------------------  ---------------------------------
     en         (any)                           NOTHING — English is canonical
     non-en     placeholder                     Pending notice + English link
-    non-en     ai_translated / reviewed /      Slim AI disclosure bar (Option A)
+    non-en     ai_translated / ai_published /  Slim AI disclosure bar (Option A)
+               reviewed /
                community_corrected / live
 
   Design (Option A — locked by JEC panel):
@@ -62,7 +63,7 @@
       {{ end }}
     </div>
   {{ else }}
-    {{/* AI disclosure bar — ai_translated, reviewed, community_corrected, live. */}}
+    {{/* AI disclosure bar — ai_translated, ai_published, reviewed, community_corrected, live. */}}
     {{ $copied := i18n "disclosure_copied" }}
     <div class="disclosure-slim" role="note" lang="{{ $currentLang }}">
       <span class="disclosure-slim__icon" aria-hidden="true">🌐</span>

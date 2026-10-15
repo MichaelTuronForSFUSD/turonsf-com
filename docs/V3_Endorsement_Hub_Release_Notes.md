@@ -58,3 +58,7 @@ The English copy was checked claim by claim against its sources. Thirteen errors
 ## SEO and GEO pass (2026-10-15)
 
 Added search titles naming the candidates, Open Graph/Twitter tags with a share image, JSON-LD, a visible last-updated date, real 404 pages, and Hugo-rendered `llms.txt` per language. Removed empty RSS feeds, fixed touch-target sizes, and renamed the site from the committee name to "Michael J. Turon". See `docs/V3_SEO_GEO_Audit_2026-10-15.md`. The largest remaining gap is that the translations stay noindex until a human reviews them.
+
+## Translations made indexable (2026-10-15)
+
+At the owner's direction, the seven translations are `ai_published`: indexable, in hreflang and the sitemap, and still carrying the AI-translation notice. Human native-speaker review is still recommended. Promote each language to `reviewed` afterward. Cantonese uses `hreflang="zh-HK"`.

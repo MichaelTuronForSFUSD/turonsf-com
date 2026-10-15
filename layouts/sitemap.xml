@@ -9,7 +9,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {{- $translationStatusData := (index hugo.Data "translation_status").pages -}}
-{{- $liveStatuses := slice "reviewed" "community_corrected" "live" -}}
+{{- $liveStatuses := slice "reviewed" "community_corrected" "live" "ai_published" -}}
 {{- $currentLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Site.Language.Lang) -}}
 {{- $includedKinds := slice "home" "section" "page" -}}
 {{- range .Site.Pages -}}
@@ -72,7 +72,7 @@
     {{- end -}}
     {{- range $liveTranslations }}
     {{- $translationLang := .Site.Language.Params.bcp47 | default (.Site.Language.LanguageCode | default .Lang) }}
-    <xhtml:link rel="alternate" hreflang="{{ $translationLang }}" href="{{ .Permalink }}" />
+    <xhtml:link rel="alternate" hreflang="{{ .Site.Language.Params.hreflang | default $translationLang }}" href="{{ .Permalink }}" />
     {{- end }}
   </url>
 {{- end }}

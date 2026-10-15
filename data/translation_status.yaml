@@ -15,7 +15,9 @@
 #
 # Status values (Architecture Decision 9 §4):
 #   placeholder         scaffold exists; not translated; renders pending notice
-#   ai_translated       AI draft applied; pre-review; can publish for preview
+#   ai_translated       AI draft applied; pre-review; noindex, canonical to English
+#   ai_published        AI translation published for search without human review;
+#                       indexable (hreflang + sitemap), AI notice still shown
 #   reviewed            operator + Sam Ray + Lauren review complete
 #   community_corrected updated after public correction from info@turonsf.com
 #   live                public production state
@@ -27,14 +29,14 @@
 pages:
 
   # ----- /  (v3 endorsement hub — the only page) -----
-  # ai_translated: AI-assisted drafts from the October 4 redesign package.
-  # Not yet reviewed by a human editor in each language, so these render the
-  # AI disclosure bar, canonicalize to English, and stay out of the sitemap
-  # until promoted to "reviewed" or "live".
-  "/::es":       "ai_translated"
-  "/::yue-Hant": "ai_translated"
-  "/::zh-Hant":  "ai_translated"
-  "/::zh-Hans":  "ai_translated"
-  "/::tl":       "ai_translated"
-  "/::vi":       "ai_translated"
-  "/::ar":       "ai_translated"
+  # ai_published (2026-10-15, owner's decision): AI-assisted translations are
+  # indexable and listed in hreflang and the sitemap, but no human editor has
+  # reviewed them yet. Each page keeps the AI disclosure bar and the in-page
+  # "not yet reviewed" note. Promote to "reviewed" after native-speaker review.
+  "/::es":       "ai_published"
+  "/::yue-Hant": "ai_published"
+  "/::zh-Hant":  "ai_published"
+  "/::zh-Hans":  "ai_published"
+  "/::tl":       "ai_published"
+  "/::vi":       "ai_published"
+  "/::ar":       "ai_published"
