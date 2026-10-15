@@ -3,7 +3,7 @@
 # Copy lives in data/hub_copy.json. Candidate order is editorial only.
 #
 # Campaign and donate links were followed from each candidate's own site on
-# 2026-10-04 (package audit) and rechecked 2026-10-14, when every claim in
+# 2026-10-04 (package audit) and rechecked 2026-10-14 (and the official candidate list again on 2026-10-15), when every claim in
 # data/hub_copy.json was also checked against these sources. Keep them free of
 # tracking parameters.
 
@@ -69,4 +69,4 @@ candidates:
 
 # Date the page facts were last verified. Keep in step with the "updated"
 # line in data/hub_copy.json; it feeds dateModified in the structured data.
-updated: "2026-10-14"
+updated: "2026-10-15"

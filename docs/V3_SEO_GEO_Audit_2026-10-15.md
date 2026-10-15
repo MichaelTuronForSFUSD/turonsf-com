@@ -48,11 +48,10 @@ This is deliberate: no native speaker has reviewed them yet. After a reviewer si
 
 ## Other recommendations (not done)
 
-1. **Old campaign URLs return 302 (temporary).** A 301 passes the old pages' link value to the hub more reliably. I kept 302 so you can restore v2 without browsers having cached a permanent move. If v3 is staying, change `302` to `301` in `static/_redirects`.
-2. **After deploying,** submit `https://turonsf.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, and request indexing of the home page. Bing's index feeds ChatGPT search and Copilot.
-3. **Links from elsewhere** (the candidates' sites, local coverage of the endorsement) will matter more for ranking than anything on the page. That's outside this repo.
-4. **Refresh the date** in `data/hub_copy.json` (`updated`, and the date in `status`) and `data/hub_links.yaml` (`updated`) whenever the official candidate list is rechecked.
-5. **Empty language sitemaps:** Hugo lists one sitemap per language in `/sitemap.xml`. The seven translated ones are empty while noindex. That's harmless; they fill in once a language is promoted.
+1. **After deploying,** submit `https://turonsf.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, and request indexing of the home page. Bing's index feeds ChatGPT search and Copilot.
+2. **Links from elsewhere** (the candidates' sites, local coverage of the endorsement) will matter more for ranking than anything on the page. That's outside this repo.
+3. **Refresh the date** in `data/hub_copy.json` (`updated`, and the date in `status`) and `data/hub_links.yaml` (`updated`) whenever the official candidate list is rechecked.
+4. **Empty language sitemaps:** Hugo lists one sitemap per language in `/sitemap.xml`. The seven translated ones are empty while noindex. That's harmless; they fill in once a language is promoted.
 
 ## Files changed
 
@@ -70,3 +69,12 @@ This is deliberate: no native speaker has reviewed them yet. After a reviewer si
 - `static/robots.txt`: llms references.
 - `static/llms.*.txt`: removed (now rendered).
 - `content/_index.*.md`: titles and descriptions kept in step.
+
+## Follow-up corrections, same day (web and mobile)
+
+- **Official status rechecked Oct. 15:** SF.gov still lists 8 Board of Education filers without Michael. The status line and "last updated" now read October 15 in all 8 languages, and `dateModified` is 2026-10-15.
+- **Old campaign URLs are now 301 (permanent).** That passes their link value to the hub. Restoring v2 means removing these rules, and some browsers may keep a cached 301 for a while.
+- **Fixed three broken redirect rules** (`/yue-hant/`, `/zh-hant/`, `/zh-hans/` thank-you-volunteer) that had no space between source and destination. Added `bin/check-redirects.sh` to CI so this can't recur.
+- **Touch targets:** the header section links, the translation-feedback link, and "Fil" in the language bar are now at least 24×24px. On 375px, 768px, and 1280px screens, 0 links are under 24px in all 8 languages, with no horizontal scroll.
+- **Equal buttons on desktop:** on screens 841px and wider, the three candidate cards use a CSS subgrid. Headings, text, links, and both buttons line up and are the same size across cards.
+- **Stylesheet is fingerprinted** (`/css/site.min.<hash>.css` with SRI), and CSS/JS get a one-year immutable cache header. Deploys can't leave visitors on stale styles, and repeat visits load faster.

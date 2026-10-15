@@ -147,6 +147,8 @@ a { color: var(--navy-900); text-decoration-thickness: 0.08em; text-underline-of
 .hub-official-links a { font-weight: 600; }
 /* Keep every text link at least 24px tall (WCAG 2.2 target size). */
 .hub-official-links a, .hub-source-links a { display: inline-block; padding-block: 0.2rem; }
+.nav-links a, .disclosure-slim__link { display: inline-block; padding-block: 0.3rem; }
+.lang-eyebrow__link { min-width: 24px; text-align: center; }
 .hub-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
 .hub-card { display: flex; flex-direction: column; padding: 1.35rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
 .hub-card h3 { font-family: var(--serif); color: var(--navy-900); font-size: 1.6rem; margin: 0 0 0.6rem; }
@@ -167,3 +169,13 @@ a:focus-visible, .hub-cta:focus-visible { outline: 3px solid var(--accent); outl
   .hub-section { scroll-margin-top: 0; }
 }
 .hub-updated { margin: -0.5rem 0 1rem; color: var(--muted); font-size: 0.95rem; }
+/* Wide screens: line up headings, text, links, and both buttons across the
+   three cards (CSS subgrid), so every candidate's buttons are the same size. */
+@media (min-width: 841px) {
+  @supports (grid-template-rows: subgrid) {
+    .hub-card { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0.6rem; align-content: start; }
+    .hub-card > ul { align-self: start; }
+    .hub-cta-row { display: contents; }
+    .hub-cta-row .hub-cta:first-child { margin-top: 0.65rem; }
+  }
+}

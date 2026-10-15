@@ -58,6 +58,11 @@ jobs:
           chmod +x bin/check-fppc-footer.sh
           ./bin/check-fppc-footer.sh public/
 
+      - name: Cloudflare _redirects syntax
+        run: |
+          chmod +x bin/check-redirects.sh
+          ./bin/check-redirects.sh
+
       - name: translation_status.yaml consistency
         run: |
           chmod +x bin/check-translation-status.sh

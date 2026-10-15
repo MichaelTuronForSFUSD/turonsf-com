@@ -3,7 +3,7 @@ title: "Michael Turon يؤيد Kim وFisher وHazelton لمجلس تعليم SFU
 description: "انسحب Michael J. Turon في 20 يوليو من انتخابات مجلس التعليم في سان فرانسيسكو لعام 2026، وهو يؤيد Phil Kim وAlida Fisher وRyan Hazelton."
 summary: "انسحب Michael J. Turon في 20 يوليو من انتخابات مجلس التعليم في سان فرانسيسكو لعام 2026، وهو يؤيد Phil Kim وAlida Fisher وRyan Hazelton."
 date: 2026-05-12
-lastmod: 2026-10-14
+lastmod: 2026-10-15
 translationKey: "home"
 schema_type: "WebPage"
 inLanguage: "ar"

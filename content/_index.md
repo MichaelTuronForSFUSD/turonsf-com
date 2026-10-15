@@ -3,7 +3,7 @@ title: "Michael Turon endorses Kim, Fisher, Hazelton for SFUSD board"
 description: "Michael J. Turon withdrew from the 2026 San Francisco school board race on July 20 and endorses Phil Kim, Alida Fisher, and Ryan Hazelton."
 summary: "Michael J. Turon withdrew from the 2026 San Francisco school board race on July 20 and endorses Phil Kim, Alida Fisher, and Ryan Hazelton."
 date: 2026-05-12
-lastmod: 2026-10-14
+lastmod: 2026-10-15
 translationKey: "home"
 schema_type: "WebPage"
 inLanguage: "en"
