@@ -1,7 +1,7 @@
 # v3 go-live runbook
 
 **Branch:** `v3-endorsement-hub` (local; `main` and `origin/main` are still at v2, `f5c0864`)  
-**Hosting:** Cloudflare Pages builds and deploys on every push to `main`. The live site reports Hugo 0.160.1, the same version v3 is built and tested with.  
+**Hosting:** Cloudflare Pages project `turonsf-com`. **A git push does not deploy:** the GitHub→Pages auto-build has failed since 2026-05-27, so releases go out by Wrangler direct upload via `bin/deploy.sh`. The live site reports Hugo 0.160.1, the same version v3 is built and tested with.  
 **Final audit:** 2026-10-15. See "What the final audit found and fixed" below.
 
 ## 1. Before you push (your decisions and off-site steps)
@@ -12,19 +12,20 @@
 - [ ] **Recheck the official candidate list** at https://www.sf.gov/candidates-november-3-2026-general-election on launch day. If the date changes, update it in three places:
   - `data/hub_copy.json`: the date inside `status` and the `updated` line, in all 8 languages;
   - `data/hub_links.yaml`: `updated`.
-- [ ] **Cloudflare setting:** in Pages, go to Settings, then Environment variables, and confirm `HUGO_VERSION` is `0.160.1` for Production.
+- [ ] **Cloudflare login:** `wrangler whoami` lists the account that owns the `turonsf-com` Pages project.
 
 ## 2. Deploy
 
 ```bash
 cd ~/www/turonsf_com
-git switch main
-git pull --ff-only
-git merge --ff-only v3-endorsement-hub
-git push origin main
+git switch main && git pull --ff-only
+wrangler whoami            # must be the Cloudflare account that owns turonsf-com
+./bin/deploy.sh
 ```
 
-Cloudflare builds in about a minute. GitHub Actions runs the same checks (now pinned to Hugo 0.160.1).
+`bin/deploy.sh` stops unless Wrangler can see the `turonsf-com` project and the tree is clean. It then builds `public/`, runs every CI check, uploads with `wrangler pages deploy`, and runs the checks in section 3 against turonsf.com. If Wrangler is signed in to a different Cloudflare account (for example CARE Institute's), run `wrangler logout && wrangler login` and sign in to the turonsf.com account.
+
+Pushing to GitHub keeps the repo and CI current but does not change the site.
 
 ## 3. Check the live site (about 5 minutes)
 

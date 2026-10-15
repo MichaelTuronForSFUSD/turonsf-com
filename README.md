@@ -22,7 +22,7 @@ hugo server --bind 127.0.0.1 --baseURL http://127.0.0.1:1313/
 
 ## Going live
 
-Cloudflare Pages deploys on push to `main`. Follow `docs/V3_Go_Live_Runbook.md`: pre-flight checklist, deploy commands, post-deploy checks, and rollback.
+A git push does **not** deploy (the Cloudflare auto-build has been broken since 2026-05-27). Deploy with `./bin/deploy.sh` (Wrangler direct upload). See `docs/V3_Go_Live_Runbook.md`: pre-flight checklist, deploy commands, post-deploy checks, and rollback.
 
 ## Checks (also run in CI)
 
