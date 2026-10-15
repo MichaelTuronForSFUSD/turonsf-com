@@ -76,7 +76,7 @@ check() { # expected-code path
   if [[ "$got" == "$1" ]]; then ok "$got $2"; else printf '\033[31m✗\033[0m got %s, want %s: %s\n' "$got" "$1" "$2"; FAIL=1; fi
 }
 for p in / /es/ /yue-hant/ /zh-hant/ /zh-hans/ /tl/ /vi/ /ar/ /llms.txt /sitemap.xml /en/sitemap.xml /favicon.ico; do check 200 "$p"; done
-for p in /donate/ /platform/pillar-1/ /es/volunteer/ /llms.en.txt; do check 301 "$p"; done
+for p in /donate/ /platform/pillar-1/ /es/volunteer/ /zh-hans/thank-you-volunteer/ /tl/meet/ /ar/volunteer/ /llms.ar.txt /give; do check 301 "$p"; done
 check 404 /no-such-page/
 curl -sI https://turonsf.com/ | grep -qi "gateway.umami.is" && ok "CSP allows gateway.umami.is" || { echo "✗ CSP missing gateway.umami.is"; FAIL=1; }
 printf '  live title: '; curl -s "https://turonsf.com/?cb=$(date +%s)" | grep -o '<title>[^<]*' | sed 's/<title>//'

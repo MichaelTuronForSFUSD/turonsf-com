@@ -29,7 +29,10 @@ DUPES=$(grep -vE '^\s*(#|$)' "$FILE" | awk '{print $1}' | sort | uniq -d)
 if [[ -n "$DUPES" ]]; then echo "FAIL: duplicate sources:"; echo "$DUPES"; FAIL=1; fi
 
 SPLATS=$(grep -vE '^\s*(#|$)' "$FILE" | awk '$1 ~ /\*|:/' | wc -l | tr -d ' ')
-if [[ "$SPLATS" -ge 100 ]]; then echo "FAIL: $SPLATS dynamic rules (limit 100)"; FAIL=1; fi
+TOTAL=$(grep -cvE '^\s*(#|$)' "$FILE")
+# On 2026-10-15 this project applied only the first 101 rules in production,
+# whatever the documented limits say. Stay at or under 100 rules in total.
+if [[ "$TOTAL" -gt 100 ]]; then echo "FAIL: $TOTAL rules; production ignores rules past ~100"; FAIL=1; fi
 
 if [[ -n "$BUILD" ]]; then
   while IFS= read -r built; do

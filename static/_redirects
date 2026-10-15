@@ -1,207 +1,121 @@
 # Cloudflare Pages redirects for turonsf.com
-# Reference: docs/Phase1_Deployment_Red_JEC_Audit.md F15.
+#
+# v3 endorsement hub: the campaign pages were retired and every legacy route
+# lands on the same-language hub with a 301, so search engines pass the old
+# pages' links to the hub. v2 is preserved at tag v2-campaign-site-final;
+# restoring it means removing these rules, and browsers that cached a 301 may
+# keep redirecting until their cache clears.
+#
+# Keep this file SHORT. In production this project applied only the first 101
+# rules of a 174-rule file (2026-10-15), well under Cloudflare's documented
+# 2,000 static / 100 dynamic limits. So each retired page is one splat per
+# language: "/es/about*" covers /es/about, /es/about/ and anything below it
+# ("/thank-you*" also covers /thank-you-volunteer). Never splat "/en": it would
+# swallow /en/sitemap.xml. bin/check-redirects.sh enforces this in CI.
+#
+# www -> apex is a Cloudflare zone redirect rule, not something this file does.
 
-# www → apex (audit F15 canonical)
-# NOTE: www → apex redirect is best configured via Cloudflare Page Rules or
-# a redirect rule on the zone, not via _redirects (which only runs after the
-# Pages project receives the request). Document in Run Guide §5 instead.
+# Aliases from v2
+/give*                    /                 301
+/uesf-questionnaire*      /                 301
+/en                       /                 301
+/en/                      /                 301
 
-# v3 endorsement hub (2026-10-14): the campaign pages were retired and every
-# legacy route now lands on the same-language hub. 301 (permanent) so search
-# engines pass the old pages' links to the hub. The v2 site is preserved at
-# tag v2-campaign-site-final; restoring it means removing these rules, and
-# browsers that cached a 301 may keep redirecting until their cache clears.
-# Cloudflare Pages allows 100 dynamic (splat) rules; keep splats to
-# /platform/* (it had subpages) and the three aliases below.
-/give                     /          301
-/give/*                   /          301
-/uesf-questionnaire       /          301
-/uesf-questionnaire/*     /          301
-/en                       /          301
-/en/                      /          301
+# llms.{lang}.txt (v2 naming) -> Hugo-rendered llms.txt per language
+/llms.en.txt              /llms.txt         301
+/llms.es.txt              /es/llms.txt      301
+/llms.yue-Hant.txt        /yue-hant/llms.txt 301
+/llms.zh-Hant.txt         /zh-hant/llms.txt 301
+/llms.zh-Hans.txt         /zh-hans/llms.txt 301
+/llms.tl.txt              /tl/llms.txt      301
+/llms.vi.txt              /vi/llms.txt      301
+/llms.ar.txt              /ar/llms.txt      301
 
-# llms.{lang}.txt (v2 naming) → Hugo-rendered llms.txt per language.
-/llms.en.txt               /llms.txt              301
-/llms.es.txt               /es/llms.txt           301
-/llms.yue-Hant.txt         /yue-hant/llms.txt     301
-/llms.zh-Hant.txt          /zh-hant/llms.txt      301
-/llms.zh-Hans.txt          /zh-hans/llms.txt      301
-/llms.tl.txt               /tl/llms.txt           301
-/llms.vi.txt               /vi/llms.txt           301
-/llms.ar.txt               /ar/llms.txt           301
 
-# /
-/about                      /          301
-/about/                     /          301
-/contact                    /          301
-/contact/                   /          301
-/donate                     /          301
-/donate/                    /          301
-/endorsements               /          301
-/endorsements/              /          301
-/meet                       /          301
-/meet/                      /          301
-/newsletter                 /          301
-/newsletter/                /          301
-/platform                   /          301
-/platform/*                 /          301
-/thank-you                  /          301
-/thank-you/                 /          301
-/thank-you-volunteer        /          301
-/thank-you-volunteer/       /          301
-/volunteer                  /          301
-/volunteer/                 /          301
+# Retired campaign pages -> /
+/about*                   /                 301
+/contact*                 /                 301
+/donate*                  /                 301
+/endorsements*            /                 301
+/meet*                    /                 301
+/newsletter*              /                 301
+/platform*                /                 301
+/thank-you*               /                 301
+/volunteer*               /                 301
 
-# /es/
-/es/about                      /es/       301
-/es/about/                  /es/       301
-/es/contact                    /es/       301
-/es/contact/                /es/       301
-/es/donate                     /es/       301
-/es/donate/                 /es/       301
-/es/endorsements               /es/       301
-/es/endorsements/           /es/       301
-/es/meet                       /es/       301
-/es/meet/                   /es/       301
-/es/newsletter                 /es/       301
-/es/newsletter/             /es/       301
-/es/platform                   /es/       301
-/es/platform/*                 /es/       301
-/es/thank-you                  /es/       301
-/es/thank-you/              /es/       301
-/es/thank-you-volunteer        /es/       301
-/es/thank-you-volunteer/    /es/       301
-/es/volunteer                  /es/       301
-/es/volunteer/              /es/       301
+# Retired campaign pages -> /es/
+/es/about*                /es/              301
+/es/contact*              /es/              301
+/es/donate*               /es/              301
+/es/endorsements*         /es/              301
+/es/meet*                 /es/              301
+/es/newsletter*           /es/              301
+/es/platform*             /es/              301
+/es/thank-you*            /es/              301
+/es/volunteer*            /es/              301
 
-# /yue-hant/
-/yue-hant/about                      /yue-hant/ 301
-/yue-hant/about/            /yue-hant/ 301
-/yue-hant/contact                    /yue-hant/ 301
-/yue-hant/contact/          /yue-hant/ 301
-/yue-hant/donate                     /yue-hant/ 301
-/yue-hant/donate/           /yue-hant/ 301
-/yue-hant/endorsements               /yue-hant/ 301
-/yue-hant/endorsements/     /yue-hant/ 301
-/yue-hant/meet                       /yue-hant/ 301
-/yue-hant/meet/             /yue-hant/ 301
-/yue-hant/newsletter                 /yue-hant/ 301
-/yue-hant/newsletter/       /yue-hant/ 301
-/yue-hant/platform                   /yue-hant/ 301
-/yue-hant/platform/*                 /yue-hant/ 301
-/yue-hant/thank-you                  /yue-hant/ 301
-/yue-hant/thank-you/        /yue-hant/ 301
-/yue-hant/thank-you-volunteer        /yue-hant/ 301
-/yue-hant/thank-you-volunteer/     /yue-hant/ 301
-/yue-hant/volunteer                  /yue-hant/ 301
-/yue-hant/volunteer/        /yue-hant/ 301
+# Retired campaign pages -> /yue-hant/
+/yue-hant/about*          /yue-hant/        301
+/yue-hant/contact*        /yue-hant/        301
+/yue-hant/donate*         /yue-hant/        301
+/yue-hant/endorsements*   /yue-hant/        301
+/yue-hant/meet*           /yue-hant/        301
+/yue-hant/newsletter*     /yue-hant/        301
+/yue-hant/platform*       /yue-hant/        301
+/yue-hant/thank-you*      /yue-hant/        301
+/yue-hant/volunteer*      /yue-hant/        301
 
-# /zh-hant/
-/zh-hant/about                      /zh-hant/  301
-/zh-hant/about/             /zh-hant/  301
-/zh-hant/contact                    /zh-hant/  301
-/zh-hant/contact/           /zh-hant/  301
-/zh-hant/donate                     /zh-hant/  301
-/zh-hant/donate/            /zh-hant/  301
-/zh-hant/endorsements               /zh-hant/  301
-/zh-hant/endorsements/      /zh-hant/  301
-/zh-hant/meet                       /zh-hant/  301
-/zh-hant/meet/              /zh-hant/  301
-/zh-hant/newsletter                 /zh-hant/  301
-/zh-hant/newsletter/        /zh-hant/  301
-/zh-hant/platform                   /zh-hant/  301
-/zh-hant/platform/*                 /zh-hant/  301
-/zh-hant/thank-you                  /zh-hant/  301
-/zh-hant/thank-you/         /zh-hant/  301
-/zh-hant/thank-you-volunteer        /zh-hant/  301
-/zh-hant/thank-you-volunteer/      /zh-hant/  301
-/zh-hant/volunteer                  /zh-hant/  301
-/zh-hant/volunteer/         /zh-hant/  301
+# Retired campaign pages -> /zh-hant/
+/zh-hant/about*           /zh-hant/         301
+/zh-hant/contact*         /zh-hant/         301
+/zh-hant/donate*          /zh-hant/         301
+/zh-hant/endorsements*    /zh-hant/         301
+/zh-hant/meet*            /zh-hant/         301
+/zh-hant/newsletter*      /zh-hant/         301
+/zh-hant/platform*        /zh-hant/         301
+/zh-hant/thank-you*       /zh-hant/         301
+/zh-hant/volunteer*       /zh-hant/         301
 
-# /zh-hans/
-/zh-hans/about                      /zh-hans/  301
-/zh-hans/about/             /zh-hans/  301
-/zh-hans/contact                    /zh-hans/  301
-/zh-hans/contact/           /zh-hans/  301
-/zh-hans/donate                     /zh-hans/  301
-/zh-hans/donate/            /zh-hans/  301
-/zh-hans/endorsements               /zh-hans/  301
-/zh-hans/endorsements/      /zh-hans/  301
-/zh-hans/meet                       /zh-hans/  301
-/zh-hans/meet/              /zh-hans/  301
-/zh-hans/newsletter                 /zh-hans/  301
-/zh-hans/newsletter/        /zh-hans/  301
-/zh-hans/platform                   /zh-hans/  301
-/zh-hans/platform/*                 /zh-hans/  301
-/zh-hans/thank-you                  /zh-hans/  301
-/zh-hans/thank-you/         /zh-hans/  301
-/zh-hans/thank-you-volunteer        /zh-hans/  301
-/zh-hans/thank-you-volunteer/      /zh-hans/  301
-/zh-hans/volunteer                  /zh-hans/  301
-/zh-hans/volunteer/         /zh-hans/  301
+# Retired campaign pages -> /zh-hans/
+/zh-hans/about*           /zh-hans/         301
+/zh-hans/contact*         /zh-hans/         301
+/zh-hans/donate*          /zh-hans/         301
+/zh-hans/endorsements*    /zh-hans/         301
+/zh-hans/meet*            /zh-hans/         301
+/zh-hans/newsletter*      /zh-hans/         301
+/zh-hans/platform*        /zh-hans/         301
+/zh-hans/thank-you*       /zh-hans/         301
+/zh-hans/volunteer*       /zh-hans/         301
 
-# /tl/
-/tl/about                      /tl/       301
-/tl/about/                  /tl/       301
-/tl/contact                    /tl/       301
-/tl/contact/                /tl/       301
-/tl/donate                     /tl/       301
-/tl/donate/                 /tl/       301
-/tl/endorsements               /tl/       301
-/tl/endorsements/           /tl/       301
-/tl/meet                       /tl/       301
-/tl/meet/                   /tl/       301
-/tl/newsletter                 /tl/       301
-/tl/newsletter/             /tl/       301
-/tl/platform                   /tl/       301
-/tl/platform/*                 /tl/       301
-/tl/thank-you                  /tl/       301
-/tl/thank-you/              /tl/       301
-/tl/thank-you-volunteer        /tl/       301
-/tl/thank-you-volunteer/    /tl/       301
-/tl/volunteer                  /tl/       301
-/tl/volunteer/              /tl/       301
+# Retired campaign pages -> /tl/
+/tl/about*                /tl/              301
+/tl/contact*              /tl/              301
+/tl/donate*               /tl/              301
+/tl/endorsements*         /tl/              301
+/tl/meet*                 /tl/              301
+/tl/newsletter*           /tl/              301
+/tl/platform*             /tl/              301
+/tl/thank-you*            /tl/              301
+/tl/volunteer*            /tl/              301
 
-# /vi/
-/vi/about                      /vi/       301
-/vi/about/                  /vi/       301
-/vi/contact                    /vi/       301
-/vi/contact/                /vi/       301
-/vi/donate                     /vi/       301
-/vi/donate/                 /vi/       301
-/vi/endorsements               /vi/       301
-/vi/endorsements/           /vi/       301
-/vi/meet                       /vi/       301
-/vi/meet/                   /vi/       301
-/vi/newsletter                 /vi/       301
-/vi/newsletter/             /vi/       301
-/vi/platform                   /vi/       301
-/vi/platform/*                 /vi/       301
-/vi/thank-you                  /vi/       301
-/vi/thank-you/              /vi/       301
-/vi/thank-you-volunteer        /vi/       301
-/vi/thank-you-volunteer/    /vi/       301
-/vi/volunteer                  /vi/       301
-/vi/volunteer/              /vi/       301
+# Retired campaign pages -> /vi/
+/vi/about*                /vi/              301
+/vi/contact*              /vi/              301
+/vi/donate*               /vi/              301
+/vi/endorsements*         /vi/              301
+/vi/meet*                 /vi/              301
+/vi/newsletter*           /vi/              301
+/vi/platform*             /vi/              301
+/vi/thank-you*            /vi/              301
+/vi/volunteer*            /vi/              301
 
-# /ar/
-/ar/about                      /ar/       301
-/ar/about/                  /ar/       301
-/ar/contact                    /ar/       301
-/ar/contact/                /ar/       301
-/ar/donate                     /ar/       301
-/ar/donate/                 /ar/       301
-/ar/endorsements               /ar/       301
-/ar/endorsements/           /ar/       301
-/ar/meet                       /ar/       301
-/ar/meet/                   /ar/       301
-/ar/newsletter                 /ar/       301
-/ar/newsletter/             /ar/       301
-/ar/platform                   /ar/       301
-/ar/platform/*                 /ar/       301
-/ar/thank-you                  /ar/       301
-/ar/thank-you/              /ar/       301
-/ar/thank-you-volunteer        /ar/       301
-/ar/thank-you-volunteer/    /ar/       301
-/ar/volunteer                  /ar/       301
-/ar/volunteer/              /ar/       301
+# Retired campaign pages -> /ar/
+/ar/about*                /ar/              301
+/ar/contact*              /ar/              301
+/ar/donate*               /ar/              301
+/ar/endorsements*         /ar/              301
+/ar/meet*                 /ar/              301
+/ar/newsletter*           /ar/              301
+/ar/platform*             /ar/              301
+/ar/thank-you*            /ar/              301
+/ar/volunteer*            /ar/              301
