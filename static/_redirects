@@ -18,7 +18,7 @@
 /uesf-questionnaire       /          301
 /uesf-questionnaire/*     /          301
 /en                       /          301
-/en/*                     /          301
+/en/                      /          301
 
 # llms.{lang}.txt (v2 naming) → Hugo-rendered llms.txt per language.
 /llms.en.txt               /llms.txt              301

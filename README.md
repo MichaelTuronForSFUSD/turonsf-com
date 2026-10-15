@@ -20,6 +20,14 @@ hugo server --bind 127.0.0.1 --baseURL http://127.0.0.1:1313/
 - Links and candidate order: `data/hub_links.yaml`
 - Translation state per language: `data/translation_status.yaml`
 
-## Before pushing v3 to `main`
+## Going live
 
-Cloudflare Pages deploys on push to `main`. Work through "Still required before pushing" in the v3 release notes first.
+Cloudflare Pages deploys on push to `main`. Follow `docs/V3_Go_Live_Runbook.md`: pre-flight checklist, deploy commands, post-deploy checks, and rollback.
+
+## Checks (also run in CI)
+
+```bash
+hugo --minify
+./bin/check-i18n-parity.sh && ./bin/check-no-jd-references.sh && ./bin/check-translation-status.sh
+./bin/check-utm-hygiene.sh public && ./bin/check-fppc-footer.sh public && ./bin/check-redirects.sh static/_redirects public
+```

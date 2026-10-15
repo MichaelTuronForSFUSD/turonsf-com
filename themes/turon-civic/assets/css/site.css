@@ -39,7 +39,7 @@ a { color: var(--navy-900); text-decoration-thickness: 0.08em; text-underline-of
 .disclosure-slim__icon { opacity: 0.45; font-size: 0.72rem; flex-shrink: 0; }
 .disclosure-slim__body { text-align: center; }
 .disclosure-slim__sep { color: var(--muted); opacity: 0.5; }
-.disclosure-slim__link { color: var(--accent); text-decoration: none; font-weight: 600; white-space: nowrap; }
+.disclosure-slim__link { color: #964220; text-decoration: none; font-weight: 600; white-space: nowrap; }
 .disclosure-slim__link:hover { text-decoration: underline; }
 
 .disclosure-toast { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(0.5rem); background: var(--navy-900); color: var(--cream-50); font-size: 0.82rem; font-family: var(--sans); padding: 0.55rem 1.25rem; border-radius: 999px; white-space: nowrap; z-index: 500; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; box-shadow: 0 4px 16px rgba(7,26,47,0.22); }
@@ -179,3 +179,4 @@ a:focus-visible, .hub-cta:focus-visible { outline: 3px solid var(--accent); outl
     .hub-cta-row .hub-cta:first-child { margin-top: 0.65rem; }
   }
 }
+.hub-cta--inline { display: inline-flex; }

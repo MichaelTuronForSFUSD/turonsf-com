@@ -42,7 +42,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.125.7'
+          hugo-version: '0.160.1'
           extended: true
 
       - name: Build (Hugo)
@@ -61,7 +61,7 @@ jobs:
       - name: Cloudflare _redirects syntax
         run: |
           chmod +x bin/check-redirects.sh
-          ./bin/check-redirects.sh
+          ./bin/check-redirects.sh static/_redirects public
 
       - name: translation_status.yaml consistency
         run: |

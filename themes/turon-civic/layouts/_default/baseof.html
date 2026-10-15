@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a2f">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   {{ $title := .Title }}
   {{ $description := .Params.description | default .Site.Params.description }}
   {{ $c := index hugo.Data.hub_copy (lower .Site.Language.Lang) }}
@@ -30,7 +34,7 @@
   {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
   {{ with .Site.Params.umami_website_id }}
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ . }}"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="{{ . }}" data-domains="turonsf.com"></script>
   {{ end }}
   {{ partial "analytics-script.html" . }}
 </head>

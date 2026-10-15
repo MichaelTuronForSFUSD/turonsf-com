@@ -62,3 +62,7 @@ Added search titles naming the candidates, Open Graph/Twitter tags with a share 
 ## Translations made indexable (2026-10-15)
 
 At the owner's direction, the seven translations are `ai_published`: indexable, in hreflang and the sitemap, and still carrying the AI-translation notice. Human native-speaker review is still recommended. Promote each language to `reviewed` afterward. Cantonese uses `hreflang="zh-HK"`.
+
+## Final pre-launch audit (2026-10-15)
+
+Fixed an `/en/*` redirect that hid the English sitemap, a CSP gap that blocks Umami (also affecting the live site), and CI pinned to an old Hugo version. Also removed a publicly served diff file, added a favicon, fixed one contrast failure, removed duplicate section labels, and made the 404 link a full-size button. See `docs/V3_Go_Live_Runbook.md` for the checklist, deploy steps, and rollback.
