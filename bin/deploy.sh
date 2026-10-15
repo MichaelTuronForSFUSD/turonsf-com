@@ -8,13 +8,16 @@
 # locally, run every CI check, and upload the build directly with Wrangler.
 #
 #   Project : turonsf-com   (Cloudflare Pages, production branch "main")
-#   Login   : the Cloudflare account that owns turonsf-com
-#             (wrangler logout && wrangler login)
+#   Account : Michael@turon.com's Account (67085892385248117e242d8307f8e5b5),
+#             reachable from the info@turonsf.com Cloudflare login
+#             (wrangler login, then tick that account on the consent screen)
 #
 # Usage:  ./bin/deploy.sh
 # =============================================================================
 set -euo pipefail
 
+CF_ACCOUNT_ID="67085892385248117e242d8307f8e5b5"   # Michael@turon.com's Account
+export CLOUDFLARE_ACCOUNT_ID="$CF_ACCOUNT_ID"
 PROJECT="turonsf-com"
 BRANCH="main"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -33,9 +36,10 @@ command -v wrangler >/dev/null || die "wrangler not found: brew install cloudfla
 [[ "$(git rev-parse --abbrev-ref HEAD)" == "$BRANCH" ]] || die "Check out $BRANCH first."
 [[ -z "$(git status --porcelain --untracked-files=no)" ]] || die "Uncommitted changes. Commit them so the deploy matches a commit."
 
-if ! wrangler pages project list 2>/dev/null | grep -q " $PROJECT "; then
-  die "This Wrangler login can't see the $PROJECT Pages project.
-     Run:  wrangler logout && wrangler login   (sign in to the Cloudflare account that owns turonsf.com)"
+# (project list returns an empty table on some accounts; query the project directly)
+if ! wrangler pages deployment list --project-name="$PROJECT" >/dev/null 2>&1; then
+  die "This Wrangler login can't reach the $PROJECT Pages project in account $CF_ACCOUNT_ID.
+     Run:  wrangler login   (sign in as info@turonsf.com and tick Michael@turon.com's Account)"
 fi
 ok "Wrangler can see $PROJECT"
 

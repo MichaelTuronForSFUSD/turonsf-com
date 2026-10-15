@@ -1,7 +1,7 @@
 # v3 go-live runbook
 
 **Branch:** `v3-endorsement-hub` (local; `main` and `origin/main` are still at v2, `f5c0864`)  
-**Hosting:** Cloudflare Pages project `turonsf-com`. **A git push does not deploy:** the GitHub→Pages auto-build has failed since 2026-05-27, so releases go out by Wrangler direct upload via `bin/deploy.sh`. The live site reports Hugo 0.160.1, the same version v3 is built and tested with.  
+**Hosting:** Cloudflare Pages project `turonsf-com` in *Michael@turon.com's Account* (`67085892385248117e242d8307f8e5b5`), reached by Wrangler signed in as info@turonsf.com. **A git push does not deploy:** the GitHub→Pages auto-build has failed since 2026-05-27, so releases go out by Wrangler direct upload via `bin/deploy.sh`. The live site reports Hugo 0.160.1, the same version v3 is built and tested with.  
 **Final audit:** 2026-10-15. See "What the final audit found and fixed" below.
 
 ## 1. Before you push (your decisions and off-site steps)
