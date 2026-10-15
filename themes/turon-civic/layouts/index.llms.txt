@@ -1,0 +1,64 @@
+{{- /*
+  llms.txt for each language (https://llmstxt.org): / for English, /<lang>/llms.txt
+  for the others. Rendered from the same data as the page so the two stay in sync.
+*/ -}}
+{{- $lang := lower .Site.Language.Lang -}}
+{{- $c := index hugo.Data.hub_copy $lang -}}
+{{- $L := hugo.Data.hub_links -}}
+{{- $guide := index $L.voter_guides $lang -}}
+# {{ $c.title }}
+
+> {{ $c.description }}
+
+{{ $c.updated }}. {{ if ne $lang "en" }}{{ $c.translation_note }} {{ end }}Michael J. Turon's personal statement; not an official election resource. Page: {{ .Permalink }}
+
+## {{ $c.hero_title }}
+
+{{ $c.statement }}
+
+{{ $c.status_label }}: {{ $c.status }}
+
+## {{ $c.endorsements_title }}
+{{ range $L.candidates }}
+### {{ .name }}
+
+{{ index $c .reason_key }}
+
+- [{{ replace $c.site_cta "{name}" .name }}]({{ .site }})
+- [{{ replace $c.donate_cta "{name}" .name }}]({{ .donate }})
+{{ end }}
+## {{ $c.shared_title }}
+
+{{ $c.shared_text }}
+{{ range $L.candidates }}
+- [{{ replace $c.src_shared "{name}" .name }}]({{ .questionnaire }})
+{{- end }}
+- [{{ $c.src_michael }}]({{ $L.sources.michael_questionnaire }})
+
+## {{ $c.differences_title }}
+
+### {{ $c.assignment_title }}
+
+{{ $c.assignment_text }}
+
+- [{{ $c.src_assignment }}]({{ $L.sources.assignment }})
+
+### {{ $c.closure_title }}
+
+{{ $c.closure_text }}
+
+- [{{ $c.src_closure }}]({{ $L.sources.closures }})
+- [{{ $c.src_forum }}]({{ $L.sources.forum }})
+
+## {{ $c.voting_title }}
+
+{{ $c.voting_text }}
+
+- [{{ $c.official_candidate }}]({{ $L.official.candidate }})
+- [{{ $c.official_election }}]({{ $L.official.election }})
+- [{{ $c.voter_guide }}]({{ $guide }})
+- [{{ $c.voter_portal }}]({{ $L.official.voter_portal }})
+
+## Optional
+
+- [Other languages]({{ "/" | absURL }}): English, Español, 廣東話, 繁體中文, 简体中文, Filipino, Tiếng Việt, العربية

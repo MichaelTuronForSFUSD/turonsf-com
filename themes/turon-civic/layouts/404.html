@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ $c := index hugo.Data.hub_copy (lower .Site.Language.Lang) }}
+<section class="hub-hero">
+  <h1>{{ $c.notfound_title }}</h1>
+  <p class="hub-lead"><a href="{{ "/" | relLangURL }}">{{ $c.notfound_link }}</a></p>
+</section>
+{{ end }}

@@ -1,5 +1,5 @@
 baseURL = "https://turonsf.com/"
-title = "Michael Turon for SFUSD Board of Education"
+title = "Michael J. Turon"
 theme = "turon-civic"
 enableRobotsTXT = true
 enableGitInfo = true
@@ -10,6 +10,7 @@ disableKinds = ["taxonomy", "term"]
 summaryLength = 32
 
 [params]
+  og_image = "/img/og-endorsements.png"
   description = "A personal statement by Michael J. Turon about his 2026 school board campaign decision and three endorsements."
   candidate = "Michael Turon"
   role_tag = "Data Scientist · SFUSD Parent"
@@ -33,8 +34,9 @@ summaryLength = 32
     languageCode = "en"
     languageName = "English"
     weight = 1
-    title = "Michael Turon for SFUSD Board of Education"
+    title = "Michael J. Turon"
     [languages.en.params]
+      og_locale = "en_US"
       languageName = "English"
       dir = "ltr"
       bcp47 = "en"
@@ -43,8 +45,9 @@ summaryLength = 32
     languageCode = "es"
     languageName = "Español"
     weight = 2
-    title = "Michael Turon para el Consejo de Educación de SFUSD"
+    title = "Michael J. Turon"
     [languages.es.params]
+      og_locale = "es_US"
       languageName = "Español"
       dir = "ltr"
       bcp47 = "es"
@@ -53,8 +56,9 @@ summaryLength = 32
     languageCode = "zh-Hant"
     languageName = "繁體中文"
     weight = 4
-    title = "Michael Turon 參選 SFUSD 教育委員會"
+    title = "Michael J. Turon"
     [languages.zh-Hant.params]
+      og_locale = "zh_TW"
       languageName = "繁體中文"
       dir = "ltr"
       bcp47 = "zh-Hant"
@@ -63,8 +67,9 @@ summaryLength = 32
     languageCode = "yue-Hant"
     languageName = "廣東話"
     weight = 3
-    title = "Michael Turon 參選 SFUSD 教育委員會"
+    title = "Michael J. Turon"
     [languages.yue-Hant.params]
+      og_locale = "zh_HK"
       languageName = "廣東話"
       dir = "ltr"
       bcp47 = "yue-Hant"
@@ -73,8 +78,9 @@ summaryLength = 32
     languageCode = "zh-Hans"
     languageName = "简体中文"
     weight = 5
-    title = "Michael Turon 参选 SFUSD 教育委员会"
+    title = "Michael J. Turon"
     [languages.zh-Hans.params]
+      og_locale = "zh_CN"
       languageName = "简体中文"
       dir = "ltr"
       bcp47 = "zh-Hans"
@@ -84,8 +90,9 @@ summaryLength = 32
     locale = "fil"
     languageName = "Tagalog"
     weight = 6
-    title = "Michael Turon para sa Lupon ng Edukasyon ng SFUSD"
+    title = "Michael J. Turon"
     [languages.tl.params]
+      og_locale = "tl_PH"
       languageName = "Tagalog"
       dir = "ltr"
       bcp47 = "tl"
@@ -94,8 +101,9 @@ summaryLength = 32
     languageCode = "vi"
     languageName = "Tiếng Việt"
     weight = 7
-    title = "Michael Turon ứng cử Hội đồng Giáo dục SFUSD"
+    title = "Michael J. Turon"
     [languages.vi.params]
+      og_locale = "vi_VN"
       languageName = "Tiếng Việt"
       dir = "ltr"
       bcp47 = "vi"
@@ -104,8 +112,9 @@ summaryLength = 32
     languageCode = "ar"
     languageName = "العربية"
     weight = 8
-    title = "مايكل تورون لمجلس تعليم منطقة سان فرانسيسكو"
+    title = "Michael J. Turon"
     [languages.ar.params]
+      og_locale = "ar_AR"
       languageName = "العربية"
       dir = "rtl"
       bcp47 = "ar"
@@ -114,7 +123,13 @@ summaryLength = 32
   [markup.goldmark.renderer]
     unsafe = true
 
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
+  home = ["HTML", "llms"]
+  section = ["HTML"]
   page = ["HTML"]

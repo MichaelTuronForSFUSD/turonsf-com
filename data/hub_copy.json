@@ -3,7 +3,7 @@
     "name": "English",
     "label": "English",
     "dir": "ltr",
-    "title": "My school board decision and endorsements",
+    "title": "Michael Turon endorses Kim, Fisher, Hazelton for SFUSD board",
     "description": "Michael J. Turon withdrew from the 2026 San Francisco school board race on July 20 and endorses Phil Kim, Alida Fisher, and Ryan Hazelton.",
     "translation_note": "English original.",
     "nav_label": "Page sections",
@@ -13,6 +13,7 @@
     "nav_voting": "Voting information",
     "skip": "Skip to content",
     "hero_title": "My decision and my endorsements",
+    "updated": "Last updated October 14, 2026",
     "statement": "On July 20, 2026, I withdrew from the race for the San Francisco Board of Education. For the three Board seats on the November 3 ballot, I'm endorsing Phil Kim, Alida Fisher, and Ryan Hazelton. They're listed in no particular order.",
     "status_label": "Official status",
     "status": "As of October 14, the city's candidate page lists eight people running for the three Board seats. My name isn't on the list, though the page doesn't say why or mention my withdrawal. The sample ballot the Department of Elections mails to every voter shows exactly who is on yours.",
@@ -46,14 +47,16 @@
     "voting_text": "Election Day is Tuesday, November 3, 2026. For your ballot and the current rules, go to the San Francisco Department of Elections. Its voter guide, dated August 31, comes in English, Chinese, Spanish, Filipino, and Vietnamese, and there's an audio version in English. Candidates write their own statements in the guide, and no city agency checks them for accuracy.",
     "voter_guide": "Official voter guide (PDF)",
     "audio_guide": "Audio voter guide (English, 73 MB ZIP)",
-    "language_nav": "Language options"
+    "language_nav": "Language options",
+    "notfound_title": "Page not found",
+    "notfound_link": "Go to the home page"
   },
   "es": {
     "name": "Spanish",
     "label": "Español",
     "dir": "ltr",
-    "title": "Mi decisión sobre la Junta de Educación y mis respaldos",
-    "description": "Michael J. Turon se retiró el 20 de julio de la contienda de 2026 por la Junta de Educación de San Francisco y respalda a Phil Kim, Alida Fisher y Ryan Hazelton.",
+    "title": "Junta de SFUSD: Michael Turon respalda a Kim, Fisher y Hazelton",
+    "description": "Michael J. Turon se retiró el 20 de julio de la contienda por la Junta de Educación de San Francisco y respalda a Phil Kim, Alida Fisher y Ryan Hazelton.",
     "translation_note": "Esta página se tradujo con ayuda de inteligencia artificial y todavía no la ha revisado un editor que domine el español.",
     "nav_label": "Secciones de la página",
     "nav_endorsements": "Respaldos",
@@ -62,6 +65,7 @@
     "nav_voting": "Información electoral",
     "skip": "Ir al contenido",
     "hero_title": "Mi decisión y mis respaldos",
+    "updated": "Última actualización: 14 de octubre de 2026",
     "statement": "El 20 de julio de 2026 me retiré de la contienda por la Junta de Educación de San Francisco. Para los tres puestos de la Junta que aparecen en la boleta del 3 de noviembre, respaldo a Phil Kim, Alida Fisher y Ryan Hazelton. Los nombres no siguen ningún orden de preferencia.",
     "status_label": "Estado oficial",
     "status": "Al 14 de octubre, la página de candidaturas de la Ciudad incluye a ocho personas para los tres puestos de la Junta. Mi nombre no aparece, aunque la página no explica el motivo ni menciona mi retiro. La boleta de muestra que el Departamento de Elecciones envía a cada elector indica exactamente quién aparece en la suya.",
@@ -95,13 +99,15 @@
     "voting_text": "Las elecciones son el martes 3 de noviembre de 2026. Para consultar su boleta y las reglas vigentes, acuda al Departamento de Elecciones de San Francisco. Su guía para electores, con fecha del 31 de agosto, está disponible en español, inglés, chino, filipino y vietnamita, y hay una versión en audio en inglés. Cada candidato redacta su propia declaración en la guía, y ninguna agencia de la Ciudad verifica su exactitud.",
     "voter_guide": "Guía oficial para electores en español (PDF)",
     "audio_guide": "Guía en audio (en inglés, archivo ZIP de 73 MB)",
-    "language_nav": "Idiomas"
+    "language_nav": "Idiomas",
+    "notfound_title": "Página no encontrada",
+    "notfound_link": "Ir a la página principal"
   },
   "yue-hant": {
     "name": "Cantonese (Traditional Chinese script)",
     "label": "廣東話",
     "dir": "ltr",
-    "title": "我嘅教育委員會選舉決定同支持嘅候選人",
+    "title": "Michael Turon 支持 Kim、Fisher、Hazelton 競逐三藩市教育委員會",
     "description": "Michael J. Turon 喺 7 月 20 日退出 2026 年三藩市教育委員會選舉，並支持 Phil Kim、Alida Fisher 同 Ryan Hazelton。",
     "translation_note": "呢頁由人工智能協助翻譯，暫時未有熟悉粵語嘅編輯審閱。",
     "nav_label": "頁面分段",
@@ -111,6 +117,7 @@
     "nav_voting": "投票資訊",
     "skip": "跳到正文",
     "hero_title": "我嘅決定同我支持嘅候選人",
+    "updated": "最後更新：2026 年 10 月 14 日",
     "statement": "2026 年 7 月 20 日，我退出咗三藩市教育委員會嘅選舉。11 月 3 日選票上有三個委員會議席，我支持 Phil Kim、Alida Fisher 同 Ryan Hazelton。排名不分先後。",
     "status_label": "官方狀況",
     "status": "截至 10 月 14 日，市政府嘅候選人名單列出八個人競逐教育委員會三個議席，入面冇我個名。不過網頁冇解釋原因，亦冇提到我退選。選務處寄畀每位選民嘅選票樣本，會列明你張選票上面有邊啲候選人。",
@@ -144,13 +151,15 @@
     "voting_text": "選舉日係 2026 年 11 月 3 日（星期二）。想查自己張選票同最新規則，請去三藩市選務處。選務處嘅選民資料手冊日期係 8 月 31 日，有中文、英文、西班牙文、菲律賓文同越南文版本，另外有英文錄音版。手冊入面嘅候選人陳述係候選人自己寫嘅，市政府冇任何部門核實內容準唔準確。",
     "voter_guide": "官方選民資料手冊中文版（PDF）",
     "audio_guide": "錄音版選民手冊（英文，73 MB ZIP）",
-    "language_nav": "語言選項"
+    "language_nav": "語言選項",
+    "notfound_title": "搵唔到呢個頁面",
+    "notfound_link": "返回主頁"
   },
   "zh-hant": {
     "name": "Traditional Chinese",
     "label": "繁體中文",
     "dir": "ltr",
-    "title": "我的教育委員會選舉決定與支持的候選人",
+    "title": "Michael Turon 支持 Kim、Fisher、Hazelton 角逐三藩市教育委員會",
     "description": "Michael J. Turon 於 7 月 20 日退出 2026 年三藩市教育委員會選舉，並支持 Phil Kim、Alida Fisher 和 Ryan Hazelton。",
     "translation_note": "本頁由人工智慧協助翻譯，尚未經熟悉繁體中文的編輯審閱。",
     "nav_label": "頁面章節",
@@ -160,6 +169,7 @@
     "nav_voting": "投票資訊",
     "skip": "跳至正文",
     "hero_title": "我的決定與我支持的候選人",
+    "updated": "最後更新：2026 年 10 月 14 日",
     "statement": "2026 年 7 月 20 日，我退出了三藩市教育委員會選舉。11 月 3 日的選票上有三個委員會席位，我支持 Phil Kim、Alida Fisher 和 Ryan Hazelton。排名不分先後。",
     "status_label": "官方狀態",
     "status": "截至 10 月 14 日，市政府的候選人名單列出八人角逐教育委員會的三個席位，其中沒有我的名字。不過該頁面並未說明原因，也沒有提到我退選一事。選務處寄給每位選民的選票樣本，會列明您的選票上有哪些候選人。",
@@ -193,13 +203,15 @@
     "voting_text": "選舉日是 2026 年 11 月 3 日（星期二）。如需查詢您的選票和最新規則，請前往三藩市選務處。選務處的選民資料手冊日期為 8 月 31 日，提供中文、英文、西班牙文、菲律賓文和越南文版本，另有英文有聲版。手冊中的候選人陳述由候選人自行撰寫，市府沒有任何機構核實其準確性。",
     "voter_guide": "官方選民資料手冊中文版（PDF）",
     "audio_guide": "有聲版選民手冊（英文，73 MB ZIP）",
-    "language_nav": "語言選項"
+    "language_nav": "語言選項",
+    "notfound_title": "找不到此頁面",
+    "notfound_link": "返回首頁"
   },
   "zh-hans": {
     "name": "Simplified Chinese",
     "label": "简体中文",
     "dir": "ltr",
-    "title": "我的教育委员会选举决定与支持的候选人",
+    "title": "Michael Turon 支持 Kim、Fisher、Hazelton 竞选旧金山教育委员会",
     "description": "Michael J. Turon 于 7 月 20 日退出 2026 年旧金山教育委员会选举，并支持 Phil Kim、Alida Fisher 和 Ryan Hazelton。",
     "translation_note": "本页由人工智能辅助翻译，尚未经熟悉简体中文的编辑审阅。",
     "nav_label": "页面目录",
@@ -209,6 +221,7 @@
     "nav_voting": "投票信息",
     "skip": "跳至正文",
     "hero_title": "我的决定与我支持的候选人",
+    "updated": "最后更新：2026 年 10 月 14 日",
     "statement": "2026 年 7 月 20 日，我退出了旧金山教育委员会选举。11 月 3 日的选票上有三个委员席位，我支持 Phil Kim、Alida Fisher 和 Ryan Hazelton。排名不分先后。",
     "status_label": "官方状态",
     "status": "截至 10 月 14 日，市政府的候选人名单列出八人竞争教育委员会的三个席位，其中没有我的名字。不过该页面没有说明原因，也没有提及我退选一事。选务处寄给每位选民的选票样本，会列明您的选票上有哪些候选人。",
@@ -242,14 +255,16 @@
     "voting_text": "选举日是 2026 年 11 月 3 日（星期二）。如需查询您的选票和最新规则，请访问旧金山选务处网站。选务处的选民手册日期为 8 月 31 日，有中文（繁体）、英文、西班牙文、菲律宾文和越南文版本，另有英文音频版。手册中的候选人陈述由候选人自行撰写，市政府没有任何部门核实其准确性。",
     "voter_guide": "官方选民手册中文版（PDF，繁体）",
     "audio_guide": "选民手册音频版（英文，73 MB ZIP）",
-    "language_nav": "语言选项"
+    "language_nav": "语言选项",
+    "notfound_title": "找不到此页面",
+    "notfound_link": "返回首页"
   },
   "tl": {
     "name": "Filipino",
     "label": "Filipino",
     "dir": "ltr",
-    "title": "Ang pasya ko tungkol sa school board at ang mga ineendorso ko",
-    "description": "Umatras si Michael J. Turon sa 2026 na halalan para sa San Francisco Board of Education noong Hulyo 20, at ineendorso niya sina Phil Kim, Alida Fisher, at Ryan Hazelton.",
+    "title": "Ineendorso ni Michael Turon sina Kim, Fisher, Hazelton (SFUSD)",
+    "description": "Umatras si Michael J. Turon sa halalan para sa SF Board of Education noong Hulyo 20 at ineendorso niya sina Phil Kim, Alida Fisher, at Ryan Hazelton.",
     "translation_note": "Isinalin ang pahinang ito sa tulong ng AI at hindi pa ito nasusuri ng isang editor na bihasa sa Filipino.",
     "nav_label": "Mga bahagi ng pahina",
     "nav_endorsements": "Mga ineendorso",
@@ -258,6 +273,7 @@
     "nav_voting": "Pagboto",
     "skip": "Lumaktaw sa nilalaman",
     "hero_title": "Ang pasya ko at ang mga ineendorso ko",
+    "updated": "Huling na-update: Oktubre 14, 2026",
     "statement": "Noong Hulyo 20, 2026, umatras ako sa karera para sa San Francisco Board of Education. Para sa tatlong puwesto sa Board na nasa balota sa Nobyembre 3, ineendorso ko sina Phil Kim, Alida Fisher, at Ryan Hazelton. Walang partikular na pagkakasunod-sunod ang mga pangalan.",
     "status_label": "Opisyal na katayuan",
     "status": "Hanggang Oktubre 14, walong tao ang nakalista sa pahina ng mga kandidato ng Lungsod para sa tatlong puwesto sa Board. Wala roon ang pangalan ko, pero hindi sinasabi ng pahina kung bakit at hindi rin nito binabanggit ang pag-atras ko. Makikita mo kung sino mismo ang nasa balota mo sa sample ballot na ipinapadala ng Department of Elections sa bawat botante.",
@@ -291,13 +307,15 @@
     "voting_text": "Martes, Nobyembre 3, 2026 ang Araw ng Halalan. Para sa balota mo at sa kasalukuyang mga patakaran, pumunta sa San Francisco Department of Elections. Ang gabay nila sa botante, na may petsang Agosto 31, ay makukuha sa Filipino, Ingles, Chinese, Espanyol, at Vietnamese, at may audio na bersyon sa Ingles. Ang mga kandidato mismo ang sumusulat ng kanilang pahayag sa gabay, at walang ahensya ng Lungsod na sumusuri kung tama ang mga ito.",
     "voter_guide": "Opisyal na gabay sa botante sa Filipino (PDF)",
     "audio_guide": "Audio na gabay sa botante (Ingles, 73 MB ZIP)",
-    "language_nav": "Mga wika"
+    "language_nav": "Mga wika",
+    "notfound_title": "Hindi nahanap ang pahina",
+    "notfound_link": "Pumunta sa home page"
   },
   "vi": {
     "name": "Vietnamese",
     "label": "Tiếng Việt",
     "dir": "ltr",
-    "title": "Quyết định của tôi về cuộc bầu cử Hội đồng Giáo dục và những ứng cử viên tôi ủng hộ",
+    "title": "Michael Turon ủng hộ Kim, Fisher, Hazelton cho Hội đồng SFUSD",
     "description": "Michael J. Turon đã rút khỏi cuộc bầu cử Hội đồng Giáo dục San Francisco năm 2026 vào ngày 20 tháng 7 và ủng hộ Phil Kim, Alida Fisher và Ryan Hazelton.",
     "translation_note": "Trang này được dịch với sự hỗ trợ của trí tuệ nhân tạo và chưa được biên tập viên thông thạo tiếng Việt duyệt lại.",
     "nav_label": "Các phần của trang",
@@ -307,6 +325,7 @@
     "nav_voting": "Thông tin bầu cử",
     "skip": "Chuyển đến nội dung chính",
     "hero_title": "Quyết định của tôi và những ứng cử viên tôi ủng hộ",
+    "updated": "Cập nhật lần cuối: ngày 14 tháng 10 năm 2026",
     "statement": "Ngày 20 tháng 7 năm 2026, tôi đã rút khỏi cuộc đua vào Hội đồng Giáo dục San Francisco. Với ba ghế Hội đồng trên lá phiếu ngày 3 tháng 11, tôi ủng hộ Phil Kim, Alida Fisher và Ryan Hazelton. Thứ tự tên không thể hiện mức độ ưu tiên.",
     "status_label": "Tình trạng chính thức",
     "status": "Tính đến ngày 14 tháng 10, trang danh sách ứng cử viên của Thành phố ghi tên tám người tranh ba ghế trong Hội đồng. Tên tôi không có trong danh sách, nhưng trang này không giải thích lý do và cũng không nhắc đến việc tôi rút lui. Lá phiếu mẫu mà Sở Bầu cử gửi đến mỗi cử tri cho biết chính xác những ai có tên trên lá phiếu của quý vị.",
@@ -340,13 +359,15 @@
     "voting_text": "Ngày Bầu cử là thứ Ba, 3 tháng 11 năm 2026. Để xem lá phiếu và các quy định hiện hành, xin truy cập trang của Sở Bầu cử San Francisco. Tập Thông tin Cử tri của Sở, đề ngày 31 tháng 8, có bản tiếng Việt, tiếng Anh, tiếng Trung, tiếng Tây Ban Nha và tiếng Filipino, cùng một bản ghi âm bằng tiếng Anh. Các ứng cử viên tự viết tuyên bố của mình trong tập này, và không cơ quan nào của Thành phố kiểm chứng độ chính xác.",
     "voter_guide": "Tập Thông tin Cử tri bằng tiếng Việt (PDF)",
     "audio_guide": "Bản ghi âm Tập Thông tin Cử tri (tiếng Anh, tệp ZIP 73 MB)",
-    "language_nav": "Ngôn ngữ"
+    "language_nav": "Ngôn ngữ",
+    "notfound_title": "Không tìm thấy trang",
+    "notfound_link": "Về trang chủ"
   },
   "ar": {
     "name": "Arabic",
     "label": "العربية",
     "dir": "rtl",
-    "title": "قراري بشأن انتخابات مجلس التعليم والمرشحون الذين أؤيدهم",
+    "title": "Michael Turon يؤيد Kim وFisher وHazelton لمجلس تعليم SFUSD",
     "description": "انسحب Michael J. Turon في 20 يوليو من انتخابات مجلس التعليم في سان فرانسيسكو لعام 2026، وهو يؤيد Phil Kim وAlida Fisher وRyan Hazelton.",
     "translation_note": "تُرجمت هذه الصفحة بمساعدة الذكاء الاصطناعي، ولم يراجعها بعد محرر يتقن العربية.",
     "nav_label": "أقسام الصفحة",
@@ -356,6 +377,7 @@
     "nav_voting": "معلومات التصويت",
     "skip": "انتقل إلى المحتوى",
     "hero_title": "قراري والمرشحون الذين أؤيدهم",
+    "updated": "آخر تحديث: 14 أكتوبر 2026",
     "statement": "في 20 يوليو 2026 انسحبت من السباق على عضوية مجلس التعليم في سان فرانسيسكو. وللمقاعد الثلاثة في المجلس المطروحة على بطاقة اقتراع 3 نوفمبر، أؤيد Phil Kim وAlida Fisher وRyan Hazelton. ولا يعكس ترتيب الأسماء أي تفضيل.",
     "status_label": "الوضع الرسمي",
     "status": "حتى 14 أكتوبر، تُدرج صفحة المرشحين التابعة للمدينة ثمانية أشخاص يتنافسون على مقاعد المجلس الثلاثة، وليس اسمي بينهم. غير أن الصفحة لا توضح السبب ولا تشير إلى انسحابي. ونموذج بطاقة الاقتراع الذي ترسله إدارة الانتخابات إلى كل ناخب يبيّن بالضبط مَن ترد أسماؤهم في بطاقتك.",
@@ -389,6 +411,8 @@
     "voting_text": "يوم الانتخابات هو الثلاثاء 3 نوفمبر 2026. للاطلاع على بطاقة اقتراعك والقواعد الحالية، توجّه إلى إدارة الانتخابات في سان فرانسيسكو. يصدر دليل الناخبين الخاص بها، المؤرخ في 31 أغسطس، بالإنجليزية والصينية والإسبانية والفلبينية والفيتنامية، وتتوفر منه نسخة صوتية بالإنجليزية، ولا تتوفر منه نسخة عربية. يكتب المرشحون بياناتهم في الدليل بأنفسهم، ولا تتحقق أي جهة تابعة للمدينة من دقتها.",
     "voter_guide": "دليل الناخبين الرسمي (PDF، بالإنجليزية)",
     "audio_guide": "النسخة الصوتية من دليل الناخبين (بالإنجليزية، ملف ZIP بحجم 73 ميغابايت)",
-    "language_nav": "اللغات"
+    "language_nav": "اللغات",
+    "notfound_title": "الصفحة غير موجودة",
+    "notfound_link": "الانتقال إلى الصفحة الرئيسية"
   }
 }

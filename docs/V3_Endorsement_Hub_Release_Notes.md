@@ -54,3 +54,7 @@ The source package in `~/Projects/.../Website Redesign/` still says October 3.
 ## Copy audit and rewrite (2026-10-14)
 
 The English copy was checked claim by claim against its sources. Thirteen errors and overclaims were fixed, and the copy was rewritten to remove AI writing patterns. All seven translations were rewritten from the new English. Each language now links its own official voter guide. See `docs/V3_Red_Team_Audit_2026-10-14.md`. Translations remain `ai_translated` until a human native speaker reviews them.
+
+## SEO and GEO pass (2026-10-15)
+
+Added search titles naming the candidates, Open Graph/Twitter tags with a share image, JSON-LD, a visible last-updated date, real 404 pages, and Hugo-rendered `llms.txt` per language. Removed empty RSS feeds, fixed touch-target sizes, and renamed the site from the committee name to "Michael J. Turon". See `docs/V3_SEO_GEO_Audit_2026-10-15.md`. The largest remaining gap is that the translations stay noindex until a human reviews them.

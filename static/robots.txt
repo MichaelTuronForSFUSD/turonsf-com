@@ -76,17 +76,7 @@ Allow: /
 Sitemap: https://turonsf.com/sitemap.xml
 
 # ---------------------------------------------------------------------------
-# llms.txt references — one per language (v1.3.0 addition).
-# Per build prompt Deliverable 10 (divergence from Architecture Decision 8
-# which prefers a single file; resolution documented in JEC scorecard).
+# llms.txt (https://llmstxt.org), rendered by Hugo from the page data:
+#   https://turonsf.com/llms.txt          (English)
+#   https://turonsf.com/<lang>/llms.txt   (es, yue-hant, zh-hant, zh-hans, tl, vi, ar)
 # ---------------------------------------------------------------------------
-
-# Canonical English (also discoverable at the conventional location):
-#   https://turonsf.com/llms.en.txt
-#   https://turonsf.com/llms.es.txt
-#   https://turonsf.com/llms.yue-Hant.txt
-#   https://turonsf.com/llms.zh-Hant.txt
-#   https://turonsf.com/llms.zh-Hans.txt
-#   https://turonsf.com/llms.tl.txt
-#   https://turonsf.com/llms.vi.txt
-#   https://turonsf.com/llms.ar.txt

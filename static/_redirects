@@ -19,6 +19,16 @@
 /en                       /          302
 /en/*                     /          302
 
+# llms.{lang}.txt (v2 naming) → Hugo-rendered llms.txt per language.
+/llms.en.txt               /llms.txt              301
+/llms.es.txt               /es/llms.txt           301
+/llms.yue-Hant.txt         /yue-hant/llms.txt     301
+/llms.zh-Hant.txt          /zh-hant/llms.txt      301
+/llms.zh-Hans.txt          /zh-hans/llms.txt      301
+/llms.tl.txt               /tl/llms.txt           301
+/llms.vi.txt               /vi/llms.txt           301
+/llms.ar.txt               /ar/llms.txt           301
+
 # /
 /about                      /          302
 /about/                     /          302

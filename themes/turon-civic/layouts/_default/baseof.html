@@ -3,13 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  {{ $title := .Title }}
   {{ $description := .Params.description | default .Site.Params.description }}
+  {{ $c := index hugo.Data.hub_copy (lower .Site.Language.Lang) }}
+  {{ if .IsHome }}{{ $title = $c.title }}{{ $description = $c.description }}
+  {{ else if eq .Kind "404" }}{{ $title = printf "%s | %s" $c.notfound_title .Site.Title }}{{ end }}
+  <title>{{ $title }}</title>
   <meta name="description" content="{{ $description }}">
+  {{ if eq .Kind "404" }}<meta name="robots" content="noindex">{{ end }}
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ $title }}">
   <meta property="og:description" content="{{ $description }}">
   <meta property="og:url" content="{{ .Permalink }}">
+  {{ with .Site.Language.Params.og_locale }}<meta property="og:locale" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.og_image }}
+  <meta property="og:image" content="{{ . | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Michael J. Turon endorses Phil Kim, Alida Fisher, and Ryan Hazelton for the SFUSD Board of Education">
+  <meta name="twitter:card" content="summary_large_image">
+  {{ end }}
+  {{ if .IsHome }}{{ partial "hub-jsonld.html" . }}{{ end }}
   {{ partial "head-preconnects.html" . }}
   {{ partial "head-hreflang.html" . }}
   <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">

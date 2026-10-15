@@ -1,0 +1,72 @@
+# v3 hub — SEO and GEO audit, 2026-10-15
+
+**Scope:** the built v3 site (`v3-endorsement-hub` branch), all 8 language routes, checked against the local Hugo build and preview.  
+**Limits:** Lighthouse isn't installed here, so it wasn't run. The checks below follow its SEO audit list and were done by hand on the built HTML and in a 375px mobile viewport. Nothing here can guarantee rankings or citations by AI assistants. Those depend on Google, Bing, and the AI providers, and on links from other sites.
+
+## Scorecard
+
+**SEO (English page; the Lighthouse SEO audits plus common extras)**
+
+| Check | Before | After |
+|---|---|---|
+| Page is indexable (English) | Pass | Pass |
+| `<title>` names the person, topic, and candidates (≤ 60 chars) | Fail: "My school board decision and endorsements" | Pass: "Michael Turon endorses Kim, Fisher, Hazelton for SFUSD board" (60) |
+| Meta description present, ≤ 160 chars | Pass (138) | Pass. Spanish and Filipino trimmed from 161/169 to 153/149 |
+| Canonical URL | Pass | Pass |
+| hreflang | Pass (English + x-default; translations excluded while noindex) | Pass |
+| Descriptive link text | Pass | Pass |
+| Crawlable anchors, HTTP 200 | Pass | Pass |
+| robots.txt valid, sitemap listed | Pass | Pass |
+| Structured data (JSON-LD) | Fail: none | Pass: `WebSite`, `Person` (Michael), and `WebPage` with `dateModified`, `about` (Nov. 3 election), and `mentions` (the three candidates and their sites). Parses in the minified build |
+| Social preview (Open Graph / Twitter) | Partial: no image, site name, or locale | Pass: 1200×630 image, `og:site_name`, `og:locale` per language, `summary_large_image` |
+| Site name | Fail: "Michael Turon for SFUSD Board of Education"; Chinese versions said he is running (參選) | Pass: "Michael J. Turon" in every language. The FPPC footer and committee name are unchanged |
+| Real 404 page | Fail. Without `404.html`, Cloudflare Pages serves the home page with status 200 for any bad URL (duplicate content). This also affects the live v2 site | Pass: `404.html` per language, `noindex` |
+| Empty RSS feeds | Fail: 8 empty feeds | Pass: removed |
+| Visible last-updated date | Fail | Pass: "Last updated October 14, 2026" with `<time datetime>` and matching `dateModified` |
+| Mobile: no horizontal scroll | Pass | Pass (all 8 routes) |
+| Mobile: touch targets ≥ 24px (WCAG 2.2) | Fail: 18 links at 18–22px; language links used 11.5px text | Pass: 0 under 24px; language links 31px tall, 12.8px text |
+
+**GEO (being found and cited by AI assistants)**
+
+| Check | Before | After |
+|---|---|---|
+| Content is in server-rendered HTML (no JS needed) | Pass | Pass |
+| AI crawlers allowed in robots.txt (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.) | Pass | Pass |
+| `/llms.txt` at the root | Fail: only `llms.en.txt` etc. | Pass: `/llms.txt` plus `/<lang>/llms.txt`, in llmstxt.org format with links |
+| llms files match the page | Fail: written once by a script outside the repo, so they would drift | Pass: Hugo renders them from `data/hub_copy.json` and `data/hub_links.yaml`. Old `llms.<lang>.txt` URLs 301 to the new ones |
+| Clear answer in the first paragraph (who, what, when) | Pass | Pass |
+| Claims attributed and linked to primary sources | Pass (after the Oct. 14 copy audit) | Pass |
+| Machine-readable entities | Fail | Pass (JSON-LD above) |
+| Freshness signal | Fail | Pass (visible date and `dateModified`) |
+| Consistent names (Michael J. Turon; candidates' full names) | Pass | Pass |
+
+## The biggest remaining gap: translations are noindex
+
+The seven translated pages are `ai_translated` in `data/translation_status.yaml`. That makes them `noindex`, canonical to English, and absent from the sitemap. Spanish, Chinese, Filipino, Vietnamese, and Arabic searches won't surface them, and Lighthouse would flag them as blocked from indexing.
+
+This is deliberate: no native speaker has reviewed them yet. After a reviewer signs off on a language, change that language's line from `ai_translated` to `reviewed`. It then becomes indexable, joins hreflang and the sitemap, and canonicals to itself. No code change is needed.
+
+## Other recommendations (not done)
+
+1. **Old campaign URLs return 302 (temporary).** A 301 passes the old pages' link value to the hub more reliably. I kept 302 so you can restore v2 without browsers having cached a permanent move. If v3 is staying, change `302` to `301` in `static/_redirects`.
+2. **After deploying,** submit `https://turonsf.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools, and request indexing of the home page. Bing's index feeds ChatGPT search and Copilot.
+3. **Links from elsewhere** (the candidates' sites, local coverage of the endorsement) will matter more for ranking than anything on the page. That's outside this repo.
+4. **Refresh the date** in `data/hub_copy.json` (`updated`, and the date in `status`) and `data/hub_links.yaml` (`updated`) whenever the official candidate list is rechecked.
+5. **Empty language sitemaps:** Hugo lists one sitemap per language in `/sitemap.xml`. The seven translated ones are empty while noindex. That's harmless; they fill in once a language is promoted.
+
+## Files changed
+
+- `hugo.toml`: site title, `og_image`, `og_locale` per language, `llms` output format, RSS removed.
+- `themes/turon-civic/layouts/_default/baseof.html`: title and description from hub data, Open Graph and Twitter tags, JSON-LD, 404 noindex.
+- `themes/turon-civic/layouts/partials/hub-jsonld.html`: new.
+- `themes/turon-civic/layouts/index.llms.txt`: new.
+- `themes/turon-civic/layouts/404.html`: new.
+- `themes/turon-civic/layouts/index.html`: visible updated date.
+- `themes/turon-civic/static/css/site.css`: touch targets, language bar on narrow screens, updated-date style.
+- `data/hub_copy.json`: SEO titles; `updated`, `notfound_title`, and `notfound_link` in 8 languages; Spanish and Filipino descriptions shortened.
+- `data/hub_links.yaml`: `updated` date.
+- `static/img/og-endorsements.png`: new share image.
+- `static/_redirects`: old llms URLs.
+- `static/robots.txt`: llms references.
+- `static/llms.*.txt`: removed (now rendered).
+- `content/_index.*.md`: titles and descriptions kept in step.

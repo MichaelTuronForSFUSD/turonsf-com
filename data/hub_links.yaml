@@ -66,3 +66,7 @@ candidates:
     evidence:
       - { label_key: "src_pamphlet", statement: true, named: true }
       - { label_key: "src_retention", source: "retention", named: true }
+
+# Date the page facts were last verified. Keep in step with the "updated"
+# line in data/hub_copy.json; it feeds dateModified in the structured data.
+updated: "2026-10-14"

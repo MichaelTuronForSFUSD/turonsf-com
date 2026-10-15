@@ -1,0 +1,38 @@
+{{/*
+  hub-jsonld.html — schema.org structured data for the endorsement hub.
+  Built with dict + jsonify so every string is escaped correctly. Facts come
+  from the same data files as the visible page; keep them in step.
+*/}}
+{{ $lang := lower .Site.Language.Lang }}
+{{ $c := index hugo.Data.hub_copy $lang }}
+{{ $L := hugo.Data.hub_links }}
+{{ $home := "/" | absURL }}
+{{ $michael := dict "@type" "Person" "@id" (printf "%s#michael" $home) "name" "Michael J. Turon" "url" $home }}
+{{ $mentions := slice }}
+{{ range $L.candidates }}
+  {{ $mentions = $mentions | append (dict "@type" "Person" "name" .name "url" .site) }}
+{{ end }}
+{{ $election := dict
+  "@type" "Event"
+  "name" "San Francisco Consolidated General Election, November 3, 2026"
+  "startDate" "2026-11-03"
+  "url" $L.official.election
+  "location" (dict "@type" "Place" "name" "San Francisco, California")
+}}
+{{ $page := dict
+  "@type" "WebPage"
+  "@id" (printf "%s#webpage" .Permalink)
+  "url" .Permalink
+  "name" $c.title
+  "headline" $c.hero_title
+  "description" $c.description
+  "inLanguage" (.Site.Language.Params.bcp47 | default .Site.Language.Lang)
+  "dateModified" $L.updated
+  "isPartOf" (dict "@id" (printf "%s#website" $home))
+  "author" (dict "@id" (printf "%s#michael" $home))
+  "about" $election
+  "mentions" $mentions
+  "primaryImageOfPage" (site.Params.og_image | absURL)
+}}
+{{ $site := dict "@type" "WebSite" "@id" (printf "%s#website" $home) "url" $home "name" site.Title "publisher" (dict "@id" (printf "%s#michael" $home)) }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $site $michael $page) | jsonify | safeJS }}</script>
