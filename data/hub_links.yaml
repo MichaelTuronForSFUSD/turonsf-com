@@ -37,6 +37,16 @@ sources:
   michael_questionnaire: "https://sfparentaction.org/wp-content/uploads/Michael-J.-Turon-November-2026-Candidate-Questionnaire.pdf"
 
 candidates:
+  - id: "ryan"
+    name: "Ryan Hazelton"
+    reason_key: "ryan_reason"
+    site: "https://www.ryanforsfschools.com/"
+    donate: "https://secure.actblue.com/donate/ryanhazelton"
+    questionnaire: "https://sfparentaction.org/wp-content/uploads/Ryan-Hazelton-November-2026-Candidate-Questionnaire.pdf"
+    guide_page: { en: 31, translated: 24 }
+    evidence:
+      - { label_key: "src_pamphlet", statement: true, named: true }
+      - { label_key: "src_retention", source: "retention", named: true }
   - id: "phil"
     name: "Phil Kim"
     reason_key: "phil_reason"
@@ -53,16 +63,6 @@ candidates:
     donate: "https://secure.actblue.com/donate/reelect-alida-fisher"
     questionnaire: "https://sfparentaction.org/wp-content/uploads/Alida-Fisher-November-2026-Candidate-Questionnaire.pdf"
     guide_page: { en: 31, translated: 23 }
-    evidence:
-      - { label_key: "src_pamphlet", statement: true, named: true }
-      - { label_key: "src_retention", source: "retention", named: true }
-  - id: "ryan"
-    name: "Ryan Hazelton"
-    reason_key: "ryan_reason"
-    site: "https://www.ryanforsfschools.com/"
-    donate: "https://secure.actblue.com/donate/ryanhazelton"
-    questionnaire: "https://sfparentaction.org/wp-content/uploads/Ryan-Hazelton-November-2026-Candidate-Questionnaire.pdf"
-    guide_page: { en: 31, translated: 24 }
     evidence:
       - { label_key: "src_pamphlet", statement: true, named: true }
       - { label_key: "src_retention", source: "retention", named: true }
